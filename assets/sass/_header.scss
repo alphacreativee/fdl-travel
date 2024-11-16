@@ -1,6 +1,6 @@
 .header {
   &__inner {
-    padding: 0 80px;
+    padding: 45px 80px 15px;
     background-color: var(--color-secondary);
   }
   &__menu {
@@ -16,7 +16,13 @@
     gap: 32px;
   }
   &__search {
+    position: relative;
+    min-width: 295px;
+    width: 100%;
     &--top {
+      position: absolute;
+      top: -30px;
+      left: 0;
       nav {
         ul {
           display: flex;
@@ -27,14 +33,59 @@
     }
     &--bottom {
       position: relative;
+      .ic-search {
+        position: absolute;
+        top: 50%;
+        left: 9px;
+        transform: translateY(-50%);
+      }
       label {
         position: absolute;
-        left: 0;
+        left: 41px;
+        top: 50%;
+        transform: translateY(-50%);
       }
       .label-inner {
-        gap: 8px;
         .text {
           color: var(--color-grey);
+          line-height: 1;
+          transform: translateY(2px);
+          &-up {
+            display: inline-block;
+            position: relative;
+            height: 12px;
+            width: 100px;
+            span {
+              position: absolute;
+              width: max-content;
+              top: 2.5px;
+              left: 0;
+              animation: textSwitch 5s infinite;
+              line-height: 12px;
+              opacity: 0;
+              &:nth-child(1) {
+                animation-delay: 0s;
+              }
+              &:nth-child(2) {
+                animation-delay: 2.5s;
+              }
+            }
+          }
+        }
+      }
+      #search-form {
+        background-color: var(--color-white);
+        border: none;
+        padding: 9px 9px 9px 40px;
+        border-radius: 12px;
+        width: 100%;
+        height: 40px;
+        color: var(--color-grey);
+        &:placeholder-shown + label {
+          display: block;
+        }
+        &:not(:placeholder-shown) + label {
+          display: none;
         }
       }
     }
@@ -42,6 +93,69 @@
   &__cta {
     display: flex;
     align-items: center;
-    gap: 32px;
+    gap: 16px;
+  }
+  &__lang {
+    position: relative;
+    .lang__inner {
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-left: 8px solid transparent; /* Nửa bên trái tam giác */
+        border-right: 8px solid transparent; /* Nửa bên phải tam giác */
+        border-bottom: 8px solid var(--color-white); /* Màu và chiều cao tam giác */
+        top: -12px;
+        z-index: 1;
+        left: 7px;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s;
+      }
+    }
+    .value-select {
+      width: 24px;
+      height: 22px;
+    }
+    .language__body {
+      position: absolute;
+      background-color: var(--color-white);
+      bottom: -45px;
+      left: 0;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      width: 56px;
+      padding: 4px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0px 1px 10px 0px #0000001a;
+      border-radius: 8px;
+      &.dropdown--active {
+        opacity: 1;
+        visibility: visible;
+        .lang__inner::before {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+      .language__item {
+        width: 40px;
+        height: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s;
+        border-radius: 4px;
+        padding: 4px;
+        &:hover {
+          background-color: var(--color-gary-opa);
+        }
+      }
+    }
   }
 }

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *:before,
 *:after {
@@ -62,6 +63,7 @@ body {
   --color-grey: #777777;
   --color-stroke: #d8d8d8;
   --color-stroke-bold: #333333;
+  --color-gary-opa: #f2f2f2;
   --font-body: "SVN-Poppins", sans-serif;
   --font-heading: "SVN-Recoleta", sans-serif;
 }
@@ -135,14 +137,14 @@ body {
   font-weight: 400;
 }
 
-.b2-regular {
+.b3-regular {
   font-family: var(--font-body);
   font-size: 12px;
   line-height: 20px;
   font-weight: 400;
 }
 
-.b2-medium {
+.b3-medium {
   font-family: var(--font-body);
   font-size: 12px;
   line-height: 20px;
@@ -154,7 +156,7 @@ body {
 }
 
 .header__inner {
-  padding: 0 80px;
+  padding: 45px 80px 15px;
   background-color: var(--color-secondary);
 }
 .header__menu nav ul {
@@ -165,6 +167,16 @@ body {
 .header__main {
   gap: 32px;
 }
+.header__search {
+  position: relative;
+  min-width: 295px;
+  width: 100%;
+}
+.header__search--top {
+  position: absolute;
+  top: -30px;
+  left: 0;
+}
 .header__search--top nav ul {
   display: flex;
   align-items: center;
@@ -173,20 +185,141 @@ body {
 .header__search--bottom {
   position: relative;
 }
+.header__search--bottom .ic-search {
+  position: absolute;
+  top: 50%;
+  left: 9px;
+  transform: translateY(-50%);
+}
 .header__search--bottom label {
   position: absolute;
-  left: 0;
-}
-.header__search--bottom .label-inner {
-  gap: 8px;
+  left: 41px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .header__search--bottom .label-inner .text {
   color: var(--color-grey);
+  line-height: 1;
+  transform: translateY(2px);
+}
+.header__search--bottom .label-inner .text-up {
+  display: inline-block;
+  position: relative;
+  height: 12px;
+  width: 100px;
+}
+.header__search--bottom .label-inner .text-up span {
+  position: absolute;
+  width: max-content;
+  top: 2.5px;
+  left: 0;
+  animation: textSwitch 5s infinite;
+  line-height: 12px;
+  opacity: 0;
+}
+.header__search--bottom .label-inner .text-up span:nth-child(1) {
+  animation-delay: 0s;
+}
+.header__search--bottom .label-inner .text-up span:nth-child(2) {
+  animation-delay: 2.5s;
+}
+.header__search--bottom #search-form {
+  background-color: var(--color-white);
+  border: none;
+  padding: 9px 9px 9px 40px;
+  border-radius: 12px;
+  width: 100%;
+  height: 40px;
+  color: var(--color-grey);
+}
+.header__search--bottom #search-form:placeholder-shown + label {
+  display: block;
+}
+.header__search--bottom #search-form:not(:placeholder-shown) + label {
+  display: none;
 }
 .header__cta {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 16px;
+}
+.header__lang {
+  position: relative;
+}
+.header__lang .lang__inner {
+  position: relative;
+}
+.header__lang .lang__inner::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent; /* Nửa bên trái tam giác */
+  border-right: 8px solid transparent; /* Nửa bên phải tam giác */
+  border-bottom: 8px solid var(--color-white); /* Màu và chiều cao tam giác */
+  top: -12px;
+  z-index: 1;
+  left: 7px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+.header__lang .value-select {
+  width: 24px;
+  height: 22px;
+}
+.header__lang .language__body {
+  position: absolute;
+  background-color: var(--color-white);
+  bottom: -45px;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  width: 56px;
+  padding: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.1019607843);
+  border-radius: 8px;
+}
+.header__lang .language__body.dropdown--active {
+  opacity: 1;
+  visibility: visible;
+}
+.header__lang .language__body.dropdown--active .lang__inner::before {
+  opacity: 1;
+  visibility: visible;
+}
+.header__lang .language__body .language__item {
+  width: 40px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
+  border-radius: 4px;
+  padding: 4px;
+}
+.header__lang .language__body .language__item:hover {
+  background-color: var(--color-gary-opa);
+}
+
+@keyframes textSwitch {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  10%, 50% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  60%, 100% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

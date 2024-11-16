@@ -77,23 +77,39 @@
                   <nav>
                     <ul>
                       <li>
-                        <a href="">Về FDL Travel</a>
+                        <a href="" class="b3-regular color-white"
+                          >Về FDL Travel</a
+                        >
                       </li>
                       <li>
-                        <a href="">Cẩm nang du lịch</a>
+                        <a href="" class="b3-regular color-white"
+                          >Cẩm nang du lịch</a
+                        >
                       </li>
                       <li>
-                        <a href="">Liên hệ</a>
+                        <a href="" class="b3-regular color-white">Liên hệ</a>
                       </li>
                     </ul>
                   </nav>
                 </div>
                 <div class="header__search--bottom">
-                  <input type="text" id="search-form" />
+                  <div class="ic-search">
+                    <img src="./assets/images/svg/ic_search.svg" alt="" />
+                  </div>
+                  <input
+                    type="text"
+                    id="search-form"
+                    placeholder=" "
+                    autocomplete="off"
+                  />
                   <label for="search-form">
                     <div class="label-inner d-flex align-items-center">
-                      <img src="./assets/images/svg/ic_search.svg" alt="" />
-                      <div class="text b2-regular">Tìm kiếm điểm đến</div>
+                      <div class="text b2-regular">
+                        Tìm kiếm
+                        <div class="text-up">
+                          <span>điểm đến</span> <span>hoạt động</span>
+                        </div>
+                      </div>
                     </div>
                   </label>
                 </div>
@@ -103,7 +119,24 @@
                   <img src="./assets/images/svg/ic_wishlist.svg" alt="icon" />
                 </a>
               </div>
-              <div class="header__lang"></div>
+              <div class="header__lang dropdown-custom">
+                <div class="language__head dropdown-custom__btn">
+                  <div
+                    class="value-select color-white b2-font dropdown-custom__text"
+                  >
+                    <img src="./assets/images/svg/ic_flag_vi.svg" alt="" />
+                  </div>
+                </div>
+                <div class="language__body dropdown-custom__menu">
+                  <div class="lang__inner">
+                    <a
+                      class="dropdown-custom__item language__item color-black b2-font"
+                    >
+                      <img src="./assets/images/svg/ic_flag_en.svg" alt="" />
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
