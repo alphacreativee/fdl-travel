@@ -1,0 +1,41 @@
+.header {
+  &__inner {
+    padding: 0 80px;
+    background-color: var(--color-secondary);
+  }
+  &__menu {
+    nav {
+      ul {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+      }
+    }
+  }
+  &__main {
+    gap: 32px;
+  }
+  &__search {
+    &--top {
+      nav {
+        ul {
+          display: flex;
+          align-items: center;
+          gap: 32px;
+        }
+      }
+    }
+    &--bottom {
+      position: relative;
+      label {
+        position: absolute;
+        left: 0;
+      }
+    }
+  }
+  &__cta {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+}

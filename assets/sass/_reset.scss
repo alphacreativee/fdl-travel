@@ -27,6 +27,14 @@ button {
   outline: none;
   border: 0;
 }
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+a {
+  text-decoration: none;
+}
 body {
   min-height: 100vh;
   font-weight: 400;

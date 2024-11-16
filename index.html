@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Home</title>
     <!-- import favicon -->
     <link
       rel="icon"
@@ -11,11 +11,11 @@
       href="./assets/images/logo_shorten.svg"
     />
     <!-- meta -->
-    <meta property="og:url" content="" />
+    <!-- <meta property="og:url" content="" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Phuc Long Luxury Hotel" />
     <meta property="og:description" content="Phuc Long Luxury Hotel" />
-    <meta property="og:image" content="./assets/images/banner.png" />
+    <meta property="og:image" content="./assets/images/banner.png" /> -->
     <!-- meta -->
     <!-- import boostrap css -->
     <link rel="stylesheet" href="./assets/libs/bootstrap.min.css" />
@@ -30,14 +30,86 @@
     <link rel="stylesheet" href="./assets/libs/lenis.css" />
     <!-- end css lenis -->
     <!-- import font -->
-    <link rel="stylesheet" href="./assets/font/Graphik/font.css" />
-    <link rel="stylesheet" href="./assets/font/RB/font.css" />
+    <link rel="stylesheet" href="./assets/font/poppins/font.css" />
+    <link rel="stylesheet" href="./assets/font/recoleta/font.css" />
     <!-- end import font -->
     <!-- import link custom css page -->
-    <link rel="stylesheet" href="./assets/styles/style.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <!-- end link custom css page -->
   </head>
   <body>
+    <!-- start header -->
+    <header class="header">
+      <div class="container-fluid p-0">
+        <div
+          class="header__inner d-flex align-items-center justify-content-between"
+        >
+          <div class="header__logo">
+            <a href="./index.html">
+              <img src="./assets/images/svg/logo.svg" alt="logo" />
+            </a>
+          </div>
+          <div class="header__main d-flex align-items-center">
+            <div class="header__menu d-flex align-items-center">
+              <nav>
+                <ul>
+                  <li>
+                    <a href="" class="b2-medium color-white">Trang chủ</a>
+                  </li>
+                  <li>
+                    <a href="" class="b2-medium color-white">Tour du lịch</a>
+                  </li>
+                  <li>
+                    <a href="" class="b2-medium color-white">Tour độc quyền</a>
+                  </li>
+                  <li>
+                    <a href="" class="b2-medium color-white">Khách sạn</a>
+                  </li>
+                  <li>
+                    <a href="" class="b2-medium color-white">Dịch vụ</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="header__cta">
+              <div class="header__search">
+                <div class="header__search--top">
+                  <nav>
+                    <ul>
+                      <li>
+                        <a href="">Về FDL Travel</a>
+                      </li>
+                      <li>
+                        <a href="">Cẩm nang du lịch</a>
+                      </li>
+                      <li>
+                        <a href="">Liên hệ</a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+                <div class="header__search--bottom">
+                  <input type="text" id="search-form" />
+                  <label for="search-form">
+                    <div class="label-inner">
+                      <img src="./assets/images/svg/ic_search.svg" alt="" />
+                      <div class="text">Tìm kiếm điểm đến</div>
+                    </div>
+                  </label>
+                </div>
+              </div>
+              <div class="header__wishlist">
+                <a href="">
+                  <img src="./assets/images/svg/ic_wishlist.svg" alt="icon" />
+                </a>
+              </div>
+              <div class="header__lang"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- end header -->
     <!-- import jquery -->
     <script src="./assets/libs/jquery-3.7.1.js"></script>
     <!-- end jquery -->

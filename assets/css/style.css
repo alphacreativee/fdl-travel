@@ -32,6 +32,16 @@ button {
   border: 0;
 }
 
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
 body {
   min-height: 100vh;
   font-weight: 400;
@@ -52,6 +62,125 @@ body {
   --color-grey: #777777;
   --color-stroke: #d8d8d8;
   --color-stroke-bold: #333333;
+  --font-body: "SVN-Poppins", sans-serif;
+  --font-heading: "SVN-Recoleta", sans-serif;
+}
+
+.h0-font {
+  font-family: var(--font-heading);
+  font-size: 40px;
+  line-height: 56px;
+}
+
+.h1-semibold {
+  font-family: var(--font-body);
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 600;
+}
+
+.h2-semibold {
+  font-family: var(--font-body);
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+}
+
+.h3-semibold {
+  font-family: var(--font-body);
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+}
+
+.h4-medium {
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 500;
+}
+
+.h4-semibold {
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 600;
+}
+
+.b1-semibold {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+}
+
+.b1-regular {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.b2-medium {
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 500;
+}
+
+.b2-regular {
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+}
+
+.b2-regular {
+  font-family: var(--font-body);
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.b2-medium {
+  font-family: var(--font-body);
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+.color-white {
+  color: var(--color-white);
+}
+
+.header__inner {
+  padding: 0 80px;
+  background-color: var(--color-secondary);
+}
+.header__menu nav ul {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+.header__main {
+  gap: 32px;
+}
+.header__search--top nav ul {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+.header__search--bottom {
+  position: relative;
+}
+.header__search--bottom label {
+  position: absolute;
+  left: 0;
+}
+.header__cta {
+  display: flex;
+  align-items: center;
+  gap: 32px;
 }
 
 /*# sourceMappingURL=style.css.map */
