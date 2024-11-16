@@ -177,6 +177,12 @@ body {
   position: absolute;
   left: 0;
 }
+.header__search--bottom .label-inner {
+  gap: 8px;
+}
+.header__search--bottom .label-inner .text {
+  color: var(--color-grey);
+}
 .header__cta {
   display: flex;
   align-items: center;

@@ -31,6 +31,12 @@
         position: absolute;
         left: 0;
       }
+      .label-inner {
+        gap: 8px;
+        .text {
+          color: var(--color-grey);
+        }
+      }
     }
   }
   &__cta {
