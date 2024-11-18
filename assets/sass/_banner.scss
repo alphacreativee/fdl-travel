@@ -60,4 +60,20 @@
       object-fit: cover;
     }
   }
+  &__search {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 40px;
+    z-index: 2;
+    max-width: 760px;
+    width: 100%;
+    background-color: var(--color-white);
+    border-radius: 12px;
+    padding: 8px;
+    .search-bar {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr) 140px;
+    }
+  }
 }

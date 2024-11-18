@@ -510,5 +510,21 @@ body {
   height: 100%;
   object-fit: cover;
 }
+.hero-sec__search {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 40px;
+  z-index: 2;
+  max-width: 760px;
+  width: 100%;
+  background-color: var(--color-white);
+  border-radius: 12px;
+  padding: 8px;
+}
+.hero-sec__search .search-bar {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) 140px;
+}
 
 /*# sourceMappingURL=style.css.map */

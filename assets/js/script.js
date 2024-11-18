@@ -33,66 +33,62 @@ function scrollHeader() {
   $(window).on("load", initializeScrollTrigger);
 }
 function customDropdown() {
-  const dropdowns = document.querySelectorAll(".dropdown-custom");
+  const $dropdowns = $(".dropdown-custom");
 
-  dropdowns.forEach((dropdown) => {
-    const btnDropdown = dropdown.querySelector(".dropdown-custom__btn");
-    const dropdownMenu = dropdown.querySelector(".dropdown-custom__menu");
-    const dropdownItems = dropdown.querySelectorAll(".dropdown-custom__item");
-    const textDropdown = dropdown.querySelector(".dropdown-custom__text");
+  $dropdowns.each(function () {
+    const $dropdown = $(this);
+    const $btnDropdown = $dropdown.find(".dropdown-custom__btn");
+    const $dropdownMenu = $dropdown.find(".dropdown-custom__menu");
+    const $dropdownItems = $dropdown.find(".dropdown-custom__item");
+    const $textDropdown = $dropdown.find(".dropdown-custom__text");
 
-    // Toggle dropdown menu on button click
-    btnDropdown.addEventListener("click", (e) => {
+    $btnDropdown.on("click", function (e) {
       e.stopPropagation();
-      closeAllDropdowns(dropdown);
-      dropdownMenu.classList.toggle("dropdown--active");
-      btnDropdown.classList.toggle("--active");
+      closeAllDropdowns($dropdown);
+      $dropdownMenu.toggleClass("dropdown--active");
+      $btnDropdown.toggleClass("--active");
     });
 
-    // Close dropdowns when clicking outside
-    document.addEventListener("click", () => {
+    $(document).on("click", function () {
       closeAllDropdowns();
     });
 
-    // Handle item selection and text swapping
-    dropdownItems.forEach((item) => {
-      item.addEventListener("click", (e) => {
-        e.stopPropagation();
+    $dropdownItems.on("click", function (e) {
+      e.stopPropagation();
+      const $item = $(this);
+      let tmpText = $textDropdown.text();
+      const tmpImgSrc = $textDropdown.find("img").attr("src"); // Get the current image src if present
+      const $img = $item.find("img"); // Check if the clicked item contains an img
 
-        const tmpText = textDropdown.textContent;
-        const tmpImg = textDropdown.querySelector("img");
-        const itemImg = item.querySelector("img");
+      // Swap text content
+      $textDropdown.text($item.text());
 
-        // Swap text and/or image
-        if (itemImg) {
-          const newHtml = item.innerHTML;
-          textDropdown.innerHTML = newHtml;
+      // If the item has an image, swap the img src
+      if ($img.length) {
+        $textDropdown.html($item.html()); // Swap the entire HTML, including the img
 
-          item.innerHTML = `${
-            tmpImg ? `<img src="${tmpImg.src}" />` : ""
-          } <span>${tmpText}</span>`;
-        } else {
-          textDropdown.textContent = item.textContent;
-          item.textContent = tmpText;
+        if ($item.hasClass("language__item")) {
+          tmpText = `<span>${tmpText}</span>`;
         }
 
-        closeAllDropdowns();
-      });
+        $item.html(
+          `${tmpImgSrc ? `<img src="${tmpImgSrc}" />` : ""} ${tmpText}`
+        ); // Swap img and text back to the item
+      } else if ($item.hasClass("language__item")) {
+        $item.text(tmpText);
+      }
+
+      closeAllDropdowns();
     });
 
-    // Function to close all dropdowns except the current one
     function closeAllDropdowns(exception) {
-      document.querySelectorAll(".dropdown-custom__btn").forEach((btn) => {
-        btn.classList.remove("--active");
-      });
-
-      dropdowns.forEach((dropdown) => {
-        const menu = dropdown.querySelector(".dropdown-custom__menu");
-        const btn = dropdown.querySelector(".dropdown-custom__btn");
-
-        if (!exception || dropdown !== exception) {
-          menu.classList.remove("dropdown--active");
-          btn.classList.remove("--active");
+      $(".dropdown-custom__btn").removeClass("active");
+      $dropdowns.each(function () {
+        const $menu = $(this).find(".dropdown-custom__menu");
+        const $ic = $(this).find(".dropdown-custom__btn");
+        if (!exception || !$(this).is(exception)) {
+          $menu.removeClass("dropdown--active");
+          $ic.removeClass("--active");
         }
       });
     }
