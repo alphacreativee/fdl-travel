@@ -159,6 +159,13 @@ body {
   color: var(--color-black);
 }
 
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
 .header__inner {
   padding: 45px 80px 15px;
   background-color: var(--color-secondary);
@@ -177,6 +184,12 @@ body {
 .header__menu nav ul li.menu-item-has-children {
   position: relative;
   padding-right: 20px;
+}
+.header__menu nav ul li.menu-item-has-children:hover > a {
+  color: var(--color-primary);
+}
+.header__menu nav ul li.menu-item-has-children:hover > a::before {
+  background-image: url("../images/svg/ic_arrow_down_white_hover.svg");
 }
 .header__menu nav ul li.menu-item-has-children > a {
   position: relative;
@@ -371,7 +384,7 @@ body {
 .header__lang .language__body {
   position: absolute;
   background-color: var(--color-white);
-  bottom: -15px;
+  bottom: -35px;
   left: -8px;
   transform: translateY(100%);
   opacity: 0;
@@ -412,6 +425,19 @@ body {
 }
 .header__lang .language__body .language__item:hover {
   background-color: var(--color-gary-opa);
+}
+.header__wishlist {
+  width: 24px;
+  height: 24px;
+}
+.header__wishlist img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.spacing {
+  height: 220vh;
 }
 
 @keyframes textSwitch {

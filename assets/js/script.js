@@ -1,6 +1,36 @@
 $(document).ready(function () {
   customDropdown();
+  scrollHeader();
 });
+function scrollHeader() {
+  gsap.registerPlugin(ScrollTrigger);
+  let height = 33 * -1;
+  function initializeScrollTrigger() {
+    navTop = gsap
+      .from(".header", {
+        y: height,
+        paused: true,
+        duration: 0.5,
+        ease: "power1.out",
+        trigger: "header",
+      })
+      .progress(1);
+
+    ScrollTrigger.create({
+      start: "top top",
+      end: 99999,
+      // markers: true,
+      onUpdate: (self) => {
+        self.direction === -1 ? navTop.play() : navTop.reverse();
+      },
+    });
+  }
+
+  initializeScrollTrigger();
+
+  // Re-initialize ScrollTrigger when page is refreshed
+  $(window).on("load", initializeScrollTrigger);
+}
 function customDropdown() {
   const dropdowns = document.querySelectorAll(".dropdown-custom");
 
