@@ -2,6 +2,7 @@ $(document).ready(function () {
   customDropdown();
   scrollHeader();
   swiperBanner();
+  searchBar();
 });
 function scrollHeader() {
   gsap.registerPlugin(ScrollTrigger);
@@ -144,4 +145,22 @@ function swiperBanner() {
       },
     });
   }
+}
+function searchBar() {
+  $(".dropdown-custom__destination .dropdown-custom__btn").on(
+    "click",
+    function (e) {
+      const clickYPosition = e.clientY;
+      const viewportHeight = $(window).height();
+      console.log(viewportHeight);
+
+      if (clickYPosition > viewportHeight / 2) {
+        console.log("aa");
+        $(".dropdown-custom__menu").addClass("dropdown-up");
+      } else {
+        console.log("abb");
+        $(".dropdown-custom__menu").removeClass("dropdown-up");
+      }
+    }
+  );
 }
