@@ -234,6 +234,7 @@ function swiperTours() {
         pagination: {
           el: $this.find(".swiper-pagination")[0],
           dynamicBullets: true,
+          // dynamicMainBullets: 5,
         },
         navigation: {
           nextEl: $this.find(".swiper-button-next")[0],
