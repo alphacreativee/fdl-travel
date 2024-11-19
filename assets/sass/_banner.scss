@@ -151,4 +151,26 @@
       padding: 16px;
     }
   }
+  .date-arrival {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    border-left: 1px solid var(--color-stroke);
+    .date {
+      input {
+        border: none;
+        transform: translateY(2px);
+        &::placeholder {
+          color: var(--color-black);
+        }
+      }
+    }
+  }
+  .search-btn {
+    background-color: var(--color-secondary);
+    border-radius: 4px;
+    width: 100%;
+    height: 100%;
+  }
 }
