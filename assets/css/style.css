@@ -744,6 +744,9 @@ body {
 .tour-sec .swiper-tour .swiper-slide {
   overflow: hidden;
 }
+.tour-sec .swiper-tour .swiper-pagination {
+  width: 70px !important;
+}
 .tour-sec .swiper-tour .swiper-pagination-bullet {
   width: 6px;
   height: 6px;
