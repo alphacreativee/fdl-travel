@@ -143,3 +143,31 @@
 .lightpick {
   font-family: var(--font-body);
 }
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after,
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+  content: unset;
+  font-size: 0;
+}
+.swiper-button-next svg,
+.swiper-button-prev svg {
+  width: auto;
+  height: auto;
+}
+
+// style button
+.btn-view-all {
+  display: inline-block;
+  padding: 12px 24px;
+  border: 1px solid var(--color-stroke-bold);
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-stroke-bold);
+  transition: all 0.3s;
+  &:hover {
+    background-color: var(--color-gray-bg);
+    color: var(--color-stroke-bold);
+  }
+}

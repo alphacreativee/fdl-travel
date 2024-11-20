@@ -5,6 +5,8 @@ $(document).ready(function () {
   searchBar();
   createFilter();
   swiperTours();
+  countDown();
+  swiperTopTour();
 });
 function scrollHeader() {
   gsap.registerPlugin(ScrollTrigger);
@@ -191,50 +193,55 @@ function searchBar() {
 }
 
 function createFilter() {
-  if ($(".tour-sec__filter").length) {
-    $(".filter-button[data-type]").on("click", function () {
+  $(".tour-sec__filter").each(function () {
+    const $filterSection = $(this);
+    const $resultContainer = $filterSection.siblings(".tour-sec__result");
+    $filterSection.find(".filter-button[data-type]").on("click", function () {
       const $this = $(this);
-      const $filter = $this.data("type");
+      const filterType = $this.data("type");
+      console.log("Filter Type:", filterType);
       $this.addClass("active").siblings().removeClass("active");
-      // animation
-      gsap.to(".tour-sec__result", {
+      gsap.to($resultContainer, {
         autoAlpha: 0,
         duration: 0.25,
         onComplete: () => {
-          gsap.to(".tour-sec__result", {
+          if (filterType === "all") {
+            $resultContainer.find(".tour-sec__item[data-filter]").show();
+          } else {
+            $resultContainer.find(".tour-sec__item").hide();
+            $resultContainer
+              .find(`.tour-sec__item[data-filter='${filterType}']`)
+              .show();
+          }
+
+          gsap.to($resultContainer, {
             autoAlpha: 1,
+            duration: 0.25,
           });
         },
       });
-      // result filter
-      setTimeout(() => {
-        if ($filter === "all") {
-          $(".tour-sec__item[data-filter]").show();
-        } else {
-          $(".tour-sec__result > div, .tour-sec__result > img")
-            .not("[data-filter='" + $filter + "']")
-            .hide();
-          $(".tour-sec__item[data-filter='" + $filter + "']").show();
-        }
-      }, 250);
     });
-  }
+  });
 }
+
 function swiperTours() {
   if ($(".tour-sec__result").length) {
     let interleaveOffsetSuites = 0.8;
     var swiperSuites = $(".swiper-tour");
     swiperSuites.each(function () {
       var $this = $(this);
-      console.log($this[0]);
 
       new Swiper($this[0], {
         slidesPerView: 1,
         speed: 1000,
+        init: true,
         pagination: {
           el: $this.find(".swiper-pagination")[0],
+          clickable: true,
+          hideOnClick: false,
+          type: "bullets",
           dynamicBullets: true,
-          dynamicMainBullets: 5,
+          // dynamicMainBullets: 5,
         },
         navigation: {
           nextEl: $this.find(".swiper-button-next")[0],
@@ -277,6 +284,63 @@ function swiperTours() {
           },
         },
       });
+    });
+  }
+}
+
+function countDown() {
+  // Lấy thời gian đếm ngược từ HTML (dùng thuộc tính `data-time`)
+  const countdownElement = document.querySelector(".countdown");
+  if (countdownElement) {
+    const countDownDate = new Date(
+      countdownElement.getAttribute("data-time")
+    ).getTime();
+
+    const hourscontainer = countdownElement.querySelector(".js-hours span");
+    const minutescontainer = countdownElement.querySelector(".js-minutes span");
+    const secondscontainer = countdownElement.querySelector(".js-seconds span");
+
+    const startCountdown = () => {
+      const timer = setInterval(function () {
+        // Lấy thời gian hiện tại
+        let now = new Date().getTime();
+
+        // Tính khoảng cách giữa hiện tại và thời gian đếm ngược
+        let distance = countDownDate - now;
+
+        // Nếu đã hết thời gian, dừng bộ đếm
+        if (distance < 0) {
+          countdownElement.remove(); // Xóa bộ đếm ngược
+          clearInterval(timer); // Dừng bộ đếm
+          return; // Thoát
+        }
+
+        // Tính toán số giờ, phút, giây còn lại
+        let totalHours = Math.floor(distance / (1000 * 60 * 60)); // Tổng giờ
+        let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)); // Phút
+        let seconds = Math.floor((distance % (1000 * 60)) / 1000); // Giây
+
+        // Cập nhật nội dung các container
+        hourscontainer.innerHTML =
+          totalHours < 10 ? `0${totalHours}` : totalHours;
+        minutescontainer.innerHTML = minutes < 10 ? `0${minutes}` : minutes;
+        secondscontainer.innerHTML = seconds < 10 ? `0${seconds}` : seconds;
+      }, 1000);
+    };
+
+    startCountdown();
+  }
+}
+
+function swiperTopTour() {
+  if ($(".top-tour").length) {
+    var swiperTopTour = new Swiper(".swiper-tour-top", {
+      slidesPerView: 5,
+      spaceBetween: 24,
+      navigation: {
+        nextEl: ".top-tour .swiper-button-next",
+        prevEl: ".top-tour .swiper-button-prev",
+      },
     });
   }
 }
