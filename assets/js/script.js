@@ -7,6 +7,7 @@ $(document).ready(function () {
   swiperTours();
   countDown();
   swiperTopTour();
+  swiperTravelGuide();
 });
 function scrollHeader() {
   gsap.registerPlugin(ScrollTrigger);
@@ -340,6 +341,18 @@ function swiperTopTour() {
       navigation: {
         nextEl: ".top-tour .swiper-button-next",
         prevEl: ".top-tour .swiper-button-prev",
+      },
+    });
+  }
+}
+function swiperTravelGuide() {
+  if ($(".travel-guide").length) {
+    var swiperTravelGuide = new Swiper(".swiper-travel-guide", {
+      slidesPerView: 4,
+      spaceBetween: 24,
+      navigation: {
+        nextEl: ".travel-guide__list .swiper-button-next",
+        prevEl: ".travel-guide__list .swiper-button-prev",
       },
     });
   }

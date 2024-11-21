@@ -66,6 +66,7 @@ body {
   --color-gary-opa: #f2f2f2;
   --color-grey-opa: #7777771a;
   --color-gray-bg: #f1f1f1;
+  --color-tag-gray: #f5f5f5;
   --font-body: "SVN-Poppins", sans-serif;
   --font-heading: "SVN-Recoleta", sans-serif;
 }
@@ -95,6 +96,13 @@ body {
   font-size: 20px;
   line-height: 28px;
   font-weight: 600;
+}
+
+.h3-medium {
+  font-family: var(--font-body);
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 500;
 }
 
 .h4-medium {
@@ -1013,6 +1021,148 @@ body {
 }
 .top-tour .swiper-control .swiper-button-prev svg path {
   transition: all 0.3s;
+}
+
+.facility-sec {
+  padding: 0 80px;
+}
+.facility-sec .facility__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.facility-sec .facility__title {
+  margin-bottom: 70px;
+}
+.facility-sec .facility__item {
+  background-color: var(--color-gray);
+  border-radius: 16px;
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 3;
+  gap: 0;
+}
+.facility-sec .facility__image {
+  height: 112px;
+  position: relative;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  margin-bottom: 12px;
+}
+.facility-sec .facility__image img {
+  height: 100%;
+  width: auto;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -20px;
+}
+.facility-sec .facility__content {
+  padding: 0 20px 20px;
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 2;
+  gap: 8px;
+}
+.facility-sec .facility__content .title {
+  text-align: center;
+  margin-bottom: 0;
+}
+.facility-sec .facility__content .desc {
+  text-align: center;
+}
+
+.travel-guide__container {
+  padding: 0 80px;
+}
+.travel-guide__title {
+  margin-bottom: 40px;
+}
+.travel-guide__item:hover .travel-guide__image img {
+  transform: scale(1.05);
+}
+.travel-guide__list {
+  position: relative;
+}
+.travel-guide__image {
+  width: 100%;
+  aspect-ratio: 300/190;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+.travel-guide__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+.travel-guide__tag {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.travel-guide__tag p {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-black);
+  background-color: var(--color-tag-gray);
+  border-radius: 4px;
+  padding: 8px 12px 4px;
+  margin-bottom: 0;
+}
+.travel-guide__name {
+  margin-bottom: 4px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+}
+.travel-guide__date {
+  color: var(--color-grey);
+  margin-bottom: 16px;
+}
+.travel-guide .swiper-control .custom-swiper-button {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--color-black);
+  top: -55px;
+  transition: all 0.3s;
+}
+.travel-guide .swiper-control .custom-swiper-button:hover {
+  border-color: var(--color-grey);
+}
+.travel-guide .swiper-control .custom-swiper-button:hover svg path {
+  stroke: var(--color-grey);
+}
+.travel-guide .swiper-control .swiper-button-next {
+  right: 0px;
+}
+.travel-guide .swiper-control .swiper-button-next svg {
+  transform: translateX(1px);
+}
+.travel-guide .swiper-control .swiper-button-next svg path {
+  transition: all 0.3s;
+}
+.travel-guide .swiper-control .swiper-button-prev {
+  left: unset;
+  right: 44px;
+}
+.travel-guide .swiper-control .swiper-button-prev svg {
+  transform: translateX(-1px);
+}
+.travel-guide .swiper-control .swiper-button-prev svg path {
+  transition: all 0.3s;
+}
+.travel-guide__btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
 }
 
 /*# sourceMappingURL=style.css.map */
