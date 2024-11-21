@@ -371,14 +371,12 @@ function swiperTravelGuide() {
 function swiperCustomStory() {
   if ($(".customer-story").length) {
     var swiperCustomStory = new Swiper(".swiper-customer-story", {
-      direction: "horizontal",
       slidesPerView: 4.5,
       spaceBetween: 24,
-      speed: 2000,
+      speed: 8000,
       loop: true,
-      centeredSlides: true,
       autoplay: {
-        delay: 1000,
+        delay: 2000,
         disableOnInteraction: true,
         pauseOnMouseEnter: true,
       },
