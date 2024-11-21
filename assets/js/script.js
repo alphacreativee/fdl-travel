@@ -8,6 +8,7 @@ $(document).ready(function () {
   countDown();
   swiperTopTour();
   swiperTravelGuide();
+  swiperCustomStory();
 });
 function scrollHeader() {
   gsap.registerPlugin(ScrollTrigger);
@@ -354,6 +355,15 @@ function swiperTravelGuide() {
         nextEl: ".travel-guide__list .swiper-button-next",
         prevEl: ".travel-guide__list .swiper-button-prev",
       },
+    });
+  }
+}
+
+function swiperCustomStory() {
+  if ($(".customer-story").length) {
+    var swiperCustomStory = new Swiper(".swiper-customer-story", {
+      slidesPerView: 4.5,
+      spaceBetween: 24,
     });
   }
 }
