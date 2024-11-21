@@ -177,3 +177,101 @@
     color: var(--color-stroke-bold);
   }
 }
+// modal
+.swiper-gallery-story .swiper-slide {
+  overflow: hidden;
+}
+#modalCustomerStory .modal-dialog {
+  max-width: 800px;
+}
+.swiper-gallery-story .swiper-slide .slide-banner {
+  height: 450px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.swiper-gallery-story .swiper-slide .slide-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+}
+.swiper-gallery-story {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    border-radius: 26px;
+    border: 10px solid var(--color-white);
+    z-index: 2;
+    inset: -8px;
+    pointer-events: none;
+  }
+  .swiper-control {
+    .custom-swiper-button {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 1px solid var(--color-white);
+      transition: all 0.3s;
+      background-color: var(--color-white);
+      &:hover {
+        // border-color: var(--color-grey);
+        svg {
+          path {
+            stroke: var(--color-grey);
+          }
+        }
+      }
+    }
+    .swiper-button-next {
+      right: 20px;
+      svg {
+        transform: translateX(1px);
+        path {
+          transition: all 0.3s;
+        }
+      }
+    }
+    .swiper-button-prev {
+      left: 20px;
+      svg {
+        transform: translateX(-1px);
+        path {
+          transition: all 0.3s;
+        }
+      }
+    }
+  }
+}
+#modalCustomerStory {
+  background-color: var(--color-primary);
+  .modal-content {
+    border-radius: 24px;
+    border: none;
+  }
+  .modal-body {
+    padding: 8px;
+  }
+  .modal-header {
+    position: relative;
+    padding: 0;
+    border: none;
+
+    .btn-close {
+      position: absolute;
+      right: 0;
+      transform: translateX(100%);
+      width: 32px;
+      height: 32px;
+      background-color: var(--color-white);
+      opacity: 1;
+      border-radius: 50%;
+      font-size: 12px;
+      &:focus {
+        box-shadow: none;
+      }
+    }
+  }
+}
