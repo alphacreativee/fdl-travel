@@ -10,7 +10,34 @@ $(document).ready(function () {
   swiperTopTour();
   swiperTravelGuide();
   swiperCustomStory();
+  scrollCTA();
 });
+function scrollCTA() {
+  gsap.registerPlugin(ScrollTrigger);
+
+  ScrollTrigger.create({
+    start: "top top",
+    end: 99999,
+    onUpdate: (self) => {
+      if (self.direction === -1) {
+        $(".footer__cta").removeClass("hide");
+      } else {
+        $(".footer__cta").addClass("hide");
+      }
+    },
+  });
+
+  ScrollTrigger.create({
+    trigger: ".footer",
+    start: "top bottom",
+    end: "bottom 80vh", // Điều chỉnh vị trí end nếu cần
+    toggleClass: "freeze",
+    scrub: 0.5,
+  });
+}
+
+$(window).on("load", scrollCTA);
+
 function closeModalBoot() {
   const modals = document.querySelectorAll(".modal"); // Chọn tất cả modal
   modals.forEach((modalElement) => {
