@@ -1537,6 +1537,12 @@ h6 {
 .why-choose {
   margin-bottom: 375px;
 }
+.why-choose__heading {
+  position: absolute;
+  left: 80px;
+  top: 80px;
+  z-index: 2;
+}
 .why-choose__cards {
   display: flex;
   flex-direction: column;
