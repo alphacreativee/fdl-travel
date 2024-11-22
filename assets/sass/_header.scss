@@ -142,6 +142,16 @@
           display: flex;
           align-items: center;
           gap: 32px;
+          li {
+            a {
+              transition: all 0.3s;
+            }
+            &:hover {
+              a {
+                color: var(--color-primary);
+              }
+            }
+          }
         }
       }
     }

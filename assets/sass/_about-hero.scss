@@ -1,0 +1,75 @@
+.hero-about {
+  position: relative;
+  &__container {
+    height: 100vh;
+    background-color: var(--color-banner-primary);
+  }
+  &__title {
+    position: absolute;
+    left: 80px;
+    bottom: 120px;
+    z-index: 3;
+    h1 {
+      font-family: var(--font-heading);
+      font-size: 140px;
+      line-height: 128px;
+      margin-bottom: 0;
+      font-weight: 400;
+    }
+  }
+  &__left {
+    position: relative;
+    height: 100%;
+  }
+  &__right {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__desc {
+    h3 {
+      font-family: var(--font-heading);
+      font-size: 40px;
+      line-height: 48px;
+      margin-bottom: 32px;
+    }
+  }
+  &__flower {
+    position: absolute;
+    left: 0;
+    bottom: -30px;
+    z-index: 2;
+  }
+
+  &__ondebox {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 3;
+    .onde {
+      position: relative;
+      width: 100%;
+      height: 10vh;
+      margin-bottom: -7px;
+      min-height: 80px;
+      max-height: 100px;
+    }
+
+    /* Animation */
+
+    .parallaxonde > use {
+      animation: move-forever 40s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+    }
+
+    .parallaxonde > use:nth-child(1) {
+      animation-delay: -6s;
+      animation-duration: 15s;
+    }
+    .parallaxonde > use:nth-child(2) {
+      animation-delay: -4s;
+      animation-duration: 10s;
+    }
+  }
+}
