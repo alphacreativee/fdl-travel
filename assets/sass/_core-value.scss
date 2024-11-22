@@ -1,0 +1,29 @@
+.core-values {
+  &__container {
+    padding: 0 80px;
+  }
+  &__head {
+    margin-bottom: 60px;
+  }
+  &__title {
+    color: var(--color-primary);
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 56px;
+    font-family: var(--font-heading);
+  }
+  &__name {
+    color: var(--color-black);
+    margin-bottom: 40px;
+  }
+  &__list {
+    display: flex;
+    gap: 24px;
+  }
+  &__item {
+    width: calc((100% - 72px) / 4);
+    background-color: var(--color-box);
+    border-radius: 16px;
+    padding: 40px;
+  }
+}

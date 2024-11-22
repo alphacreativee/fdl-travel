@@ -1,4 +1,17 @@
 $(document).ready(function () {
+  const lenis = new Lenis({
+    smooth: true,
+    easing: (t) => 1 - Math.pow(1 - t, 3), // Eases out the scroll
+    duration: 2, // Adjust for smoother scroll duration
+  });
+
+  lenis.on("scroll", ScrollTrigger.update);
+
+  gsap.ticker.add((time) => {
+    lenis.raf(time * 1000); // Adjusting speed factor for smoother performance
+  });
+
+  gsap.ticker.lagSmoothing(0);
   closeModalBoot();
   customDropdown();
   scrollHeader();
@@ -11,6 +24,8 @@ $(document).ready(function () {
   swiperTravelGuide();
   swiperCustomStory();
   scrollCTA();
+  parrallaxAboutBanner();
+  pinCards();
 });
 function scrollCTA() {
   gsap.registerPlugin(ScrollTrigger);
@@ -464,6 +479,88 @@ function swiperCustomStory() {
       $this.closest(".modal").on("shown.bs.modal", function () {
         swiperInstance.update();
       });
+    });
+  }
+}
+function parrallaxAboutBanner() {
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.set([".hero-about__title", ".hero-about__desc"], {
+    y: 0,
+    willChange: "transform",
+    transformStyle: "preserve-3d",
+  });
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".hero-about__title",
+      start: "top 42%",
+      end: "top 20%",
+      scrub: 1.5,
+    },
+  });
+  const tl2 = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".hero-about__desc",
+      start: "top 28%",
+      end: "top 20%",
+      scrub: 1.5,
+    },
+  });
+
+  tl.to(".hero-about__title", {
+    y: -25,
+    ease: "none",
+    duration: 5,
+  });
+  tl2.to(".hero-about__desc", {
+    y: -25,
+    ease: "none",
+    duration: 5,
+  });
+}
+function pinCards() {
+  if ($(".why-choose").length) {
+    const items = gsap.utils.toArray(".why-choose__card");
+    const lastCard = items[items.length - 1];
+    let lastCardHeight = lastCard.clientHeight + 80;
+    console.log(lastCardHeight);
+
+    let endPointImage =
+      document.querySelector(".why-choose__animation").clientHeight -
+      lastCardHeight;
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: ".why-choose__image",
+        start: "top top",
+        end: `+=${endPointImage}px`,
+        pin: true,
+        pinSpacing: false,
+        scrub: true,
+        // markers: true,
+      },
+    });
+    items.forEach((item, index) => {
+      let tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: item,
+          start: "top 30%",
+          endTrigger: ".why-choose__container--card",
+          end: `bottom top+=${lastCardHeight}px`,
+          pin: true,
+          scrub: true,
+        },
+      });
+
+      if (item === lastCard) {
+        tl.to(item, {
+          scale: 1,
+          transformOrigin: "center center",
+        });
+      } else {
+        tl.to(item, {
+          scale: 0.8 + 0.02 * index,
+          transformOrigin: "center center",
+        });
+      }
     });
   }
 }

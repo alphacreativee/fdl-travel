@@ -1,5 +1,6 @@
 .hero-about {
   position: relative;
+  margin-bottom: 24px;
   &__container {
     height: 100vh;
     background-color: var(--color-banner-primary);
@@ -7,7 +8,7 @@
   &__title {
     position: absolute;
     left: 80px;
-    bottom: 120px;
+    bottom: 140px;
     z-index: 3;
     h1 {
       font-family: var(--font-heading);
@@ -33,6 +34,7 @@
       font-size: 40px;
       line-height: 48px;
       margin-bottom: 32px;
+      font-weight: 400;
     }
   }
   &__flower {
@@ -40,6 +42,7 @@
     left: 0;
     bottom: -30px;
     z-index: 2;
+    height: 100%;
   }
 
   &__ondebox {
@@ -72,4 +75,7 @@
       animation-duration: 10s;
     }
   }
+}
+.spacing-200 {
+  height: 200vh;
 }
