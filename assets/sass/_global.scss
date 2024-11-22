@@ -81,6 +81,9 @@
 .color-black {
   color: var(--color-black);
 }
+.color-text-footer {
+  color: var(--color-text-footer);
+}
 .spacing {
   height: 80px;
 }
@@ -137,7 +140,7 @@
   justify-content: center;
   align-items: center;
   font-size: 0;
-  background-image: url("../images/ic_arrow_white.svg");
+  background-image: url("../images/svg/ic_arrow_right_white.svg");
   background-repeat: no-repeat;
   background-position: 55% 50%;
   background-color: var(--color-primary);
