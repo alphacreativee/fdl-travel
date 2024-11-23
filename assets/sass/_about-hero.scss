@@ -29,6 +29,8 @@
     align-items: center;
   }
   &__desc {
+    max-width: 410px;
+    width: 100%;
     h3 {
       font-family: var(--font-heading);
       font-size: 40px;

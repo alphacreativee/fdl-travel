@@ -1,3 +1,7 @@
+if ("scrollRestoration" in history) {
+  history.scrollRestoration = "manual";
+}
+
 $(document).ready(function () {
   const lenis = new Lenis({
     smooth: true,
@@ -25,10 +29,48 @@ $(document).ready(function () {
   swiperCustomStory();
   scrollCTA();
   parrallaxAboutBanner();
-  pinCards();
   loadProvinces();
   closeSelect2();
 });
+window.onload = function () {
+  window.scrollTo(0, 0);
+  pinCards();
+  parallaxImage();
+  ScrollTrigger.refresh();
+};
+function parallaxImage() {
+  gsap.registerPlugin(ScrollTrigger);
+  if ($(".overlay-image").length) {
+    const sections = document.querySelectorAll(".strategies_image-wrapper");
+
+    sections.forEach((section) => {
+      const image = section.querySelector(".strategies_image");
+      const overlay = section.querySelector(".strategies_image-overlay");
+
+      gsap.set([image, overlay], {
+        y: 100,
+        willChange: "transform",
+        transformStyle: "preserve-3d",
+      });
+
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: section,
+          start: "top 55%",
+          end: "top 10%",
+          scrub: true,
+          // markers: true,
+        },
+      });
+
+      tl.to(image, { y: 0, ease: "none", duration: 5 }).to(
+        overlay,
+        { y: 0, ease: "none", duration: 5 },
+        "<"
+      );
+    });
+  }
+}
 function scrollCTA() {
   gsap.registerPlugin(ScrollTrigger);
 

@@ -1,0 +1,40 @@
+.partner {
+  &__container {
+    padding: 80px;
+    background-color: var(--color-gary-opa);
+  }
+  &__head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 60px;
+  }
+  &__desc {
+    max-width: 630px;
+    width: 100%;
+    text-align: center;
+  }
+  &__title {
+    margin-bottom: 24px;
+    font-weight: 400;
+  }
+  &__body {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+  &__logo {
+    width: 120px;
+    aspect-ratio: 1;
+  }
+  &__item {
+    background-color: var(--color-white);
+    border-radius: 16px;
+    width: 100%;
+    aspect-ratio: 410 / 240;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
