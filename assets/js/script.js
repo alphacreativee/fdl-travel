@@ -2,7 +2,7 @@ $(document).ready(function () {
   const lenis = new Lenis({
     smooth: true,
     easing: (t) => 1 - Math.pow(1 - t, 3), // Eases out the scroll
-    duration: 2, // Adjust for smoother scroll duration
+    duration: 1, // Adjust for smoother scroll duration
   });
 
   lenis.on("scroll", ScrollTrigger.update);
@@ -26,6 +26,8 @@ $(document).ready(function () {
   scrollCTA();
   parrallaxAboutBanner();
   pinCards();
+  loadProvinces();
+  closeSelect2();
 });
 function scrollCTA() {
   gsap.registerPlugin(ScrollTrigger);
@@ -415,14 +417,19 @@ function swiperCustomStory() {
     var swiperCustomStory = new Swiper(".swiper-customer-story", {
       slidesPerView: 4.5,
       spaceBetween: 24,
-      speed: 3000,
+      speed: 8000,
       loop: true,
       centeredSlides: true,
       autoplay: {
-        delay: 0,
+        delay: 1,
         disableOnInteraction: true,
         pauseOnMouseEnter: true,
       },
+      freeMode: true,
+      freeModeMomentum: true,
+      freeModeMomentumRatio: 0.5,
+      loopedSlides: 5,
+      // loopAdditionalSlides: 5,
     });
   }
   if ($(".customer-story").length) {
@@ -563,4 +570,51 @@ function pinCards() {
       }
     });
   }
+}
+
+
+async function loadProvinces() {
+  try {
+    const response = await fetch('./assets/data/province.json');
+    const provinces = await response.json();
+
+    console.log(provinces);
+    
+
+    $(".js-province-matcher").select2({
+      data: provinces,
+      matcher: matchCustom,
+      placeholder: "Điểm đến",
+      allowClear: true
+    });
+  } catch (error) {
+    console.error("Không thể tải dữ liệu từ province.json:", error);
+  }
+}
+
+function matchCustom(params, data) {
+  if ($.trim(params.term) === '') {
+    return data;
+  }
+
+  if (typeof data.text === 'undefined') {
+    return null;
+  }
+
+  const searchTerm = params.term.toLowerCase();
+  const text = data.text.toLowerCase();
+
+  if (text.indexOf(searchTerm) > -1) {
+    return data;
+  }
+
+  return null;
+}
+
+function closeSelect2(){
+  $(document).on('click', function(e) {
+    if (!$(e.target).closest('.select2-container').length && !$(e.target).closest('.js-example-matcher').length) {
+      $(".js-example-matcher").select2('close');
+    }
+  });
 }

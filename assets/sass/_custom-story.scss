@@ -69,4 +69,10 @@
     opacity: 0;
     visibility: hidden;
   }
+
+  &__list{
+    .swiper-wrapper{
+      transition-timing-function: ease;
+    }
+  }
 }

@@ -34,6 +34,7 @@
     <link rel="stylesheet" href="./assets/font/recoleta/font.css" />
     <!-- end import font -->
     <!-- import link custom css page -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <!-- end link custom css page -->
   </head>
@@ -140,6 +141,7 @@
                 </a>
               </div>
               <div class="header__lang dropdown-custom">
+
                 <div class="language__head dropdown-custom__btn">
                   <div
                     class="value-select color-white b2-font dropdown-custom__text"
@@ -207,7 +209,10 @@
               <form action="" class="search-bar">
                 <div class="search-destination">
                   <div class="dropdown-custom dropdown-custom__destination">
-                    <div class="dropdown-custom__btn">
+                    <select class="js-province-matcher" style="width: 100%">
+                      <option></option>
+                    </select>
+                    <div class="dropdown-custom__btn d-none">
                       <div class="ic">
                         <img src="./assets/images/svg/ic_location.svg" alt="" />
                       </div>
@@ -3159,6 +3164,7 @@
     <!-- import lenis js -->
     <script src="./assets/libs/lenis.min.js"></script>
     <!-- end import lenis  js -->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <!-- import custom js -->
 
     <script src="./assets/js/script.js"></script>
