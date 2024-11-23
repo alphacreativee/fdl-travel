@@ -6,7 +6,7 @@ $(document).ready(function () {
   const lenis = new Lenis({
     smooth: true,
     easing: (t) => 1 - Math.pow(1 - t, 3), // Eases out the scroll
-    duration: 2, // Adjust for smoother scroll duration
+    duration: 1.25, // Adjust for smoother scroll duration
   });
 
   lenis.on("scroll", ScrollTrigger.update);
