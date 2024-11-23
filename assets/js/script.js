@@ -1,4 +1,14 @@
+// window.onload = function () {
+//   window.scrollTo(0, 0);
+// };
 $(document).ready(function () {
+  if ("scrollRestoration" in history) {
+    history.scrollRestoration = "manual";
+  }
+
+  window.onload = function () {
+    window.scrollTo(0, 0);
+  };
   const lenis = new Lenis({
     smooth: true,
     easing: (t) => 1 - Math.pow(1 - t, 3), // Eases out the scroll
