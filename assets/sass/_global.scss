@@ -384,3 +384,22 @@
   line-height: 22px;
   margin-left: 12px;
 }
+
+.page-width{
+  padding: 0 80px;
+}
+
+.btn-custom{
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 500;
+  color: var(--color-white);
+  border: none;
+  padding: 13px;
+  border-radius: 12px;
+
+  &.btn--secondary{
+    background-color: #062435;
+  }
+}
