@@ -1,0 +1,31 @@
+.faq-sec {
+  &__title {
+    text-align: center;
+    margin-bottom: 36px;
+  }
+  .accordion-button::after {
+    background-image: url("../images/svg/ic_arrow_down_black.svg");
+    background-size: auto;
+    background-position: center;
+  }
+  .accordion-button:not(.collapsed) {
+    color: var(--color-black);
+    background-color: var(--color-white);
+    box-shadow: none;
+  }
+  .accordion-button:focus {
+    box-shadow: none;
+  }
+  .accordion-button {
+    padding: 24px 0;
+  }
+  .accordion-item {
+    border: none;
+    border-bottom: 1px solid var(--color-stroke);
+  }
+  .accordion-body {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+  }
+}
