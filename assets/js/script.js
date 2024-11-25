@@ -571,7 +571,10 @@ function pinCards() {
     const items = gsap.utils.toArray(".why-choose__card");
     const lastCard = items[items.length - 1];
     let lastCardHeight = lastCard.clientHeight + 80;
-    console.log(lastCardHeight);
+    const element = document.querySelector(".why-choose");
+    let startPoint = element.classList.contains("animation-center")
+      ? "top 40%"
+      : "top 30%";
 
     let endPointImage =
       document.querySelector(".why-choose__animation").clientHeight -
@@ -591,7 +594,7 @@ function pinCards() {
       let tl = gsap.timeline({
         scrollTrigger: {
           trigger: item,
-          start: "top 30%",
+          start: startPoint,
           endTrigger: ".why-choose__container--card",
           end: `bottom top+=${lastCardHeight}px`,
           pin: true,
@@ -614,20 +617,18 @@ function pinCards() {
   }
 }
 
-
 async function loadProvinces() {
   try {
-    const response = await fetch('./assets/data/province.json');
+    const response = await fetch("./assets/data/province.json");
     const provinces = await response.json();
 
     console.log(provinces);
-    
 
     $(".js-province-matcher").select2({
       data: provinces,
       matcher: matchCustom,
       placeholder: "Điểm đến",
-      allowClear: true
+      allowClear: true,
     });
   } catch (error) {
     console.error("Không thể tải dữ liệu từ province.json:", error);
@@ -635,11 +636,11 @@ async function loadProvinces() {
 }
 
 function matchCustom(params, data) {
-  if ($.trim(params.term) === '') {
+  if ($.trim(params.term) === "") {
     return data;
   }
 
-  if (typeof data.text === 'undefined') {
+  if (typeof data.text === "undefined") {
     return null;
   }
 
@@ -653,10 +654,13 @@ function matchCustom(params, data) {
   return null;
 }
 
-function closeSelect2(){
-  $(document).on('click', function(e) {
-    if (!$(e.target).closest('.select2-container').length && !$(e.target).closest('.js-example-matcher').length) {
-      $(".js-example-matcher").select2('close');
+function closeSelect2() {
+  $(document).on("click", function (e) {
+    if (
+      !$(e.target).closest(".select2-container").length &&
+      !$(e.target).closest(".js-example-matcher").length
+    ) {
+      $(".js-example-matcher").select2("close");
     }
   });
 }

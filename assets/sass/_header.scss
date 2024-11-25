@@ -17,6 +17,9 @@
         li {
           a {
             transition: all 0.3s;
+            &.active {
+              color: var(--color-primary);
+            }
             &:hover {
               color: var(--color-primary);
             }
@@ -145,6 +148,9 @@
           li {
             a {
               transition: all 0.3s;
+              &.active {
+                color: var(--color-primary);
+              }
             }
             &:hover {
               a {

@@ -1,5 +1,17 @@
 .why-choose {
   margin-bottom: 375px;
+
+  &.animation-center {
+    .why-choose__heading {
+      left: 50%;
+      transform: translateX(-50%);
+      top: 120px;
+      text-align: center;
+    }
+    .why-choose__container--card {
+      margin: 0 auto;
+    }
+  }
   &__heading {
     position: absolute;
     left: 80px;
@@ -30,7 +42,16 @@
     width: 100%;
     height: 100vh;
     position: relative;
-
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0) 75.58%,
+        #ffffff 99.82%
+      );
+    }
     img {
       width: 100%;
       height: 100%;

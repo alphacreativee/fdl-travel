@@ -1,4 +1,28 @@
 .contact-sec {
+  &.new {
+    background-image: url("../images/img/img_bg_contact.png");
+    background-size: cover;
+    .contact-sec__inner {
+      grid-template-columns: 1fr 1fr;
+      background-color: transparent;
+      padding: 0;
+    }
+    .contact-sec__container {
+      padding-top: 120px;
+      padding-bottom: 250px;
+    }
+    .contact-sec__left--title {
+      font-weight: 400;
+      max-width: 465px;
+      width: 100%;
+    }
+    .contact-sec__right--button {
+      background-color: var(--color-primary);
+      &:hover {
+        background-color: var(--color-primary-hover);
+      }
+    }
+  }
   &__container {
     padding: 0 80px;
   }

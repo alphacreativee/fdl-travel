@@ -1,5 +1,13 @@
 .customer-story {
   --height: 300px;
+  &.new {
+    .customer-story__title {
+      padding: 0;
+      font-weight: 400;
+      text-align: center;
+      margin-bottom: 60px;
+    }
+  }
   &__title {
     padding: 0 80px;
     margin-bottom: 40px;
@@ -70,8 +78,8 @@
     visibility: hidden;
   }
 
-  &__list{
-    .swiper-wrapper{
+  &__list {
+    .swiper-wrapper {
       transition-timing-function: ease;
     }
   }
