@@ -322,7 +322,7 @@ function createFilter() {
 }
 
 function swiperTours() {
-  if ($(".tour-sec__result").length) {
+  if ($(".tour-sec__result").length || $(".main-detail").length) {
     let interleaveOffsetTour = 0.8;
     var swiperSuites = $(".swiper-tour");
     swiperSuites.each(function () {
@@ -621,8 +621,6 @@ async function loadProvinces() {
   try {
     const response = await fetch("./assets/data/province.json");
     const provinces = await response.json();
-
-    console.log(provinces);
 
     $(".js-province-matcher").select2({
       data: provinces,
