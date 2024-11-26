@@ -2082,6 +2082,59 @@ p {
 .main-detail .sub-title .wrapper-action .print:hover, .main-detail .sub-title .wrapper-action .share:hover {
   border: 1px solid var(--color-grey);
 }
+.main-detail .gallery {
+  position: relative;
+}
+.main-detail .gallery .tour-sec__tag {
+  top: 24px;
+  left: 24px;
+}
+.main-detail .gallery .swiper {
+  border-radius: 12px;
+  overflow: hidden;
+}
+.main-detail .gallery .swiper:hover .custom-swiper-button {
+  opacity: 1;
+  visibility: visible;
+}
+.main-detail .gallery .swiper-slide {
+  overflow: hidden;
+}
+.main-detail .gallery .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.main-detail .gallery .slide-banner {
+  width: 100%;
+  aspect-ratio: 845/530;
+}
+.main-detail .gallery .custom-swiper-button {
+  width: 30px;
+  height: 30px;
+  background-color: var(--color-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+  transform: translateY(50%);
+}
+.main-detail .gallery .custom-swiper-button.swiper-button-disabled {
+  opacity: 0 !important;
+}
+.main-detail .gallery .custom-swiper-button svg {
+  transform: translateX(-1px);
+}
+.main-detail .gallery .swiper-pagination-bullet {
+  opacity: 1;
+  background-color: rgba(245, 245, 245, 0.8);
+}
+.main-detail .gallery .swiper-pagination-bullet-active {
+  background-color: var(--color-white);
+}
 .main-detail .main-content {
   margin-top: 24px;
 }
@@ -2349,8 +2402,10 @@ p {
   list-style: disc;
 }
 .main-detail .tour-information__item.chedule .tab-content li .content li {
-  margin-bottom: 4px;
   display: list-item;
+}
+.main-detail .tour-information__item.chedule .tab-content li .content li:not(:last-child) {
+  margin-bottom: 4px;
 }
 .main-detail .tour-information__item.expense p {
   margin-bottom: 12px;
@@ -2410,6 +2465,33 @@ p {
 }
 .main-detail .tour-information__item.more-information .accordion-body li {
   margin-bottom: 8px;
+}
+
+.related-tour .container-slider {
+  position: relative;
+}
+.related-tour .tour-sec__result {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: unset;
+}
+.related-tour .tour-sec__item {
+  height: auto;
+}
+.related-tour .swiper-control .custom-swiper-button {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--color-black);
+  top: -54px;
+  transition: all 0.3s;
+}
+.related-tour .swiper-control .swiper-button-prev {
+  left: unset;
+  right: 44px;
+}
+.related-tour .swiper-control .swiper-button-next {
+  right: 0;
 }
 
 .content-sec__container {

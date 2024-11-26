@@ -77,6 +77,73 @@
         }
     }
 
+    .gallery{
+        position: relative;
+
+        .tour-sec__tag{
+            top: 24px;
+            left: 24px;
+        }
+
+        .swiper{
+            border-radius: 12px;
+            overflow: hidden;
+
+            &:hover{
+                .custom-swiper-button{
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+
+        .swiper-slide{
+            overflow: hidden;
+            
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .slide-banner{
+            width: 100%;
+            aspect-ratio: 845 / 530;
+        }
+
+        .custom-swiper-button{
+            width: 30px;
+            height: 30px;
+            background-color: var(--color-white);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+            transform: translateY(50%);
+
+            &.swiper-button-disabled{
+                opacity: 0 !important;
+            }
+
+            svg{
+                transform: translateX(-1px);
+            }
+        }
+
+        .swiper-pagination-bullet{
+            opacity: 1;
+            background-color: rgba(245, 245, 245, 0.8);
+        }
+
+        .swiper-pagination-bullet-active{
+            background-color: var(--color-white);
+        }
+    }
+
     .main-content{
         margin-top: 24px;
 
@@ -403,8 +470,11 @@
                             }
 
                             li{
-                                margin-bottom: 4px;
                                 display: list-item;
+
+                                &:not(:last-child){
+                                    margin-bottom: 4px;
+                                }
                             }
                         }
                     }
@@ -492,5 +562,39 @@
                 }
             }
         }
+    }
+}
+
+.related-tour{
+    .container-slider{
+        position: relative;
+    }
+
+    .tour-sec__result{
+        display: flex;
+        flex-wrap: nowrap;
+        gap: unset;
+    }
+
+    .tour-sec__item{
+        height: auto;
+    }
+
+    .swiper-control .custom-swiper-button{
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        border: 1px solid var(--color-black);
+        top: -54px;
+        transition: all 0.3s;
+    }
+
+    .swiper-control .swiper-button-prev{
+        left: unset;
+        right: 44px;
+    }
+
+    .swiper-control .swiper-button-next{
+        right: 0;
     }
 }

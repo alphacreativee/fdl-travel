@@ -442,13 +442,13 @@ function swiperTopTour() {
   }
 }
 function swiperTravelGuide() {
-  if ($(".travel-guide").length) {
+  if ($(".travel-guide").length || $(".related-tour").length) {
     var swiperTravelGuide = new Swiper(".swiper-travel-guide", {
       slidesPerView: 4,
       spaceBetween: 24,
       navigation: {
-        nextEl: ".travel-guide__list .swiper-button-next",
-        prevEl: ".travel-guide__list .swiper-button-prev",
+        nextEl: ".swiper-travel-guide + .swiper-control .swiper-button-next",
+        prevEl: ".swiper-travel-guide + .swiper-control .swiper-button-prev",
       },
     });
   }
