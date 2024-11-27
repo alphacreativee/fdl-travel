@@ -32,6 +32,7 @@ $(document).ready(function () {
   loadProvinces();
   closeSelect2();
   toggleWishlist();
+  filterTourList();
 });
 window.onload = function () {
   window.scrollTo(0, 0);
@@ -626,7 +627,7 @@ async function loadProvinces() {
     $(".js-province-matcher").select2({
       data: provinces,
       matcher: matchCustom,
-      placeholder: "Điểm đến",
+      placeholder: $(this).data("placeholder") !== '' ? $(this).data("placeholder") : 'Điểm đến',
       allowClear: true,
     });
   } catch (error) {
@@ -693,4 +694,11 @@ function closeNotiToast(){
   setTimeout(() => {
       $(".toastSuccess .progress").removeClass("active");
   }, 300);
+}
+
+function filterTourList(){
+  $(".filter-list .top-location li").on("click", function(){
+    $(this).addClass("active");
+    $(this).siblings().removeClass("active");
+  })
 }
