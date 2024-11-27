@@ -85,6 +85,33 @@
             left: 24px;
         }
 
+        .wish-list{
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            z-index: 2;
+            cursor: pointer;
+
+            path{
+                transition: all 0.3s ease;
+            }
+
+            &:hover{
+                path{
+                    stroke: var(--color-tag-red);
+                    fill: transparent;
+                }
+            }
+
+            &.active{
+                path{
+                    fill: var(--color-tag-red);
+                    stroke: var(--color-tag-red);
+                    fill-opacity: 1;
+                }
+            }
+        }
+
         .swiper{
             border-radius: 12px;
             overflow: hidden;
@@ -112,6 +139,10 @@
             aspect-ratio: 845 / 530;
         }
 
+        .swiper-pagination{
+            bottom: 24px;
+        }
+
         .custom-swiper-button{
             width: 30px;
             height: 30px;
@@ -120,17 +151,22 @@
             justify-content: center;
             align-items: center;
             border-radius: 50%;
-            opacity: 0;
-            visibility: hidden;
+            opacity: 1;
+            visibility: visible;
             transition: all 0.3s;
             transform: translateY(50%);
 
             &.swiper-button-disabled{
                 opacity: 0 !important;
+                visibility: hidden;
             }
 
-            svg{
-                transform: translateX(-1px);
+            &.swiper-button-next{
+                right: 24px;
+            }
+
+            &.swiper-button-prev{
+                left: 24px;
             }
         }
 
@@ -295,6 +331,12 @@
                 border-radius: 8px;
                 padding: 15px;
                 cursor: pointer;
+                transition: all 0.4s ease;
+
+                &:hover{
+                    border: 1px solid var(--color-grey);
+                    color: var(--color-grey);
+                }
 
                 img{
                     width: 18px;

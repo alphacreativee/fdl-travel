@@ -401,8 +401,135 @@
   border: none;
   padding: 13px;
   border-radius: 12px;
+  transition: all 0.4s ease;
 
   &.btn--secondary{
     background-color: #062435;
+
+    &:hover{
+      color: var(--color-white);
+      background-color: #0b4465;
+    }
+  }
+}
+
+.toastSuccess{
+  position: fixed;
+  z-index: 100;
+  display: block !important;
+  bottom: 25px;
+  right: 30px;
+  border-radius: 12px;
+  background: #fff;
+  padding: 20px 35px 20px 25px;
+  box-shadow: 0 6px 20px -5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transform: translateX(calc(100% + 30px));
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+
+  @media (max-width: 768px){
+    right: 15px;
+    padding: 20px 15px;
+  }
+
+  &.active{
+    transform: translateX(0%);
+  }
+
+  .toast-content{
+    display: flex;
+    align-items: center;
+
+    .check{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 35px;
+      min-width: 35px;
+      background-color: #107E2F;
+      color: #fff;
+      font-size: 20px;
+      border-radius: 50%;
+
+      svg{
+        width: 18px;
+        height: 19px;
+      }
+
+      @media (max-width: 768px){
+        min-width: 25px;
+        height: 25px;
+      }
+    }
+
+    .message{
+      display: flex;
+      gap: 4px;
+      flex-direction: column;
+      margin: 0 20px;
+    }
+
+    .text{
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--color-grey);
+
+      @media (max-width: 768px){
+        font-size: 14px;
+      }
+
+      &.text-1 {
+        font-weight: 600;
+        color: var(--color-black);
+      }
+    }
+  }
+
+  .close{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    padding: 5px;
+    cursor: pointer;
+    opacity: 0.7;
+
+    svg{
+      width: 12px;
+      height: 12px;
+    }
+
+    &:hover{
+      opacity: 1;
+    }
+  }
+
+  .progress{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+
+    &::before{
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      background-color: #107E2F;
+    }
+
+    &.active{
+      &::before{
+        animation: progress 5s linear forwards;
+      }
+    }
+
+    @keyframes progress {
+      100% {
+        right: 100%;
+      }
+    }
   }
 }

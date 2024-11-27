@@ -31,6 +31,7 @@ $(document).ready(function () {
   parrallaxAboutBanner();
   loadProvinces();
   closeSelect2();
+  toggleWishlist();
 });
 window.onload = function () {
   window.scrollTo(0, 0);
@@ -661,4 +662,35 @@ function closeSelect2() {
       $(".js-example-matcher").select2("close");
     }
   });
+}
+
+function toggleWishlist(){
+  $(".wish-list.action").on("click", function(){
+    $(this).toggleClass("active");
+
+    if($(".wish-list.action.active").length){
+      openNotiToast();
+    }
+  })
+}
+
+function openNotiToast(){
+  $(".toastSuccess").addClass("active");
+  $(".toastSuccess .progress").addClass("active");
+
+  setTimeout(() => {
+      $(".toastSuccess").removeClass("active");
+  }, 5000);
+
+  setTimeout(() => {
+      $(".toastSuccess .progress").removeClass("active");
+  }, 5300);
+}
+
+function closeNotiToast(){
+  $(".toastSuccess").removeClass("active");
+
+  setTimeout(() => {
+      $(".toastSuccess .progress").removeClass("active");
+  }, 300);
 }
