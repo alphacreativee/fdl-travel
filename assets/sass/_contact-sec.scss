@@ -73,9 +73,13 @@
       &.answer {
         grid-template-columns: 1fr;
       }
+      &.full {
+        grid-template-columns: 1fr;
+      }
     }
     &--fullname,
-    &--email {
+    &--email,
+    &--country {
       display: flex;
       flex-direction: column;
       label {
