@@ -1,4 +1,16 @@
 .travel-guide {
+  &.contact-new {
+    .travel-guide__list {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    .travel-guide__title {
+      font-weight: 400;
+    }
+  }
+  &__head {
+  }
   &__container {
     padding: 0 80px;
   }

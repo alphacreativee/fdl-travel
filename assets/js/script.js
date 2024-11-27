@@ -33,6 +33,7 @@ $(document).ready(function () {
   closeSelect2();
   toggleWishlist();
   filterTourList();
+  chooseTime();
 });
 window.onload = function () {
   window.scrollTo(0, 0);
@@ -40,6 +41,29 @@ window.onload = function () {
   parallaxImage();
   ScrollTrigger.refresh();
 };
+function chooseTime() {
+  if ($("#rentalDay").length) {
+    var pickerRental = new Lightpick({
+      field: document.getElementById("rentalDay"),
+      singleDate: false,
+      numberOfMonths: 1,
+      minDate: new Date(),
+      onOpen: function () {
+        var input = pickerArrival._opts.field; // Use pickerArrival instead of picker
+        var rect = input.getBoundingClientRect();
+        var calendar = pickerArrival.el; // Use pickerArrival instead of picker
+        if (rect.top >= window.innerHeight / 2) {
+          calendar.style.top =
+            rect.top + window.scrollY - calendar.offsetHeight - 38 + "px";
+          calendar.style.left = rect.left + window.scrollX - 30 + "px";
+        } else {
+          calendar.style.top = rect.bottom + window.scrollY + 20 + "px";
+          calendar.style.left = rect.left + window.scrollX - 30 + "px";
+        }
+      },
+    });
+  }
+}
 function parallaxImage() {
   gsap.registerPlugin(ScrollTrigger);
   if ($(".overlay-image").length) {

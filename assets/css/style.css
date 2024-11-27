@@ -1457,6 +1457,14 @@ p {
   text-align: center;
 }
 
+.travel-guide.contact-new .travel-guide__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.travel-guide.contact-new .travel-guide__title {
+  font-weight: 400;
+}
 .travel-guide__container {
   padding: 0 80px;
 }
@@ -2073,20 +2081,26 @@ p {
 .contact-sec__right--group.answer {
   grid-template-columns: 1fr;
 }
-.contact-sec__right--fullname, .contact-sec__right--email {
+.contact-sec__right--group.full {
+  grid-template-columns: 1fr;
+}
+.contact-sec__right--fullname, .contact-sec__right--email, .contact-sec__right--country {
   display: flex;
   flex-direction: column;
 }
-.contact-sec__right--fullname label, .contact-sec__right--email label {
+.contact-sec__right--fullname label, .contact-sec__right--email label, .contact-sec__right--country label {
   margin-bottom: 4px;
 }
-.contact-sec__right--fullname input, .contact-sec__right--email input {
+.contact-sec__right--fullname input, .contact-sec__right--email input, .contact-sec__right--country input {
   box-shadow: none;
   border: none;
   border-radius: 8px;
   background-color: var(--color-white);
   height: 48px;
   padding: 0 16px;
+}
+.contact-sec__right--car label {
+  margin-bottom: 4px;
 }
 .contact-sec__right--note label {
   margin-bottom: 4px;
@@ -2109,6 +2123,57 @@ p {
 }
 .contact-sec__right--button:hover {
   background-color: var(--color-primary);
+}
+.contact-sec .dropdown-custom__car {
+  position: relative;
+}
+.contact-sec .dropdown-custom__car .dropdown-custom__menu {
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  background-color: var(--color-white);
+  width: 100%;
+  transform: translateY(100%);
+  padding: 8px;
+  border-radius: 8px;
+  box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.1019607843);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+.contact-sec .dropdown-custom__car .dropdown-custom__menu.dropdown--active {
+  opacity: 1;
+  visibility: visible;
+}
+.contact-sec .dropdown-custom__car .dropdown-custom__text {
+  display: flex;
+  align-items: center;
+}
+.contact-sec .dropdown-custom__car .dropdown-custom__btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--color-white);
+  width: 100%;
+  height: 48px;
+  border-radius: 8px;
+  padding: 0 16px;
+}
+.contact-sec .dropdown-custom__car .dropdown-custom__btn.--active .ic img {
+  transform: rotate(180deg);
+}
+.contact-sec .dropdown-custom__car .dropdown-custom__btn .ic img {
+  transition: all 0.3s;
+}
+.contact-sec .dropdown-custom__car .dropdown-custom__item {
+  padding: 8px;
+  transition: all 0.3s;
+  border-radius: 4px;
+}
+.contact-sec .dropdown-custom__car .dropdown-custom__item:hover {
+  color: var(--color-primary);
+  background-color: var(--color-gary-opa);
+  cursor: pointer;
 }
 
 .faq-sec__title {
@@ -2779,6 +2844,94 @@ p {
 }
 .tour-exclusive__title {
   font-weight: 400;
+}
+
+.visa-application {
+  --border-radius: 16px;
+  background-color: var(--color-gary-opa);
+  padding: 120px 80px;
+}
+.visa-application__head {
+  margin-bottom: 50px;
+}
+.visa-application__head h1 {
+  font-weight: 400;
+}
+.visa-application__body {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+.visa-application .flip-card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.visa-application .flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.visa-application .flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+.visa-application .flip-card-container {
+  width: 100%;
+  height: 230px;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+  perspective: 1000px;
+}
+.visa-application .flip-card-front, .visa-application .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  z-index: 1;
+}
+.visa-application .flip-card-front-image {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+}
+.visa-application .flip-card-front-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.visa-application .flip-card-front-number {
+  position: absolute;
+  font-size: 82px;
+  line-height: 110px;
+  font-weight: 600;
+  font-family: var(--font-body);
+  color: var(--color-white);
+  z-index: 3;
+  top: 0;
+  left: 24px;
+}
+.visa-application .flip-card-front-step-name {
+  position: absolute;
+  bottom: 18px;
+  left: 24px;
+  right: 24px;
+  text-align: left;
+}
+.visa-application .flip-card-back {
+  transform: rotateY(180deg);
+  background-color: var(--color-white);
+  border-radius: var(--border-radius);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px;
 }
 
 .footer {
