@@ -1,6 +1,8 @@
 .why-choose {
   margin-bottom: 375px;
-
+  &__name {
+    text-align: center;
+  }
   &.animation-center {
     .why-choose__heading {
       left: 50%;
