@@ -629,6 +629,14 @@ p {
   }
 }
 
+.dropdown-custom__btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--color-grey);
+  cursor: pointer;
+}
+
 .header {
   position: fixed;
   top: 0;
