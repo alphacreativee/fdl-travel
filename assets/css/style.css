@@ -52,6 +52,7 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 1;
+  font-family: var(--font-body);
 }
 
 .h1,
@@ -638,12 +639,24 @@ p {
   position: relative;
   cursor: default;
 }
+.dropdown-custom.has-hover:hover .ic path {
+  fill: var(--color-black);
+}
+.dropdown-custom.has-hover:hover .dropdown-custom__text {
+  color: var(--color-black);
+}
 .dropdown-custom__btn {
   display: flex;
   align-items: center;
   gap: 12px;
   color: var(--color-grey);
   cursor: pointer;
+}
+.dropdown-custom__btn path {
+  transition: all 0.3s ease;
+}
+.dropdown-custom .dropdown-custom__text {
+  transition: all 0.3s ease;
 }
 .dropdown-custom__menu {
   position: absolute;
@@ -677,6 +690,13 @@ p {
 .dropdown--active {
   opacity: 1;
   visibility: visible;
+}
+
+.sort .dropdown-custom__menu {
+  right: -18px;
+}
+.sort .dropdown-custom__item {
+  text-align: right;
 }
 
 .wish-list {
@@ -2385,6 +2405,7 @@ p {
   background-color: var(--color-gray-bg-60);
   border-radius: 4px;
   gap: 8px;
+  color: var(--color-grey);
 }
 .main-detail .sub-title .wrapper-tag .icon {
   width: 16px;
@@ -2399,6 +2420,8 @@ p {
   border: 1px solid var(--color-stroke);
   cursor: pointer;
   transition: all 0.4s ease;
+  width: 38px;
+  height: 38px;
 }
 .main-detail .sub-title .wrapper-action .print img, .main-detail .sub-title .wrapper-action .share img {
   width: 16px;
@@ -2837,6 +2860,52 @@ p {
   right: 0;
 }
 
+#checkoutModal .btn-custom {
+  min-width: 170px;
+}
+#checkoutModal .modal-header {
+  padding: 16px 24px;
+}
+#checkoutModal .modal-content {
+  border: none;
+  border-radius: 24px;
+}
+#checkoutModal .modal-body {
+  padding: 16px 24px;
+}
+#checkoutModal .modal-body .departure-info {
+  padding: 16px;
+  border-radius: 16px;
+  background-color: var(--color-box);
+}
+#checkoutModal .modal-body .departure-info span {
+  margin-bottom: 4px;
+}
+#checkoutModal .modal-body .departure-info .wrapper-tag {
+  margin-top: 16px;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+#checkoutModal .modal-body .departure-info .wrapper-tag li {
+  padding: 8px 12px;
+  background-color: var(--color-gray-bg-60);
+  color: var(--color-grey);
+  border-radius: 4px;
+  gap: 8px;
+}
+#checkoutModal .modal-body .departure-info .wrapper-tag .icon {
+  width: 16px;
+  height: 16px;
+}
+#checkoutModal .modal-body .departure-calendar {
+  margin-top: 16px;
+}
+@media (min-width: 576px) {
+  #checkoutModal .modal-dialog {
+    max-width: 845px;
+  }
+}
+
 .main-content__left .feature-image {
   border-radius: 12px;
   overflow: hidden;
@@ -3130,12 +3199,6 @@ p {
 }
 .tour-list .content-right__heading {
   margin-bottom: 12px;
-}
-.tour-list .content-right .sort .dropdown-custom__menu {
-  right: -18px;
-}
-.tour-list .content-right .sort .dropdown-custom__item {
-  text-align: right;
 }
 
 .content-sec__container {

@@ -108,7 +108,7 @@
                         >
                       </li>
                       <li>
-                        <a href="" class="b3-regular color-white"
+                        <a href="./blog.html" class="b3-regular color-white"
                           >Cẩm nang du lịch</a
                         >
                       </li>
@@ -292,13 +292,13 @@
                 class="sub-title d-flex align-items-start justify-content-between"
               >
                 <ul class="wrapper-tag p-0 d-flex align-items-center">
-                  <li class="d-flex align-items-center tag-item">
+                  <li class="d-flex align-items-center tag-item b2-medium">
                     <div class="icon">
                       <img src="./assets/images/svg/icon_location.svg" alt="" />
                     </div>
                     Hà Giang
                   </li>
-                  <li class="d-flex align-items-center tag-item">
+                  <li class="d-flex align-items-center tag-item b2-medium">
                     <div class="icon">
                       <img
                         src="./assets/images/svg/icon_stopwatch.svg"
@@ -307,19 +307,19 @@
                     </div>
                     6N5D
                   </li>
-                  <li class="d-flex align-items-center tag-item">
+                  <li class="d-flex align-items-center tag-item b2-medium">
                     <div class="icon">
                       <img src="./assets/images/svg/icon_bookmark.svg" alt="" />
                     </div>
                     Khám phá văn hoá
                   </li>
-                  <li class="d-flex align-items-center tag-item">
+                  <li class="d-flex align-items-center tag-item b2-medium">
                     <div class="icon">
                       <img src="./assets/images/svg/icon_airplane.svg" alt="" />
                     </div>
                     Vietnam Airlines
                   </li>
-                  <li class="d-flex align-items-center tag-item">
+                  <li class="d-flex align-items-center tag-item b2-medium">
                     <div class="icon">
                       <img
                         src="./assets/images/svg/icon-info-circle.svg"
@@ -484,7 +484,7 @@
                     <div class="date b1-semibold">16 thg 10</div>
                   </li>
                   <li
-                    class="view-calendar d-flex flex-column align-items-center justify-content-center"
+                    class="view-calendar d-flex flex-column align-items-center justify-content-center" data-bs-toggle="modal" data-bs-target="#checkoutModal"
                   >
                     <div class="icon">
                       <img src="./assets/images/svg/ic_calendar.svg" alt="" />
@@ -1228,7 +1228,7 @@
                     </div>
                     <div class="price-sale">12.039.000 đ</div>
                   </div>
-                  <button class="choose-tour btn-custom btn--secondary">
+                  <button class="choose-tour btn-custom btn--secondary" data-bs-toggle="modal" data-bs-target="#checkoutModal">
                     Chọn gói tour
                   </button>
                 </div>
@@ -2115,6 +2115,75 @@
       </section>
       <div class="spacing"></div>
     </main>
+
+    <!-- Popup checkout -->
+    <div class="modal fade" id="checkoutModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title h3-semibold">Chọn ngày</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="departure">
+              <div class="departure-info">
+                <span class="b3-medium">Xuất phát từ Hà Nội</span>
+                <h3 class="title b1-semibold">Du lịch Hà Giang - Đồng Văn - Sông Nho Quế - Pác Pó - Bản Giốc - Lạng Sơn</h3>
+                <ul class="wrapper-tag p-0 d-flex align-items-center">
+                  <li class="d-flex align-items-center tag-item b2-medium">
+                    <div class="icon">
+                      <img src="./assets/images/svg/icon_location.svg" alt="" />
+                    </div>
+                    Hà Giang
+                  </li>
+                  <li class="d-flex align-items-center tag-item b2-medium">
+                    <div class="icon">
+                      <img
+                        src="./assets/images/svg/icon_stopwatch.svg"
+                        alt=""
+                      />
+                    </div>
+                    6N5D
+                  </li>
+                  <li class="d-flex align-items-center tag-item b2-medium">
+                    <div class="icon">
+                      <img src="./assets/images/svg/icon_bookmark.svg" alt="" />
+                    </div>
+                    Khám phá văn hoá
+                  </li>
+                  <li class="d-flex align-items-center tag-item b2-medium">
+                    <div class="icon">
+                      <img src="./assets/images/svg/icon_airplane.svg" alt="" />
+                    </div>
+                    Vietnam Airlines
+                  </li>
+                  <li class="d-flex align-items-center tag-item b2-medium">
+                    <div class="icon">
+                      <img
+                        src="./assets/images/svg/icon-info-circle.svg"
+                        alt=""
+                      />
+                    </div>
+                    Huỷ miễn phí
+                  </li>
+                </ul>
+              </div>
+              <div class="departure-calendar row g-0">
+                <div class="col-5 departure-calendar__title h3-semibold">
+                  Lịch khởi hành
+                </div>
+                <div class="col-7 departure-calendar__main">
+                  lịch
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn-custom btn--secondary">Áp dụng</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- start footer -->
     <footer class="footer">
