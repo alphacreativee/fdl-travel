@@ -168,14 +168,6 @@
     }
   }
   .tour {
-    &__image{
-      &:hover{
-        .wish-list{
-          opacity: 1;
-          visibility: visible;
-        }
-      }
-    }
     &__desc {
       padding: 16px;
       width: 100%;
