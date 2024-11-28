@@ -83,15 +83,15 @@ function parallaxImage() {
         scrollTrigger: {
           trigger: section,
           start: "top 55%",
-          end: "top 10%",
+          end: "top 0%",
           scrub: true,
           // markers: true,
         },
       });
 
-      tl.to(image, { y: 0, ease: "none", duration: 5 }).to(
+      tl.to(image, { y: 0, ease: "none", duration: 20 }).to(
         overlay,
-        { y: 0, ease: "none", duration: 5 },
+        { y: 0, ease: "none", duration: 20 },
         "<"
       );
     });
@@ -651,7 +651,10 @@ async function loadProvinces() {
     $(".js-province-matcher").select2({
       data: provinces,
       matcher: matchCustom,
-      placeholder: $(this).data("placeholder") !== '' ? $(this).data("placeholder") : 'Điểm đến',
+      placeholder:
+        $(this).data("placeholder") !== ""
+          ? $(this).data("placeholder")
+          : "Điểm đến",
       allowClear: true,
     });
   } catch (error) {
@@ -689,40 +692,40 @@ function closeSelect2() {
   });
 }
 
-function toggleWishlist(){
-  $(".wish-list.action").on("click", function(){
+function toggleWishlist() {
+  $(".wish-list.action").on("click", function () {
     $(this).toggleClass("active");
 
-    if($(".wish-list.action.active").length){
+    if ($(".wish-list.action.active").length) {
       openNotiToast();
     }
-  })
+  });
 }
 
-function openNotiToast(){
+function openNotiToast() {
   $(".toastSuccess").addClass("active");
   $(".toastSuccess .progress").addClass("active");
 
   setTimeout(() => {
-      $(".toastSuccess").removeClass("active");
+    $(".toastSuccess").removeClass("active");
   }, 5000);
 
   setTimeout(() => {
-      $(".toastSuccess .progress").removeClass("active");
+    $(".toastSuccess .progress").removeClass("active");
   }, 5300);
 }
 
-function closeNotiToast(){
+function closeNotiToast() {
   $(".toastSuccess").removeClass("active");
 
   setTimeout(() => {
-      $(".toastSuccess .progress").removeClass("active");
+    $(".toastSuccess .progress").removeClass("active");
   }, 300);
 }
 
-function filterTourList(){
-  $(".filter-list .top-location li").on("click", function(){
+function filterTourList() {
+  $(".filter-list .top-location li").on("click", function () {
     $(this).addClass("active");
     $(this).siblings().removeClass("active");
-  })
+  });
 }

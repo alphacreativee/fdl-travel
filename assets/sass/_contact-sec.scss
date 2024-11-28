@@ -126,9 +126,10 @@
   }
   .dropdown-custom__car {
     position: relative;
+
     .dropdown-custom__menu {
       position: absolute;
-      bottom: -8px;
+      bottom: -10px;
       left: 0;
       background-color: var(--color-white);
       width: 100%;
@@ -157,9 +158,27 @@
       height: 48px;
       border-radius: 8px;
       padding: 0 16px;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-left: 8px solid transparent; /* Nửa bên trái tam giác */
+        border-right: 8px solid transparent; /* Nửa bên phải tam giác */
+        border-bottom: 8px solid var(--color-white); /* Màu và chiều cao tam giác */
+        bottom: -10px;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s;
+      }
       &.--active {
         .ic img {
           transform: rotate(180deg);
+        }
+        &::before {
+          opacity: 1;
+          visibility: visible;
         }
       }
       .ic img {

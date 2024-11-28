@@ -2175,7 +2175,7 @@ p {
 }
 .contact-sec .dropdown-custom__car .dropdown-custom__menu {
   position: absolute;
-  bottom: -8px;
+  bottom: -10px;
   left: 0;
   background-color: var(--color-white);
   width: 100%;
@@ -2204,9 +2204,27 @@ p {
   height: 48px;
   border-radius: 8px;
   padding: 0 16px;
+  position: relative;
+}
+.contact-sec .dropdown-custom__car .dropdown-custom__btn::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent; /* Nửa bên trái tam giác */
+  border-right: 8px solid transparent; /* Nửa bên phải tam giác */
+  border-bottom: 8px solid var(--color-white); /* Màu và chiều cao tam giác */
+  bottom: -10px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
 }
 .contact-sec .dropdown-custom__car .dropdown-custom__btn.--active .ic img {
   transform: rotate(180deg);
+}
+.contact-sec .dropdown-custom__car .dropdown-custom__btn.--active::before {
+  opacity: 1;
+  visibility: visible;
 }
 .contact-sec .dropdown-custom__car .dropdown-custom__btn .ic img {
   transition: all 0.3s;
