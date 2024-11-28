@@ -678,6 +678,33 @@
         }
     }
 
+    .lightpick,
+    .lightpick__inner,
+    .lightpick__month{
+        width: 100%;
+    }
+
+    .lightpick{
+        box-shadow: none;
+        border: 1px solid var(--color-stroke);
+        border-radius: 16px;
+    }
+
+    .lightpick__day{
+        width: 40px;
+        margin: auto;
+        border-radius: 50%;
+        transition: all 0.3s;
+        font-weight: 400;
+
+        &.is-start-date,
+        &:hover{
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            background-image: unset;
+        }
+    }
+
     @media (min-width : 576px){
         .modal-dialog{
             max-width: 845px;
