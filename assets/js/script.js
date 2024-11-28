@@ -72,7 +72,7 @@ function chooseTime() {
       minDate: new Date(),
       startDate: new Date(),
       inline: true,
-      lang: 'vi',
+      lang: "vi",
     });
   }
 }
@@ -657,21 +657,25 @@ function pinCards() {
 }
 
 async function loadProvinces() {
-  try {
-    const response = await fetch("./assets/data/province.json");
-    const provinces = await response.json();
+  if ($(".hero-sec__search").length > 0) {
+    try {
+      const response = await fetch("./assets/data/province.json");
+      const provinces = await response.json();
 
-    $(".js-province-matcher").select2({
-      data: provinces,
-      matcher: matchCustom,
-      placeholder:
-        $(this).data("placeholder") !== ""
-          ? $(this).data("placeholder")
-          : "Điểm đến",
-      allowClear: true,
-    });
-  } catch (error) {
-    console.error("Không thể tải dữ liệu từ province.json:", error);
+      $(".js-province-matcher").select2({
+        data: provinces,
+        matcher: matchCustom,
+        placeholder:
+          $(".js-province-matcher").data("placeholder") !== ""
+            ? $(".js-province-matcher").data("placeholder")
+            : "Điểm đến",
+        allowClear: true,
+      });
+    } catch (error) {
+      console.error("Không thể tải dữ liệu từ province.json:", error);
+    }
+  } else {
+    console.warn("Phần tử có class 'hero-sec__search' không tồn tại.");
   }
 }
 

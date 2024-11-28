@@ -85,8 +85,15 @@
   &__right {
     @media (max-width: 767px) {
       position: relative;
+      padding-top: 24px;
       &::before {
         content: "";
+        position: absolute;
+        width: calc(100% + 32px);
+        height: 1px;
+        background-color: var(--color-stroke);
+        top: 0;
+        left: -16px;
       }
     }
     &--group {

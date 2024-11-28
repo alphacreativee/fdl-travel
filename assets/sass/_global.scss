@@ -104,6 +104,9 @@
 }
 .spacing-big {
   height: 120px;
+  @media (max-width: 767px) {
+    height: 48px;
+  }
 }
 .spacing-bigger {
   height: 160px;
