@@ -5,6 +5,9 @@
     position: relative;
     &.option-image {
       height: 70vh;
+      @media (max-width: 767px) {
+        height: 40vh;
+      }
     }
     .swiper-banner {
       width: 100%;

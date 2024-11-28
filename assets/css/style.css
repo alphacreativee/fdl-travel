@@ -218,6 +218,11 @@ p {
 .spacing {
   height: 80px;
 }
+@media (max-width: 767px) {
+  .spacing {
+    height: 48px;
+  }
+}
 
 .spacing-big {
   height: 120px;
@@ -560,7 +565,7 @@ p {
   justify-content: center;
   height: 35px;
   min-width: 35px;
-  background-color: #107E2F;
+  background-color: #107e2f;
   color: #fff;
   font-size: 20px;
   border-radius: 50%;
@@ -624,7 +629,7 @@ p {
   right: 0;
   height: 100%;
   width: 100%;
-  background-color: #107E2F;
+  background-color: #107e2f;
 }
 .toastSuccess .progress.active::before {
   animation: progress 5s linear forwards;
@@ -1046,6 +1051,11 @@ p {
 }
 .hero-sec__container.option-image {
   height: 70vh;
+}
+@media (max-width: 767px) {
+  .hero-sec__container.option-image {
+    height: 40vh;
+  }
 }
 .hero-sec__container .swiper-banner {
   width: 100%;
@@ -1805,7 +1815,7 @@ p {
   font-size: 40px;
   line-height: 48px;
   color: var(--color-primary);
-  margin-bottom: 48px;
+  margin-bottom: 56px;
 }
 .newsletter-sec__desc {
   margin-bottom: 16px;
@@ -2180,12 +2190,30 @@ p {
 .contact-sec__container {
   padding: 0 80px;
 }
+@media (max-width: 767px) {
+  .contact-sec__container {
+    padding: 0 16px;
+  }
+}
 .contact-sec__head {
   margin-bottom: 60px;
+}
+@media (max-width: 767px) {
+  .contact-sec__head {
+    margin-bottom: 24px;
+  }
 }
 .contact-sec__title {
   font-weight: 400;
   text-align: center;
+  max-width: 510px;
+}
+@media (max-width: 767px) {
+  .contact-sec__title {
+    font-size: 32px;
+    line-height: 40px;
+    text-align: left;
+  }
 }
 .contact-sec__inner {
   display: grid;
@@ -2194,6 +2222,14 @@ p {
   background-color: var(--color-box);
   padding: 40px;
   border-radius: 24px;
+}
+@media (max-width: 767px) {
+  .contact-sec__inner {
+    display: flex;
+    flex-direction: column;
+    padding: 24px 16px;
+    gap: 24px 0;
+  }
 }
 .contact-sec__left--info {
   display: flex;
@@ -2212,11 +2248,25 @@ p {
 .contact-sec__left--phone a:hover, .contact-sec__left--email a:hover {
   color: var(--color-primary);
 }
+@media (max-width: 767px) {
+  .contact-sec__right {
+    position: relative;
+  }
+  .contact-sec__right::before {
+    content: "";
+  }
+}
 .contact-sec__right--group {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 32px;
   margin-bottom: 24px;
+}
+@media (max-width: 767px) {
+  .contact-sec__right--group {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
 }
 .contact-sec__right--group.answer {
   grid-template-columns: 1fr;
