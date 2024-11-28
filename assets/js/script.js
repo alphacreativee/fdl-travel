@@ -693,7 +693,9 @@ function closeSelect2() {
 }
 
 function toggleWishlist() {
-  $(".wish-list.action").on("click", function () {
+  $(".wish-list.action").on("click", function (event) {
+    event.preventDefault();
+    
     $(this).toggleClass("active");
 
     if ($(".wish-list.action.active").length) {

@@ -86,24 +86,10 @@
         }
 
         .wish-list{
-            position: absolute;
             top: 24px;
             right: 24px;
-            width: 24px;
-            height: 24px;
-            z-index: 2;
-            cursor: pointer;
-
-            path{
-                transition: all 0.3s ease;
-            }
-
-            &.active{
-                path{
-                    fill: var(--color-tag-red);
-                    fill-opacity: 1;
-                }
-            }
+            opacity: 1;
+            visibility: visible;
         }
 
         .swiper{

@@ -134,6 +134,14 @@
       visibility: hidden;
       transition: all 0.3s;
       transform: translateY(50%);
+
+      &.swiper-button-next{
+        right: 16px;
+      }
+
+      &.swiper-button-prev{
+        left: 16px;
+      }
     }
     .swiper-button-next svg {
       transform: translateX(1px);
