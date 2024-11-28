@@ -63,6 +63,18 @@ function chooseTime() {
       },
     });
   }
+
+  if ($("#checkoutModalCalendar").length) {
+    var pickerCheckoutModal = new Lightpick({
+      field: document.getElementById("checkoutModalCalendar"),
+      singleDate: true,
+      numberOfMonths: 1,
+      minDate: new Date(),
+      startDate: new Date(),
+      inline: true,
+      lang: 'vi',
+    });
+  }
 }
 function parallaxImage() {
   gsap.registerPlugin(ScrollTrigger);
