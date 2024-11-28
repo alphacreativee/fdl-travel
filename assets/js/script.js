@@ -637,6 +637,7 @@ function pinCards() {
         tl.to(item, {
           scale: 0.8 + 0.02 * index,
           transformOrigin: "center center",
+          backgroundColor: "#d8d8d8",
         });
       }
     });
@@ -695,7 +696,7 @@ function closeSelect2() {
 function toggleWishlist() {
   $(".wish-list.action").on("click", function (event) {
     event.preventDefault();
-    
+
     $(this).toggleClass("active");
 
     if ($(".wish-list.action.active").length) {
