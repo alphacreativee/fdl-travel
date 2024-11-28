@@ -84,14 +84,14 @@ function parallaxImage() {
           trigger: section,
           start: "top 55%",
           end: "top 0%",
-          scrub: true,
+          scrub: 2,
           // markers: true,
         },
       });
 
-      tl.to(image, { y: 0, ease: "none", duration: 20 }).to(
+      tl.to(image, { y: 0, ease: "none", duration: 50 }).to(
         overlay,
-        { y: 0, ease: "none", duration: 20 },
+        { y: 0, ease: "none", duration: 50 },
         "<"
       );
     });
