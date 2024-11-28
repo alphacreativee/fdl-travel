@@ -692,6 +692,13 @@ p {
   visibility: visible;
 }
 
+.sort .dropdown-custom__menu {
+  right: -18px;
+}
+.sort .dropdown-custom__item {
+  text-align: right;
+}
+
 .wish-list {
   position: absolute;
   top: 16px;
@@ -3192,12 +3199,6 @@ p {
 }
 .tour-list .content-right__heading {
   margin-bottom: 12px;
-}
-.tour-list .content-right .sort .dropdown-custom__menu {
-  right: -18px;
-}
-.tour-list .content-right .sort .dropdown-custom__item {
-  text-align: right;
 }
 
 .content-sec__container {

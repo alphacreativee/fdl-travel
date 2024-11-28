@@ -605,6 +605,16 @@
   visibility: visible;
 }
 
+.sort{
+  .dropdown-custom__menu{
+      right: -18px;
+  }
+
+  .dropdown-custom__item{
+      text-align: right;
+  }
+}
+
 // wishlist
 
 .wish-list{
