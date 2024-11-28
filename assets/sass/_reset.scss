@@ -35,6 +35,9 @@ ul {
 a {
   text-decoration: none;
   display: block;
+  &:hover {
+    color: inherit;
+  }
 }
 body {
   min-height: 100vh;

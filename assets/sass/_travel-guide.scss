@@ -1,4 +1,11 @@
 .travel-guide {
+  &.blog-new {
+    .travel-guide__list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+  }
   &.contact-new {
     .travel-guide__list {
       display: grid;
