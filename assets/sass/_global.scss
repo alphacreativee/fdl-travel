@@ -539,12 +539,33 @@
   position: relative;
   cursor: default;
 
+  &.has-hover{
+    &:hover{
+      .ic{
+        path{
+          fill: var(--color-black);
+        }
+      }
+      .dropdown-custom__text{
+        color: var(--color-black);
+      }
+    }
+  }
+
   &__btn{
     display: flex;
     align-items: center;
     gap: 12px;
     color: var(--color-grey);
     cursor: pointer;
+
+    path{
+      transition: all 0.3s ease;
+    }
+  }
+
+  .dropdown-custom__text{
+    transition: all 0.3s ease;
   }
 
   &__menu {
