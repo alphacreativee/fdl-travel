@@ -98,17 +98,9 @@
                 transition: all 0.3s ease;
             }
 
-            &:hover{
-                path{
-                    stroke: var(--color-tag-red);
-                    fill: transparent;
-                }
-            }
-
             &.active{
                 path{
                     fill: var(--color-tag-red);
-                    stroke: var(--color-tag-red);
                     fill-opacity: 1;
                 }
             }

@@ -70,7 +70,8 @@ p {
   --color-primary: #b88d2e;
   --color-primary-hover: #d1a647;
   --color-banner-primary: #cca268;
-  --color-secondary: #0a354e;
+  --color-secondary: #062435;
+  --color-secondary-hover: #0a354e;
   --color-third: #307058;
   --color-white: #fff;
   --color-black: #212121;
@@ -514,11 +515,11 @@ p {
   transition: all 0.4s ease;
 }
 .btn-custom.btn--secondary {
-  background-color: #062435;
+  background-color: var(--color-secondary);
 }
 .btn-custom.btn--secondary:hover {
   color: var(--color-white);
-  background-color: #0b4465;
+  background-color: var(--color-secondary-hover);
 }
 
 .toastSuccess {
@@ -629,12 +630,49 @@ p {
   }
 }
 
+.dropdown-custom {
+  position: relative;
+  cursor: default;
+}
 .dropdown-custom__btn {
   display: flex;
   align-items: center;
   gap: 12px;
   color: var(--color-grey);
   cursor: pointer;
+}
+.dropdown-custom__menu {
+  position: absolute;
+  top: calc(100% + 5px);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 3;
+  right: 0;
+  width: 100%;
+  min-width: max-content;
+  background-color: var(--color-white);
+  border-radius: 8px;
+  padding: 8px;
+  box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.1019607843);
+}
+.dropdown-custom__menu .dropdown-custom__item {
+  width: 100%;
+  padding: 5px 10px;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.3s;
+  border-radius: 8px;
+  color: var(--color-black);
+}
+.dropdown-custom__menu .dropdown-custom__item:hover {
+  color: var(--color-primary);
+  background-color: var(--color-gary-opa);
+}
+
+.dropdown--active {
+  opacity: 1;
+  visibility: visible;
 }
 
 .header {
@@ -2297,13 +2335,8 @@ p {
 .main-detail .gallery .wish-list path {
   transition: all 0.3s ease;
 }
-.main-detail .gallery .wish-list:hover path {
-  stroke: var(--color-tag-red);
-  fill: transparent;
-}
 .main-detail .gallery .wish-list.active path {
   fill: var(--color-tag-red);
-  stroke: var(--color-tag-red);
   fill-opacity: 1;
 }
 .main-detail .gallery .swiper {
@@ -2843,6 +2876,10 @@ p {
   border: 1px solid var(--color-stroke);
   margin-top: 8px;
 }
+.page-tour-list .select2-results__option--selectable {
+  font-size: 14px;
+  line-height: 22px;
+}
 
 .tour-list {
   padding-top: 135px;
@@ -2883,6 +2920,7 @@ p {
 }
 .tour-list .content-left .filter-search .select2-container--default .select2-selection--single .select2-selection__placeholder {
   color: var(--color-grey);
+  margin-left: 0;
 }
 .tour-list .content-left .filter-list .top-location {
   margin-top: 24px;
@@ -2906,7 +2944,7 @@ p {
   cursor: pointer;
 }
 .tour-list .content-left .filter-list .top-location ul li:hover {
-  border-color: var(--color-black);
+  border-color: var(--color-secondary);
 }
 .tour-list .content-left .filter-list .top-location ul li.active {
   color: var(--color-white);
@@ -2961,11 +2999,11 @@ p {
   cursor: pointer;
 }
 .tour-list .content-left .filter-list .accordion-body ul li input[type=checkbox]:hover {
-  border-color: var(--color-grey);
+  border-color: var(--color-secondary);
 }
 .tour-list .content-left .filter-list .accordion-body ul li input[type=checkbox]:checked {
-  background-color: var(--color-black);
-  border-color: var(--color-black);
+  background-color: var(--color-secondary);
+  border-color: var(--color-secondary);
 }
 .tour-list .content-left .filter-list .accordion-body ul li input[type=checkbox]:checked::after {
   content: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 16 16"%3E%3Cpath fill="white" d="M12.293 3.293a1 1 0 0 1 0 1.414L6 10.414 3.707 8.121a1 1 0 1 1 1.414-1.414L6 7.586l5.293-5.293a1 1 0 0 1 1.414 0z"%3E%3C/path%3E%3C/svg%3E');
@@ -2990,7 +3028,7 @@ p {
 }
 .tour-list .content-left .filter-list .accordion-body ul li input[type=radio]:checked {
   background-color: var(--color-white);
-  border-color: var(--color-black) !important;
+  border-color: var(--color-secondary) !important;
 }
 .tour-list .content-left .filter-list .accordion-body ul li input[type=radio]:checked::before {
   content: "";
@@ -3001,16 +3039,22 @@ p {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background-color: var(--color-black);
+  background-color: var(--color-secondary);
 }
 .tour-list .content-left .filter-list .accordion-body ul li input[type=radio]:hover {
-  border-color: var(--color-grey);
+  border-color: var(--color-secondary);
 }
 .tour-list .content-right .tour-sec__item {
-  width: calc((100% - 48px) / 3);
+  width: calc((100% - 49px) / 3);
 }
 .tour-list .content-right__heading {
   margin-bottom: 12px;
+}
+.tour-list .content-right .sort .dropdown-custom__menu {
+  right: -18px;
+}
+.tour-list .content-right .sort .dropdown-custom__item {
+  text-align: right;
 }
 
 .content-sec__container {
