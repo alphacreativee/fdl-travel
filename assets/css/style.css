@@ -950,7 +950,7 @@ p {
   border-left: 8px solid transparent; /* Nửa bên trái tam giác */
   border-right: 8px solid transparent; /* Nửa bên phải tam giác */
   border-bottom: 8px solid var(--color-white); /* Màu và chiều cao tam giác */
-  top: -12px;
+  top: -10px;
   z-index: 1;
   left: 50%;
   transform: translateX(-50%);
@@ -1006,6 +1006,7 @@ p {
   font-size: 14px;
   line-height: 22px;
   color: var(--color-black);
+  display: none;
 }
 .header__lang .language__body .language__item:hover {
   background-color: var(--color-gary-opa);
@@ -3368,6 +3369,21 @@ p {
 }
 .footer__cta .cta__phone:hover {
   background-color: var(--color-primary-hover);
+}
+.footer__cta .cta__mess:hover a img:last-child {
+  opacity: 1;
+  visibility: visible;
+}
+.footer__cta .cta__mess a {
+  display: block;
+  position: relative;
+}
+.footer__cta .cta__mess a img:last-child {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
 }
 .footer__container {
   padding: 0 80px;
