@@ -213,6 +213,7 @@
         &--sale {
           transform: translateY(2px);
           width: max-content;
+          color: var(--color-black);
         }
         &--regular {
           text-decoration: line-through;
