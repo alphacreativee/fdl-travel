@@ -20,6 +20,7 @@
     transition: all 0.3s;
     opacity: 1;
     visibility: visible;
+
     &.hide {
       transform: translateX(10px);
       opacity: 0;
@@ -37,6 +38,27 @@
         transition: all 0.3s;
         &:hover {
           background-color: var(--color-primary-hover);
+        }
+      }
+      &__mess {
+        &:hover {
+          a {
+            img:last-child {
+              opacity: 1;
+              visibility: visible;
+            }
+          }
+        }
+        a {
+          display: block;
+          position: relative;
+          img:last-child {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+          }
         }
       }
     }
