@@ -3,6 +3,11 @@
         border: 1px solid var(--color-stroke);
         margin-top: 8px;
     }
+
+    .select2-results__option--selectable{
+        font-size: 14px;
+        line-height: 22px;
+    }
 }
 
 .tour-list{
@@ -51,6 +56,7 @@
 
             .select2-container--default .select2-selection--single .select2-selection__placeholder{
                 color: var(--color-grey);
+                margin-left: 0;
             }
         }
 
@@ -77,7 +83,7 @@
                         cursor: pointer;
 
                         &:hover{
-                            border-color: var(--color-black);
+                            border-color: var(--color-secondary);
                         }
 
                         &.active{
@@ -145,12 +151,12 @@
                             cursor: pointer;
 
                             &:hover{
-                                border-color: var(--color-grey);
+                                border-color: var(--color-secondary);
                             }
 
                             &:checked{
-                                background-color: var(--color-black);
-                                border-color: var(--color-black);
+                                background-color: var(--color-secondary);
+                                border-color: var(--color-secondary);
                             }
 
                             &:checked::after{
@@ -178,7 +184,7 @@
 
                             &:checked{
                                 background-color: var(--color-white);
-                                border-color: var(--color-black) !important;
+                                border-color: var(--color-secondary) !important;
 
                                 &::before{
                                     content: '';
@@ -189,12 +195,12 @@
                                     width: 12px;
                                     height: 12px;
                                     border-radius: 50%;
-                                    background-color: var(--color-black);
+                                    background-color: var(--color-secondary);
                                 }
                             }
 
                             &:hover{
-                                border-color: var(--color-grey);
+                                border-color: var(--color-secondary);
                             }
                         }
                     }
@@ -205,11 +211,21 @@
     
     .content-right{
         .tour-sec__item{
-            width: calc((100% - 48px) / 3);
+            width: calc((100% - 49px) / 3);
         }
         
         &__heading{
             margin-bottom: 12px;
+        }
+
+        .sort{
+            .dropdown-custom__menu{
+                right: -18px;
+            }
+
+            .dropdown-custom__item{
+                text-align: right;
+            }
         }
     }
 }
