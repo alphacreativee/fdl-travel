@@ -41,6 +41,7 @@ ul {
 
 a {
   text-decoration: none;
+  display: block;
 }
 
 body {
@@ -1302,6 +1303,7 @@ p {
 .tour-sec .tour__desc--price--sale {
   transform: translateY(2px);
   width: max-content;
+  color: var(--color-black);
 }
 .tour-sec .tour__desc--price--regular {
   text-decoration: line-through;
