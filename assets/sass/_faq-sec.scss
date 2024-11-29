@@ -1,4 +1,7 @@
 .faq-sec {
+  @media (max-width: 991px) {
+    padding: 0 40px;
+  }
   @media (max-width: 767px) {
     padding: 0 16px;
   }
@@ -7,10 +10,13 @@
     margin-bottom: 36px;
     color: var(--color-primary);
     font-weight: 400;
-    @media (max-width: 767px) {
+    @media (max-width: 991px) {
       font-size: 32px;
       line-height: 40px;
       text-align: left;
+      margin-bottom: 48px;
+    }
+    @media (max-width: 767px) {
       margin-bottom: 16px;
     }
   }

@@ -98,12 +98,18 @@
 }
 .spacing {
   height: 80px;
+  @media (max-width: 991px) {
+    height: 64px;
+  }
   @media (max-width: 767px) {
     height: 48px;
   }
 }
 .spacing-big {
   height: 120px;
+  @media (max-width: 991px) {
+    height: 64px;
+  }
   @media (max-width: 767px) {
     height: 48px;
   }
