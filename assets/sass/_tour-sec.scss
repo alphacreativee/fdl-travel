@@ -105,6 +105,9 @@
     // aspect-ratio: 302 / 384;
     border-radius: 16px;
     overflow: hidden;
+    @media (max-width: 991px) {
+      width: 100%;
+    }
   }
   .swiper-tour {
     .swiper-slide {

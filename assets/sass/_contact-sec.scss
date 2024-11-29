@@ -9,6 +9,11 @@
   }
   &.new {
     background-size: cover;
+    @media (max-width: 991px) {
+      .contact-sec__right::before {
+        content: unset;
+      }
+    }
     .contact-sec__inner {
       grid-template-columns: 1fr 1fr;
       background-color: transparent;
@@ -17,11 +22,24 @@
     .contact-sec__container {
       padding-top: 120px;
       padding-bottom: 250px;
+      @media (max-width: 991px) {
+        padding-top: 64px;
+        padding-bottom: 64px;
+      }
+      @media (max-width: 767px) {
+        padding-top: 48px;
+        padding-bottom: 48px;
+      }
     }
     .contact-sec__left--title {
       font-weight: 400;
       max-width: 465px;
       width: 100%;
+      @media (max-width: 991px) {
+        font-size: 32px;
+        line-height: 40px;
+        text-align: center;
+      }
     }
     .contact-sec__right--button {
       background-color: var(--color-primary);
