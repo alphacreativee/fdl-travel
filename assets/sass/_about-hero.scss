@@ -22,6 +22,10 @@
     @media (min-width: 1441px) {
       bottom: 30%;
     }
+    @media (max-width: 991px) {
+      bottom: 0;
+      left: 40px;
+    }
     @media (max-width: 767px) {
       left: 24px;
       bottom: 0;
@@ -49,10 +53,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    @media (max-width: 991px) {
+      justify-content: flex-start;
+      padding-inline: 40px;
+    }
+    @media (max-width: 767px) {
+      justify-content: flex-start;
+      padding-inline: 0px;
+    }
   }
   &__desc {
     max-width: 410px;
     width: 100%;
+    @media (max-width: 991px) {
+      z-index: 3;
+      max-width: 100%;
+    }
     @media (max-width: 767px) {
       max-width: 100%;
       padding: 0 24px;

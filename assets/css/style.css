@@ -1974,6 +1974,12 @@ p {
     bottom: 30%;
   }
 }
+@media (max-width: 991px) {
+  .hero-about__title {
+    bottom: 0;
+    left: 40px;
+  }
+}
 @media (max-width: 767px) {
   .hero-about__title {
     left: 24px;
@@ -2003,9 +2009,27 @@ p {
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 991px) {
+  .hero-about__right {
+    justify-content: flex-start;
+    padding-inline: 40px;
+  }
+}
+@media (max-width: 767px) {
+  .hero-about__right {
+    justify-content: flex-start;
+    padding-inline: 0px;
+  }
+}
 .hero-about__desc {
   max-width: 410px;
   width: 100%;
+}
+@media (max-width: 991px) {
+  .hero-about__desc {
+    z-index: 3;
+    max-width: 100%;
+  }
 }
 @media (max-width: 767px) {
   .hero-about__desc {
@@ -2072,8 +2096,23 @@ p {
 .core-values__container {
   padding: 0 80px;
 }
+@media (max-width: 991px) {
+  .core-values__container {
+    padding: 0;
+  }
+}
 .core-values__head {
   margin-bottom: 60px;
+}
+@media (max-width: 991px) {
+  .core-values__head {
+    margin-bottom: 48px;
+  }
+}
+@media (max-width: 767px) {
+  .core-values__head {
+    margin-bottom: 40px;
+  }
 }
 .core-values__title {
   color: var(--color-primary);
@@ -2090,11 +2129,48 @@ p {
   display: flex;
   gap: 24px;
 }
+@media (max-width: 991px) {
+  .core-values__list {
+    overflow-x: scroll;
+  }
+  .core-values__list::-webkit-scrollbar {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .core-values__list {
+    gap: 16px;
+  }
+}
 .core-values__item {
   width: calc((100% - 72px) / 4);
   background-color: var(--color-box);
   border-radius: 16px;
   padding: 40px;
+}
+@media (max-width: 991px) {
+  .core-values__item {
+    min-width: 350px;
+    aspect-ratio: 1;
+  }
+  .core-values__item:first-child {
+    margin-left: 40px;
+  }
+  .core-values__item:last-child {
+    margin-right: 40px;
+  }
+}
+@media (max-width: 767px) {
+  .core-values__item {
+    min-width: 300px;
+    aspect-ratio: 1;
+  }
+  .core-values__item:first-child {
+    margin-left: 16px;
+  }
+  .core-values__item:last-child {
+    margin-right: 16px;
+  }
 }
 
 .why-choose {
@@ -2127,6 +2203,14 @@ p {
     margin-inline: auto;
   }
 }
+@media (max-width: 767px) {
+  .why-choose__heading {
+    left: 16px !important;
+    right: 16px !important;
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
 .why-choose__cards {
   display: flex;
   flex-direction: column;
@@ -2136,6 +2220,12 @@ p {
   margin-left: auto;
   margin-right: 80px;
   width: 520px;
+}
+@media (max-width: 767px) {
+  .why-choose__container--card {
+    width: calc(100% - 32px);
+    margin-right: auto;
+  }
 }
 .why-choose__card {
   width: 100%;
