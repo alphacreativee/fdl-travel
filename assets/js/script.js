@@ -84,9 +84,9 @@ function parallaxImage() {
     sections.forEach((section) => {
       const image = section.querySelector(".strategies_image");
       const overlay = section.querySelector(".strategies_image-overlay");
-
+      const yPercent = $(window).width() < 991 ? "40" : "100";
       gsap.set([image, overlay], {
-        y: 100,
+        y: yPercent,
         willChange: "transform",
         transformStyle: "preserve-3d",
       });
@@ -571,6 +571,8 @@ function swiperCustomStory() {
 }
 function parrallaxAboutBanner() {
   gsap.registerPlugin(ScrollTrigger);
+  let triggerStart = $(window).width() < 991 ? "top top" : "top 42%";
+
   gsap.set([".hero-about__title", ".hero-about__desc"], {
     y: 0,
     willChange: "transform",
@@ -579,7 +581,7 @@ function parrallaxAboutBanner() {
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: ".hero-about__title",
-      start: "top 42%",
+      start: triggerStart,
       end: "top 20%",
       scrub: 1.5,
     },

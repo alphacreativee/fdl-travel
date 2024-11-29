@@ -1,11 +1,14 @@
 .why-choose {
   margin-bottom: 375px;
+  @media (max-width: 991px) {
+    margin-bottom: 560px;
+  }
   &__name {
     text-align: center;
   }
   &.animation-center {
     .why-choose__heading {
-      left: 50%;
+      left: 50% !important;
       transform: translateX(-50%);
       top: 120px;
       text-align: center;
@@ -44,9 +47,12 @@
     margin-left: auto;
     margin-right: 80px;
     width: 520px;
+    @media (max-width: 991px) {
+      width: calc(100% - 80px);
+      margin-right: auto;
+    }
     @media (max-width: 767px) {
       width: calc(100% - 32px);
-      margin-right: auto;
     }
   }
   &__card {
@@ -58,6 +64,10 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    @media (max-width: 991px) {
+      height: 350px;
+      padding: 24px !important;
+    }
   }
   &__image {
     width: 100%;
@@ -83,5 +93,8 @@
     position: absolute;
     left: 80px;
     top: 120px;
+    @media (max-width: 991px) {
+      top: 80px;
+    }
   }
 }
