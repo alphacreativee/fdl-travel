@@ -1,4 +1,12 @@
 .contact-sec {
+  @media (min-width: 1441px) {
+    &__body {
+      max-width: 1440px;
+      width: 100%;
+      padding-inline: 80px;
+      margin-inline: auto;
+    }
+  }
   &.new {
     background-size: cover;
     .contact-sec__inner {
@@ -183,6 +191,7 @@
       opacity: 0;
       visibility: hidden;
       transition: all 0.3s;
+      top: unset;
       &.dropdown--active {
         opacity: 1;
         visibility: visible;

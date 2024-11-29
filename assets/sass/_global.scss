@@ -96,6 +96,22 @@
 .color-grey {
   color: var(--color-grey);
 }
+@media (min-width: 1441px) {
+  section {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    &.hero-sec,
+    &.customer-story,
+    &.why-choose,
+    &.contact-sec,
+    &.visa-application,
+    &.hero-about,
+    &.partner {
+      max-width: 100%;
+    }
+  }
+}
 .spacing {
   height: 80px;
   @media (max-width: 991px) {

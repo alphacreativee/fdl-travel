@@ -4,9 +4,15 @@
   left: 0;
   right: 0;
   z-index: 9999;
+  background-color: var(--color-secondary);
   &__inner {
     padding: 45px 80px 15px;
-    background-color: var(--color-secondary);
+
+    @media (min-width: 1441px) {
+      max-width: 1440px;
+      width: 100%;
+      margin: 0 auto;
+    }
   }
   &__menu {
     nav {

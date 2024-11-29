@@ -11,6 +11,11 @@
   &__title {
     padding: 0 80px;
     margin-bottom: 40px;
+    @media (min-width: 1441px) {
+      max-width: 1440px;
+      width: 100%;
+      margin-inline: auto;
+    }
   }
   &__item {
     position: relative;

@@ -1,5 +1,6 @@
 .footer {
   position: relative;
+
   &.freeze {
     .footer__cta {
       position: absolute;
@@ -74,6 +75,12 @@
   }
   &__top {
     padding: 40px 0;
+    @media (min-width: 1441px) {
+      max-width: 1440px;
+      width: 100%;
+      margin: 0 auto;
+      padding-inline: 80px;
+    }
     @media (max-width: 991px) {
       padding: 24px 0;
     }
@@ -96,6 +103,14 @@
     background-color: var(--color-secondary);
     padding: 32px 80px;
     position: relative;
+    @media (min-width: 1441px) {
+      .row {
+        max-width: 1440px;
+        width: 100%;
+        margin: 0 auto;
+        padding-inline: 80px;
+      }
+    }
     @media (max-width: 991px) {
       padding: 40px;
     }

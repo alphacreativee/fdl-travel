@@ -12,6 +12,12 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
+    @media (min-width: 1441px) {
+      max-width: 1440px;
+      width: 100%;
+      margin-inline: auto;
+      padding-inline: 80px;
+    }
   }
   .flip-card {
     width: 100%;

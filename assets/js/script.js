@@ -657,7 +657,7 @@ function pinCards() {
 }
 
 async function loadProvinces() {
-  if ($(".hero-sec__search").length > 0) {
+  if ($(".js-province-matcher").length > 0) {
     try {
       const response = await fetch("./assets/data/province.json");
       const provinces = await response.json();

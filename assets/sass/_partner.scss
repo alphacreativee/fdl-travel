@@ -1,4 +1,12 @@
 .partner {
+  @media (min-width: 1441px) {
+    &__inner {
+      max-width: 1440px;
+      width: 100%;
+      margin: 0 auto;
+      padding-inline: 80px;
+    }
+  }
   &__container {
     padding: 80px;
     background-color: var(--color-gary-opa);

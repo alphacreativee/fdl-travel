@@ -19,6 +19,13 @@
     left: 80px;
     top: 80px;
     z-index: 2;
+    @media (min-width: 1441px) {
+      right: 0;
+      left: 0 !important;
+      max-width: 1440px;
+      width: 100%;
+      margin-inline: auto;
+    }
   }
   &__cards {
     display: flex;

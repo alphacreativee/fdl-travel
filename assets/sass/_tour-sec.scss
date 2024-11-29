@@ -17,12 +17,15 @@
     }
     .travel-guide__item {
       display: grid;
-      grid-template-columns: 4fr 6fr;
+      grid-template-columns: 4.5fr 5.5fr;
       gap: 16px;
     }
     .travel-guide__image {
       width: 100%;
       aspect-ratio: 217 / 122;
+      margin-bottom: 0;
+    }
+    .travel-guide__date {
       margin-bottom: 0;
     }
     .travel-guide__name {
@@ -135,11 +138,11 @@
       transition: all 0.3s;
       transform: translateY(50%);
 
-      &.swiper-button-next{
+      &.swiper-button-next {
         right: 16px;
       }
 
-      &.swiper-button-prev{
+      &.swiper-button-prev {
         left: 16px;
       }
     }
