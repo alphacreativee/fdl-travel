@@ -10,6 +10,12 @@
   &__container {
     padding: 80px;
     background-color: var(--color-gary-opa);
+    @media (max-width: 991px) {
+      padding: 64px 40px;
+    }
+    @media (max-width: 767px) {
+      padding: 48px 16px;
+    }
   }
   &__head {
     display: flex;
@@ -17,6 +23,12 @@
     align-items: center;
     flex-direction: column;
     margin-bottom: 60px;
+    @media (max-width: 991px) {
+      margin-bottom: 32px;
+    }
+    @media (max-width: 767px) {
+      margin-bottom: 24px;
+    }
   }
   &__desc {
     max-width: 630px;
@@ -26,11 +38,18 @@
   &__title {
     margin-bottom: 24px;
     font-weight: 400;
+    @media (max-width: 991px) {
+      font-size: 32px;
+      line-height: 40px;
+    }
   }
   &__body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 24px;
+    @media (max-width: 991px) {
+      grid-template-columns: 1fr;
+    }
   }
   &__logo {
     width: 120px;
