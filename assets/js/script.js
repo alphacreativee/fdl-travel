@@ -496,8 +496,8 @@ function swiperTravelGuide() {
 function swiperCustomStory() {
   if ($(".customer-story").length) {
     var swiperCustomStory = new Swiper(".swiper-customer-story", {
-      slidesPerView: 4.5,
-      spaceBetween: 24,
+      slidesPerView: 1.5,
+      spaceBetween: 16,
       speed: 8000,
       loop: true,
       centeredSlides: true,
@@ -511,6 +511,12 @@ function swiperCustomStory() {
       freeModeMomentumRatio: 0.5,
       loopedSlides: 5,
       // loopAdditionalSlides: 5,
+      breakpoints: {
+        992: {
+          slidesPerView: 4.5,
+          spaceBetween: 24,
+        },
+      },
     });
   }
   if ($(".customer-story").length) {

@@ -1,9 +1,19 @@
 .content-sec {
   &__container {
     padding: 0 80px;
+    @media (max-width: 991px) {
+      padding: 0 40px;
+    }
+    @media (max-width: 767px) {
+      padding: 0 16px;
+    }
   }
   &__content {
     font-weight: 400;
     text-align: center;
+    @media (max-width: 991px) {
+      font-size: 32px;
+      line-height: 40px;
+    }
   }
 }

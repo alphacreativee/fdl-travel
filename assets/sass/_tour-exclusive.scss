@@ -1,11 +1,22 @@
 .tour-exclusive {
   &__container {
     padding: 0 80px;
+    @media (max-width: 991px) {
+      padding: 0 40px;
+    }
+    @media (max-width: 767px) {
+      padding: 0 16px;
+    }
   }
   &__head {
     margin-bottom: 60px;
   }
   &__title {
     font-weight: 400;
+    @media (max-width: 991px) {
+      font-size: 32px;
+      line-height: 40px;
+      text-align: center;
+    }
   }
 }

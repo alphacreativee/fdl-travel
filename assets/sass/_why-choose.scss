@@ -12,6 +12,14 @@
       transform: translateX(-50%);
       top: 120px;
       text-align: center;
+      max-width: 630px;
+      @media (max-width: 991px) {
+        top: 80px;
+        max-width: 100%;
+        left: 0 !important;
+        right: 0 !important;
+        transform: translateX(0);
+      }
     }
     .why-choose__container--card {
       margin: 0 auto;

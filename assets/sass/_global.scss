@@ -132,6 +132,12 @@
 }
 .spacing-bigger {
   height: 160px;
+  @media (max-width: 991px) {
+    height: 64px;
+  }
+  @media (max-width: 767px) {
+    height: 56px;
+  }
 }
 // css lightpick
 
