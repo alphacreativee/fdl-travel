@@ -213,6 +213,9 @@
       }
       &--name {
         margin-bottom: 8px;
+        a{
+          color: var(--color-black);
+        }
       }
       ul {
         display: flex;
