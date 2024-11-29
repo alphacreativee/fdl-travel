@@ -2185,7 +2185,7 @@ p {
   text-align: center;
 }
 .why-choose.animation-center .why-choose__heading {
-  left: 50%;
+  left: 50% !important;
   transform: translateX(-50%);
   top: 120px;
   text-align: center;
