@@ -3321,6 +3321,7 @@ p {
 
 #checkoutModal .btn-custom {
   min-width: 170px;
+  margin: 0;
 }
 #checkoutModal .modal-header {
   padding: 16px 24px;
@@ -3359,6 +3360,37 @@ p {
 #checkoutModal .modal-body .departure-calendar {
   margin-top: 16px;
 }
+#checkoutModal .modal-body .departure-quantity {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--color-grey);
+}
+#checkoutModal .modal-body .departure-quantity__item {
+  padding: 16px;
+  border: 1px solid var(--color-stroke);
+  border-radius: 8px;
+}
+#checkoutModal .modal-body .departure-quantity__item:not(:last-child) {
+  margin-bottom: 16px;
+}
+#checkoutModal .modal-body .departure-quantity__item button {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--color-grey);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#checkoutModal .modal-body .departure-quantity__item .number {
+  width: 32px;
+  height: auto;
+  text-align: center;
+}
+#checkoutModal .modal-footer {
+  padding: 16px 24px;
+  margin: 0;
+}
 #checkoutModal .lightpick,
 #checkoutModal .lightpick__inner,
 #checkoutModal .lightpick__month {
@@ -3380,6 +3412,18 @@ p {
   background-color: var(--color-primary);
   color: var(--color-white);
   background-image: unset;
+}
+#checkoutModal .lightpick__month-title-bar {
+  margin-bottom: 32px;
+}
+#checkoutModal .total-right {
+  gap: 24px;
+}
+#checkoutModal .total .price {
+  color: var(--color-primary);
+}
+#checkoutModal .total .note {
+  color: var(--color-grey);
 }
 @media (min-width: 576px) {
   #checkoutModal .modal-dialog {

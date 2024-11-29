@@ -34,6 +34,7 @@ $(document).ready(function () {
   toggleWishlist();
   filterTourList();
   chooseTime();
+  modalCheckoutTour();
 });
 window.onload = function () {
   window.scrollTo(0, 0);
@@ -749,4 +750,64 @@ function filterTourList() {
     $(this).addClass("active");
     $(this).siblings().removeClass("active");
   });
+}
+
+function modalCheckoutTour(){
+  let step = 1;
+  
+  $("#apply-btn").on("click", function(){
+    step = 2;
+    updateLayoutModalCheckout(step)
+  })
+
+  $("#checkoutModal [minus]").on("click", function(){
+    const thisButton = $(this);
+    const action = 'decrease';
+    changeQuantity(thisButton,action);
+  })
+
+  $("#checkoutModal [plus]").on("click", function(){
+    const thisButton = $(this);
+    const action = 'increase';
+    changeQuantity(thisButton,action);
+  })
+}
+
+function updateLayoutModalCheckout(step){
+  const modalCheckout = $("#checkoutModal");
+
+  if(step == 2){
+    $("#apply-btn").addClass("d-none");
+    modalCheckout.find(".total").removeClass("d-none").addClass("d-flex");
+    modalCheckout.find(".departure-quantity").removeClass("d-none").addClass("d-flex");
+  }
+}
+
+function changeQuantity(thisButton,action) {
+  var $numberDiv = thisButton.siblings(".number");
+  var min = parseInt($numberDiv.data('min'));
+  var max = parseInt($numberDiv.data('max'));
+  var currentQuantity = parseInt($numberDiv.text());
+
+  if (action === 'increase') {
+    if (currentQuantity < max) {
+      $numberDiv.text(currentQuantity + 1);
+    }
+  } else if (action === 'decrease') {
+    if (currentQuantity > min) {
+      $numberDiv.text(currentQuantity - 1);
+    }
+  }
+}
+
+function updateNumber(){
+  var currentQuantity = parseInt($(this).text());
+  var min = parseInt($(this).data('min'));
+  var max = parseInt($(this).data('max'));
+  
+  if (currentQuantity < min) {
+    $(this).text(min);
+  } else if (currentQuantity > max) {
+    $(this).text(max);
+  }
 }

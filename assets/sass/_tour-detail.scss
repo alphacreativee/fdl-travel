@@ -627,6 +627,7 @@
 #checkoutModal{
     .btn-custom{
         min-width: 170px;
+        margin: 0;
     }
 
     .modal-header{
@@ -675,7 +676,44 @@
             &-calendar{
                 margin-top: 16px;
             }
+
+            &-quantity{
+                margin-top: 16px;
+                padding-top: 16px;
+                border-top: 1px solid var(--color-grey);
+
+                &__item{
+                    padding: 16px;
+                    border: 1px solid var(--color-stroke);
+                    border-radius: 8px;
+
+                    &:not(:last-child){
+                        margin-bottom: 16px;
+                    }
+
+                    button{
+                        width: 32px;
+                        height: 32px;
+                        border-radius: 50%;
+                        border: 1px solid var(--color-grey);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+
+                    .number{
+                        width: 32px;
+                        height: auto;
+                        text-align: center;
+                    }
+                }
+            }
         }
+    }
+
+    .modal-footer{
+        padding: 16px 24px;
+        margin: 0;
     }
 
     .lightpick,
@@ -702,6 +740,24 @@
             background-color: var(--color-primary);
             color: var(--color-white);
             background-image: unset;
+        }
+    }
+
+    .lightpick__month-title-bar{
+        margin-bottom: 32px;
+    }
+
+    .total{
+        &-right{
+            gap: 24px;
+        }
+
+        .price{
+            color: var(--color-primary);
+        }
+
+        .note{
+            color: var(--color-grey);
         }
     }
 
