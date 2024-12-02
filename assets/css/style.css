@@ -2275,6 +2275,11 @@ p {
   text-align: center;
   max-width: 630px;
 }
+@media (min-width: 1441px) {
+  .why-choose.animation-center .why-choose__heading {
+    right: unset;
+  }
+}
 @media (max-width: 991px) {
   .why-choose.animation-center .why-choose__heading {
     top: 80px;

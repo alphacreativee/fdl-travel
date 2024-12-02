@@ -13,6 +13,9 @@
       top: 120px;
       text-align: center;
       max-width: 630px;
+      @media (min-width: 1441px) {
+        right: unset;
+      }
       @media (max-width: 991px) {
         top: 80px;
         max-width: 100%;
