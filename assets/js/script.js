@@ -38,6 +38,7 @@ $(document).ready(function () {
   filterTourList();
   chooseTime();
   modalCheckoutTour();
+  viewCalendarModal();
 });
 window.onload = function () {
   window.scrollTo(0, 0);
@@ -814,7 +815,35 @@ function updateLayoutModalCheckout(step) {
       .find(".departure-quantity")
       .removeClass("d-none")
       .addClass("d-flex");
+
+    modalCheckout.find(".departure-calendar__main--list").removeClass("d-none").addClass("d-flex");
+    modalCheckout.find(".lightpick").addClass("d-none");
   }
+  else{
+    $("#apply-btn").addClass("d-block").removeClass("d-none");
+    modalCheckout.find(".total").removeClass("d-flex").addClass("d-none");
+    modalCheckout
+      .find(".departure-quantity")
+      .removeClass("d-flex")
+      .addClass("d-none");
+
+    modalCheckout.find(".departure-calendar__main--list").removeClass("d-flex").addClass("d-none");
+    modalCheckout.find(".lightpick").removeClass("d-none");
+  }
+}
+
+function viewCalendarModal(){
+  const modalCheckout = $("#checkoutModal");
+
+  $("#checkoutModal .view-calendar").on("click", function(){
+    const step = 1;
+    updateLayoutModalCheckout(step);
+  })
+  
+  $("#checkoutModal .departure-calendar__main--list li:not('.view-calendar')").on("click", function(){
+    $(this).addClass("active");
+    $(this).siblings().removeClass("active");
+  })
 }
 
 function changeQuantity(thisButton, action) {
@@ -827,10 +856,14 @@ function changeQuantity(thisButton, action) {
     if (currentQuantity < max) {
       $numberDiv.text(currentQuantity + 1);
     }
+    thisButton.attr("disabled", currentQuantity + 1 >= max ? "disabled" : false);
+    $numberDiv.siblings("[minus]").attr("disabled", false);
   } else if (action === "decrease") {
     if (currentQuantity > min) {
       $numberDiv.text(currentQuantity - 1);
     }
+    $numberDiv.siblings("[minus]").attr("disabled", currentQuantity - 1 <= min ? "disabled" : false);
+    $numberDiv.siblings("[plus]").attr("disabled", false);
   }
 }
 

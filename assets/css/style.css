@@ -3761,6 +3761,32 @@ p {
 #checkoutModal .modal-body .departure-calendar {
   margin-top: 16px;
 }
+#checkoutModal .modal-body .departure-calendar ul {
+  width: 100%;
+  gap: 16px;
+}
+#checkoutModal .modal-body .departure-calendar ul li {
+  width: calc((100% - 64px) / 5);
+  border: 1px solid var(--color-stroke);
+  background-color: var(--color-white);
+  border-radius: 8px;
+  padding: 15px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+#checkoutModal .modal-body .departure-calendar ul li:hover {
+  border: 1px solid var(--color-grey);
+  color: var(--color-grey);
+}
+#checkoutModal .modal-body .departure-calendar ul li.active, #checkoutModal .modal-body .departure-calendar ul li.active:hover {
+  border: 1px solid var(--color-primary);
+  background-color: var(--color-box);
+  color: var(--color-black);
+}
+#checkoutModal .modal-body .departure-calendar ul li img {
+  width: 18px;
+  height: 18px;
+}
 #checkoutModal .modal-body .departure-quantity {
   margin-top: 16px;
   padding-top: 16px;
@@ -3782,6 +3808,10 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+#checkoutModal .modal-body .departure-quantity__item button[disabled=disabled] {
+  opacity: 0.5;
+  cursor: default;
 }
 #checkoutModal .modal-body .departure-quantity__item .number {
   width: 32px;
@@ -3829,6 +3859,7 @@ p {
 @media (min-width: 576px) {
   #checkoutModal .modal-dialog {
     max-width: 845px;
+    margin: 5rem auto;
   }
 }
 
