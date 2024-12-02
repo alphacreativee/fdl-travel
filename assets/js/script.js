@@ -149,7 +149,13 @@ function closeModalBoot() {
 }
 function scrollHeader() {
   gsap.registerPlugin(ScrollTrigger);
-  let height = 33 * -1;
+  let headerInner =
+    document.querySelector(".header__inner")?.getBoundingClientRect().height ||
+    0;
+
+  let height = window.innerWidth < 991 ? -headerInner : -33;
+
+  console.log(height);
   function initializeScrollTrigger() {
     navTop = gsap
       .from(".header", {
