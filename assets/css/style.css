@@ -476,6 +476,11 @@ p {
   padding-left: 28px;
   margin-left: 12px;
 }
+@media (max-width: 991px) {
+  .select2-container--default .select2-selection--single .select2-selection__rendered {
+    margin-left: 0;
+  }
+}
 
 .select2-container--default .select2-selection--single {
   border: none;
@@ -494,6 +499,11 @@ p {
   top: 50%;
   left: 12px;
   transform: translateY(-50%);
+}
+@media (max-width: 991px) {
+  .select2-container--default .select2-selection--single::after {
+    left: 0;
+  }
 }
 
 .select2-dropdown {
@@ -1145,9 +1155,14 @@ p {
 .hero-sec__container.option-image {
   height: 70vh;
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .hero-sec__container.option-image {
     height: 40vh;
+  }
+}
+@media (max-width: 991px) {
+  .hero-sec__container {
+    height: 55vh;
   }
 }
 .hero-sec__container .swiper-banner {
@@ -1174,6 +1189,13 @@ p {
   top: 140px;
   z-index: 2;
 }
+@media (max-width: 991px) {
+  .hero-sec__content {
+    left: 54px;
+    right: 54px;
+    transform: translateX(0);
+  }
+}
 .hero-sec__content--heading {
   font-size: 88px;
   line-height: 96px;
@@ -1181,6 +1203,12 @@ p {
   color: var(--color-white);
   text-align: center;
   margin-bottom: 24px;
+}
+@media (max-width: 991px) {
+  .hero-sec__content--heading {
+    font-size: 48px;
+    line-height: 56px;
+  }
 }
 .hero-sec__content--fdl {
   display: flex;
@@ -1217,13 +1245,35 @@ p {
   border-radius: 12px;
   padding: 8px;
 }
+@media (max-width: 991px) {
+  .hero-sec__search {
+    max-width: calc(100% - 80px);
+    bottom: 24px;
+  }
+}
+@media (max-width: 767px) {
+  .hero-sec__search {
+    max-width: calc(100% - 32px);
+  }
+}
 .hero-sec__search .search-bar {
   display: grid;
   grid-template-columns: repeat(2, 1fr) 140px;
 }
+@media (max-width: 991px) {
+  .hero-sec__search .search-bar {
+    grid-template-columns: 1fr;
+  }
+}
 .hero-sec .search-destination {
   display: flex;
   align-self: center;
+}
+@media (max-width: 991px) {
+  .hero-sec .search-destination {
+    padding-bottom: 8px;
+    padding-top: 8px;
+  }
 }
 .hero-sec .dropdown-custom__text {
   transform: translateY(2px);
@@ -1301,6 +1351,14 @@ p {
   padding: 16px;
   border-left: 1px solid var(--color-stroke);
 }
+@media (max-width: 991px) {
+  .hero-sec .date-arrival {
+    border-left: none;
+    padding: 12px 0;
+    border-top: 1px solid var(--color-stroke);
+    border-bottom: 1px solid var(--color-stroke);
+  }
+}
 .hero-sec .date-arrival .date input {
   border: none;
   transform: translateY(2px);
@@ -1314,7 +1372,71 @@ p {
   width: 100%;
   height: 100%;
 }
+@media (max-width: 991px) {
+  .hero-sec .search-btn {
+    height: 48px;
+    width: 100%;
+    margin-top: 8px;
+  }
+}
+.hero-sec .select2-selection__arrow {
+  opacity: 0;
+}
 
+@media (max-width: 991px) {
+  .tour-sec.home .tour-sec__container {
+    padding: 0;
+  }
+}
+@media (max-width: 991px) {
+  .tour-sec.home .tour-sec__result {
+    padding: 0 40px;
+  }
+}
+@media (max-width: 991px) {
+  .tour-sec.home .tour-sec__result {
+    padding: 0 16px;
+  }
+}
+@media (max-width: 991px) {
+  .tour-sec.home .tour-sec__title {
+    padding-left: 40px;
+  }
+}
+@media (max-width: 767px) {
+  .tour-sec.home .tour-sec__title {
+    padding-left: 16px;
+  }
+}
+.tour-sec.home .tour-sec__button .filter-button {
+  min-width: max-content;
+}
+@media (max-width: 991px) {
+  .tour-sec.home .tour-sec__button .filter-button:first-child {
+    margin-left: 40px;
+  }
+  .tour-sec.home .tour-sec__button .filter-button:last-child {
+    margin-right: 40px;
+  }
+}
+@media (max-width: 767px) {
+  .tour-sec.home .tour-sec__button .filter-button:first-child {
+    margin-left: 16px;
+  }
+  .tour-sec.home .tour-sec__button .filter-button:last-child {
+    margin-right: 16px;
+  }
+}
+@media (max-width: 991px) {
+  .tour-sec.home .tour-sec__filter {
+    margin-bottom: 32px;
+  }
+}
+@media (max-width: 767px) {
+  .tour-sec.home .tour-sec__filter {
+    margin-bottom: 24px;
+  }
+}
 .tour-sec.blog-col .tour-sec__container {
   padding: 0;
 }
@@ -1454,6 +1576,12 @@ p {
 .tour-sec__title {
   margin-bottom: 24px;
 }
+@media (max-width: 991px) {
+  .tour-sec__title {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
 .tour-sec__all {
   display: flex;
   align-items: center;
@@ -1480,6 +1608,14 @@ p {
 .tour-sec__button {
   display: flex;
   gap: 8px;
+}
+@media (max-width: 991px) {
+  .tour-sec__button {
+    overflow-x: scroll;
+  }
+  .tour-sec__button::-webkit-scrollbar {
+    display: none;
+  }
 }
 .tour-sec__button .filter-button {
   border-radius: 19px;
