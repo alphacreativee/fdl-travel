@@ -155,7 +155,6 @@ function scrollHeader() {
 
   let height = window.innerWidth < 991 ? -headerInner : -33;
 
-  console.log(height);
   function initializeScrollTrigger() {
     navTop = gsap
       .from(".header", {
