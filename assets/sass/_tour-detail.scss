@@ -696,6 +696,38 @@
 
       &-calendar {
         margin-top: 16px;
+
+        ul {
+          width: 100%;
+          gap: 16px;
+    
+          li {
+            width: calc((100% - 64px) / 5);
+            border: 1px solid var(--color-stroke);
+            background-color: var(--color-white);
+            border-radius: 8px;
+            padding: 15px;
+            cursor: pointer;
+            transition: all 0.4s ease;
+    
+            &:hover {
+              border: 1px solid var(--color-grey);
+              color: var(--color-grey);
+            }
+
+            &.active,
+            &.active:hover{
+              border: 1px solid var(--color-primary);
+              background-color: var(--color-box);
+              color: var(--color-black);
+            }
+    
+            img {
+              width: 18px;
+              height: 18px;
+            }
+          }
+        }
       }
 
       &-quantity {
@@ -720,6 +752,11 @@
             display: flex;
             align-items: center;
             justify-content: center;
+
+            &[disabled='disabled']{
+              opacity: 0.5;
+              cursor: default;
+            }
           }
 
           .number {
@@ -785,6 +822,7 @@
   @media (min-width: 576px) {
     .modal-dialog {
       max-width: 845px;
+      margin: 5rem auto;
     }
   }
 }
