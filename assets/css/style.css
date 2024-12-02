@@ -3475,6 +3475,11 @@ p {
 .main-detail {
   padding-top: 135px;
 }
+@media (max-width: 991px) {
+  .main-detail {
+    padding-top: 56px;
+  }
+}
 .main-detail .title {
   margin-bottom: 24px;
 }
@@ -3489,6 +3494,12 @@ p {
   .main-detail .title {
     margin-bottom: 12px;
   }
+}
+.main-detail .tag {
+  font-size: 12px;
+  line-height: 20px;
+  color: var(--color-grey);
+  margin-bottom: 4px;
 }
 .main-detail .sub-title .wrapper-tag {
   gap: 8px;
@@ -3535,6 +3546,17 @@ p {
 .main-detail .gallery {
   position: relative;
 }
+@media (max-width: 991px) {
+  .main-detail .gallery {
+    margin-bottom: 24px;
+  }
+}
+.main-detail .gallery .share-mobile {
+  position: absolute;
+  z-index: 3;
+  top: 24px;
+  right: 60px;
+}
 .main-detail .gallery .tour-sec__tag {
   top: 24px;
   left: 24px;
@@ -3548,6 +3570,11 @@ p {
 .main-detail .gallery .swiper {
   border-radius: 12px;
   overflow: hidden;
+}
+@media (max-width: 991px) {
+  .main-detail .gallery .swiper {
+    border-radius: 0;
+  }
 }
 .main-detail .gallery .swiper:hover .custom-swiper-button {
   opacity: 1;
@@ -3715,6 +3742,11 @@ p {
   display: flex;
   align-items: flex-start;
 }
+@media (max-width: 991px) {
+  .main-detail .departure-chedule {
+    flex-direction: column;
+  }
+}
 .main-detail .departure-chedule p {
   width: 25%;
   font-size: 20px;
@@ -3722,9 +3754,20 @@ p {
   color: var(--color-black);
   font-weight: 600;
 }
+@media (max-width: 991px) {
+  .main-detail .departure-chedule p {
+    width: 100%;
+  }
+}
 .main-detail .departure-chedule ul {
   width: 75%;
   gap: 16px;
+}
+@media (max-width: 991px) {
+  .main-detail .departure-chedule ul {
+    width: 100%;
+    gap: 8px;
+  }
 }
 .main-detail .departure-chedule ul li {
   width: calc((100% - 64px) / 5);
@@ -3734,6 +3777,11 @@ p {
   padding: 15px;
   cursor: pointer;
   transition: all 0.4s ease;
+}
+@media (max-width: 991px) {
+  .main-detail .departure-chedule ul li {
+    width: calc((100% - 24px) / 4);
+  }
 }
 .main-detail .departure-chedule ul li:hover {
   border: 1px solid var(--color-grey);
