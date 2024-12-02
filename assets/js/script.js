@@ -39,6 +39,7 @@ $(document).ready(function () {
   chooseTime();
   modalCheckoutTour();
   viewCalendarModal();
+  openSubmenuMobile();
 });
 window.onload = function () {
   window.scrollTo(0, 0);
@@ -149,6 +150,8 @@ function closeModalBoot() {
   });
 }
 function scrollHeader() {
+  if($(window).width() < 768) return;
+
   gsap.registerPlugin(ScrollTrigger);
   let headerInner =
     document.querySelector(".header__inner")?.getBoundingClientRect().height ||
@@ -877,4 +880,23 @@ function updateNumber() {
   } else if (currentQuantity > max) {
     $(this).text(max);
   }
+}
+
+function openMenuMobile(event){
+  event.preventDefault();
+
+  $("body").addClass("overflow-hidden");
+
+  $(".header-mobile .header-mobile__menu").addClass("open");
+  $("header .header__wishlist").addClass("d-none");
+
+  $(".header-mobile .header-mobile__list li").removeClass("active");
+  $(".header-mobile .header-mobile__list li.menu").addClass("active");
+}
+
+function openSubmenuMobile(){
+  $(".header-mobile .menu-item-has-children").on("click", function(e){
+    e.preventDefault();
+    $(this).toggleClass("open");
+  })
 }

@@ -43,7 +43,7 @@
   </head>
   <body>
     <!-- start header -->
-    <header class="header d-none">
+    <header class="header">
       <div class="container-fluid p-0">
         <div
           class="header__inner d-flex align-items-center justify-content-between"
@@ -182,6 +182,121 @@
         </div>
       </div>
     </header>
+
+    <div class="header-mobile d-block d-md-none">
+      <div class="header-mobile__menu">
+        <ul class="menu--top">
+          <li>
+            <a href="./about-us.html">
+              <div class="icon">
+                <img src="./assets/images/svg/icon_menu_flower.svg" alt="">
+              </div>
+              <span class="b3-regular">Về FDL Travel</span>
+            </a>
+          </li>
+          <li>
+            <a href="./exclusive-tour.html">
+              <div class="icon">
+                <img src="./assets/images/svg/icon_menu_book.svg" alt="">
+              </div>
+              <span class="b3-regular">Cẩm nang du lịch</span>
+            </a>
+          </li>
+          <li>
+            <a href="./contact.html">
+              <div class="icon">
+                <img src="./assets/images/svg/icon_menu_phone.svg" alt="">
+              </div>
+              <span class="b3-regular">Liên hệ</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="icon">
+                <img src="./assets/images/svg/icon_menu_wishlist.svg" alt="">
+              </div>
+              <span class="b3-regular">Mục ưa thích</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="menu--bottom">
+          <li>
+            <a href="#">
+              <img src="./assets/images/svg/icon_menu_globe.svg" alt="">
+              Ngôn ngữ
+            </a>
+            <img src="./assets/images/svg/ic_flag_vi.svg" class="icon-flag" alt="">
+          </li>
+          <li>
+            <a href="#">
+              <img src="./assets/images/svg/icon_menu_shield-check.svg" alt="">
+              Chính sách quyền riêng tư
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./assets/images/svg/icon_menu_credit.svg" alt="">
+              Chính sách thanh toán
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./assets/images/svg/icon_menu_file-text.svg" alt="">
+              Điều khoản sử dụng
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./assets/images/svg/icon_menu_file-ban.svg" alt="">
+              Chính sách huỷ
+            </a>
+          </li>
+        </ul>
+      </div>
+      <ul class="header-mobile__list">
+        <li class="active home">
+          <a href="./index.html">
+            <img class="icon-default" src="./assets/images/svg/icon_menu_home.svg" alt="">
+            <img class="icon-hover" src="./assets/images/svg/icon_menu_home_active.svg" alt="">
+            <span class="b3-regular">Trang chủ</span>
+          </a>
+        </li>
+        <li class="menu-item-has-children">
+          <a href="./tour-list.html">
+            <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12.25 10.751C13.583 10.751 14.667 9.66698 14.667 8.33398C14.667 7.00098 13.583 5.91699 12.25 5.91699C10.917 5.91699 9.83304 7.00098 9.83304 8.33398C9.83304 9.66698 10.917 10.751 12.25 10.751ZM12.25 7.41699C12.755 7.41699 13.167 7.82798 13.167 8.33398C13.167 8.83998 12.756 9.25098 12.25 9.25098C11.744 9.25098 11.333 8.83998 11.333 8.33398C11.333 7.82798 11.745 7.41699 12.25 7.41699ZM21.214 7.37598C20.706 7.05998 20.052 7.04108 19.464 7.33008L18.311 7.90698C18.09 4.75198 15.459 2.25 12.249 2.25C9.12402 2.25 6.54502 4.61903 6.20602 7.65503L3.90503 8.81006C3.03803 9.24506 2.49902 10.1181 2.49902 11.0891V19.5C2.49902 20.113 2.80903 20.6709 3.32703 20.9939C3.84403 21.3159 4.48204 21.347 5.03604 21.074L8.43903 19.3621C8.52003 19.3241 8.59402 19.303 8.68802 19.302C8.78902 19.296 8.86104 19.3059 8.93704 19.3359L15.028 21.613C15.268 21.706 15.511 21.752 15.712 21.752C15.761 21.752 15.807 21.7499 15.85 21.7439C16.133 21.7439 16.411 21.6779 16.717 21.5339L20.596 19.584C21.462 19.148 22 18.2749 22 17.3059V8.89111C22 8.23911 21.714 7.68698 21.214 7.37598ZM12.25 3.75C14.777 3.75 16.833 5.80698 16.833 8.33398C16.833 8.53298 16.815 8.72506 16.788 8.91406V8.91504C16.447 11.302 14.06 12.906 12.25 14.103C10.296 12.812 7.66702 11.047 7.66702 8.33398C7.66702 5.80698 9.72303 3.75 12.25 3.75ZM4.36902 19.731C4.25802 19.786 4.16503 19.749 4.12003 19.72C4.07503 19.692 4.00003 19.626 4.00003 19.5V11.0891C4.00003 10.6901 4.22204 10.3299 4.57904 10.1509L6.25903 9.30811C6.47803 10.5661 7.10202 11.623 7.90002 12.52V17.9719C7.86102 17.9879 7.82302 17.9949 7.78302 18.0139L4.36902 19.731ZM9.47104 17.9341C9.44804 17.9251 9.42302 17.923 9.40002 17.915V13.9199C10.114 14.4879 10.847 14.9731 11.482 15.3931L11.834 15.626C11.96 15.71 12.105 15.752 12.25 15.752C12.395 15.752 12.54 15.71 12.666 15.626L13.018 15.3931C13.653 14.9741 14.386 14.4879 15.1 13.9199V20.0381L9.47104 17.9341ZM20.5 17.3059C20.5 17.7049 20.278 18.0649 19.922 18.2439L16.6 19.9141V12.52C17.325 11.706 17.911 10.7599 18.177 9.65088L20.131 8.6731C20.259 8.6101 20.369 8.61593 20.422 8.64893C20.492 8.69293 20.5 8.83311 20.5 8.89111V17.3059Z" fill="#777777"/>
+            </svg>  
+            <span class="b3-regular">Tour</span>
+          </a>
+          <ul class="sub-menu">
+            <li><a href="./tour-list.html">Tour trong nước</a></li>
+            <li><a href="./tour-list.html">Tour nước ngoài</a></li>
+            <li><a href="./tour-list.html">Tour độc quyền</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">
+            <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10.25 11V7C10.25 6.586 10.586 6.25 11 6.25C11.414 6.25 11.75 6.586 11.75 7V8.25H13.25V7C13.25 6.586 13.586 6.25 14 6.25C14.414 6.25 14.75 6.586 14.75 7V11C14.75 11.414 14.414 11.75 14 11.75C13.586 11.75 13.25 11.414 13.25 11V9.75H11.75V11C11.75 11.414 11.414 11.75 11 11.75C10.586 11.75 10.25 11.414 10.25 11ZM23.25 21C23.25 21.414 22.914 21.75 22.5 21.75H2.5C2.086 21.75 1.75 21.414 1.75 21C1.75 20.586 2.086 20.25 2.5 20.25H2.75V11C2.75 9.252 3.752 8.25 5.5 8.25H5.75V6C5.75 3.582 7.082 2.25 9.5 2.25H15.5C17.918 2.25 19.25 3.582 19.25 6V8.25H19.5C21.248 8.25 22.25 9.252 22.25 11V20.25H22.5C22.914 20.25 23.25 20.586 23.25 21ZM7.25 20.25H9.75V17C9.75 15.483 10.983 14.25 12.5 14.25C14.017 14.25 15.25 15.483 15.25 17V20.25H17.75V6C17.75 4.423 17.077 3.75 15.5 3.75H9.5C7.923 3.75 7.25 4.423 7.25 6V20.25ZM13.75 17C13.75 16.311 13.189 15.75 12.5 15.75C11.811 15.75 11.25 16.311 11.25 17V20.25H13.75V17ZM4.25 20.25H5.75V9.75H5.5C4.589 9.75 4.25 10.089 4.25 11V20.25ZM20.75 20.25V11C20.75 10.089 20.411 9.75 19.5 9.75H19.25V20.25H20.75Z" fill="#777777"/>
+            </svg>  
+            <span class="b3-regular">Khách sạn</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18.375 2.25H7.125C4.465 2.25 3 3.715 3 6.375V17.625C3 20.285 4.465 21.75 7.125 21.75H18.375C21.035 21.75 22.5 20.285 22.5 17.625V6.375C22.5 3.715 21.035 2.25 18.375 2.25ZM21 17.625C21 19.465 20.215 20.25 18.375 20.25H7.125C5.285 20.25 4.5 19.465 4.5 17.625V6.375C4.5 4.535 5.285 3.75 7.125 3.75H18.375C20.215 3.75 21 4.535 21 6.375V17.625ZM18 9.5C18 9.914 17.664 10.25 17.25 10.25H13.25C12.836 10.25 12.5 9.914 12.5 9.5C12.5 9.086 12.836 8.75 13.25 8.75H17.25C17.664 8.75 18 9.086 18 9.5ZM18 14.5C18 14.914 17.664 15.25 17.25 15.25H13.25C12.836 15.25 12.5 14.914 12.5 14.5C12.5 14.086 12.836 13.75 13.25 13.75H17.25C17.664 13.75 18 14.086 18 14.5ZM10.78 8.30298C11.073 8.59598 11.073 9.07101 10.78 9.36401L9.44702 10.697C9.30102 10.843 9.10899 10.917 8.91699 10.917C8.72599 10.917 8.53296 10.844 8.38696 10.698L7.71997 10.031C7.42697 9.73801 7.42697 9.26297 7.71997 8.96997C8.01297 8.67797 8.48701 8.67697 8.78101 8.96997L8.91797 9.10699L9.72095 8.30402C10.0129 8.01002 10.487 8.00998 10.78 8.30298ZM10.78 13.303C11.073 13.596 11.073 14.071 10.78 14.364L9.44702 15.697C9.30102 15.843 9.10899 15.917 8.91699 15.917C8.72599 15.917 8.53296 15.844 8.38696 15.698L7.71997 15.031C7.42697 14.738 7.42697 14.263 7.71997 13.97C8.01297 13.678 8.48701 13.677 8.78101 13.97L8.91797 14.107L9.72095 13.304C10.0129 13.01 10.487 13.01 10.78 13.303Z" fill="#777777"/>
+            </svg>  
+            <span class="b3-regular">Dịch vụ</span>
+          </a>
+        </li>
+        <li class="menu" onclick="openMenuMobile(event)">
+          <img class="icon-default" src="./assets/images/svg/icon_menu_menu.svg" alt=""> 
+          <img class="icon-hover" src="./assets/images/svg/icon_menu_menu_active.svg" alt=""> 
+          <span class="b3-regular">Menu</span>
+        </li>
+      </ul>
+    </div>
 
     <div class="toastSuccess">
       <div class="toast-content">

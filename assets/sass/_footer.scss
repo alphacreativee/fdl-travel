@@ -22,6 +22,10 @@
     opacity: 1;
     visibility: visible;
 
+    @media (max-width: 767px){
+      bottom: 88px;
+    }
+
     &.hide {
       transform: translateX(10px);
       opacity: 0;
