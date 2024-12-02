@@ -9,7 +9,9 @@
       }
     }
   }
-  &.blogs {
+
+  &.blogs,
+  &.home {
     @media (max-width: 991px) {
       .travel-guide__container {
         padding: 0;

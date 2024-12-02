@@ -480,11 +480,28 @@ function countDown() {
 function swiperTopTour() {
   if ($(".top-tour").length) {
     var swiperTopTour = new Swiper(".swiper-tour-top", {
-      slidesPerView: 5,
-      spaceBetween: 24,
+      slidesPerView: 1.5,
+      spaceBetween: 16,
+      slidesOffsetAfter: 32,
       navigation: {
         nextEl: ".top-tour .swiper-button-next",
         prevEl: ".top-tour .swiper-button-prev",
+      },
+      breakpoints: {
+        1023: {
+          slidesOffsetAfter: 0,
+          slidesPerView: 4,
+          spaceBetween: 24,
+        },
+        991: {
+          slidesPerView: 4,
+          spaceBetween: 24,
+          slidesOffsetAfter: 84,
+        },
+        767: {
+          slidesOffsetAfter: 84,
+          spaceBetween: 40,
+        },
       },
     });
   }
@@ -816,10 +833,12 @@ function updateLayoutModalCheckout(step) {
       .removeClass("d-none")
       .addClass("d-flex");
 
-    modalCheckout.find(".departure-calendar__main--list").removeClass("d-none").addClass("d-flex");
+    modalCheckout
+      .find(".departure-calendar__main--list")
+      .removeClass("d-none")
+      .addClass("d-flex");
     modalCheckout.find(".lightpick").addClass("d-none");
-  }
-  else{
+  } else {
     $("#apply-btn").addClass("d-block").removeClass("d-none");
     modalCheckout.find(".total").removeClass("d-flex").addClass("d-none");
     modalCheckout
@@ -827,23 +846,28 @@ function updateLayoutModalCheckout(step) {
       .removeClass("d-flex")
       .addClass("d-none");
 
-    modalCheckout.find(".departure-calendar__main--list").removeClass("d-flex").addClass("d-none");
+    modalCheckout
+      .find(".departure-calendar__main--list")
+      .removeClass("d-flex")
+      .addClass("d-none");
     modalCheckout.find(".lightpick").removeClass("d-none");
   }
 }
 
-function viewCalendarModal(){
+function viewCalendarModal() {
   const modalCheckout = $("#checkoutModal");
 
-  $("#checkoutModal .view-calendar").on("click", function(){
+  $("#checkoutModal .view-calendar").on("click", function () {
     const step = 1;
     updateLayoutModalCheckout(step);
-  })
-  
-  $("#checkoutModal .departure-calendar__main--list li:not('.view-calendar')").on("click", function(){
+  });
+
+  $(
+    "#checkoutModal .departure-calendar__main--list li:not('.view-calendar')"
+  ).on("click", function () {
     $(this).addClass("active");
     $(this).siblings().removeClass("active");
-  })
+  });
 }
 
 function changeQuantity(thisButton, action) {
@@ -856,13 +880,18 @@ function changeQuantity(thisButton, action) {
     if (currentQuantity < max) {
       $numberDiv.text(currentQuantity + 1);
     }
-    thisButton.attr("disabled", currentQuantity + 1 >= max ? "disabled" : false);
+    thisButton.attr(
+      "disabled",
+      currentQuantity + 1 >= max ? "disabled" : false
+    );
     $numberDiv.siblings("[minus]").attr("disabled", false);
   } else if (action === "decrease") {
     if (currentQuantity > min) {
       $numberDiv.text(currentQuantity - 1);
     }
-    $numberDiv.siblings("[minus]").attr("disabled", currentQuantity - 1 <= min ? "disabled" : false);
+    $numberDiv
+      .siblings("[minus]")
+      .attr("disabled", currentQuantity - 1 <= min ? "disabled" : false);
     $numberDiv.siblings("[plus]").attr("disabled", false);
   }
 }
