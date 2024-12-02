@@ -4,6 +4,16 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 24px;
+      .travel-guide__date {
+        margin-bottom: 0;
+      }
+      @media (max-width: 991px) {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+      @media (max-width: 767px) {
+        gap: 16px;
+      }
     }
   }
   &.contact-new {
@@ -65,9 +75,25 @@
   }
   &__container {
     padding: 0 80px;
+    @media (max-width: 991px) {
+      padding: 0 40px;
+    }
+    @media (max-width: 767px) {
+      padding: 0 16px;
+    }
   }
   &__title {
     margin-bottom: 40px;
+    @media (max-width: 991px) {
+      font-size: 20px;
+      line-height: 28px;
+      margin-bottom: 32px;
+    }
+    @media (max-width: 767px) {
+      font-size: 20px;
+      line-height: 28px;
+      margin-bottom: 24px;
+    }
   }
   &__item {
     &:hover {

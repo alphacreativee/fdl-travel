@@ -25,6 +25,9 @@
       gap: 24px;
       grid-template-columns: 1fr;
     }
+    @media (max-width: 767px) {
+      gap: 16px;
+    }
     @media (min-width: 1441px) {
       max-width: 1440px;
       width: 100%;
@@ -73,6 +76,11 @@
         height: 100%;
         overflow: hidden;
         border-radius: var(--border-radius);
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
       }
       &-content {
         position: relative;
