@@ -424,6 +424,12 @@
 
 .page-width {
   padding: 0 80px;
+  @media (max-width: 991px) {
+    padding: 0 40px;
+  }
+  @media (max-width: 767px) {
+    padding: 0 16px;
+  }
 }
 
 .btn-custom {

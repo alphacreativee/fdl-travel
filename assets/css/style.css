@@ -547,6 +547,16 @@ p {
 .page-width {
   padding: 0 80px;
 }
+@media (max-width: 991px) {
+  .page-width {
+    padding: 0 40px;
+  }
+}
+@media (max-width: 767px) {
+  .page-width {
+    padding: 0 16px;
+  }
+}
 
 .btn-custom {
   font-family: var(--font-body);
@@ -1768,6 +1778,41 @@ p {
   text-align: center;
 }
 
+@media (max-width: 991px) {
+  .travel-guide .swiper-travel-guide .swiper-wrapper {
+    padding-left: 40px;
+  }
+}
+@media (max-width: 767px) {
+  .travel-guide .swiper-travel-guide .swiper-wrapper {
+    padding-left: 16px;
+  }
+}
+@media (max-width: 991px) {
+  .travel-guide.blogs .travel-guide__container {
+    padding: 0;
+  }
+}
+@media (max-width: 991px) {
+  .travel-guide.blogs .travel-guide__title {
+    padding-left: 40px;
+  }
+}
+@media (max-width: 767px) {
+  .travel-guide.blogs .travel-guide__title {
+    padding-left: 16px;
+  }
+}
+@media (max-width: 991px) {
+  .travel-guide.blogs .travel-guide__btn {
+    margin-top: 32px;
+  }
+}
+@media (max-width: 767px) {
+  .travel-guide.blogs .travel-guide__btn {
+    margin-top: 24px;
+  }
+}
 .travel-guide.blog-new .travel-guide__list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1924,6 +1969,11 @@ p {
 .travel-guide__date {
   color: var(--color-grey);
   margin-bottom: 16px;
+}
+@media (max-width: 991px) {
+  .travel-guide .swiper-control {
+    display: none;
+  }
 }
 .travel-guide .swiper-control .custom-swiper-button {
   width: 32px;
@@ -3108,28 +3158,36 @@ p {
 .breadcrumb {
   margin-bottom: 32px;
 }
+@media (max-width: 991px) {
+  .breadcrumb {
+    display: none;
+  }
+}
 .breadcrumb > span {
   gap: 8px;
 }
-.breadcrumb a, .breadcrumb span {
+.breadcrumb a,
+.breadcrumb span {
   font-size: 14px;
-  line-height: 20px;
+  line-height: 1;
   color: var(--color-grey);
   transition: all 0.4s ease;
+  transform: translateY(1px);
 }
-.breadcrumb a:hover, .breadcrumb span:hover {
+.breadcrumb a:hover,
+.breadcrumb span:hover {
   color: var(--color-black);
 }
 .breadcrumb .breadcrumb_last {
   color: var(--color-black);
+  transform: translateY(1px);
 }
 .breadcrumb .arrow {
   width: 12px;
-  height: 12px;
+  height: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
-  transform: translateY(1px);
 }
 
 .main-detail {
@@ -3137,6 +3195,18 @@ p {
 }
 .main-detail .title {
   margin-bottom: 24px;
+}
+@media (max-width: 991px) {
+  .main-detail .title {
+    font-size: 18px;
+    line-height: 26px;
+    margin-bottom: 24px;
+  }
+}
+@media (max-width: 767px) {
+  .main-detail .title {
+    margin-bottom: 12px;
+  }
 }
 .main-detail .sub-title .wrapper-tag {
   gap: 8px;
@@ -3156,7 +3226,13 @@ p {
 .main-detail .sub-title .wrapper-action {
   gap: 8px;
 }
-.main-detail .sub-title .wrapper-action .print, .main-detail .sub-title .wrapper-action .share {
+@media (max-width: 991px) {
+  .main-detail .sub-title .wrapper-action {
+    display: none !important;
+  }
+}
+.main-detail .sub-title .wrapper-action .print,
+.main-detail .sub-title .wrapper-action .share {
   padding: 10px;
   border-radius: 50%;
   border: 1px solid var(--color-stroke);
@@ -3165,11 +3241,13 @@ p {
   width: 38px;
   height: 38px;
 }
-.main-detail .sub-title .wrapper-action .print img, .main-detail .sub-title .wrapper-action .share img {
+.main-detail .sub-title .wrapper-action .print img,
+.main-detail .sub-title .wrapper-action .share img {
   width: 16px;
   height: 16px;
 }
-.main-detail .sub-title .wrapper-action .print:hover, .main-detail .sub-title .wrapper-action .share:hover {
+.main-detail .sub-title .wrapper-action .print:hover,
+.main-detail .sub-title .wrapper-action .share:hover {
   border: 1px solid var(--color-grey);
 }
 .main-detail .gallery {
@@ -3246,6 +3324,11 @@ p {
   top: 135px;
   padding-left: 60px;
   height: max-content;
+}
+@media (max-width: 991px) {
+  .main-detail .main-content__right {
+    padding-left: 0;
+  }
 }
 .main-detail .tour-suggestion {
   border-radius: 8px;
@@ -3725,12 +3808,20 @@ p {
   color: #000;
   font-family: var(--font-body);
 }
-.main-content__left .the-content h2, .main-content__left .the-content h3 {
+.main-content__left .the-content h2,
+.main-content__left .the-content h3 {
   font-size: 24px;
   line-height: 38px;
   margin-top: 24px;
   margin-bottom: 12px;
   font-weight: 600;
+}
+@media (max-width: 991px) {
+  .main-content__left .the-content h2,
+  .main-content__left .the-content h3 {
+    font-size: 20px;
+    line-height: 28px;
+  }
 }
 .main-content__left .the-content p {
   font-size: 16px;
@@ -3766,6 +3857,11 @@ p {
   border-radius: 12px;
   background-color: var(--color-box);
   padding: 24px;
+}
+@media (max-width: 991px) {
+  .main-content__right .hot-tour {
+    padding: 16px;
+  }
 }
 .main-content__right .hot-tour .title {
   margin-bottom: 15px;

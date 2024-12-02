@@ -486,11 +486,28 @@ function swiperTopTour() {
 function swiperTravelGuide() {
   if ($(".travel-guide").length || $(".related-tour").length) {
     var swiperTravelGuide = new Swiper(".swiper-travel-guide", {
-      slidesPerView: 4,
-      spaceBetween: 24,
+      slidesPerView: 1.5,
+      spaceBetween: 16,
+      slidesOffsetAfter: 32,
       navigation: {
         nextEl: ".swiper-travel-guide + .swiper-control .swiper-button-next",
         prevEl: ".swiper-travel-guide + .swiper-control .swiper-button-prev",
+      },
+      breakpoints: {
+        1023: {
+          slidesOffsetAfter: 0,
+          slidesPerView: 4,
+          spaceBetween: 24,
+        },
+        991: {
+          slidesPerView: 4,
+          spaceBetween: 24,
+          slidesOffsetAfter: 84,
+        },
+        767: {
+          slidesOffsetAfter: 84,
+          spaceBetween: 40,
+        },
       },
     });
   }
