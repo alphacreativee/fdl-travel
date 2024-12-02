@@ -163,9 +163,7 @@
     position: relative;
     min-width: 295px;
     width: 100%;
-    @media (max-width: 991px) {
-      display: none;
-    }
+
     &--top {
       position: absolute;
       top: -30px;
@@ -198,7 +196,6 @@
     &--bottom {
       position: relative;
       @media (max-width: 991px) {
-        display: none;
       }
       .ic-search {
         position: absolute;
@@ -264,6 +261,9 @@
   }
   &__lang {
     position: relative;
+    @media (max-width: 991px) {
+      display: none;
+    }
     .lang__inner {
       position: relative;
       &::before {

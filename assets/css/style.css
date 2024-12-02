@@ -934,11 +934,6 @@ p {
   min-width: 295px;
   width: 100%;
 }
-@media (max-width: 991px) {
-  .header__search {
-    display: none;
-  }
-}
 .header__search--top {
   position: absolute;
   top: -30px;
@@ -965,11 +960,6 @@ p {
 }
 .header__search--bottom {
   position: relative;
-}
-@media (max-width: 991px) {
-  .header__search--bottom {
-    display: none;
-  }
 }
 .header__search--bottom .ic-search {
   position: absolute;
@@ -1031,6 +1021,11 @@ p {
 }
 .header__lang {
   position: relative;
+}
+@media (max-width: 991px) {
+  .header__lang {
+    display: none;
+  }
 }
 .header__lang .lang__inner {
   position: relative;
