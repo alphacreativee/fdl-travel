@@ -9,7 +9,7 @@
       @media (max-width: 991px) {
         padding: 0 40px;
       }
-      @media (max-width: 991px) {
+      @media (max-width: 767px) {
         padding: 0 16px;
       }
     }
@@ -267,6 +267,13 @@
     .swiper-pagination-bullet-active {
       background-color: var(--color-white);
     }
+    .slide-banner {
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
 
     &:hover {
       cursor: pointer;
@@ -310,6 +317,11 @@
   &__image {
     width: 100%;
     aspect-ratio: 302 / 190;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
   &__box {
     position: relative;

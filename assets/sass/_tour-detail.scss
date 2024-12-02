@@ -36,7 +36,9 @@
 
 .main-detail {
   padding-top: 135px;
-
+  @media (max-width: 991px) {
+    padding-top: 56px;
+  }
   .title {
     margin-bottom: 24px;
     @media (max-width: 991px) {
@@ -47,6 +49,12 @@
     @media (max-width: 767px) {
       margin-bottom: 12px;
     }
+  }
+  .tag {
+    font-size: 12px;
+    line-height: 20px;
+    color: var(--color-grey);
+    margin-bottom: 4px;
   }
 
   .sub-title {
@@ -97,7 +105,15 @@
 
   .gallery {
     position: relative;
-
+    @media (max-width: 991px) {
+      margin-bottom: 24px;
+    }
+    .share-mobile {
+      position: absolute;
+      z-index: 3;
+      top: 24px;
+      right: 60px;
+    }
     .tour-sec__tag {
       top: 24px;
       left: 24px;
@@ -113,7 +129,9 @@
     .swiper {
       border-radius: 12px;
       overflow: hidden;
-
+      @media (max-width: 991px) {
+        border-radius: 0;
+      }
       &:hover {
         .custom-swiper-button {
           opacity: 1;
@@ -312,6 +330,9 @@
 
     display: flex;
     align-items: flex-start;
+    @media (max-width: 991px) {
+      flex-direction: column;
+    }
 
     p {
       width: 25%;
@@ -319,12 +340,18 @@
       line-height: 28px;
       color: var(--color-black);
       font-weight: 600;
+      @media (max-width: 991px) {
+        width: 100%;
+      }
     }
 
     ul {
       width: 75%;
       gap: 16px;
-
+      @media (max-width: 991px) {
+        width: 100%;
+        gap: 8px;
+      }
       li {
         width: calc((100% - 64px) / 5);
         border: 1px solid var(--color-stroke);
@@ -333,7 +360,9 @@
         padding: 15px;
         cursor: pointer;
         transition: all 0.4s ease;
-
+        @media (max-width: 991px) {
+          width: calc((100% - 24px) / 4);
+        }
         &:hover {
           border: 1px solid var(--color-grey);
           color: var(--color-grey);
@@ -700,7 +729,7 @@
         ul {
           width: 100%;
           gap: 16px;
-    
+
           li {
             width: calc((100% - 64px) / 5);
             border: 1px solid var(--color-stroke);
@@ -709,19 +738,19 @@
             padding: 15px;
             cursor: pointer;
             transition: all 0.4s ease;
-    
+
             &:hover {
               border: 1px solid var(--color-grey);
               color: var(--color-grey);
             }
 
             &.active,
-            &.active:hover{
+            &.active:hover {
               border: 1px solid var(--color-primary);
               background-color: var(--color-box);
               color: var(--color-black);
             }
-    
+
             img {
               width: 18px;
               height: 18px;
@@ -753,7 +782,7 @@
             align-items: center;
             justify-content: center;
 
-            &[disabled='disabled']{
+            &[disabled="disabled"] {
               opacity: 0.5;
               cursor: default;
             }
