@@ -1148,6 +1148,36 @@ p {
   height: 100%;
   object-fit: cover;
 }
+.header__sub {
+  position: relative;
+  width: 100%;
+}
+.header__sub .btn-back {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+.header__sub h4 {
+  margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+  .header.has-sub .header__inner {
+    height: 48px;
+  }
+  .header.has-sub .header__logo {
+    display: none;
+  }
+  .header.has-sub .header__main {
+    display: none !important;
+  }
+  .header.has-sub .header__sub {
+    display: block !important;
+  }
+}
 
 .header-mobile {
   position: fixed;
@@ -1221,7 +1251,7 @@ p {
   border-radius: 8px;
   padding: 8px;
   position: absolute;
-  bottom: calc(100% + 24px);
+  bottom: calc(100% + 20px);
   background-color: var(--color-white);
   opacity: 0;
   visibility: hidden;
@@ -1240,14 +1270,42 @@ p {
   transform: translate(-50%, 100%) rotate(180deg);
 }
 .header-mobile__list li ul.sub-menu li {
-  padding: 8px 16px;
+  width: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+  text-align: left;
+  display: block;
 }
 .header-mobile__list li ul.sub-menu li a {
+  padding: 8px 16px;
   width: 100%;
   height: 100%;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   white-space: nowrap;
   color: var(--color-black);
+  transition: all 0.3s;
+  background-color: var(--color-white);
+  text-align: left;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 500;
+}
+.header-mobile__list li ul.sub-menu li a:hover {
+  background-color: var(--color-gary-opa);
+}
+.header-mobile__list li ul.sub-menu li a span {
+  color: rgba(33, 33, 33, 0.3);
+  font-size: 9px;
+  line-height: 17px;
+  font-weight: 500;
+}
+.header-mobile__list li ul.sub-menu li.comming-soon {
+  pointer-events: none;
+}
+.header-mobile__list li ul.sub-menu li.comming-soon a {
+  color: rgba(33, 33, 33, 0.3);
 }
 .header-mobile__menu {
   height: calc(100dvh - 120px);
@@ -1325,6 +1383,21 @@ p {
   right: 0;
   transform: translateY(-50%);
   margin-right: 0;
+}
+.header-mobile__backdrop {
+  width: 100vw;
+  height: 100dvh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+.header-mobile__backdrop.visible {
+  opacity: 1;
+  visibility: visible;
 }
 
 @keyframes textSwitch {

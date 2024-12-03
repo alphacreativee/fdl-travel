@@ -39,7 +39,7 @@ $(document).ready(function () {
   chooseTime();
   modalCheckoutTour();
   viewCalendarModal();
-  openSubmenuMobile();
+  toggleSubmenuMobile();
 });
 window.onload = function () {
   window.scrollTo(0, 0);
@@ -921,11 +921,27 @@ function openMenuMobile(event){
 
   $(".header-mobile .header-mobile__list li").removeClass("active");
   $(".header-mobile .header-mobile__list li.menu").addClass("active");
+
+  $(".header-mobile .menu-item-has-children").removeClass("open");
+  $(".header-mobile__backdrop").removeClass("visible");
 }
 
-function openSubmenuMobile(){
-  $(".header-mobile .menu-item-has-children").on("click", function(e){
+function toggleSubmenuMobile(){
+  $(".header-mobile .menu-item-has-children > a").on("click", function(e){
     e.preventDefault();
-    $(this).toggleClass("open");
+
+    $(".header-mobile .menu-item-has-children").removeClass("open");
+    $(this).closest(".menu-item-has-children").toggleClass("open");
+
+    if($(".header-mobile .menu-item-has-children.open").length){
+      $(".header-mobile__backdrop").addClass("visible");
+    }
+  })
+
+  $(".header-mobile__backdrop").on("click", function(e){
+    e.preventDefault();
+
+    $(this).removeClass("visible");
+    $(".menu-item-has-children").removeClass("open");
   })
 }
