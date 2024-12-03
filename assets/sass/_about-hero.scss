@@ -7,6 +7,9 @@
   &__container {
     height: 100vh;
     background-color: var(--color-banner-primary);
+    @media (max-width: 991px) {
+      height: 950px;
+    }
     @media (min-width: 1441px) {
       .row {
         max-width: 1440px;

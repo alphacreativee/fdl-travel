@@ -25,6 +25,10 @@
         left: 0 !important;
         right: 0 !important;
         transform: translateX(0);
+        padding-inline: 40px;
+      }
+      @media (max-width: 767px) {
+        padding-inline: 16px;
       }
     }
     .why-choose__container--card {
@@ -44,6 +48,8 @@
       margin-inline: auto;
     }
     @media (max-width: 991px) {
+      left: 40px !important;
+      right: 40px !important;
     }
     @media (max-width: 767px) {
       left: 16px !important;

@@ -253,6 +253,9 @@
     border-radius: 16px;
     overflow: hidden;
     @media (max-width: 991px) {
+      width: calc((100% - 24px) / 2);
+    }
+    @media (max-width: 767px) {
       width: 100%;
     }
   }
