@@ -946,6 +946,21 @@ p {
   border-radius: 4px;
   transition: all 0.3s;
 }
+.header__menu nav ul li.menu-item-has-children .sub-menu li.comming-soon {
+  color: rgba(33, 33, 33, 0.3);
+  pointer-events: none;
+}
+.header__menu nav ul li.menu-item-has-children .sub-menu li.comming-soon a {
+  pointer-events: none;
+  color: rgba(33, 33, 33, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.header__menu nav ul li.menu-item-has-children .sub-menu li.comming-soon span {
+  font-size: 9px;
+  line-height: 17px;
+}
 .header__main {
   gap: 32px;
 }

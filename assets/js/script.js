@@ -150,7 +150,7 @@ function closeModalBoot() {
   });
 }
 function scrollHeader() {
-  if ($(window).width() < 768) return;
+  if ($(window).width() < 992) return;
 
   gsap.registerPlugin(ScrollTrigger);
   let headerInner =
