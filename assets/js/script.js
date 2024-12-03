@@ -40,6 +40,7 @@ $(document).ready(function () {
   modalCheckoutTour();
   viewCalendarModal();
   toggleSubmenuMobile();
+  paymentFilter();
 });
 window.onload = function () {
   window.scrollTo(0, 0);
@@ -47,6 +48,7 @@ window.onload = function () {
   parallaxImage();
   ScrollTrigger.refresh();
 };
+
 function chooseTime() {
   if ($("#rentalDay").length) {
     var pickerRental = new Lightpick({
@@ -339,7 +341,32 @@ function searchBar() {
     });
   }
 }
-
+function paymentFilter() {
+  if ($(".payment-sec").length) {
+    $(".filter-step").not("[data-fitler-step='step1']").hide();
+    $(".payment-sec__step[data-step]").on("click", function (e) {
+      const $step = $(this);
+      const $stepIndex = $step.data("step");
+      console.log($stepIndex);
+      $step.addClass("active");
+      gsap.to(".filter-step", {
+        autoAlpha: 0,
+        duration: 0.5,
+        onComplete: () => {
+          gsap.to(".filter-step", {
+            autoAlpha: 1,
+          });
+        },
+      });
+      setTimeout(() => {
+        $(".filter-step")
+          .not("[data-fitler-step='" + $stepIndex + "']")
+          .hide();
+        $("[data-fitler-step='" + $stepIndex + "']").show();
+      }, 500);
+    });
+  }
+}
 function createFilter() {
   $(".tour-sec__filter").each(function () {
     const $filterSection = $(this);

@@ -1,0 +1,123 @@
+.payment-sec {
+  padding-top: 100px;
+  padding-bottom: 60px;
+  &__container {
+    padding: 0 80px;
+    .filter-step {
+      padding-top: 64px;
+    }
+    .payment-form {
+      .form-group {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0 32px;
+        &.full {
+          grid-template-columns: 1fr;
+        }
+        .note-email,
+        .note-request {
+          margin-top: 4px;
+        }
+      }
+      .input-field {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 24px;
+        input {
+          box-shadow: none;
+          outline: none;
+          border: 1px solid var(--color-stroke);
+          border-radius: 8px;
+          padding: 15px 10px;
+        }
+        textarea {
+          resize: none;
+          border-radius: 8px;
+          border: 1px solid var(--color-stroke);
+        }
+
+        .form-label {
+          margin-bottom: 4px;
+          span {
+            color: #f56266;
+          }
+        }
+      }
+      .note-form {
+        padding-top: 24px;
+        border-top: 1px solid var(--color-stroke);
+        span {
+          display: inline-block;
+          a {
+            color: var(--color-primary);
+          }
+        }
+      }
+    }
+    .payment-inner {
+      h2 {
+        margin-bottom: 48px;
+      }
+    }
+    .btn-submit {
+      width: 100%;
+      margin-bottom: 24px;
+    }
+  }
+  &__filter {
+    border-bottom: 1px solid var(--color-stroke);
+    padding-block: 16px;
+  }
+  &__steps {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 115px;
+  }
+  &__step {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    &.step-start {
+      .step-number {
+        background-color: #062435;
+        border: 1px solid #062435;
+        color: var(--color-white);
+      }
+      .step-label {
+        color: var(--color-black);
+      }
+    }
+    &.active {
+      .step-number {
+        background-color: #062435;
+        border: 1px solid #062435;
+        color: var(--color-white);
+      }
+      .step-label {
+        color: var(--color-black);
+      }
+    }
+    .step-label {
+      font-family: var(--font-body);
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 22px;
+      color: #bcbcbc;
+    }
+    .step-number {
+      width: 32px;
+      height: 32px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: var(--color-white);
+      font-size: 14px;
+      line-height: 20px;
+      padding-top: 4px;
+      color: #bcbcbc;
+      border: 1px solid currentColor;
+      border-radius: 50%;
+    }
+  }
+}
