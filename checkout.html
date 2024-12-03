@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment</title>
+    <!-- import favicon -->
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./assets/images/svg/ic_favicon.svg"
+    />
+    <!-- meta -->
+    <!-- <meta property="og:url" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Phuc Long Luxury Hotel" />
+    <meta property="og:description" content="Phuc Long Luxury Hotel" />
+    <meta property="og:image" content="./assets/images/banner.png" /> -->
+    <!-- meta -->
+    <!-- import boostrap css -->
+    <link rel="stylesheet" href="./assets/libs/bootstrap.min.css" />
+    <!-- end boostrap css -->
+    <!-- import lightpick css -->
+    <link rel="stylesheet" href="./assets/libs/lightpick.min.css" />
+    <!-- end lightpick css -->
+    <!-- import css swiper -->
+    <link rel="stylesheet" href="./assets/libs/swiper-bundle.min.css" />
+    <!-- end css swiper -->
+    <!-- import css lenis -->
+    <link rel="stylesheet" href="./assets/libs/lenis.css" />
+    <!-- end css lenis -->
+    <!-- import font -->
+    <link rel="stylesheet" href="./assets/font/poppins/font.css" />
+    <link rel="stylesheet" href="./assets/font/recoleta/font.css" />
+    <!-- end import font -->
+    <!-- import link custom css page -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- end link custom css page -->
+  </head>
+  <body>
+    <!-- start header -->
+    <header class="header">
+      <div class="container-fluid p-0">
+        <div
+          class="header__inner d-flex align-items-center justify-content-between"
+        >
+          <div class="header__logo">
+            <a href="./index.html">
+              <img src="./assets/images/svg/logo.svg" alt="logo" />
+            </a>
+          </div>
+          <div class="header__main d-flex align-items-center">
+            <div class="header__menu d-flex align-items-center">
+              <nav>
+                <ul>
+                  <li>
+                    <a href="./index.html" class="b2-medium color-white"
+                      >Trang chủ</a
+                    >
+                  </li>
+                  <li class="menu-item-has-children">
+                    <a href="" class="b2-medium color-white">Tour du lịch</a>
+                    <ul class="sub-menu">
+                      <li>
+                        <a href="" class="b2-medium color-black"
+                          >Tour trong nước</a
+                        >
+                      </li>
+                      <li>
+                        <a href="" class="b2-medium color-black"
+                          >Tour nước ngoài</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a
+                      href="./exclusive-tour.html"
+                      class="b2-medium color-white"
+                      >Tour độc quyền</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="b2-medium color-white">Khách sạn</a>
+                  </li>
+                  <li class="menu-item-has-children">
+                    <a href="" class="b2-medium color-white active">Dịch vụ </a>
+                    <ul class="sub-menu">
+                      <li>
+                        <a
+                          href="./car-rental.html"
+                          class="b2-medium color-black"
+                          >Thuê xe</a
+                        >
+                      </li>
+                      <li class="active">
+                        <a href="./visa.html" class="b2-medium color-black"
+                          >Visa</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="header__cta">
+              <div class="header__search">
+                <div class="header__search--top">
+                  <nav>
+                    <ul>
+                      <li>
+                        <a href="./about-us.html" class="b3-regular color-white"
+                          >Về FDL Travel</a
+                        >
+                      </li>
+                      <li>
+                        <a href="./blog.html" class="b3-regular color-white"
+                          >Cẩm nang du lịch</a
+                        >
+                      </li>
+                      <li>
+                        <a href="./contact.html" class="b3-regular color-white"
+                          >Liên hệ</a
+                        >
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+                <div class="header__search--bottom">
+                  <div class="ic-search">
+                    <img src="./assets/images/svg/ic_search.svg" alt="" />
+                  </div>
+                  <input
+                    type="text"
+                    id="search-form"
+                    placeholder=" "
+                    autocomplete="off"
+                  />
+                  <label for="search-form">
+                    <div class="label-inner d-flex align-items-center">
+                      <div class="text b2-regular">
+                        Tìm kiếm
+                        <div class="text-up">
+                          <span>điểm đến</span> <span>hoạt động</span>
+                        </div>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+              </div>
+              <div class="header__wishlist">
+                <a href="">
+                  <img src="./assets/images/svg/ic_wishlist.svg" alt="icon" />
+                </a>
+              </div>
+              <div class="header__lang dropdown-custom">
+                <div class="language__head dropdown-custom__btn">
+                  <div
+                    class="value-select color-white b2-font dropdown-custom__text"
+                  >
+                    <img src="./assets/images/svg/ic_flag_vi.svg" alt="" />
+                    <!-- <span>Tiếng Việt</span> -->
+                  </div>
+                </div>
+                <div class="language__body dropdown-custom__menu">
+                  <div class="lang__inner">
+                    <a
+                      class="dropdown-custom__item language__item color-black b2-font"
+                    >
+                      <img src="./assets/images/svg/ic_flag_en.svg" alt="" />
+                      <!-- <span class="b2-medium color-black">English</span> -->
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="payment-sec">
+        <div class="container-fluid p-0">
+          <div class="payment-sec__filter">
+            <div class="row g-0">
+              <div class="col-lg-8 offset-lg-2">
+                <div class="payment-sec__steps">
+                  <div class="payment-sec__step step-start" data-step="step1">
+                    <div class="step-number">1</div>
+                    <div class="step-label">Thông tin đặt chỗ</div>
+                  </div>
+                  <div class="payment-sec__step" data-step="step2">
+                    <div class="step-number">2</div>
+                    <div class="step-label">Phương thức thanh toán</div>
+                  </div>
+                  <div class="payment-sec__step" data-step="step3">
+                    <div class="step-number">3</div>
+                    <div class="step-label">Hoàn tất đặt tour</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="payment-sec__container">
+            <!-- step 1 -->
+            <div class="row g-0 filter-step" data-fitler-step="step1">
+              <div class="col-lg-7">
+                <div class="payment-inner step-1">
+                  <h2 class="h1-semibold color-black">Thông tin đặt chỗ</h2>
+                  <div class="payment-form step-1">
+                    <div class="form">
+                      <div class="form-group full">
+                        <div class="input-field">
+                          <label
+                            for="full-name"
+                            class="form-label b2-regular color-black"
+                            >Họ và tên <span>*</span></label
+                          >
+                          <input
+                            type="text"
+                            id="full-name"
+                            autocomplete="off"
+                          />
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="input-field">
+                          <label
+                            for="email"
+                            class="form-label b2-regular color-black"
+                            >Email <span>*</span></label
+                          >
+                          <input type="email" id="email" autocomplete="off" />
+                          <p class="note-email b3-regular color-grey">
+                            Thông báo và hoá đơn điện tử sẽ được gửi tới email
+                            này
+                          </p>
+                        </div>
+                        <div class="input-field">
+                          <label
+                            for="phone"
+                            class="form-label b2-regular color-black"
+                            >Số điện thoại <span>*</span></label
+                          >
+                          <input
+                            type="tel"
+                            id="phone"
+                            autocomplete="off"
+                            pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+                          />
+                        </div>
+                      </div>
+                      <div class="form-group full">
+                        <div class="input-field">
+                          <label
+                            for="note"
+                            class="form-label b2-regular color-black"
+                            >Yêu cầu đặc biệt</label
+                          >
+                          <textarea
+                            id="note"
+                            rows="9"
+                            cols="50"
+                            autocomplete="off"
+                          >
+                          </textarea>
+                          <p class="note-request b3-regular color-grey">
+                            Ghi chú về tour, ví dụ: đồ ăn chay hoặc yêu cầu đặc
+                            biệt
+                          </p>
+                        </div>
+                      </div>
+                      <button
+                        class="btn-submit step-1 btn-custom btn--secondary"
+                      >
+                        Thanh toán
+                      </button>
+                      <div class="note-form b2-regular color-grey">
+                        Bằng việc nhấn "Thanh toán" và hoàn tất đơn đặt tour,
+                        bạn đồng ý với
+                        <span> <a href="">Điều khoản sử dụng</a> </span>, chính
+                        sách
+                        <span>
+                          <a href="">Quyền riêng tư</a>
+                        </span>
+                        và chính sách
+                        <span>
+                          <a href="">Huỷ</a>
+                        </span>
+                        của chúng tôi.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 offset-lg-1"></div>
+            </div>
+            <div class="row g-0 filter-step" data-fitler-step="step2">
+              <div class="col-lg-7">step2</div>
+              <div class="col-lg-4 offset-lg-1"></div>
+            </div>
+            <div class="row g-0 filter-step" data-fitler-step="step3">
+              <div class="col-lg-7">step3</div>
+              <div class="col-lg-4 offset-lg-1"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- import jquery -->
+    <script src="./assets/libs/jquery-3.7.1.js"></script>
+    <!-- end jquery -->
+    <!-- import gsap -->
+    <script src="./assets/libs/gsap.min.js"></script>
+    <script src="./assets/libs/ScrollTrigger.min.js"></script>
+    <script src="./assets/libs/splitType.min.js"></script>
+    <!-- end import gsap -->
+    <!-- import boostrap -->
+
+    <script src="./assets/libs/bootstrap.bundle.min.js"></script>
+    <!-- end boostrap -->
+    <!-- import swiper js -->
+    <script src="./assets/libs/swiper-bundle.min.js"></script>
+    <!-- end import swiper js -->
+
+    <!-- import moment js -->
+    <script src="./assets/libs/moment.min.js"></script>
+    <!-- end import moment js -->
+
+    <!-- import lightpick js -->
+    <script src="./assets/libs/lightpick.min.js"></script>
+    <!-- end import lightpick js -->
+    <!-- import lenis js -->
+    <script src="./assets/libs/lenis.min.js"></script>
+    <!-- end import lenis  js -->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <!-- import custom js -->
+
+    <script src="./assets/js/script.js"></script>
+    <!-- end import custom js -->
+  </body>
+</html>
