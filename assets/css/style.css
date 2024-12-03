@@ -2792,6 +2792,11 @@ p {
   height: 100vh;
   background-color: var(--color-banner-primary);
 }
+@media (max-width: 991px) {
+  .hero-about__container {
+    height: 950px;
+  }
+}
 @media (min-width: 1441px) {
   .hero-about__container .row {
     max-width: 1440px;
