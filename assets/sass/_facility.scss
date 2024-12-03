@@ -10,7 +10,8 @@
       gap: 24px;
       @media (max-width: 991px) {
         overflow-x: scroll;
-        grid-template-columns: repeat(4, calc(278 / 395 * 100%));
+        grid-template-columns: repeat(4, 42.5%);
+        // grid-template-columns: repeat(4, calc(278 / 380 * 100%));
         padding-top: 20px;
         padding-inline: 40px;
         &::-webkit-scrollbar {
@@ -20,6 +21,7 @@
       @media (max-width: 767px) {
         padding-inline: 16px;
         gap: 16px;
+        grid-template-columns: repeat(4, 71.5%);
       }
     }
     &__title {

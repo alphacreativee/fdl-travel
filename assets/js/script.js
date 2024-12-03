@@ -502,8 +502,9 @@ function swiperTopTour() {
           slidesOffsetAfter: 84,
         },
         767: {
+          slidesPerView: 2.5,
           slidesOffsetAfter: 84,
-          spaceBetween: 40,
+          spaceBetween: 24,
         },
       },
     });
@@ -531,8 +532,9 @@ function swiperTravelGuide() {
           slidesOffsetAfter: 84,
         },
         767: {
+          slidesPerView: 2.5,
           slidesOffsetAfter: 84,
-          spaceBetween: 40,
+          spaceBetween: 24,
         },
       },
     });
@@ -560,6 +562,10 @@ function swiperCustomStory() {
       breakpoints: {
         992: {
           slidesPerView: 4.5,
+          spaceBetween: 24,
+        },
+        767: {
+          slidesPerView: 2.5,
           spaceBetween: 24,
         },
       },

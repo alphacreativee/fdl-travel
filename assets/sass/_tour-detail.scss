@@ -42,6 +42,7 @@
   &__container {
     @media (max-width: 991px) {
       position: relative;
+      padding-top: 24px;
       &::before {
         content: "";
         width: calc(100% + 40px);
