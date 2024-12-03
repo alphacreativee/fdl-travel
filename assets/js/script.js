@@ -159,7 +159,7 @@ function scrollHeader() {
     document.querySelector(".header__inner")?.getBoundingClientRect().height ||
     0;
 
-  let height = window.innerWidth < 991 ? -headerInner : -33;
+  let height = window.innerWidth < 1200 ? -40 : -33;
 
   function initializeScrollTrigger() {
     navTop = gsap
@@ -958,6 +958,8 @@ function openMenuMobile(event) {
 
   $(".header-mobile .menu-item-has-children").removeClass("open");
   $(".header-mobile__backdrop").removeClass("visible");
+
+  $("header").addClass("open-menu-mobile");
 }
 
 function toggleSubmenuMobile() {
@@ -970,6 +972,8 @@ function toggleSubmenuMobile() {
     if ($(".header-mobile .menu-item-has-children.open").length) {
       $(".header-mobile__backdrop").addClass("visible");
     }
+
+    $(".header__search--mobile").removeClass("visible");
   });
 
   $(".header-mobile__backdrop").on("click", function (e) {
@@ -978,4 +982,20 @@ function toggleSubmenuMobile() {
     $(this).removeClass("visible");
     $(".menu-item-has-children").removeClass("open");
   });
+}
+
+function openSearchHeaderMobile(event){
+  if($(window).width() > 1201) return;
+
+  event.preventDefault();
+
+  $(".header__search--mobile").toggleClass("visible");
+}
+
+function openSearchHeaderMobile(event){
+  if($(window).width() > 1201) return;
+
+  event.preventDefault();
+
+  $(".header__search--mobile").toggleClass("visible");
 }
