@@ -37,8 +37,34 @@
 .main-detail {
   padding-top: 135px;
   @media (max-width: 991px) {
-    padding-top: 56px;
+    padding-top: 48px;
   }
+  &__container {
+    @media (max-width: 991px) {
+      position: relative;
+      &::before {
+        content: "";
+        width: calc(100% + 40px);
+        height: 4px;
+        background-color: var(--color-stroke);
+        position: absolute;
+        bottom: -24px;
+        left: -40px;
+      }
+    }
+    @media (max-width: 991px) {
+      &::before {
+        content: "";
+        width: calc(100% + 16px);
+        height: 4px;
+        background-color: var(--color-stroke);
+        position: absolute;
+        bottom: -24px;
+        left: -16px;
+      }
+    }
+  }
+
   .title {
     margin-bottom: 24px;
     @media (max-width: 991px) {
@@ -332,6 +358,8 @@
     align-items: flex-start;
     @media (max-width: 991px) {
       flex-direction: column;
+      padding: 12px;
+      gap: 12px;
     }
 
     p {
@@ -362,6 +390,21 @@
         transition: all 0.4s ease;
         @media (max-width: 991px) {
           width: calc((100% - 24px) / 4);
+          padding: 7px 0;
+        }
+        span {
+          @media (max-width: 991px) {
+            font-size: 12px;
+            line-height: 18px;
+            font-weight: 400;
+          }
+        }
+        .date {
+          @media (max-width: 991px) {
+            font-size: 14px;
+            line-height: 22px;
+            font-weight: 500;
+          }
         }
         &:hover {
           border: 1px solid var(--color-grey);
@@ -381,21 +424,61 @@
     padding: 24px;
     border-radius: 12px;
     border: 1px solid var(--color-stroke);
-
+    @media (max-width: 991px) {
+      padding: 24px 0 0 0;
+      border: none;
+      border-radius: 0;
+      position: relative;
+      &::before {
+        content: "";
+        width: calc(100% + 80px);
+        height: 4px;
+        background-color: var(--color-stroke);
+        position: absolute;
+        top: 0px;
+        left: -40px;
+      }
+    }
+    @media (max-width: 767px) {
+      &::before {
+        content: "";
+        width: calc(100% + 32px);
+        height: 4px;
+        background-color: var(--color-stroke);
+        position: absolute;
+        top: 0px;
+        left: -16px;
+      }
+    }
     &__item {
       display: flex;
       align-items: flex-start;
-
+      @media (max-width: 991px) {
+        flex-direction: column;
+        gap: 16px 0;
+      }
       &:not(:last-child) {
         margin-bottom: 60px;
+        @media (max-width: 991px) {
+          margin-bottom: 56px;
+        }
+        @media (max-width: 767px) {
+          margin-bottom: 40px;
+        }
       }
 
       .content-left {
         width: 25%;
+        @media (max-width: 991px) {
+          width: 100%;
+        }
       }
 
       .content-right {
         width: 75%;
+        @media (max-width: 991px) {
+          width: 100%;
+        }
       }
 
       &.overview {
@@ -403,7 +486,9 @@
           display: grid;
           grid-template-columns: repeat(3, 1fr);
           gap: 24px 11px;
-
+          @media (max-width: 991px) {
+            grid-template-columns: repeat(2, 1fr);
+          }
           li {
             display: flex;
             align-items: flex-start;
@@ -564,6 +649,9 @@
 
         .included {
           padding-right: 10px;
+          @media (max-width: 991px) {
+            margin-bottom: 24px;
+          }
         }
 
         ul {
@@ -603,6 +691,11 @@
           border-radius: 8px;
           overflow: hidden;
           margin-bottom: 16px;
+          @media (max-width: 991px) {
+            &:last-child {
+              margin-bottom: 40px;
+            }
+          }
         }
 
         .accordion-button {
@@ -852,6 +945,41 @@
     .modal-dialog {
       max-width: 845px;
       margin: 5rem auto;
+    }
+  }
+}
+.related-tour {
+  &__container {
+    &.page-width {
+      @media (max-width: 991px) {
+        padding: 0;
+      }
+    }
+    .travel-guide__title {
+      @media (max-width: 991px) {
+        padding-left: 40px;
+      }
+      @media (max-width: 767px) {
+        padding-left: 16px;
+      }
+    }
+  }
+  .swiper-control {
+    @media (max-width: 991px) {
+      display: none;
+    }
+  }
+  .swiper-wrapper {
+    @media (max-width: 991px) {
+      padding-left: 40px;
+    }
+    @media (max-width: 767px) {
+      padding-left: 16px;
+    }
+  }
+  .swiper-tour {
+    .swiper-wrapper {
+      padding-left: 0;
     }
   }
 }
