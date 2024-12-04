@@ -617,6 +617,11 @@ p {
   transform: translateX(calc(100% + 30px));
   transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
 }
+@media (max-width: 991px) {
+  .toastSuccess {
+    bottom: 80px;
+  }
+}
 @media (max-width: 768px) {
   .toastSuccess {
     right: 15px;
@@ -5820,7 +5825,7 @@ p {
   opacity: 1;
   visibility: visible;
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .footer__cta {
     bottom: 88px;
   }
