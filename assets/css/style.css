@@ -3642,6 +3642,12 @@ p {
   gap: 20px;
   margin-top: 12px;
 }
+.contact-sec__left--social ul li a .animation-icon {
+  transition: all 0.3s;
+}
+.contact-sec__left--social ul li a:hover svg .animation-icon {
+  fill: var(--color-secondary-hover);
+}
 .contact-sec__left--phone a, .contact-sec__left--email a {
   transition: all 0.3s;
 }
