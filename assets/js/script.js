@@ -41,6 +41,7 @@ $(document).ready(function () {
   viewCalendarModal();
   toggleSubmenuMobile();
   paymentFilter();
+  removeVisibleSearchMobile();
 });
 window.onload = function () {
   window.scrollTo(0, 0);
@@ -992,10 +993,11 @@ function openSearchHeaderMobile(event){
   $(".header__search--mobile").toggleClass("visible");
 }
 
-function openSearchHeaderMobile(event){
-  if($(window).width() > 1201) return;
-
-  event.preventDefault();
-
-  $(".header__search--mobile").toggleClass("visible");
+function removeVisibleSearchMobile(){
+  $(document).on('click', function(event) {
+    if (!$(event.target).closest('.header__search--mobile').length &&
+      !$(event.target).is('[onclick="openSearchHeaderMobile(event)"]')) {
+      $(".header__search--mobile").removeClass("visible");
+    }
+  });
 }
