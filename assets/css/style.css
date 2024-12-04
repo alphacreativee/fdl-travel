@@ -216,6 +216,10 @@ p {
 }
 
 @media (min-width: 1441px) {
+  section.lightpick {
+    max-width: 100%;
+    width: auto;
+  }
   section {
     max-width: 1440px;
     width: 100%;

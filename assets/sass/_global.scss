@@ -97,6 +97,10 @@
   color: var(--color-grey);
 }
 @media (min-width: 1441px) {
+  section.lightpick {
+    max-width: 100%;
+    width: auto;
+  }
   section {
     max-width: 1440px;
     width: 100%;
@@ -375,8 +379,8 @@
   }
 }
 
-.filter-search .select2-container--default .select2-selection--single::after{
-  @media (max-width: 991px){
+.filter-search .select2-container--default .select2-selection--single::after {
+  @media (max-width: 991px) {
     left: 10px;
   }
 }
