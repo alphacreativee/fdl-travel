@@ -42,6 +42,123 @@
     <!-- end link custom css page -->
   </head>
   <body>
+    <!-- Modal chi tiết đơn hàng -->
+    <div
+      class="modal fade"
+      id="modalTourDesc"
+      tabindex="-1"
+      aria-labelledby="modalTourDescLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="tour-choose">
+              <div class="tour-choose__inner">
+                <div class="title h3-semibold color-black">Tour đã chọn</div>
+                <div class="tour-choose__desc">
+                  <div class="tour-image">
+                    <img src="./assets/images/img/img_tour_5.jpg" alt="icon" />
+                  </div>
+                  <div class="tour-info">
+                    <h4 class="b1-semibold color-black">
+                      Du lịch Hà Giang - Đồng Văn - Sông Nho Quế - Pác Pó - Bản
+                      Giốc - Lạng Sơn
+                    </h4>
+                    <p class="b3-medium color-black">Xuất phát từ Hà Nội</p>
+                  </div>
+                </div>
+                <div class="tour-choose__tag">
+                  <ul class="wrapper-tag p-0 d-flex align-items-center">
+                    <li class="d-flex align-items-center tag-item b2-medium">
+                      <div class="icon">
+                        <img
+                          src="./assets/images/svg/icon_stopwatch.svg"
+                          alt="icon"
+                        />
+                      </div>
+                      6N5D
+                    </li>
+                    <li class="d-flex align-items-center tag-item b2-medium">
+                      <div class="icon">
+                        <img
+                          src="./assets/images/svg/icon_bookmark.svg"
+                          alt="icon"
+                        />
+                      </div>
+                      Khám phá văn hoá
+                    </li>
+                    <li class="d-flex align-items-center tag-item b2-medium">
+                      <div class="icon">
+                        <img
+                          src="./assets/images/svg/icon_airplane.svg"
+                          alt="icon"
+                        />
+                      </div>
+                      Vietnam Airlines
+                    </li>
+                    <li class="d-flex align-items-center tag-item b2-medium">
+                      <div class="icon">
+                        <img
+                          src="./assets/images/svg/icon-info-circle.svg"
+                          alt="icon"
+                        />
+                      </div>
+                      Huỷ miễn phí
+                    </li>
+                  </ul>
+                </div>
+                <div class="tour-choose__timeline">
+                  <div class="timeline-item time">
+                    <div class="time-item">
+                      <h4 class="b2-regular color-grey">Ngày khởi hành</h4>
+                      <p class="b2-medium color-black">
+                        Thứ 5, 20 tháng 10, 2024
+                      </p>
+                    </div>
+                    <div class="time-item">
+                      <h4 class="b2-regular color-grey">Thời gian</h4>
+                      <p class="b2-medium color-black">16:00</p>
+                    </div>
+                    <div class="time-item">
+                      <h4 class="b2-regular color-grey">Địa điểm</h4>
+                      <p class="b2-medium color-black">
+                        35 Nguyễn Huệ, Phường Bến Nghé, Quận 1, TP.HCM
+                      </p>
+                    </div>
+                  </div>
+                  <div class="timeline-item people">
+                    <div class="time-item">
+                      <h4 class="b2-regular color-grey">Người lớn</h4>
+                      <p class="b2-medium color-black">1 x 12.039.000 đ</p>
+                    </div>
+                  </div>
+                  <div class="timeline-item total-price">
+                    <div class="time-item">
+                      <h4 class="h3-semibold color-black">Tổng</h4>
+                      <div class="d-flex flex-column align-items-end">
+                        <p class="h3-semibold color-black">12.039.000 đ</p>
+                        <span class="b3-regular color-grey"
+                          >Đã bao gồm thuế và phí</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- start header -->
     <header class="header">
       <div class="container-fluid p-0">
@@ -132,7 +249,7 @@
                 </div>
                 <div class="header__search--bottom">
                   <div class="ic-search">
-                    <img src="./assets/images/svg/ic_search.svg" alt="" />
+                    <img src="./assets/images/svg/ic_search.svg" alt="icon" />
                   </div>
                   <input
                     type="text"
@@ -162,7 +279,7 @@
                   <div
                     class="value-select color-white b2-font dropdown-custom__text"
                   >
-                    <img src="./assets/images/svg/ic_flag_vi.svg" alt="" />
+                    <img src="./assets/images/svg/ic_flag_vi.svg" alt="icon" />
                     <!-- <span>Tiếng Việt</span> -->
                   </div>
                 </div>
@@ -171,7 +288,10 @@
                     <a
                       class="dropdown-custom__item language__item color-black b2-font"
                     >
-                      <img src="./assets/images/svg/ic_flag_en.svg" alt="" />
+                      <img
+                        src="./assets/images/svg/ic_flag_en.svg"
+                        alt="icon"
+                      />
                       <!-- <span class="b2-medium color-black">English</span> -->
                     </a>
                   </div>
@@ -207,7 +327,7 @@
           </div>
           <div class="payment-sec__container">
             <!-- step 1 -->
-            <div class="row g-0 filter-step" data-fitler-step="step1">
+            <div class="row g-0 filter-step step-1" data-fitler-step="step1">
               <div class="col-lg-7">
                 <div class="payment-inner step-1">
                   <h2 class="h1-semibold color-black">Thông tin đặt chỗ</h2>
@@ -271,6 +391,7 @@
                       </div>
                       <button
                         class="btn-submit step-1 btn-custom btn--secondary"
+                        id="btnSubmit"
                       >
                         Thanh toán
                       </button>
@@ -300,7 +421,10 @@
                     </div>
                     <div class="tour-choose__desc">
                       <div class="tour-image">
-                        <img src="./assets/images/img/img_tour_5.jpg" alt="" />
+                        <img
+                          src="./assets/images/img/img_tour_5.jpg"
+                          alt="icon"
+                        />
                       </div>
                       <div class="tour-info">
                         <h4 class="b1-semibold color-black">
@@ -310,17 +434,132 @@
                         <p class="b3-medium color-black">Xuất phát từ Hà Nội</p>
                       </div>
                     </div>
+                    <div class="tour-choose__tag">
+                      <ul class="wrapper-tag p-0 d-flex align-items-center">
+                        <li
+                          class="d-flex align-items-center tag-item b2-medium"
+                        >
+                          <div class="icon">
+                            <img
+                              src="./assets/images/svg/icon_stopwatch.svg"
+                              alt="icon"
+                            />
+                          </div>
+                          6N5D
+                        </li>
+                        <li
+                          class="d-flex align-items-center tag-item b2-medium"
+                        >
+                          <div class="icon">
+                            <img
+                              src="./assets/images/svg/icon_bookmark.svg"
+                              alt="icon"
+                            />
+                          </div>
+                          Khám phá văn hoá
+                        </li>
+                        <li
+                          class="d-flex align-items-center tag-item b2-medium"
+                        >
+                          <div class="icon">
+                            <img
+                              src="./assets/images/svg/icon_airplane.svg"
+                              alt="icon"
+                            />
+                          </div>
+                          Vietnam Airlines
+                        </li>
+                        <li
+                          class="d-flex align-items-center tag-item b2-medium"
+                        >
+                          <div class="icon">
+                            <img
+                              src="./assets/images/svg/icon-info-circle.svg"
+                              alt="icon"
+                            />
+                          </div>
+                          Huỷ miễn phí
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="tour-choose__timeline">
+                      <div class="timeline-item time">
+                        <div class="time-item">
+                          <h4 class="b2-regular color-grey">Ngày khởi hành</h4>
+                          <p class="b2-medium color-black">
+                            Thứ 5, 20 tháng 10, 2024
+                          </p>
+                        </div>
+                        <div class="time-item">
+                          <h4 class="b2-regular color-grey">Thời gian</h4>
+                          <p class="b2-medium color-black">16:00</p>
+                        </div>
+                        <div class="time-item">
+                          <h4 class="b2-regular color-grey">Địa điểm</h4>
+                          <p class="b2-medium color-black">
+                            35 Nguyễn Huệ, Phường Bến Nghé, Quận 1, TP.HCM
+                          </p>
+                        </div>
+                      </div>
+                      <div class="timeline-item people">
+                        <div class="time-item">
+                          <h4 class="b2-regular color-grey">Người lớn</h4>
+                          <p class="b2-medium color-black">1 x 12.039.000 đ</p>
+                        </div>
+                      </div>
+                      <div class="timeline-item total-price">
+                        <div class="time-item">
+                          <h4 class="h3-semibold color-black">Tổng</h4>
+                          <div class="d-flex flex-column align-items-end">
+                            <p class="h3-semibold color-black">12.039.000 đ</p>
+                            <span class="b3-regular color-grey"
+                              >Đã bao gồm thuế và phí</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="row g-0 filter-step" data-fitler-step="step2">
+            <div class="row g-0 filter-step step-2" data-fitler-step="step2">
               <div class="col-lg-7">step2</div>
               <div class="col-lg-4 offset-lg-1"></div>
             </div>
-            <div class="row g-0 filter-step" data-fitler-step="step3">
-              <div class="col-lg-7">step3</div>
-              <div class="col-lg-4 offset-lg-1"></div>
+            <div class="row g-0 filter-step step-3" data-fitler-step="step3">
+              <div class="col-lg-12">
+                <div class="tour-complete-inner">
+                  <div class="tour-complete-box">
+                    <div class="img">
+                      <img
+                        src="./assets/images/img/img_succes.png"
+                        alt="image"
+                      />
+                    </div>
+                    <h4 class="h3-semibold color-black">
+                      FDL Travel đã ghi nhận thông tin thanh toán của bạn!
+                    </h4>
+                    <p class="b2-regular color-black">
+                      Chúng tôi sẽ gửi thông báo và biên lai điện tử sau khi
+                      thanh toán hoàn tất.
+                    </p>
+                    <a href="./index.html" class="back-to-home"
+                      >Trở về trang chủ</a
+                    >
+                    <div class="see-tour d-flex justify-content-center">
+                      <button
+                        type="button"
+                        class="b2-regular color-primary"
+                        data-bs-toggle="modal"
+                        data-bs-target="#modalTourDesc"
+                      >
+                        Chi tiết đơn hàng
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -5204,8 +5204,63 @@ p {
 .payment-sec__container {
   padding: 0 80px;
 }
+@media (min-width: 1441px) {
+  .payment-sec__container {
+    max-width: 1440px;
+    width: 100%;
+    margin-inline: auto;
+  }
+}
 .payment-sec__container .filter-step {
   padding-top: 64px;
+}
+.payment-sec__container .filter-step.step-3 {
+  height: calc(100vh - 64px);
+}
+.payment-sec__container .filter-step.step-3 .tour-complete-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  transform: translateY(-64px);
+}
+.payment-sec__container .filter-step.step-3 .tour-complete-inner .tour-complete-box {
+  position: relative;
+  background-color: #f8f4ea;
+  border-radius: 24px;
+  padding: 70px 150px 40px;
+  text-align: center;
+}
+.payment-sec__container .filter-step.step-3 .tour-complete-inner .tour-complete-box .img {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -70px);
+  top: 0;
+  width: 80px;
+  height: 100px;
+}
+.payment-sec__container .filter-step.step-3 .tour-complete-inner .tour-complete-box h4 {
+  margin-bottom: 12px;
+}
+.payment-sec__container .filter-step.step-3 .tour-complete-inner .tour-complete-box p {
+  margin-bottom: 24px;
+}
+.payment-sec__container .filter-step.step-3 .tour-complete-inner .tour-complete-box .back-to-home {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 1;
+  border-radius: 12px;
+  padding: 14px 24px;
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  transition: all 0.3s;
+  margin-bottom: 24px;
+}
+.payment-sec__container .filter-step.step-3 .tour-complete-inner .tour-complete-box .back-to-home:hover {
+  background-color: var(--color-secondary-hover);
+}
+.payment-sec__container .filter-step.step-3 .tour-complete-inner .tour-complete-box button {
+  display: block;
 }
 .payment-sec__container .payment-form .form-group {
   display: grid;
@@ -5230,6 +5285,9 @@ p {
   border: 1px solid var(--color-stroke);
   border-radius: 8px;
   padding: 15px 10px;
+}
+.payment-sec__container .payment-form .input-field input.error {
+  border: 1px solid #f56266;
 }
 .payment-sec__container .payment-form .input-field textarea {
   resize: none;
@@ -5321,32 +5379,94 @@ p {
   top: 100px;
   height: max-content;
 }
-.payment-sec .tour-choose__inner {
+
+.tour-choose__inner {
   padding: 24px;
   background-color: #f8f4ea;
   border-radius: 16px;
 }
-.payment-sec .tour-choose__inner .title {
+.tour-choose__inner .title {
   margin-bottom: 16px;
 }
-.payment-sec .tour-choose__desc {
+.tour-choose__desc {
   display: grid;
   gap: 16px;
   grid-template-columns: 1fr 2fr;
+  margin-bottom: 16px;
 }
-.payment-sec .tour-choose__desc .tour-image {
+.tour-choose__desc .tour-image {
   border-radius: 16px;
   width: 100%;
   aspect-ratio: 1;
   overflow: hidden;
 }
-.payment-sec .tour-choose__desc .tour-image img {
+.tour-choose__desc .tour-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.payment-sec .tour-choose__desc .tour-info h4 {
+.tour-choose__desc .tour-info h4 {
   margin-bottom: 8px;
+}
+.tour-choose__tag {
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--color-stroke);
+}
+.tour-choose__tag .wrapper-tag {
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.tour-choose__tag .wrapper-tag li {
+  color: var(--color-grey);
+  background-color: var(--color-white);
+  border-radius: 4px;
+  padding: 10px 12px 8px;
+  gap: 8px;
+}
+.tour-choose__timeline .timeline-item {
+  border-bottom: 1px solid var(--color-stroke);
+  padding-block: 16px;
+}
+.tour-choose__timeline .timeline-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.tour-choose__timeline .timeline-item.total-price .time-item h4 {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.tour-choose__timeline .timeline-item .time-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 16px;
+}
+.tour-choose__timeline .timeline-item .time-item:last-child {
+  margin-bottom: 0;
+}
+.tour-choose__timeline .timeline-item .time-item p {
+  text-align: right;
+}
+
+#modalTourDesc .modal-body {
+  padding: 0;
+  border-radius: 16px;
+}
+#modalTourDesc .modal-header {
+  border-bottom: none;
+  padding-right: 8px;
+}
+#modalTourDesc .modal-header .btn-close {
+  background-color: #f8f4ea;
+  border-radius: 8px;
+  opacity: 1;
+}
+#modalTourDesc .modal-header .btn-close:focus {
+  box-shadow: none;
+}
+#modalTourDesc .modal-content {
+  background-color: transparent;
+  border: none;
 }
 
 .footer {

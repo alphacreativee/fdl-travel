@@ -41,6 +41,7 @@ $(document).ready(function () {
   viewCalendarModal();
   toggleSubmenuMobile();
   paymentFilter();
+  // validateFormCheckout();
 });
 window.onload = function () {
   window.scrollTo(0, 0);
@@ -48,6 +49,48 @@ window.onload = function () {
   parallaxImage();
   ScrollTrigger.refresh();
 };
+function validateFormCheckout() {
+  const fullName = document.getElementById("full-name");
+  const email = document.getElementById("email");
+  const phone = document.getElementById("phone");
+
+  let isValid = true;
+
+  // Hàm kiểm tra và cập nhật class error
+  function validateField(input, condition) {
+    if (condition) {
+      input.classList.remove("error");
+    } else {
+      input.classList.add("error");
+      isValid = false;
+    }
+  }
+
+  // Kiểm tra Full Name
+  validateField(fullName, fullName.value.trim() !== "");
+
+  // Kiểm tra Email
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  validateField(email, emailRegex.test(email.value.trim()));
+
+  // Kiểm tra Phone
+  const phoneRegex = /^[+]?[0-9]{9,15}$/;
+  validateField(phone, phoneRegex.test(phone.value.trim()));
+
+  return isValid;
+}
+
+// Thêm sự kiện cho nút submit
+document.getElementById("btnSubmit").addEventListener("click", (e) => {
+  e.preventDefault();
+
+  const isFormValid = validateFormCheckout();
+  if (isFormValid) {
+    console.log("Form is valid, proceeding to submit...");
+  } else {
+    console.log("Form is invalid, please correct errors.");
+  }
+});
 
 function chooseTime() {
   if ($("#rentalDay").length) {
@@ -984,16 +1027,16 @@ function toggleSubmenuMobile() {
   });
 }
 
-function openSearchHeaderMobile(event){
-  if($(window).width() > 1201) return;
+function openSearchHeaderMobile(event) {
+  if ($(window).width() > 1201) return;
 
   event.preventDefault();
 
   $(".header__search--mobile").toggleClass("visible");
 }
 
-function openSearchHeaderMobile(event){
-  if($(window).width() > 1201) return;
+function openSearchHeaderMobile(event) {
+  if ($(window).width() > 1201) return;
 
   event.preventDefault();
 
