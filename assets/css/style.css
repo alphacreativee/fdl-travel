@@ -5390,6 +5390,95 @@ p {
   top: 100px;
   height: max-content;
 }
+.payment-sec .payment-options .payment-title {
+  margin-bottom: 24px;
+}
+.payment-sec .payment-options .accordion-item {
+  margin-bottom: 16px;
+  border-radius: 12px;
+  border: 1px solid var(--color-stroke);
+}
+.payment-sec .payment-options .accordion-item:last-child {
+  margin-bottom: 0;
+}
+.payment-sec .payment-options .accordion-button:not(.collapsed) {
+  box-shadow: none;
+  background-color: transparent;
+}
+.payment-sec .payment-options .accordion-header {
+  margin-bottom: 0;
+}
+.payment-sec .payment-options .accordion-header button::after {
+  display: none;
+}
+.payment-sec .payment-options .accordion-button {
+  border-radius: 16px;
+  padding: 24px;
+}
+.payment-sec .payment-options .accordion-button:focus {
+  border-color: transparent;
+  box-shadow: none;
+}
+.payment-sec .payment-options .accordion-button.collapsed {
+  border-radius: 16px;
+}
+.payment-sec .payment-options .accordion-button.collapsed input[type=radio]::before {
+  background-color: transparent;
+}
+.payment-sec .payment-options .accordion-button input[type=radio] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--color-primary);
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.payment-sec .payment-options .accordion-button input[type=radio]::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+}
+.payment-sec .payment-options .payment-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.payment-sec .payment-options .payment-header input[type=radio] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--color-primary);
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.payment-sec .payment-options .payment-header input[type=radio]:checked::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+}
+.payment-sec .payment-options .payment-header p {
+  transform: translateY(2px);
+}
 
 .tour-choose__inner {
   padding: 24px;
