@@ -5014,7 +5014,17 @@ p {
   border-color: var(--color-secondary);
 }
 .tour-list .content-right .tour-sec__item {
-  width: calc((100% - 49px) / 3);
+  width: calc((100% - 48px) / 3);
+}
+@media (max-width: 991px) {
+  .tour-list .content-right .tour-sec__item {
+    width: calc((100% - 16px) / 2);
+  }
+}
+@media (max-width: 767px) {
+  .tour-list .content-right .tour-sec__item {
+    width: 100%;
+  }
 }
 .tour-list .content-right__heading {
   margin-bottom: 12px;
