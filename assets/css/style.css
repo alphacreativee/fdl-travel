@@ -3980,6 +3980,12 @@ p {
   transition: all 0.4s ease;
   width: 38px;
   height: 38px;
+  position: relative;
+}
+.main-detail .sub-title .wrapper-action .print:hover .share-dropdown,
+.main-detail .sub-title .wrapper-action .share:hover .share-dropdown {
+  opacity: 1;
+  visibility: visible;
 }
 .main-detail .sub-title .wrapper-action .print img,
 .main-detail .sub-title .wrapper-action .share img {
@@ -3989,6 +3995,78 @@ p {
 .main-detail .sub-title .wrapper-action .print:hover,
 .main-detail .sub-title .wrapper-action .share:hover {
   border: 1px solid var(--color-grey);
+}
+.main-detail .share-dropdown {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-white);
+  width: max-content;
+  z-index: 11;
+  position: absolute;
+  box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.1019607843);
+  border-radius: 8px;
+  transition: all 0.4s;
+  padding: 8px;
+  top: calc(100% + 10px);
+  right: -1px;
+  visibility: hidden;
+  opacity: 0;
+}
+@media (max-width: 991px) {
+  .main-detail .share-dropdown {
+    right: -3px;
+  }
+}
+.main-detail .share-dropdown li {
+  width: 100%;
+}
+.main-detail .share-dropdown a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  width: 100%;
+  min-width: max-content;
+  transition: all 0.3s;
+  border-radius: 4px;
+  background-color: var(--color-white);
+  color: var(--color-secondary);
+}
+.main-detail .share-dropdown a svg path {
+  transition: all 0.3s;
+}
+.main-detail .share-dropdown a:hover {
+  background-color: var(--color-gray-bg-60);
+  color: var(--color-primary);
+}
+.main-detail .share-dropdown a:hover svg path {
+  fill: var(--color-primary);
+}
+.main-detail .share-dropdown a .icon {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+}
+.main-detail .share-dropdown::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid var(--color-white);
+  top: -7px;
+  z-index: 1;
+  right: 10px;
+}
+.main-detail .share-dropdown::before {
+  content: "";
+  width: 38px;
+  height: 10px;
+  background-color: transparent;
+  position: absolute;
+  bottom: 100%;
+  right: 0;
 }
 .main-detail .gallery {
   position: relative;
@@ -4003,6 +4081,10 @@ p {
   z-index: 3;
   top: 24px;
   right: 60px;
+}
+.main-detail .gallery .share-mobile:hover .share-dropdown {
+  opacity: 1;
+  visibility: visible;
 }
 .main-detail .gallery .tour-sec__tag {
   top: 24px;
