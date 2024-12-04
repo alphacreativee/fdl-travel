@@ -524,8 +524,339 @@
               </div>
             </div>
             <div class="row g-0 filter-step step-2" data-fitler-step="step2">
-              <div class="col-lg-7">step2</div>
-              <div class="col-lg-4 offset-lg-1"></div>
+              <div class="col-lg-7">
+                <div class="payment-inner step-2">
+                  <h2 class="h1-semibold color-black">
+                    Phương thức thanh toán
+                  </h2>
+                  <div class="payment-options">
+                    <div class="payment-title h3-semibold color-black">
+                      Chọn phương thức thanh toán
+                    </div>
+                    <div class="payment-options-inner">
+                      <div class="accordion" id="accordion-payment">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingOne">
+                            <button
+                              class="accordion-button"
+                              type="button"
+                              data-bs-toggle="collapse"
+                              data-bs-target="#collapseOne"
+                              aria-expanded="true"
+                              aria-controls="collapseOne"
+                            >
+                              <div
+                                class="payment-header-inner d-flex align-items-center justify-content-between w-100"
+                              >
+                                <div class="payment-header">
+                                  <input type="radio" />
+                                  <p class="h4-semibold color-black">
+                                    Ngân hàng TPBank
+                                  </p>
+                                </div>
+                              </div>
+                            </button>
+                          </h2>
+                          <div
+                            id="collapseOne"
+                            class="accordion-collapse collapse show"
+                            aria-labelledby="headingOne"
+                            data-bs-parent="#accordion-payment"
+                          >
+                            <div class="accordion-body">
+                              <div class="tpbank-inner">
+                                <div class="tpbank-info">
+                                  <div class="payment-box">
+                                    <p class="b2-medium color-black">
+                                      Thông tin chuyển khoản
+                                    </p>
+                                    <div class="info-table">
+                                      <div class="info-table-item">
+                                        <p
+                                          class="info-sub b2-regular color-grey"
+                                        >
+                                          Số tài khoản (VND)
+                                        </p>
+                                        <p class="info-text b1-semibold">
+                                          68793699999
+                                        </p>
+                                      </div>
+                                      <div class="info-table-item">
+                                        <p
+                                          class="info-sub b2-regular color-grey"
+                                        >
+                                          Tên tài khoản
+                                        </p>
+                                        <p class="info-text b1-semibold">
+                                          Công Ty Cổ Phần Địa Ốc Nam Việt
+                                        </p>
+                                      </div>
+                                      <div class="info-table-item">
+                                        <p
+                                          class="info-sub b2-regular color-grey"
+                                        >
+                                          Nội dung chuyển khoản
+                                        </p>
+                                        <p class="info-text b1-semibold">
+                                          QR2WGE2M
+                                        </p>
+                                      </div>
+                                      <div class="info-table-item">
+                                        <p
+                                          class="info-sub b2-regular color-grey"
+                                        >
+                                          Số tiền
+                                        </p>
+                                        <p
+                                          class="info-text h3-semibold color-primary"
+                                        >
+                                          12.039.000 đ
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="payment-qrcode">
+                                    <p class="b2-medium color-black">
+                                      Quét mã qua ứng dụng <br />Ngân hàng hoặc
+                                      Ví điện tử
+                                    </p>
+                                    <div class="qrcode">
+                                      <img
+                                        src="./assets/images/svg/ic_qrcode.svg"
+                                        alt="qrcode"
+                                      />
+                                    </div>
+                                    <div class="note d-flex align-items-center">
+                                      <div class="icon">
+                                        <img
+                                          src="./assets/images/svg/icon-info-circle.svg"
+                                          alt="icon"
+                                        />
+                                      </div>
+                                      <p class="b2-medium color-grey">
+                                        Hướng dẫn thanh toán
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingTwo">
+                            <button
+                              class="accordion-button collapsed"
+                              type="button"
+                              data-bs-toggle="collapse"
+                              data-bs-target="#collapseTwo"
+                              aria-expanded="false"
+                              aria-controls="collapseTwo"
+                            >
+                              <div
+                                class="payment-header-inner d-flex align-items-center justify-content-between w-100"
+                              >
+                                <div class="payment-header">
+                                  <input type="radio" />
+                                  <p class="h4-semibold color-black">Payoo</p>
+                                </div>
+                                <div class="payment-logo">
+                                  <img
+                                    src="./assets/images/svg/ic_payment_payoo.svg"
+                                    alt="icon"
+                                  />
+                                </div>
+                              </div>
+                            </button>
+                          </h2>
+                          <div
+                            id="collapseTwo"
+                            class="accordion-collapse collapse"
+                            aria-labelledby="headingTwo"
+                            data-bs-parent="#accordion-payment"
+                          >
+                            <div class="accordion-body">
+                              <strong
+                                >This is the second item's accordion
+                                body.</strong
+                              >
+                              It is hidden by default, until the collapse plugin
+                              adds the appropriate classes that we use to style
+                              each element. These classes control the overall
+                              appearance, as well as the showing and hiding via
+                              CSS transitions. You can modify any of this with
+                              custom CSS or overriding our default variables.
+                              It's also worth noting that just about any HTML
+                              can go within the <code>.accordion-body</code>,
+                              though the transition does limit overflow.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingThree">
+                            <button
+                              class="accordion-button collapsed"
+                              type="button"
+                              data-bs-toggle="collapse"
+                              data-bs-target="#collapseThree"
+                              aria-expanded="false"
+                              aria-controls="collapseThree"
+                            >
+                              <div
+                                class="payment-header-inner d-flex align-items-center justify-content-between w-100"
+                              >
+                                <div class="payment-header">
+                                  <input type="radio" />
+                                  <p class="h4-semibold color-black">
+                                    Tại văn phòng
+                                  </p>
+                                </div>
+                                <div class="payment-logo">
+                                  <img
+                                    src="./assets/images/svg/ic_payment_logo.svg"
+                                    alt="icon"
+                                  />
+                                </div>
+                              </div>
+                            </button>
+                          </h2>
+                          <div
+                            id="collapseThree"
+                            class="accordion-collapse collapse"
+                            aria-labelledby="headingThree"
+                            data-bs-parent="#accordion-payment"
+                          >
+                            <div class="accordion-body">
+                              <strong
+                                >This is the third item's accordion
+                                body.</strong
+                              >
+                              It is hidden by default, until the collapse plugin
+                              adds the appropriate classes that we use to style
+                              each element. These classes control the overall
+                              appearance, as well as the showing and hiding via
+                              CSS transitions. You can modify any of this with
+                              custom CSS or overriding our default variables.
+                              It's also worth noting that just about any HTML
+                              can go within the <code>.accordion-body</code>,
+                              though the transition does limit overflow.
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 offset-lg-1 tour-sticky">
+                <div class="tour-choose">
+                  <div class="tour-choose__inner">
+                    <div class="title h3-semibold color-black">
+                      Tour đã chọn
+                    </div>
+                    <div class="tour-choose__desc">
+                      <div class="tour-image">
+                        <img
+                          src="./assets/images/img/img_tour_5.jpg"
+                          alt="icon"
+                        />
+                      </div>
+                      <div class="tour-info">
+                        <h4 class="b1-semibold color-black">
+                          Du lịch Hà Giang - Đồng Văn - Sông Nho Quế - Pác Pó -
+                          Bản Giốc - Lạng Sơn
+                        </h4>
+                        <p class="b3-medium color-black">Xuất phát từ Hà Nội</p>
+                      </div>
+                    </div>
+                    <div class="tour-choose__tag">
+                      <ul class="wrapper-tag p-0 d-flex align-items-center">
+                        <li
+                          class="d-flex align-items-center tag-item b2-medium"
+                        >
+                          <div class="icon">
+                            <img
+                              src="./assets/images/svg/icon_stopwatch.svg"
+                              alt="icon"
+                            />
+                          </div>
+                          6N5D
+                        </li>
+                        <li
+                          class="d-flex align-items-center tag-item b2-medium"
+                        >
+                          <div class="icon">
+                            <img
+                              src="./assets/images/svg/icon_bookmark.svg"
+                              alt="icon"
+                            />
+                          </div>
+                          Khám phá văn hoá
+                        </li>
+                        <li
+                          class="d-flex align-items-center tag-item b2-medium"
+                        >
+                          <div class="icon">
+                            <img
+                              src="./assets/images/svg/icon_airplane.svg"
+                              alt="icon"
+                            />
+                          </div>
+                          Vietnam Airlines
+                        </li>
+                        <li
+                          class="d-flex align-items-center tag-item b2-medium"
+                        >
+                          <div class="icon">
+                            <img
+                              src="./assets/images/svg/icon-info-circle.svg"
+                              alt="icon"
+                            />
+                          </div>
+                          Huỷ miễn phí
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="tour-choose__timeline">
+                      <div class="timeline-item time">
+                        <div class="time-item">
+                          <h4 class="b2-regular color-grey">Ngày khởi hành</h4>
+                          <p class="b2-medium color-black">
+                            Thứ 5, 20 tháng 10, 2024
+                          </p>
+                        </div>
+                        <div class="time-item">
+                          <h4 class="b2-regular color-grey">Thời gian</h4>
+                          <p class="b2-medium color-black">16:00</p>
+                        </div>
+                        <div class="time-item">
+                          <h4 class="b2-regular color-grey">Địa điểm</h4>
+                          <p class="b2-medium color-black">
+                            35 Nguyễn Huệ, Phường Bến Nghé, Quận 1, TP.HCM
+                          </p>
+                        </div>
+                      </div>
+                      <div class="timeline-item people">
+                        <div class="time-item">
+                          <h4 class="b2-regular color-grey">Người lớn</h4>
+                          <p class="b2-medium color-black">1 x 12.039.000 đ</p>
+                        </div>
+                      </div>
+                      <div class="timeline-item total-price">
+                        <div class="time-item">
+                          <h4 class="h3-semibold color-black">Tổng</h4>
+                          <div class="d-flex flex-column align-items-end">
+                            <p class="h3-semibold color-black">12.039.000 đ</p>
+                            <span class="b3-regular color-grey"
+                              >Đã bao gồm thuế và phí</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="row g-0 filter-step step-3" data-fitler-step="step3">
               <div class="col-lg-12">

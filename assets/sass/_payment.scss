@@ -189,6 +189,101 @@
 
     height: max-content;
   }
+  .payment-options {
+    .payment-title {
+      margin-bottom: 24px;
+    }
+    .accordion-item {
+      margin-bottom: 16px;
+      border-radius: 12px;
+      border: 1px solid var(--color-stroke);
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    .accordion-button:not(.collapsed) {
+      box-shadow: none;
+      background-color: transparent;
+    }
+    .accordion-header {
+      margin-bottom: 0;
+      button {
+        &::after {
+          display: none;
+        }
+      }
+    }
+    .accordion-button {
+      border-radius: 16px;
+      padding: 24px;
+      &:focus {
+        border-color: transparent;
+        box-shadow: none;
+      }
+      &.collapsed {
+        border-radius: 16px;
+        input[type="radio"] {
+          &::before {
+            background-color: transparent;
+          }
+        }
+      }
+      input[type="radio"] {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border: 1px solid var(--color-primary);
+        border-radius: 50%;
+        position: relative;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+          background-color: var(--color-primary);
+        }
+      }
+    }
+    .payment-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      input[type="radio"] {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border: 1px solid var(--color-primary);
+        border-radius: 50%;
+        position: relative;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        &:checked::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+          background-color: var(--color-primary);
+        }
+      }
+      p {
+        transform: translateY(2px);
+      }
+    }
+  }
 }
 .tour-choose {
   &__inner {
