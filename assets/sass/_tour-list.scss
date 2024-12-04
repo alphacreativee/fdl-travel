@@ -13,17 +13,92 @@
 .tour-list{
     padding-top: 135px;
 
+    @media (max-width: 991px){
+        padding-top: 90px;
+    }
+
+    @media (max-width: 767px){
+        padding-top: 48px;
+    }
+
     h1{
         margin-bottom: 40px;
+
+        @media (max-width: 767px){
+            display: none;
+        }
     }
     
     .content-left{
         margin-bottom: 12px;
         padding-right: 40px;
 
+        @media (max-width: 767px){
+            padding-right: 0;
+            position: fixed;
+            z-index: 999999;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100dvh;
+            background-color: var(--color-white);
+
+
+            transform: translateX(100%);
+            transition: all 0.5s;
+
+            &.open{
+                transform: translate(0);
+            }
+        }
+
+        .filter{
+            @media (max-width: 767px){
+                padding-bottom: 100px;
+                padding-top: 48px;
+                overflow-y: scroll;
+                height: 100dvh;
+            }
+        }
+
+        .filter-top{
+            height: 48px;
+            background-color: var(--color-secondary);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 999999;
+
+            .btn--close{
+                background-color: transparent;
+                border: none;
+                outline: none;
+                width: 24px;
+                height: 24px;
+
+                position: absolute;
+                right: 16px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+
         .filter-heading{
             padding-bottom: 12px;
             border-bottom: 1px solid var(--color-stroke);
+
+            @media (max-width: 767px){
+                padding: 12px 16px;
+
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                z-index: 2;
+                background-color: var(--color-white);
+                width: 100%;
+                box-shadow: 0px -10px 20px rgba(0, 0, 0, 0.1);
+            }
 
             .icon{
                 gap: 12px;
@@ -38,11 +113,33 @@
                 &:hover{
                     color: var(--color-black);
                 }
+
+                @media (max-width: 767px){
+                    color: var(--color-secondary);
+                }
+            }
+
+            .btn-custom{
+                padding: 13px 50px;
+                border-radius: 12px;
+                font-size: 14px;
+                line-height: 22px;
+                color: var(--color-white);
+            }
+        }
+
+        .filter-list{
+            @media (max-width: 767px){
+                padding: 0 16px;
             }
         }
 
         .filter-search{
             margin-top: 24px;
+
+            @media (max-width: 767px){
+                padding: 0 16px;
+            }
 
             .select2-container--default .select2-selection--single{
                 border-radius: 12px;
@@ -63,6 +160,10 @@
         .filter-list{
             .top-location{
                 margin-top: 24px;
+
+                @media (max-width: 767px){
+                    margin-top: 16px;
+                }
 
                 ul{
                     display: flex;
@@ -101,6 +202,11 @@
                 padding-top: 24px;
                 margin-top: 24px;
                 border-radius: unset;
+
+                @media (max-width: 767px){
+                    padding-top: 16px;
+                    margin-top: 16px;
+                }
             }
 
             .accordion-button{
@@ -163,6 +269,7 @@
                                 content: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 16 16"%3E%3Cpath fill="white" d="M12.293 3.293a1 1 0 0 1 0 1.414L6 10.414 3.707 8.121a1 1 0 1 1 1.414-1.414L6 7.586l5.293-5.293a1 1 0 0 1 1.414 0z"%3E%3C/path%3E%3C/svg%3E');
                                 color: white;
                                 font-size: 16px;
+                                height: 16px;
                                 position: absolute;
                                 top: calc(50% + 2px);
                                 left: 50%;
@@ -212,10 +319,32 @@
     .content-right{
         .tour-sec__item{
             width: calc((100% - 49px) / 3);
+
+            @media (max-width: 1100px){
+                width: calc((100% - 24px) / 2);
+            }
+
+            @media (max-width: 767px){
+                width: 100%;
+            }
         }
         
         &__heading{
             margin-bottom: 12px;
+
+            @media (max-width: 767px){
+                position: sticky;
+                top: 48px;
+                margin-bottom: 0;
+                padding: 12px 0;
+                background-color: var(--color-white);
+                z-index: 12;
+            }
+
+            .button-filter{
+                width: 24px;
+                height: 24px;
+            }
         }
     }
 }

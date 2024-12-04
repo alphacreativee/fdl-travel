@@ -43,7 +43,7 @@
   </head>
   <body class="page-tour-list">
     <!-- start header -->
-    <header class="header has-sub">
+    <header class="header">
       <div class="container-fluid p-0">
         <div
           class="header__inner d-flex align-items-center justify-content-between"
@@ -395,11 +395,16 @@
 
           <div class="tour-list__main row g-0">
             <div class="content-left col-lg-3 col-md-4">
+              <div class="filter-top d-block d-md-none">
+                <div class="btn--close" onclick="toggleSidebarFilter(event)">
+                  <img src="./assets/images/svg/icon_time_white.svg" alt="">
+                </div>
+              </div>
               <div class="filter">
                 <div
                   class="filter-heading d-flex align-items-center justify-content-between"
                 >
-                  <div class="icon b2-medium d-flex align-items-center">
+                  <div class="icon b2-medium d-none d-md-flex align-items-center">
                     <svg
                       width="24"
                       height="24"
@@ -415,12 +420,13 @@
                     Bộ lọc
                   </div>
                   <p class="b2-medium" clear-filter>Đặt lại</p>
+                  <button type="button" class="btn-custom btn--secondary d-block d-md-none" onclick="toggleSidebarFilter(event)">Áp dụng</button>
                 </div>
                 <div class="filter-search">
                   <select
                     class="js-province-matcher"
                     data-placeholder="Tìm kiếm điểm đến"
-                    style="width: 100%"
+                    style="width: 100%; border: none;"
                   >
                     <option></option>
                   </select>
@@ -640,6 +646,132 @@
                         </div>
                       </div>
                     </div>
+                    <div class="accordion-item">
+                      <h2
+                        class="accordion-header"
+                        id="accordion-filter-heading-4"
+                      >
+                        <button
+                          class="accordion-button b1-semibold"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#accordion-filter-content-4"
+                          aria-expanded="true"
+                          aria-controls="accordion-filter-content-4"
+                        >
+                          Phương tiện di chuyển
+                        </button>
+                      </h2>
+                      <div
+                        id="accordion-filter-content-4"
+                        class="accordion-collapse collapse show"
+                        aria-labelledby="accordion-filter-heading-4"
+                      >
+                        <div class="accordion-body">
+                          <ul class="filter-list__item" data-cat="tour_vehicle">
+                            <li>
+                              <label for="may-bay"
+                                ><input type="checkbox" id="may-bay" />
+                                Máy bay</label
+                              >
+                            </li>
+                            <li>
+                              <label for="xe-khach"
+                                ><input
+                                  type="checkbox"
+                                  id="xe-khach"
+                                />
+                                Xe khách</label
+                              >
+                            </li>
+                            <li>
+                              <label for="xe-lua"
+                                ><input
+                                  type="checkbox"
+                                  id="xe-lua"
+                                />
+                                Xe lửa
+                              </label>
+                            </li>
+                            <li>
+                              <label for="vehicle-tau"
+                                ><input type="checkbox" id="vehicle-tau" />
+                                Tàu</label
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Item sắp xếp theo mobile mới hiện ở đây -->
+                    <div class="accordion-item d-block d-md-none">
+                      <h2
+                        class="accordion-header"
+                        id="accordion-filter-heading-5"
+                      >
+                        <button
+                          class="accordion-button b1-semibold"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#accordion-filter-content-5"
+                          aria-expanded="true"
+                          aria-controls="accordion-filter-content-5"
+                        >
+                          Sắp xếp theo
+                        </button>
+                      </h2>
+                      <div
+                        id="accordion-filter-content-5"
+                        class="accordion-collapse collapse show"
+                        aria-labelledby="accordion-filter-heading-5"
+                      >
+                        <div class="accordion-body">
+                          <ul class="filter-list__item" data-cat="sort">
+                            <li>
+                              <label for="popular"
+                                ><input
+                                  type="radio"
+                                  name="filter_sort"
+                                  id="popular"
+                                  checked
+                                />
+                                Phổ biến nhất</label
+                              >
+                            </li>
+                            <li>
+                              <label for="newest"
+                                ><input
+                                  type="radio"
+                                  name="filter_sort"
+                                  id="newest"
+                                />
+                                Mới nhất</label
+                              >
+                            </li>
+                            <li>
+                              <label for="price-down"
+                                ><input
+                                  type="radio"
+                                  name="filter_sort"
+                                  id="price-down"
+                                />
+                                Giá thấp nhất
+                              </label>
+                            </li>
+                            <li>
+                              <label for="price-up"
+                                ><input
+                                  type="radio"
+                                  name="filter_sort"
+                                  id="price-up"
+                                />
+                                Giá cao nhất</label
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -648,8 +780,9 @@
               <div
                 class="content-right__heading d-flex align-items-center justify-content-between"
               >
-                <p class="result b1-regular">Hiển thị 1-12 trên 1200 kết quả</p>
-                <div class="sort">
+                <p class="result b1-regular d-none d-md-block">Hiển thị 1-12 trên 1200 kết quả</p>
+                <p class="result b1-regular result-mobile d-block d-md-none">1200 Tour trong nước</p>
+                <div class="sort d-none d-md-block">
                   <div
                     class="dropdown-custom dropdown-custom__destination has-hover"
                   >
@@ -688,6 +821,9 @@
                     </div>
                   </div>
                 </div>
+                <button type="button" class="button-filter d-block d-md-none" onclick="toggleSidebarFilter(event)">
+                  <img src="./assets/images/svg/icon_sliders_horizontal.svg" alt="">
+                </button>
               </div>
               <div class="tour-sec__result content-right__list">
                 <div class="tour-sec__item" data-filter="sapa">

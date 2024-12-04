@@ -81,16 +81,18 @@ function validateFormCheckout() {
 }
 
 // Thêm sự kiện cho nút submit
-document.getElementById("btnSubmit").addEventListener("click", (e) => {
-  e.preventDefault();
+if($("#btnSubmit").length){
+  document.getElementById("btnSubmit").addEventListener("click", (e) => {
+    e.preventDefault();
 
-  const isFormValid = validateFormCheckout();
-  if (isFormValid) {
-    console.log("Form is valid, proceeding to submit...");
-  } else {
-    console.log("Form is invalid, please correct errors.");
-  }
-});
+    const isFormValid = validateFormCheckout();
+    if (isFormValid) {
+      console.log("Form is valid, proceeding to submit...");
+    } else {
+      console.log("Form is invalid, please correct errors.");
+    }
+  });
+}
 
 function chooseTime() {
   if ($("#rentalDay").length) {
@@ -1044,4 +1046,12 @@ function removeVisibleSearchMobile() {
       $(".header__search--mobile").removeClass("visible");
     }
   });
+}
+
+function toggleSidebarFilter(event){
+  if($(window).width() > 767) return;
+
+  event.preventDefault();
+  $("body").toggleClass("overflow-hidden");
+  $("section.tour-list .tour-list__main .content-left").toggleClass("open");
 }
