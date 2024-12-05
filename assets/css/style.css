@@ -3159,6 +3159,16 @@ p {
 .why-choose {
   margin-bottom: 375px;
 }
+@media (min-width: 1441px) {
+  .why-choose {
+    margin-bottom: 500px;
+  }
+}
+@media (min-width: 1600px) {
+  .why-choose {
+    margin-bottom: 700px;
+  }
+}
 @media (max-width: 991px) {
   .why-choose {
     margin-bottom: 560px;

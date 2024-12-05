@@ -1,5 +1,12 @@
 .why-choose {
   margin-bottom: 375px;
+
+  @media (min-width: 1441px) {
+    margin-bottom: 500px;
+  }
+  @media (min-width: 1600px) {
+    margin-bottom: 700px;
+  }
   @media (max-width: 991px) {
     margin-bottom: 560px;
   }
