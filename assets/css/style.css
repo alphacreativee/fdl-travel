@@ -2161,6 +2161,9 @@ p {
   border-radius: 4px;
   padding: 4px 6px;
 }
+.tour-sec__tag .countdown {
+  transform: translateY(2px);
+}
 .tour-sec__tag .countdown ul {
   display: flex;
 }
