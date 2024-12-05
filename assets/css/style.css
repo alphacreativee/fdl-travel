@@ -2057,6 +2057,7 @@ p {
   width: calc((100% - 72px) / 4);
   border-radius: 16px;
   overflow: hidden;
+  transition: border 0.3s ease;
 }
 .tour-sec__item:hover {
   border: 1px solid var(--color-grey);

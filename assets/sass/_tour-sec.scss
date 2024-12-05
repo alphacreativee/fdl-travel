@@ -251,7 +251,7 @@
     width: calc((100% - 72px) / 4);
     border-radius: 16px;
     overflow: hidden;
-    // transition: all 0.3s;
+    transition: border 0.3s ease;
     &:hover {
       border: 1px solid var(--color-grey);
     }
