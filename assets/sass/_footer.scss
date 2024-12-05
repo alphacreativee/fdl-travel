@@ -204,4 +204,12 @@
       }
     }
   }
+
+  &.footer-detail{
+    .footer__bottom{
+      @media (max-width: 991px){
+        padding-bottom: 140px;
+      }
+    }
+  }
 }

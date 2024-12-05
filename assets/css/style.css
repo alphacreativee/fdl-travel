@@ -4108,11 +4108,6 @@ p {
 .main-detail .gallery {
   position: relative;
 }
-@media (max-width: 991px) {
-  .main-detail .gallery {
-    margin-bottom: 24px;
-  }
-}
 .main-detail .gallery .share-mobile {
   position: absolute;
   z-index: 3;
@@ -4397,6 +4392,7 @@ p {
     flex-direction: column;
     padding: 12px;
     gap: 12px;
+    margin-top: 0;
   }
 }
 .main-detail .departure-chedule p {
@@ -6285,6 +6281,11 @@ p {
 }
 .footer__social ul li svg .animation-icon {
   transition: all 0.3s;
+}
+@media (max-width: 991px) {
+  .footer.footer-detail .footer__bottom {
+    padding-bottom: 140px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
