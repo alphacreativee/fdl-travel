@@ -1329,7 +1329,7 @@ p {
   background-color: var(--color-white);
   width: 100%;
 }
-.header-mobile.tour-detail {
+.header-mobile.detail {
   display: none !important;
 }
 .header-mobile__list {
@@ -3956,6 +3956,9 @@ p {
     left: -16px;
   }
 }
+.main-detail.blog-detail .main-detail__container::before {
+  content: unset;
+}
 .main-detail .title {
   margin-bottom: 24px;
 }
@@ -4200,6 +4203,10 @@ p {
 @media (max-width: 991px) {
   .main-detail .main-content__right {
     padding-left: 0;
+  }
+}
+@media (max-width: 991px) {
+  .main-detail .main-content__right.tour-detail {
     position: fixed;
     width: 100%;
     bottom: 0;
@@ -4532,6 +4539,7 @@ p {
 @media (max-width: 991px) {
   .main-detail .tour-information__item.overview ul {
     grid-template-columns: repeat(2, 1fr);
+    gap: 16px 14px;
   }
 }
 .main-detail .tour-information__item.overview ul li {
@@ -4684,11 +4692,6 @@ p {
   border-radius: 8px;
   overflow: hidden;
   margin-bottom: 16px;
-}
-@media (max-width: 991px) {
-  .main-detail .tour-information__item.more-information .accordion-item:last-child {
-    margin-bottom: 40px;
-  }
 }
 .main-detail .tour-information__item.more-information .accordion-button {
   box-shadow: none;
@@ -5079,6 +5082,17 @@ p {
   padding-left: 0;
 }
 
+@media (max-width: 991px) {
+  .page-tour-detail .modal-backdrop {
+    background-color: transparent;
+  }
+}
+@media (max-width: 991px) {
+  .page-tour-detail .toastSuccess {
+    bottom: 135px;
+  }
+}
+
 .main-content__left .feature-image {
   border-radius: 12px;
   overflow: hidden;
@@ -5089,6 +5103,11 @@ p {
 .main-content__left .the-content {
   color: #000;
   font-family: var(--font-body);
+}
+@media (max-width: 991px) {
+  .main-content__left .the-content {
+    margin-bottom: 28px;
+  }
 }
 .main-content__left .the-content h2,
 .main-content__left .the-content h3 {
@@ -6075,6 +6094,11 @@ p {
   opacity: 1;
   visibility: visible;
   transform: translateX(0);
+}
+@media (max-width: 991px) {
+  .footer.footer-detail .footer__cta {
+    bottom: 135px;
+  }
 }
 .footer__cta {
   position: fixed;

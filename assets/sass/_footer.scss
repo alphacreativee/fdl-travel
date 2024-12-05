@@ -10,6 +10,13 @@
       transform: translateX(0);
     }
   }
+  &.footer-detail{
+    .footer__cta{
+      @media (max-width: 991px){
+        bottom: 135px;
+      }
+    }
+  }
   &__cta {
     position: fixed;
     right: 24px;

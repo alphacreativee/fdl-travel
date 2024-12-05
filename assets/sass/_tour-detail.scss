@@ -66,6 +66,10 @@
     }
   }
 
+  &.blog-detail .main-detail__container::before{
+    content: unset;
+  }
+
   .title {
     margin-bottom: 24px;
     @media (max-width: 991px) {
@@ -333,15 +337,20 @@
 
       @media (max-width: 991px) {
         padding-left: 0;
-        position: fixed;
-        width: 100%;
-        bottom: 0;
-        background-color: transparent;
-        left: 0;
-        z-index: 9999;
-        top: unset;
-        display: flex;
-        flex-direction: column-reverse;
+      }
+
+      &.tour-detail{
+        @media (max-width: 991px){
+          position: fixed;
+          width: 100%;
+          bottom: 0;
+          background-color: transparent;
+          left: 0;
+          z-index: 9999;
+          top: unset;
+          display: flex;
+          flex-direction: column-reverse;
+        }
       }
     }
   }
@@ -661,6 +670,7 @@
           gap: 24px 11px;
           @media (max-width: 991px) {
             grid-template-columns: repeat(2, 1fr);
+            gap: 16px 14px;
           }
           li {
             display: flex;
@@ -866,7 +876,7 @@
           margin-bottom: 16px;
           @media (max-width: 991px) {
             &:last-child {
-              margin-bottom: 40px;
+              // margin-bottom: 40px;
             }
           }
         }
@@ -1316,6 +1326,20 @@
   .swiper-tour {
     .swiper-wrapper {
       padding-left: 0;
+    }
+  }
+}
+
+.page-tour-detail{
+  .modal-backdrop{
+    @media (max-width: 991px){
+      background-color: transparent;
+    }
+  }
+
+  .toastSuccess{
+    @media (max-width: 991px){
+      bottom: 135px;
     }
   }
 }
