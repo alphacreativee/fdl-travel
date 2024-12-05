@@ -477,12 +477,12 @@ p {
   color: var(--color-black);
   font-size: 14px;
   line-height: 22px;
-  padding-left: 28px;
+  padding-left: 12px;
   margin-left: 12px;
 }
 @media (max-width: 991px) {
   .select2-container--default .select2-selection--single .select2-selection__rendered {
-    margin-left: 0;
+    margin-left: 15px;
   }
 }
 
@@ -561,8 +561,10 @@ p {
 .select2-container--default .select2-selection--single .select2-selection__placeholder {
   color: var(--color-black);
   font-size: 14px;
-  line-height: 22px;
+  line-height: 1;
   margin-left: 12px;
+  transform: translateY(2px);
+  display: inline-block;
 }
 @media (max-width: 991px) {
   .select2-container--default .select2-selection--single .select2-selection__placeholder {
@@ -649,6 +651,7 @@ p {
 .toastSuccess .toast-content .check svg {
   width: 18px;
   height: 19px;
+  transform: translateY(1px);
 }
 @media (max-width: 768px) {
   .toastSuccess .toast-content .check {

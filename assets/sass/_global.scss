@@ -350,10 +350,10 @@
   color: var(--color-black);
   font-size: 14px;
   line-height: 22px;
-  padding-left: 28px;
+  padding-left: 12px;
   margin-left: 12px;
   @media (max-width: 991px) {
-    margin-left: 0;
+    margin-left: 15px;
   }
 }
 
@@ -435,8 +435,10 @@
   .select2-selection__placeholder {
   color: var(--color-black);
   font-size: 14px;
-  line-height: 22px;
+  line-height: 1;
   margin-left: 12px;
+  transform: translateY(2px);
+  display: inline-block;
   @media (max-width: 991px) {
     margin-left: 0;
   }
@@ -485,6 +487,7 @@
   box-shadow: 0 6px 20px -5px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transform: translateX(calc(100% + 30px));
+
   transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
 
   @media (max-width: 991px) {
@@ -518,6 +521,7 @@
       svg {
         width: 18px;
         height: 19px;
+        transform: translateY(1px);
       }
 
       @media (max-width: 768px) {
