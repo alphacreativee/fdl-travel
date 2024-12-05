@@ -194,7 +194,8 @@
             </div>
           </div>
           <div class="header__sub d-none">
-            <button class="btn-back" onclick="openMenuMobile(event)">
+            <!-- page detail có class detail -->
+            <button class="btn-back detail" onclick="openMenuMobile(event)">
               <img src="./assets/images/svg/icon_arrow_left_white.svg" alt="">
             </button>
             <h4 class="h4-semibold color-white text-center">Tour chi tiết</h4>
@@ -203,7 +204,8 @@
       </div>
     </header>
 
-    <div class="header-mobile d-block d-lg-none">
+    <!-- Nếu là tour chi tiết thì không hiện menu -->
+    <div class="header-mobile d-block d-lg-none tour-detail">
       <div class="header-mobile__menu">
         <ul class="menu--top">
           <li>
@@ -1601,7 +1603,7 @@
                   </button>
                 </div>
               </div>
-              <div class="why-choose-us">
+              <div class="why-choose-us" onclick="whyChooseUs(event)">
                 <h3 class="title b1-semibold">Tại sao nên chọn FDL Travel?</h3>
                 <ul class="p-0">
                   <li>Được hàng nghìn du khách tin cậy</li>
@@ -2569,10 +2571,10 @@
                 </ul>
               </div>
               <div class="departure-calendar row g-0">
-                <div class="col-3 departure-calendar__title h3-semibold">
+                <div class="col-12 col-lg-3 departure-calendar__title h3-semibold">
                   Lịch khởi hành
                 </div>
-                <div class="col-9 departure-calendar__main">
+                <div class="col-12 col-lg-9 departure-calendar__main">
                   <input id="checkoutModalCalendar" type="hidden">
 
                   </input>
@@ -2613,10 +2615,10 @@
                 </div>
               </div>
               <div class="departure-quantity row g-0 d-none">
-                <div class="col-5 departure-quantity__title h3-semibold">
+                <div class="col-md-5 col-12 departure-quantity__title h3-semibold">
                   Số lượng
                 </div>
-                <div class="col-7 departure-quantity__main">
+                <div class="col-md-7 col-12 departure-quantity__main">
                   <div class="departure-quantity__item d-flex align-items-center w-100 justify-content-between">
                     <div class="d-flex flex-column align-items-start">
                       <span class="name b2-medium">Người lớn (12-80 tuổi)</span>
@@ -2683,6 +2685,7 @@
             <div class="total d-none align-items-center justify-content-between w-100 m-0">
               <p class="h3-semibold">Tổng</p>
               <div class="total-right d-flex align-items-start">
+                <p class="h3-semibold d-block d-lg-none">Tổng</p>
                 <div class="d-flex align-items-end flex-column">
                   <div class="price h3-semibold">
                     12.039.000 đ
@@ -2698,7 +2701,7 @@
     </div>
 
     <!-- start footer -->
-    <footer class="footer">
+    <footer class="footer footer-detail">
       <div class="footer__cta">
         <div class="cta__mess">
           <a href="">

@@ -95,6 +95,10 @@
         border-radius: 4px;
         gap: 8px;
         color: var(--color-grey);
+
+        @media (max-width: 767px){
+          padding: 4px 8px;
+        }
       }
 
       .icon {
@@ -326,8 +330,18 @@
       top: 135px;
       padding-left: 60px;
       height: max-content;
+
       @media (max-width: 991px) {
         padding-left: 0;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        background-color: transparent;
+        left: 0;
+        z-index: 9999;
+        top: unset;
+        display: flex;
+        flex-direction: column-reverse;
       }
     }
   }
@@ -336,12 +350,29 @@
     border-radius: 8px;
     overflow: hidden;
 
+    @media (max-width: 991px){
+      border-radius: unset;
+      overflow: auto;
+      z-index: 2;
+    }
+
     &__top {
       padding: 7px 24px;
       text-align: center;
       position: relative;
       background-color: var(--color-primary);
       color: var(--color-white);
+
+      @media (max-width: 991px){
+        display: none;
+        background-color: var(--color-gray-bg-60);
+        font-size: 14px;
+        line-height: 22px;
+        color: var(--color-stroke-bold);
+        padding: 8px 16px;
+        text-align: left;
+        border-radius: 8px 8px 0 0;
+      }
 
       .icon {
         width: 16px;
@@ -357,10 +388,24 @@
       padding: 12px 24px 24px 24px;
       background-color: var(--color-box);
 
+      @media (max-width: 991px){
+        padding: 12px 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+        background-color: var(--color-white);
+        box-shadow: 0px -2px 4px rgba(189, 189, 189, 0.2);
+      }
+
       .price {
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        @media (max-width: 991px){
+          align-items: flex-start;
+        }
       }
 
       .price-top__wrapper {
@@ -385,19 +430,30 @@
         background-color: var(--color-discount);
         width: max-content;
         font-weight: 500;
-      }
 
+      }
+      
       .price-sale {
         margin-top: 4px;
         font-size: 24px;
         line-height: 38px;
         color: var(--color-black);
         font-weight: bold;
+
+        @media (max-width: 991px){
+          font-size: 20px;
+          line-height: 28px;
+        }
       }
 
       button {
         width: 100%;
         margin-top: 16px;
+
+        @media (max-width: 991px){
+          max-width: 162px;
+          margin-top: 0;
+        }
       }
     }
   }
@@ -408,9 +464,25 @@
     border-radius: 8px;
     border: 1px solid var(--color-stroke);
 
+    @media (max-width: 991px){
+      background-color: var(--color-gray-bg-60);
+      margin-top: 0;
+      border: none;
+      border-radius: 8px 8px 0 0;
+      padding: 12px 16px;
+      height: 42px;
+      transition: all 0.4s;
+    }
+
     .title {
       color: #333;
       margin-bottom: 8px;
+
+      @media (max-width: 991px){
+        font-size: 14px;
+        line-height: 22px;
+        font-weight: 500;
+      }
     }
 
     ul {
@@ -422,6 +494,11 @@
         padding-left: 24px;
         position: relative;
         color: var(--color-grey);
+
+        @media (max-width: 991px){
+          font-size: 12px;
+          line-height: 22px;
+        }
 
         &::before {
           content: "";
@@ -865,13 +942,45 @@
 }
 
 #checkoutModal {
+  @media (max-width: 991px){
+    z-index: 99999;
+    display: block !important;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(100%);
+    transition: all 0.5s;
+    height: 100dvh;
+  }
+
+  &.show{
+    @media (max-width: 991px){
+      transform: translateY(0);
+    }
+  }
+
+  &:not([step-2='true']){
+    .modal-body{
+      @media (max-width: 991px){
+        height: calc(100dvh - 139px);
+      }
+    }
+  }
+
   .btn-custom {
     min-width: 170px;
     margin: 0;
+
+    @media (max-width: 991px){
+      width: 100%;
+    }
   }
 
   .modal-header {
     padding: 16px 24px;
+
+    @media (max-width: 767px){
+      padding: 16px;
+    }
   }
 
   .modal-content {
@@ -879,8 +988,24 @@
     border-radius: 24px;
   }
 
+  .modal-title{
+    @media (max-width: 767px){
+      font-size: 18px;
+      line-height: 26px;
+    }
+  }
+
   .modal-body {
     padding: 16px 24px;
+
+    @media (max-width: 991px){
+      height: calc(100dvh - 191px);
+      overflow-y: scroll;
+    }
+
+    @media (max-width: 767px){
+      padding: 16px;
+    }
 
     .departure {
       &-info {
@@ -899,10 +1024,14 @@
 
           li {
             padding: 8px 12px;
-            background-color: var(--color-gray-bg-60);
+            background-color: var(--color-white);
             color: var(--color-grey);
             border-radius: 4px;
             gap: 8px;
+
+            @media (max-width: 767px){
+              padding: 4px 8px;
+            }
           }
 
           .icon {
@@ -915,9 +1044,34 @@
       &-calendar {
         margin-top: 16px;
 
+        @media (max-width: 991px){
+          flex-direction: column;
+        }
+
+        &__main{
+          @media (max-width: 991px){
+            margin-top: 16px;
+          }
+        }
+
+        &__title{
+          @media (max-width: 767px){
+            font-size: 18px;
+            line-height: 26px;
+          }
+        }
+
         ul {
           width: 100%;
           gap: 16px;
+
+          @media (max-width: 767px){
+            li:nth-child(4){
+              display: none !important;
+            }
+
+            gap: 8px;
+          }
 
           li {
             width: calc((100% - 64px) / 5);
@@ -927,6 +1081,27 @@
             padding: 15px;
             cursor: pointer;
             transition: all 0.4s ease;
+
+            @media (max-width: 767px){
+              width: calc((100% - 24px) / 4);
+              padding: 10px 8px;
+            }
+
+            .date{
+              @media (max-width: 767px){
+                font-size: 14px;
+                line-height: 22px;
+                font-weight: 500;
+              }
+            }
+
+            span{
+              @media (max-width: 767px){
+                font-size: 12px;
+                line-height: 18px;
+                font-weight: 400;
+              }
+            }
 
             &:hover {
               border: 1px solid var(--color-grey);
@@ -952,6 +1127,14 @@
         margin-top: 16px;
         padding-top: 16px;
         border-top: 1px solid var(--color-grey);
+
+        &__title{
+          @media (max-width: 767px){
+            margin-bottom: 16px;
+            font-size: 18px;
+            line-height: 26px;
+          }
+        }
 
         &__item {
           padding: 16px;
@@ -982,14 +1165,32 @@
             height: auto;
             text-align: center;
           }
+
+          .price{
+            margin-top: 8px;
+          }
         }
       }
     }
   }
 
+  .btn-close{
+    box-shadow: none;
+  }
+
   .modal-footer {
     padding: 16px 24px;
     margin: 0;
+
+    @media (max-width: 991px){
+      border: none;
+      box-shadow: 0px -2px 4px rgba(189, 189, 189, 0.2);
+      z-index: 99999;
+    }
+
+    @media (max-width: 767px){
+      padding: 16px;
+    }
   }
 
   .lightpick,
@@ -1002,6 +1203,15 @@
     box-shadow: none;
     border: 1px solid var(--color-stroke);
     border-radius: 16px;
+    max-width: 500px;
+
+    display: flex;
+    margin-left: auto;
+
+    @media (max-width: 991px){
+      margin-right: auto;
+      margin-left: unset;
+    }
   }
 
   .lightpick__day {
@@ -1024,8 +1234,29 @@
   }
 
   .total {
+
+    & > p{
+      @media (max-width: 991px){
+        display: none;
+      }
+    }
+
     &-right {
       gap: 24px;
+
+      @media (max-width: 991px){
+        display: grid !important;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        gap: 4px;
+        width: 100%;
+      }
+
+      button{
+        @media (max-width: 991px){
+          grid-column: 1 / 3;
+        }
+      }
     }
 
     .price {
@@ -1040,7 +1271,16 @@
   @media (min-width: 576px) {
     .modal-dialog {
       max-width: 845px;
-      margin: 5rem auto;
+      margin: 5rem auto 7rem;
+    }
+  }
+
+  @media (max-width: 991px){
+    .modal-dialog {
+      margin: 0;
+      transform: translate(0);
+      max-width: 991px;
+      height: 100dvh;
     }
   }
 }

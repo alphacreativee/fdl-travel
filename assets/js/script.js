@@ -902,6 +902,16 @@ function modalCheckoutTour() {
     const action = "increase";
     changeQuantity(thisButton, action);
   });
+
+  if($(window).width() < 992){
+    $("#checkoutModal").on("show.bs.modal", function(){
+      $("body").addClass("overflow-hidden");
+    })
+
+    $("#checkoutModal").on("hidden.bs.modal", function() {
+      $("body").removeClass("overflow-hidden");
+    });
+  }
 }
 
 function updateLayoutModalCheckout(step) {
@@ -920,6 +930,8 @@ function updateLayoutModalCheckout(step) {
       .removeClass("d-none")
       .addClass("d-flex");
     modalCheckout.find(".lightpick").addClass("d-none");
+
+    modalCheckout.attr("step-2", "true");
   } else {
     $("#apply-btn").addClass("d-block").removeClass("d-none");
     modalCheckout.find(".total").removeClass("d-flex").addClass("d-none");
@@ -933,6 +945,8 @@ function updateLayoutModalCheckout(step) {
       .removeClass("d-flex")
       .addClass("d-none");
     modalCheckout.find(".lightpick").removeClass("d-none");
+
+    modalCheckout.attr("step-2", "false");
   }
 }
 
@@ -993,7 +1007,26 @@ function updateNumber() {
 function openMenuMobile(event) {
   event.preventDefault();
 
+  console.log($(event.currentTarget));
+  
+  const isBtnBackDetail = $(event.currentTarget).hasClass("detail");
+  console.log(isBtnBackDetail);
+  
+  if(isBtnBackDetail){
+    if (document.referrer) {
+      window.history.back();
+    } else {
+      window.location.href = '/';
+    }
+
+    return;
+  }
+  
   $("body").addClass("overflow-hidden");
+
+  if(!$(".header.not-has-sub").length){
+    $(".header").toggleClass("has-sub");
+  }
 
   $(".header-mobile .header-mobile__menu").addClass("open");
   $("header .header__wishlist").addClass("d-none");
@@ -1054,4 +1087,22 @@ function toggleSidebarFilter(event){
   event.preventDefault();
   $("body").toggleClass("overflow-hidden");
   $("section.tour-list .tour-list__main .content-left").toggleClass("open");
+}
+
+function whyChooseUs(event){
+  if($(window).width() > 991) return;
+
+  event.preventDefault();
+  let $element = $(".why-choose-us");
+  let currentHeight = '42px';
+  let actualHeight = $element[0].scrollHeight + 12;
+  
+  $element.toggleClass("open");
+
+  if($element.hasClass("open")){
+    $element.css("height", actualHeight);
+  }
+  else{
+    $element.css("height", currentHeight);
+  }
 }
