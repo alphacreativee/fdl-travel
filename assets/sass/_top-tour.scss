@@ -97,12 +97,7 @@
       top: 25px;
       transition: all 0.3s;
       &:hover {
-        border-color: var(--color-grey);
-        svg {
-          path {
-            stroke: var(--color-grey);
-          }
-        }
+        background-color: var(--color-gray);
       }
     }
     .swiper-button-next {

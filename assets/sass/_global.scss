@@ -224,7 +224,7 @@
 // style button
 .btn-view-all {
   display: inline-block;
-  padding: 12px 24px;
+  padding: 13px 24px 11px;
   border: 1px solid var(--color-stroke-bold);
   border-radius: 8px;
   font-size: 14px;
@@ -487,7 +487,7 @@
   transform: translateX(calc(100% + 30px));
   transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
 
-  @media (max-width: 991px){
+  @media (max-width: 991px) {
     bottom: 80px;
   }
 

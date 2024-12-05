@@ -357,7 +357,7 @@ p {
 
 .btn-view-all {
   display: inline-block;
-  padding: 12px 24px;
+  padding: 13px 24px 11px;
   border: 1px solid var(--color-stroke-bold);
   border-radius: 8px;
   font-size: 14px;
@@ -922,7 +922,7 @@ p {
   top: 0;
   z-index: 1;
   left: 24px;
-  transform: translateY(46px);
+  transform: translateY(47px);
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s;
@@ -1095,7 +1095,7 @@ p {
   border-radius: 12px;
   width: 100%;
   height: 40px;
-  color: var(--color-grey);
+  color: var(--color-black);
 }
 .header__search--bottom #search-form:placeholder-shown + label {
   display: block;
@@ -2026,7 +2026,7 @@ p {
 .tour-sec__button .filter-button {
   border-radius: 19px;
   border: 1px solid var(--color-stroke);
-  padding: 11px 16px;
+  padding: 12px 16px 10px;
   color: var(--color-grey);
   transition: all 0.3s;
   font-size: 14px;
@@ -2057,6 +2057,9 @@ p {
   width: calc((100% - 72px) / 4);
   border-radius: 16px;
   overflow: hidden;
+}
+.tour-sec__item:hover {
+  border: 1px solid var(--color-grey);
 }
 @media (max-width: 991px) {
   .tour-sec__item {
@@ -2142,7 +2145,7 @@ p {
   z-index: 3;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 4px;
   background-color: var(--color-tag-red);
   border-radius: 4px;
   padding: 4px 6px;
@@ -2335,10 +2338,7 @@ p {
   transition: all 0.3s;
 }
 .top-tour .swiper-control .custom-swiper-button:hover {
-  border-color: var(--color-grey);
-}
-.top-tour .swiper-control .custom-swiper-button:hover svg path {
-  stroke: var(--color-grey);
+  background-color: var(--color-gray);
 }
 .top-tour .swiper-control .swiper-button-next {
   right: 80px;
