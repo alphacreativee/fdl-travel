@@ -221,7 +221,7 @@
     .filter-button {
       border-radius: 19px;
       border: 1px solid var(--color-stroke);
-      padding: 11px 16px;
+      padding: 12px 16px 10px;
       color: var(--color-grey);
       transition: all 0.3s;
       font-size: 14px;
@@ -249,9 +249,12 @@
   &__item {
     border: 1px solid var(--color-stroke);
     width: calc((100% - 72px) / 4);
-    // aspect-ratio: 302 / 384;
     border-radius: 16px;
     overflow: hidden;
+    transition: border 0.3s ease;
+    &:hover {
+      border: 1px solid var(--color-grey);
+    }
     @media (max-width: 991px) {
       width: calc((100% - 24px) / 2);
     }
@@ -340,7 +343,7 @@
     z-index: 3;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 4px;
     background-color: var(--color-tag-red);
     border-radius: 4px;
     padding: 4px 6px;
