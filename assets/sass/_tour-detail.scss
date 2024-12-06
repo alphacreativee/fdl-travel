@@ -1238,11 +1238,10 @@
     display: flex;
     margin-left: auto;
     margin-right: 0;
+  }
 
-    @media (max-width: 991px){
-      margin-right: auto;
-      margin-left: unset;
-    }
+  .lightpick__select{
+    color: var(--color-black) !important;
   }
 
   .lightpick__day {

@@ -1456,7 +1456,7 @@ p {
 .header-mobile__menu {
   height: calc(100dvh - 110px);
   background-color: var(--color-gray-bg);
-  padding: 24px 16px;
+  padding: 34px 16px 24px 16px;
   position: fixed;
   bottom: 62px;
   left: 0;
@@ -3191,7 +3191,7 @@ p {
 }
 @media (max-width: 767px) {
   .why-choose {
-    margin-bottom: 500px;
+    margin-bottom: 550px;
   }
 }
 .why-choose__name {
@@ -3540,6 +3540,11 @@ p {
   gap: 24px;
 }
 @media (max-width: 991px) {
+  .partner__body {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 576px) {
   .partner__body {
     grid-template-columns: 1fr;
   }
@@ -5013,11 +5018,8 @@ p {
   margin-left: auto;
   margin-right: 0;
 }
-@media (max-width: 991px) {
-  #checkoutModal .lightpick {
-    margin-right: auto;
-    margin-left: unset;
-  }
+#checkoutModal .lightpick__select {
+  color: var(--color-black) !important;
 }
 #checkoutModal .lightpick__day {
   width: 40px;
