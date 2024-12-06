@@ -314,6 +314,10 @@
       &.swiper-button-prev {
         left: 24px;
       }
+
+      svg{
+        transform: translateX(0.5px);
+      }
     }
 
     .swiper-pagination-bullet {

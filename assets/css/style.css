@@ -4183,6 +4183,9 @@ p {
 .main-detail .gallery .custom-swiper-button.swiper-button-prev {
   left: 24px;
 }
+.main-detail .gallery .custom-swiper-button svg {
+  transform: translateX(0.5px);
+}
 .main-detail .gallery .swiper-pagination-bullet {
   opacity: 1;
   background-color: rgba(245, 245, 245, 0.8);
