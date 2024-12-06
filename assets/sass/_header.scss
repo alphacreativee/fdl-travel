@@ -8,10 +8,10 @@
   &__inner {
     padding: 45px 80px 15px;
     @media (max-width: 1200px) {
-      padding: 55px 15px 15px;
+      padding: 55px 40px 15px;
     }
     @media (max-width: 991px) {
-      padding: 10px 24px;
+      padding: 10px 40px;
     }
     @media (max-width: 767px) {
       padding: 8px 16px;
@@ -204,7 +204,7 @@
 
       @media (max-width: 1200px) {
         top: 18px;
-        right: 20px;
+        right: 40px;
         left: unset;
       }
 
