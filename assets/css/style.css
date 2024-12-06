@@ -6136,6 +6136,20 @@ p {
   border: none;
 }
 
+.section-wish__list {
+  padding-top: 80px;
+}
+@media (max-width: 767px) {
+  .section-wish__list {
+    padding-top: 40px;
+  }
+}
+@media (max-width: 767px) {
+  .section-wish__list .tour-sec__result {
+    margin-bottom: 0;
+  }
+}
+
 .footer {
   position: relative;
 }

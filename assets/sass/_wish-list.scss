@@ -1,0 +1,13 @@
+.section-wish__list{
+    padding-top: 80px;
+
+    @media (max-width: 767px){
+        padding-top: 40px;
+    }
+
+    .tour-sec__result{
+        @media (max-width: 767px){
+            margin-bottom: 0;
+        }
+    }
+}
