@@ -832,7 +832,7 @@ p {
 }
 @media (max-width: 991px) {
   .header__inner {
-    padding: 10px 40px;
+    padding: 10px 24px;
   }
 }
 @media (max-width: 767px) {
