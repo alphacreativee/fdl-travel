@@ -75,7 +75,7 @@
       border-radius: 12px;
       background-color: var(--color-box);
       padding: 24px;
-      @media (max-width: 991px) {
+      @media (max-width: 1090px) {
         padding: 16px;
       }
       .title {
@@ -83,8 +83,8 @@
       }
 
       ul {
-        display: grid;
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
         row-gap: 16px;
 
         .item {
@@ -94,6 +94,10 @@
           overflow: hidden;
           background-color: var(--color-white);
           position: relative;
+
+          @media (max-width: 1200px) and (min-width: 992px){
+            max-height: 100px;
+          }
 
           &:hover {
             img {
@@ -106,6 +110,12 @@
             min-width: 120px;
             aspect-ratio: 1;
             overflow: hidden;
+
+            @media (max-width: 1200px) and (min-width: 992px){
+              width: 90px;
+              min-width: 90px;
+              aspect-ratio: unset;
+            }
 
             img {
               width: 100%;
@@ -121,6 +131,10 @@
             flex-direction: column;
             justify-content: space-between;
             padding: 16px;
+
+            @media (max-width: 1200px) and (min-width: 992px){
+              padding: 10px;
+            }
 
             a {
               color: var(--color-black);
@@ -138,6 +152,14 @@
 
           h5 {
             @include limit-row(3);
+
+            @media (max-width: 1200px){
+              -webkit-line-clamp: 2;
+            }
+
+            @media (max-width: 991px){
+              -webkit-line-clamp: 3;
+            }
           }
         }
       }

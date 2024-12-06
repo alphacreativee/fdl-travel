@@ -3199,7 +3199,7 @@ p {
 }
 @media (max-width: 1090px) {
   .why-choose {
-    margin-bottom: 640px;
+    margin-bottom: 600px;
   }
 }
 @media (max-width: 767px) {
@@ -4242,6 +4242,11 @@ p {
   padding-left: 60px;
   height: max-content;
 }
+@media (max-width: 1200px) and (min-width: 992px) {
+  .main-detail .main-content__right {
+    padding-left: 40px;
+  }
+}
 @media (max-width: 991px) {
   .main-detail .main-content__right {
     padding-left: 0;
@@ -5224,7 +5229,7 @@ p {
   background-color: var(--color-box);
   padding: 24px;
 }
-@media (max-width: 991px) {
+@media (max-width: 1090px) {
   .main-content__right .hot-tour {
     padding: 16px;
   }
@@ -5233,8 +5238,8 @@ p {
   margin-bottom: 15px;
 }
 .main-content__right .hot-tour ul {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
   row-gap: 16px;
 }
 .main-content__right .hot-tour ul .item {
@@ -5245,6 +5250,11 @@ p {
   background-color: var(--color-white);
   position: relative;
 }
+@media (max-width: 1200px) and (min-width: 992px) {
+  .main-content__right .hot-tour ul .item {
+    max-height: 100px;
+  }
+}
 .main-content__right .hot-tour ul .item:hover img {
   transform: scale(1.05);
 }
@@ -5253,6 +5263,13 @@ p {
   min-width: 120px;
   aspect-ratio: 1;
   overflow: hidden;
+}
+@media (max-width: 1200px) and (min-width: 992px) {
+  .main-content__right .hot-tour ul .item-image {
+    width: 90px;
+    min-width: 90px;
+    aspect-ratio: unset;
+  }
 }
 .main-content__right .hot-tour ul .item-image img {
   width: 100%;
@@ -5266,6 +5283,11 @@ p {
   flex-direction: column;
   justify-content: space-between;
   padding: 16px;
+}
+@media (max-width: 1200px) and (min-width: 992px) {
+  .main-content__right .hot-tour ul .item-content {
+    padding: 10px;
+  }
 }
 .main-content__right .hot-tour ul .item-content a {
   color: var(--color-black);
@@ -5284,6 +5306,16 @@ p {
   -webkit-line-clamp: 3;
   display: -webkit-box;
   -webkit-box-orient: vertical;
+}
+@media (max-width: 1200px) {
+  .main-content__right .hot-tour ul .item h5 {
+    -webkit-line-clamp: 2;
+  }
+}
+@media (max-width: 991px) {
+  .main-content__right .hot-tour ul .item h5 {
+    -webkit-line-clamp: 3;
+  }
 }
 .main-content__right .hot-tour .btn-custom {
   display: block;
@@ -6155,7 +6187,7 @@ p {
 }
 @media (max-width: 767px) {
   .section-wish__list {
-    padding-top: 40px;
+    padding-top: 24px;
   }
 }
 @media (max-width: 767px) {

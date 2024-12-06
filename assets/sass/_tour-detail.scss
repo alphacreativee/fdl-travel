@@ -339,6 +339,10 @@
       padding-left: 60px;
       height: max-content;
 
+      @media (max-width: 1200px) and (min-width: 992px){
+        padding-left: 40px;
+      }
+
       @media (max-width: 991px) {
         padding-left: 0;
       }
