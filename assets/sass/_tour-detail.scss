@@ -576,11 +576,17 @@
         cursor: pointer;
         transition: all 0.4s ease;
 
+        &:nth-child(4){
+          @media (max-width: 1200px){
+            display: none !important;
+          }
+        }
+
         &.view-calendar{
           gap: 3px;
         }
 
-        @media (max-width: 991px) {
+        @media (max-width: 1200px) {
           width: calc((100% - 24px) / 4);
           padding: 13px 0;
         }

@@ -331,6 +331,15 @@
       &:focus {
         box-shadow: none;
       }
+
+      @media (max-width: 991px){
+        transform: none;
+        width: 25px;
+        height: 25px;
+        right: 30px;
+        top: 30px;
+        z-index: 10;
+      }
     }
   }
 }
