@@ -20,6 +20,15 @@
     &:last-child {
       margin-bottom: 0;
     }
+
+    &.flex-row-reverse{
+      .overlay-image__content{
+        @media (max-width: 1200px){
+          padding-left: 0;
+          padding-right: 115px;
+        }
+      }
+    }
   }
   &__head {
     display: flex;
@@ -45,6 +54,9 @@
   }
   &__content {
     padding-inline: 115px;
+    @media (max-width: 1200px){
+      padding-right: 0;
+    }
     @media (max-width: 991px) {
       padding-inline: 0;
       margin-top: 24px;

@@ -110,6 +110,10 @@
     transition: all 0.5s;
     opacity: 0;
     visibility: hidden;
+
+    h4{
+      margin-bottom: 4px;
+    }
   }
 
   &__list {

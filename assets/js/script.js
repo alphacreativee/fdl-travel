@@ -137,7 +137,7 @@ function parallaxImage() {
     sections.forEach((section) => {
       const image = section.querySelector(".strategies_image");
       const overlay = section.querySelector(".strategies_image-overlay");
-      const yPercent = $(window).width() < 991 ? "40" : "100";
+      const yPercent = $(window).width() < 1090 ? "40" : "100";
       gsap.set([image, overlay], {
         y: yPercent,
         willChange: "transform",
