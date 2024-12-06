@@ -1006,11 +1006,8 @@ function updateNumber() {
 
 function openMenuMobile(event) {
   event.preventDefault();
-
-  console.log($(event.currentTarget));
   
   const isBtnBackDetail = $(event.currentTarget).hasClass("detail");
-  console.log(isBtnBackDetail);
   
   if(isBtnBackDetail){
     if (document.referrer) {

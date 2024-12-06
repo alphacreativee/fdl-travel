@@ -571,9 +571,14 @@
         padding: 15px;
         cursor: pointer;
         transition: all 0.4s ease;
+
+        &.view-calendar{
+          gap: 3px;
+        }
+
         @media (max-width: 991px) {
           width: calc((100% - 24px) / 4);
-          padding: 7px 0;
+          padding: 13px 0;
         }
         span {
           @media (max-width: 991px) {
@@ -583,6 +588,7 @@
           }
         }
         .date {
+          margin-top: 3px;
           @media (max-width: 991px) {
             font-size: 14px;
             line-height: 22px;
@@ -829,12 +835,19 @@
       &.expense {
         p {
           margin-bottom: 12px;
+
+          @media (max-width: 767px){
+            &.content-left{
+              margin-bottom: 0;
+            }
+          }
         }
 
         .included {
-          padding-right: 10px;
+          padding-right: 20px;
           @media (max-width: 991px) {
             margin-bottom: 24px;
+            padding-right: 0;
           }
         }
 
@@ -875,10 +888,10 @@
           border-radius: 8px;
           overflow: hidden;
           margin-bottom: 16px;
-          @media (max-width: 991px) {
-            &:last-child {
-              // margin-bottom: 40px;
-            }
+          transition: all 0.4s;
+
+          &:hover{
+            border-color: var(--color-grey);
           }
         }
 
@@ -1099,6 +1112,8 @@
             }
 
             .date{
+              margin-top: 3px;
+
               @media (max-width: 767px){
                 font-size: 14px;
                 line-height: 22px;
@@ -1218,6 +1233,7 @@
 
     display: flex;
     margin-left: auto;
+    margin-right: 0;
 
     @media (max-width: 991px){
       margin-right: auto;

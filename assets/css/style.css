@@ -4430,10 +4430,13 @@ p {
   cursor: pointer;
   transition: all 0.4s ease;
 }
+.main-detail .departure-chedule ul li.view-calendar {
+  gap: 3px;
+}
 @media (max-width: 991px) {
   .main-detail .departure-chedule ul li {
     width: calc((100% - 24px) / 4);
-    padding: 7px 0;
+    padding: 13px 0;
   }
 }
 @media (max-width: 991px) {
@@ -4442,6 +4445,9 @@ p {
     line-height: 18px;
     font-weight: 400;
   }
+}
+.main-detail .departure-chedule ul li .date {
+  margin-top: 3px;
 }
 @media (max-width: 991px) {
   .main-detail .departure-chedule ul li .date {
@@ -4658,12 +4664,18 @@ p {
 .main-detail .tour-information__item.expense p {
   margin-bottom: 12px;
 }
+@media (max-width: 767px) {
+  .main-detail .tour-information__item.expense p.content-left {
+    margin-bottom: 0;
+  }
+}
 .main-detail .tour-information__item.expense .included {
-  padding-right: 10px;
+  padding-right: 20px;
 }
 @media (max-width: 991px) {
   .main-detail .tour-information__item.expense .included {
     margin-bottom: 24px;
+    padding-right: 0;
   }
 }
 .main-detail .tour-information__item.expense ul li {
@@ -4692,6 +4704,10 @@ p {
   border-radius: 8px;
   overflow: hidden;
   margin-bottom: 16px;
+  transition: all 0.4s;
+}
+.main-detail .tour-information__item.more-information .accordion-item:hover {
+  border-color: var(--color-grey);
 }
 .main-detail .tour-information__item.more-information .accordion-button {
   box-shadow: none;
@@ -4884,6 +4900,9 @@ p {
     padding: 10px 8px;
   }
 }
+#checkoutModal .modal-body .departure-calendar ul li .date {
+  margin-top: 3px;
+}
 @media (max-width: 767px) {
   #checkoutModal .modal-body .departure-calendar ul li .date {
     font-size: 14px;
@@ -4983,6 +5002,7 @@ p {
   max-width: 500px;
   display: flex;
   margin-left: auto;
+  margin-right: 0;
 }
 @media (max-width: 991px) {
   #checkoutModal .lightpick {
