@@ -148,7 +148,7 @@ function parallaxImage() {
           start: "top 55%",
           end: "top 35%",
           scrub: 2,
-          markers: true,
+          // markers: true,
         },
       });
 
