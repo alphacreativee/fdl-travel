@@ -275,6 +275,11 @@ p {
   color: var(--color-black);
 }
 
+.lightpick__day {
+  width: 40px;
+  height: 40px;
+}
+
 .lightpick__day.is-today {
   color: var(--color-primary);
   font-weight: 900;
@@ -349,6 +354,18 @@ p {
 
 .lightpick {
   font-family: var(--font-body);
+}
+
+@media (max-width: 400px) {
+  .lightpick.lightpick--1-columns {
+    width: calc(100% - 44px);
+  }
+}
+
+@media (max-width: 400px) {
+  .lightpick__month {
+    width: 100%;
+  }
 }
 
 .swiper-button-next:after,
@@ -4932,7 +4949,7 @@ p {
 }
 .related-tour .tour-sec__item {
   height: auto;
-  overflow: auto;
+  overflow: visible;
 }
 .related-tour .tour-sec__box {
   border-radius: 16px;

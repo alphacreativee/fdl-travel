@@ -148,6 +148,11 @@
   color: var(--color-black);
 }
 
+.lightpick__day{
+  width: 40px;
+  height: 40px;
+}
+
 .lightpick__day.is-today {
   color: var(--color-primary);
   font-weight: 900;
@@ -216,6 +221,17 @@
 }
 .lightpick {
   font-family: var(--font-body);
+}
+.lightpick.lightpick--1-columns{
+  @media (max-width: 400px){
+    width: calc(100% - 44px);
+  }
+
+}
+.lightpick__month{
+  @media (max-width: 400px){
+    width: 100%;
+  }
 }
 .swiper-button-next:after,
 .swiper-rtl .swiper-button-prev:after,

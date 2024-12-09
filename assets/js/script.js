@@ -377,7 +377,7 @@ function searchBar() {
             rect.top + window.scrollY - calendar.offsetHeight - 38 + "px";
           calendar.style.left = rect.left + window.scrollX - 30 + "px";
         } else {
-          calendar.style.top = rect.bottom + window.scrollY + 20 + "px";
+          calendar.style.top = rect.bottom + window.scrollY + 19 + "px";
           calendar.style.left = rect.left + window.scrollX - 30 + "px";
         }
       },
