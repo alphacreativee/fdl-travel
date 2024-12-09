@@ -956,6 +956,12 @@
 
   .tour-sec__item {
     height: auto;
+    overflow: auto;
+  }
+
+  .tour-sec__box{
+    border-radius: 16px;
+    overflow: hidden;
   }
 
   .swiper-control .custom-swiper-button {

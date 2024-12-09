@@ -4881,6 +4881,11 @@ p {
 }
 .related-tour .tour-sec__item {
   height: auto;
+  overflow: auto;
+}
+.related-tour .tour-sec__box {
+  border-radius: 16px;
+  overflow: hidden;
 }
 .related-tour .swiper-control .custom-swiper-button {
   width: 32px;
