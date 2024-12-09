@@ -6389,6 +6389,11 @@ p {
     bottom: 88px;
   }
 }
+@media (max-width: 767px) {
+  .footer__cta {
+    right: 16px;
+  }
+}
 .footer__cta.hide {
   transform: translateX(10px);
   opacity: 0;
