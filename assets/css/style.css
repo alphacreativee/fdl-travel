@@ -3452,6 +3452,11 @@ p {
     padding-right: 115px;
   }
 }
+@media (max-width: 991px) {
+  .overlay-image .row.flex-row-reverse .overlay-image__content {
+    padding-right: 0;
+  }
+}
 .overlay-image__head {
   display: flex;
   justify-content: center;
