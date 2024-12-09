@@ -40,7 +40,9 @@ $(document).ready(function () {
   removeVisibleSearchMobile();
 });
 window.onload = function () {
-  window.scrollTo(0, 0);
+  if($(".gsap-section").length){
+    window.scrollTo(0, 0);
+  }
   pinCards();
   parallaxImage();
   ScrollTrigger.refresh();

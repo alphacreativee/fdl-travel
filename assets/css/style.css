@@ -277,6 +277,12 @@ p {
   background-image: none;
 }
 
+.lightpick__day.is-start-date {
+  background-image: unset;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+}
+
 .lightpick__day.is-in-range:hover {
   background-image: none;
   background-color: var(--color-primary);
