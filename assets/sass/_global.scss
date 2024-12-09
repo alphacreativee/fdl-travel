@@ -156,13 +156,13 @@
   &:hover{
     color: var(--color-white) !important;
     background-color: var(--color-primary);
-    font-weight: 900;
+    font-weight: 700;
   }
 }
 
 .lightpick__day.is-today {
   color: var(--color-primary);
-  font-weight: 900;
+  font-weight: 700;
   background-image: none;
 }
 
