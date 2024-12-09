@@ -158,6 +158,13 @@
         .select2-selection__placeholder {
         color: var(--color-grey);
         margin-left: 0;
+        margin-bottom: 2px;
+      }
+
+      .select2-container .select2-selection--single .select2-selection__rendered{
+        padding-left: 25px;
+        display: flex;
+        align-items: center;
       }
     }
 
@@ -270,12 +277,12 @@
               }
 
               &:checked::after {
-                content: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 16 16"%3E%3Cpath fill="white" d="M12.293 3.293a1 1 0 0 1 0 1.414L6 10.414 3.707 8.121a1 1 0 1 1 1.414-1.414L6 7.586l5.293-5.293a1 1 0 0 1 1.414 0z"%3E%3C/path%3E%3C/svg%3E');
+                content: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="11" height="8" viewBox="0 0 9 6" fill="none"%3E%3Cpath d="M1 2.46618L3.30577 5L7.30639 1" stroke="%23FEFEFE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"%3E%3C/path%3E%3C/svg%3E');
                 color: white;
                 font-size: 16px;
-                                height: 16px;
+                height: 18px;
                 position: absolute;
-                top: calc(50% + 2px);
+                top: calc(50% + 0.5px);
                 left: 50%;
                 transform: translate(-50%, -50%);
               }

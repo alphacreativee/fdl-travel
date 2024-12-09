@@ -2773,6 +2773,16 @@ p {
 .customer-story__item:hover .customer-story__image {
   height: calc(var(--height) * 0.5);
 }
+@media (max-width: 991px) {
+  .customer-story__item:hover .customer-story__image {
+    height: calc(var(--height) * 0.5);
+  }
+}
+@media (max-width: 767px) {
+  .customer-story__item:hover .customer-story__image {
+    height: calc(var(--height) * 0.56);
+  }
+}
 .customer-story__item:hover .customer-story__back {
   opacity: 1;
   visibility: visible;
@@ -2782,6 +2792,26 @@ p {
   opacity: 1;
   visibility: visible;
 }
+@media (max-width: 991px) {
+  .customer-story__item .customer-story__image {
+    height: calc(var(--height) * 0.5);
+  }
+  .customer-story__item .customer-story__back {
+    opacity: 1;
+    visibility: visible;
+    bottom: 0;
+    padding-right: 10px;
+  }
+  .customer-story__item .customer-story__picture {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+@media (max-width: 767px) {
+  .customer-story__item .customer-story__image {
+    height: calc(var(--height) * 0.56);
+  }
+}
 .customer-story__image {
   position: relative;
   border-radius: 16px;
@@ -2789,6 +2819,16 @@ p {
   width: 100%;
   overflow: hidden;
   transition: all 0.5s;
+  position: relative;
+}
+.customer-story__image::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
 }
 .customer-story__image img {
   width: 100%;
@@ -2802,9 +2842,16 @@ p {
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s;
+  z-index: 2;
 }
 .customer-story__picture:hover {
   cursor: pointer;
+}
+@media (max-width: 991px) {
+  .customer-story__picture {
+    top: 12px;
+    left: 16px;
+  }
 }
 .customer-story__nation {
   position: absolute;
@@ -2813,11 +2860,18 @@ p {
   display: flex;
   align-items: center;
   gap: 8px;
+  z-index: 2;
 }
 .customer-story__nation p {
   margin-bottom: 0;
   line-height: 1;
   transform: translateY(2px);
+}
+@media (max-width: 991px) {
+  .customer-story__nation {
+    bottom: 12px;
+    left: 16px;
+  }
 }
 .customer-story__back {
   position: absolute;
@@ -2831,6 +2885,18 @@ p {
 }
 .customer-story__back h4 {
   margin-bottom: 4px;
+}
+@media (max-width: 767px) {
+  .customer-story__back h4 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+@media (max-width: 767px) {
+  .customer-story__back .desc {
+    font-size: 14px;
+    line-height: 22px;
+  }
 }
 .customer-story__list .swiper-wrapper {
   transition-timing-function: ease;
@@ -3948,7 +4014,6 @@ p {
   line-height: 1;
   color: var(--color-grey);
   transition: all 0.4s ease;
-  transform: translateY(1px);
 }
 .breadcrumb a:hover,
 .breadcrumb span:hover {
@@ -3956,7 +4021,6 @@ p {
 }
 .breadcrumb .breadcrumb_last {
   color: var(--color-black);
-  transform: translateY(1px);
 }
 .breadcrumb .arrow {
   width: 12px;
@@ -5467,6 +5531,12 @@ p {
 .tour-list .content-left .filter-search .select2-container--default .select2-selection--single .select2-selection__placeholder {
   color: var(--color-grey);
   margin-left: 0;
+  margin-bottom: 2px;
+}
+.tour-list .content-left .filter-search .select2-container .select2-selection--single .select2-selection__rendered {
+  padding-left: 25px;
+  display: flex;
+  align-items: center;
 }
 .tour-list .content-left .filter-list .top-location {
   margin-top: 24px;
@@ -5563,12 +5633,12 @@ p {
   border-color: var(--color-secondary);
 }
 .tour-list .content-left .filter-list .accordion-body ul li input[type=checkbox]:checked::after {
-  content: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 16 16"%3E%3Cpath fill="white" d="M12.293 3.293a1 1 0 0 1 0 1.414L6 10.414 3.707 8.121a1 1 0 1 1 1.414-1.414L6 7.586l5.293-5.293a1 1 0 0 1 1.414 0z"%3E%3C/path%3E%3C/svg%3E');
+  content: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="11" height="8" viewBox="0 0 9 6" fill="none"%3E%3Cpath d="M1 2.46618L3.30577 5L7.30639 1" stroke="%23FEFEFE" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"%3E%3C/path%3E%3C/svg%3E');
   color: white;
   font-size: 16px;
-  height: 16px;
+  height: 18px;
   position: absolute;
-  top: calc(50% + 2px);
+  top: calc(50% + 0.5px);
   left: 50%;
   transform: translate(-50%, -50%);
 }

@@ -1,7 +1,3 @@
-if ("scrollRestoration" in history) {
-  history.scrollRestoration = "manual";
-}
-
 $(document).ready(function () {
   if (document.querySelector(".gsap-section")) {
     const lenis = new Lenis({
@@ -623,8 +619,8 @@ function swiperCustomStory() {
       centeredSlides: true,
       autoplay: {
         delay: 1,
-        disableOnInteraction: true,
-        pauseOnMouseEnter: true,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: false,
       },
       freeMode: true,
       freeModeMomentum: true,
@@ -635,6 +631,11 @@ function swiperCustomStory() {
         992: {
           slidesPerView: 4.5,
           spaceBetween: 24,
+          autoplay: {
+            delay: 1,
+            disableOnInteraction: true,
+            pauseOnMouseEnter: true,
+          },
         },
         767: {
           slidesPerView: 2.5,

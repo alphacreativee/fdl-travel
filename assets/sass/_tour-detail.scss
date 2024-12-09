@@ -14,7 +14,6 @@
     line-height: 1;
     color: var(--color-grey);
     transition: all 0.4s ease;
-    transform: translateY(1px);
     &:hover {
       color: var(--color-black);
     }
@@ -22,7 +21,6 @@
 
   .breadcrumb_last {
     color: var(--color-black);
-    transform: translateY(1px);
   }
 
   .arrow {
