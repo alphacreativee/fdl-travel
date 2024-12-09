@@ -507,16 +507,18 @@ function swiperTours() {
 }
 
 function countDown() {
-  // Lấy thời gian đếm ngược từ HTML (dùng thuộc tính `data-time`)
-  const countdownElement = document.querySelector(".countdown");
-  if (countdownElement) {
+  // Lấy tất cả các phần tử có class `countdown`
+  const countdownElements = document.querySelectorAll(".countdown");
+
+  countdownElements.forEach((countdownElement) => {
+    // Lấy thời gian đếm ngược từ thuộc tính `data-time`
     const countDownDate = new Date(
       countdownElement.getAttribute("data-time")
     ).getTime();
 
-    const hourscontainer = countdownElement.querySelector(".js-hours span");
-    const minutescontainer = countdownElement.querySelector(".js-minutes span");
-    const secondscontainer = countdownElement.querySelector(".js-seconds span");
+    const hoursContainer = countdownElement.querySelector(".js-hours span");
+    const minutesContainer = countdownElement.querySelector(".js-minutes span");
+    const secondsContainer = countdownElement.querySelector(".js-seconds span");
 
     const startCountdown = () => {
       const timer = setInterval(function () {
@@ -539,15 +541,15 @@ function countDown() {
         let seconds = Math.floor((distance % (1000 * 60)) / 1000); // Giây
 
         // Cập nhật nội dung các container
-        hourscontainer.innerHTML =
+        hoursContainer.innerHTML =
           totalHours < 10 ? `0${totalHours}` : totalHours;
-        minutescontainer.innerHTML = minutes < 10 ? `0${minutes}` : minutes;
-        secondscontainer.innerHTML = seconds < 10 ? `0${seconds}` : seconds;
+        minutesContainer.innerHTML = minutes < 10 ? `0${minutes}` : minutes;
+        secondsContainer.innerHTML = seconds < 10 ? `0${seconds}` : seconds;
       }, 1000);
     };
 
     startCountdown();
-  }
+  });
 }
 
 function swiperTopTour() {
