@@ -210,6 +210,12 @@
     border-radius: 4px;
     width: 100%;
     height: 100%;
+    transition: all 0.3s;
+
+    &:hover{
+      background-color: var(--color-secondary-hover);
+    }
+
     @media (max-width: 991px) {
       height: 48px;
       width: 100%;
