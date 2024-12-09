@@ -8,7 +8,8 @@
     height: 100vh;
     background-color: var(--color-banner-primary);
     @media (max-width: 991px) {
-      height: 950px;
+      height: 800px;
+      padding-top: 100px;
     }
     @media (min-width: 1441px) {
       .row {
@@ -111,6 +112,11 @@
       margin-bottom: -7px;
       min-height: 80px;
       max-height: 100px;
+
+      @media (max-width: 991px){
+        height: 5vh;
+        min-height: 50px;
+      }
     }
 
     /* Animation */

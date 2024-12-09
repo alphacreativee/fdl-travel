@@ -3031,7 +3031,8 @@ p {
 }
 @media (max-width: 991px) {
   .hero-about__container {
-    height: 950px;
+    height: 800px;
+    padding-top: 100px;
   }
 }
 @media (min-width: 1441px) {
@@ -3153,6 +3154,12 @@ p {
   margin-bottom: -7px;
   min-height: 80px;
   max-height: 100px;
+}
+@media (max-width: 991px) {
+  .hero-about__ondebox .onde {
+    height: 5vh;
+    min-height: 50px;
+  }
 }
 .hero-about__ondebox .parallaxonde > use {
   animation: move-forever 40s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;

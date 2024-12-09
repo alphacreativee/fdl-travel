@@ -706,6 +706,9 @@ function parrallaxAboutBanner() {
   let triggerStart = $(window).width() < 991 ? "top top" : "top 42%";
   let triggerStartContent = $(window).width() < 991 ? "top 40%" : "top 28%";
 
+  const triggerEndTitle = $(window).width() < 991 ? "top 8%" : "top 20%";
+  const triggerEndDesc = $(window).width() < 991 ? "top 10%" : "top 20%";
+
   gsap.set([".hero-about__title", ".hero-about__desc"], {
     y: 0,
     willChange: "transform",
@@ -715,7 +718,7 @@ function parrallaxAboutBanner() {
     scrollTrigger: {
       trigger: ".hero-about__title",
       start: triggerStart,
-      end: "top 20%",
+      end: triggerEndTitle,
       scrub: 1.5,
     },
   });
@@ -723,7 +726,7 @@ function parrallaxAboutBanner() {
     scrollTrigger: {
       trigger: ".hero-about__desc",
       start: triggerStartContent,
-      end: "top 20%",
+      end: triggerEndDesc,
       scrub: 1.5,
     },
   });
