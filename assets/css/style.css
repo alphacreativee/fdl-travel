@@ -2617,8 +2617,8 @@ p {
 }
 @media (max-width: 991px) {
   .travel-guide__title {
-    font-size: 32px;
-    line-height: 40px;
+    font-size: 20px;
+    line-height: 28px;
     margin-bottom: 32px;
   }
 }
