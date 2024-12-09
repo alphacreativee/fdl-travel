@@ -3356,9 +3356,9 @@ p {
     margin-bottom: 600px;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .why-choose {
-    margin-bottom: 650px;
+    margin-bottom: 750px;
   }
 }
 @media (max-width: 480px) {
