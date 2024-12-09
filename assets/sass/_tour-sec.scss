@@ -27,17 +27,17 @@
         &:first-child {
           margin-left: 40px;
         }
-        &:last-child {
-          margin-right: 40px;
-        }
+        // &:last-child {
+        //   margin-right: 40px;
+        // }
       }
       @media (max-width: 767px) {
         &:first-child {
           margin-left: 16px;
         }
-        &:last-child {
-          margin-right: 16px;
-        }
+        // &:last-child {
+        //   margin-right: 16px;
+        // }
       }
     }
     .tour-sec__filter {
@@ -125,10 +125,16 @@
     .tour-sec__button {
       @media (max-width: 991px) {
         overflow-x: scroll;
+        padding-right: 40px;
         &::-webkit-scrollbar {
           display: none;
         }
       }
+
+      @media (max-width: 767px){
+        padding-right: 16px;
+      }
+
       .filter-button {
         @media (max-width: 991px) {
           min-width: max-content;
@@ -136,17 +142,17 @@
             &:first-child {
               margin-left: 40px;
             }
-            &:last-child {
-              margin-right: 40px;
-            }
+            // &:last-child {
+            //   margin-right: 40px;
+            // }
           }
           @media (max-width: 767px) {
             &:first-child {
               margin-left: 16px;
             }
-            &:last-child {
-              margin-right: 16px;
-            }
+            // &:last-child {
+            //   margin-right: 16px;
+            // }
           }
         }
       }
@@ -214,10 +220,16 @@
     gap: 8px;
     @media (max-width: 991px) {
       overflow-x: scroll;
+      padding-right: 40px;
       &::-webkit-scrollbar {
         display: none;
       }
     }
+
+    @media (max-width: 767px){
+      padding-right: 16px;
+    }
+    
     .filter-button {
       border-radius: 19px;
       border: 1px solid var(--color-stroke);
