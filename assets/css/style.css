@@ -271,6 +271,10 @@ p {
   }
 }
 
+.lightpick__select {
+  color: var(--color-black);
+}
+
 .lightpick__day.is-today {
   color: var(--color-primary);
   font-weight: 900;

@@ -144,6 +144,9 @@
   }
 }
 // css lightpick
+.lightpick__select{
+  color: var(--color-black);
+}
 
 .lightpick__day.is-today {
   color: var(--color-primary);
