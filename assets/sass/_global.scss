@@ -693,11 +693,26 @@
 
 .sort {
   .dropdown-custom__menu {
-    right: -18px;
+    right: -25px;
+    top: calc(100% + 13px);
+
+    &::before{
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-bottom: 8px solid var(--color-white);
+      top: 1px;
+      z-index: 1;
+      left: 24px;
+      transform: translateY(-100%);
+    }
   }
 
   .dropdown-custom__item {
-    text-align: right;
+    // text-align: right;
   }
 }
 

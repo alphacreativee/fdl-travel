@@ -797,12 +797,22 @@ p {
 }
 
 .sort .dropdown-custom__menu {
-  right: -18px;
+  right: -25px;
+  top: calc(100% + 13px);
 }
-.sort .dropdown-custom__item {
-  text-align: right;
+.sort .dropdown-custom__menu::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid var(--color-white);
+  top: 1px;
+  z-index: 1;
+  left: 24px;
+  transform: translateY(-100%);
 }
-
 .wish-list {
   position: absolute;
   top: 16px;
@@ -4108,6 +4118,9 @@ p {
     margin-bottom: 12px;
   }
 }
+.main-detail .sub-title {
+  gap: 20px;
+}
 .main-detail .tag {
   font-size: 12px;
   line-height: 20px;
@@ -5858,7 +5871,7 @@ p {
   width: 100%;
   height: 100%;
   text-align: center;
-  transition: transform 0.6s;
+  transition: transform 1s;
   transform-style: preserve-3d;
 }
 .visa-application .flip-card-container {
@@ -6444,8 +6457,11 @@ p {
 }
 @media (max-width: 991px) {
   .footer__company {
-    margin-bottom: 12px;
+    margin-bottom: 10px;
   }
+}
+.footer__company span {
+  color: var(--color-text-footer);
 }
 .footer__company p {
   margin-bottom: 0;
@@ -6469,7 +6485,8 @@ p {
   .footer__terms ul {
     flex-wrap: wrap;
     gap: 16px;
-    margin-bottom: 16px;
+    row-gap: 10px;
+    margin-bottom: 20px;
   }
 }
 .footer__terms ul li a {
