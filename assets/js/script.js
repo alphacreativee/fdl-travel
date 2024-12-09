@@ -3,7 +3,7 @@ $(document).ready(function () {
     const lenis = new Lenis({
       smooth: true,
       easing: (t) => t,
-      duration: 0.5,
+      duration: 0,
     });
 
     lenis.on("scroll", ScrollTrigger.update);
@@ -40,7 +40,7 @@ $(document).ready(function () {
   removeVisibleSearchMobile();
 });
 window.onload = function () {
-  if($(".gsap-section").length){
+  if ($(".gsap-section").length) {
     window.scrollTo(0, 0);
   }
   pinCards();
@@ -79,7 +79,7 @@ function validateFormCheckout() {
 }
 
 // Thêm sự kiện cho nút submit
-if($("#btnSubmit").length){
+if ($("#btnSubmit").length) {
   document.getElementById("btnSubmit").addEventListener("click", (e) => {
     e.preventDefault();
 
@@ -146,15 +146,15 @@ function parallaxImage() {
         scrollTrigger: {
           trigger: section,
           start: "top 55%",
-          end: "top 0%",
+          end: "top 35%",
           scrub: 2,
           // markers: true,
         },
       });
 
-      tl.to(image, { y: 0, ease: "none", duration: 50 }).to(
+      tl.to(image, { y: 0, ease: "none", duration: 20 }).to(
         overlay,
-        { y: 0, ease: "none", duration: 50 },
+        { y: 0, ease: "none", duration: 20 },
         "<"
       );
     });
@@ -911,12 +911,12 @@ function modalCheckoutTour() {
     changeQuantity(thisButton, action);
   });
 
-  if($(window).width() < 992){
-    $("#checkoutModal").on("show.bs.modal", function(){
+  if ($(window).width() < 992) {
+    $("#checkoutModal").on("show.bs.modal", function () {
       $("body").addClass("overflow-hidden");
-    })
+    });
 
-    $("#checkoutModal").on("hidden.bs.modal", function() {
+    $("#checkoutModal").on("hidden.bs.modal", function () {
       $("body").removeClass("overflow-hidden");
     });
   }
@@ -1014,22 +1014,22 @@ function updateNumber() {
 
 function openMenuMobile(event) {
   event.preventDefault();
-  
+
   const isBtnBackDetail = $(event.currentTarget).hasClass("detail");
-  
-  if(isBtnBackDetail){
+
+  if (isBtnBackDetail) {
     if (document.referrer) {
       window.history.back();
     } else {
-      window.location.href = '/';
+      window.location.href = "/";
     }
 
     return;
   }
-  
+
   $("body").addClass("overflow-hidden");
 
-  if(!$(".header.not-has-sub").length){
+  if (!$(".header.not-has-sub").length) {
     $(".header").toggleClass("has-sub");
   }
 
@@ -1086,28 +1086,27 @@ function removeVisibleSearchMobile() {
   });
 }
 
-function toggleSidebarFilter(event){
-  if($(window).width() > 767) return;
+function toggleSidebarFilter(event) {
+  if ($(window).width() > 767) return;
 
   event.preventDefault();
   $("body").toggleClass("overflow-hidden");
   $("section.tour-list .tour-list__main .content-left").toggleClass("open");
 }
 
-function whyChooseUs(event){
-  if($(window).width() > 991) return;
+function whyChooseUs(event) {
+  if ($(window).width() > 991) return;
 
   event.preventDefault();
   let $element = $(".why-choose-us");
-  let currentHeight = '42px';
+  let currentHeight = "42px";
   let actualHeight = $element[0].scrollHeight + 12;
-  
+
   $element.toggleClass("open");
 
-  if($element.hasClass("open")){
+  if ($element.hasClass("open")) {
     $element.css("height", actualHeight);
-  }
-  else{
+  } else {
     $element.css("height", currentHeight);
   }
 }

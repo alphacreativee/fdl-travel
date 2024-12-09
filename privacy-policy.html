@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="email=no" />
+    <title>Chính sách thanh toán</title>
+    <!-- import favicon -->
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./assets/images/svg/ic_favicon.svg"
+    />
+    <!-- meta -->
+    <!-- <meta property="og:url" content="" />
+    <meta property="og:type content="website" />
+    <meta property="og:title" content="Phuc Long Luxury Hotel" />
+    <meta property="og:description" content="Phuc Long Luxury Hotel" />
+    <meta property="og:image" content="./assets/images/banner.png" /> -->
+    <!-- meta -->
+    <!-- import boostrap css -->
+    <link rel="stylesheet" href="./assets/libs/bootstrap.min.css" />
+    <!-- end boostrap css -->
+    <!-- import lightpick css -->
+    <link rel="stylesheet" href="./assets/libs/lightpick.min.css" />
+    <!-- end lightpick css -->
+    <!-- import css swiper -->
+    <link rel="stylesheet" href="./assets/libs/swiper-bundle.min.css" />
+    <!-- end css swiper -->
+    <!-- import css lenis -->
+    <link rel="stylesheet" href="./assets/libs/lenis.css" />
+    <!-- end css lenis -->
+    <!-- import font -->
+    <link rel="stylesheet" href="./assets/font/poppins/font.css" />
+    <link rel="stylesheet" href="./assets/font/recoleta/font.css" />
+    <!-- end import font -->
+    <!-- import link custom css page -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- end link custom css page -->
+  </head>
+  <body>
+    <!-- start header -->
+    <header class="header not-has-sub">
+      <div class="container-fluid p-0">
+        <div
+          class="header__inner d-flex align-items-center justify-content-between"
+        >
+          <div class="header__logo">
+            <a href="./index.html">
+              <img src="./assets/images/svg/logo.svg" alt="logo" />
+            </a>
+          </div>
+          <div class="header__main d-flex align-items-center">
+            <div class="header__menu d-flex align-items-center">
+              <nav>
+                <ul>
+                  <li>
+                    <a href="./index.html" class="b2-medium color-white"
+                      >Trang chủ</a
+                    >
+                  </li>
+                  <li class="menu-item-has-children">
+                    <a href="" class="b2-medium color-white">Tour du lịch</a>
+                    <ul class="sub-menu">
+                      <li>
+                        <a href="./tour-list.html" class="b2-medium color-black"
+                          >Tour trong nước</a
+                        >
+                      </li>
+                      <li>
+                        <a href="./tour-list.html" class="b2-medium color-black"
+                          >Tour nước ngoài</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a
+                      href="./exclusive-tour.html"
+                      class="b2-medium color-white"
+                      >Tour độc quyền</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="b2-medium color-white">Khách sạn</a>
+                  </li>
+                  <li class="menu-item-has-children">
+                    <a href="" class="b2-medium color-white">Dịch vụ </a>
+                    <ul class="sub-menu">
+                      <li>
+                        <a
+                          href="./car-rental.html"
+                          class="b2-medium color-black"
+                          >Thuê xe</a
+                        >
+                      </li>
+                      <li>
+                        <a href="./visa.html" class="b2-medium color-black"
+                          >Visa</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="header__cta">
+              <div class="header__search">
+                <div class="header__search--top">
+                  <nav>
+                    <ul>
+                      <li>
+                        <a href="./about-us.html" class="b3-regular color-white"
+                          >Về FDL Travel</a
+                        >
+                      </li>
+                      <li>
+                        <a href="./blog.html" class="b3-regular color-white"
+                          >Cẩm nang du lịch</a
+                        >
+                      </li>
+                      <li>
+                        <a href="./contact.html" class="b3-regular color-white"
+                          >Liên hệ</a
+                        >
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+                <div class="header__search--bottom">
+                  <div class="ic-search">
+                    <svg
+                      width="24"
+                      height="24"
+                      onclick="openSearchHeaderMobile(event)"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M11.6891 6.07343C10.3318 6.07343 9.03017 6.61257 8.07043 7.57226C7.1107 8.53194 6.57153 9.83356 6.57153 11.1908C6.57153 12.548 7.1107 13.8496 8.07043 14.8093C9.03017 15.7689 10.3318 16.3081 11.6891 16.3081C13.0464 16.3081 14.3481 15.7689 15.3078 14.8093C16.2675 13.8496 16.8067 12.548 16.8067 11.1908C16.8067 9.83356 16.2675 8.53194 15.3078 7.57226C14.3481 6.61257 13.0464 6.07343 11.6891 6.07343ZM5.49414 11.1908C5.49414 7.76969 8.26787 4.99609 11.6891 4.99609C15.1104 4.99609 17.8841 7.76969 17.8841 11.1908C17.8841 14.6118 15.1104 17.3854 11.6891 17.3854C8.26787 17.3854 5.49414 14.6118 5.49414 11.1908Z"
+                        fill="#212121"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M15.3101 14.8101C15.4111 14.7091 15.5481 14.6523 15.6909 14.6523C15.8338 14.6523 15.9708 14.7091 16.0718 14.8101L19.3443 18.0825C19.4425 18.184 19.4968 18.3201 19.4955 18.4614C19.4943 18.6026 19.4377 18.7377 19.3378 18.8376C19.2379 18.9374 19.1028 18.9941 18.9615 18.9953C18.8203 18.9965 18.6842 18.9423 18.5826 18.8441L15.3101 15.5717C15.2091 15.4707 15.1523 15.3337 15.1523 15.1909C15.1523 15.0481 15.2091 14.9111 15.3101 14.8101Z"
+                        fill="#212121"
+                      />
+                    </svg>
+                  </div>
+                  <input
+                    type="text"
+                    id="search-form"
+                    placeholder=" "
+                    autocomplete="off"
+                  />
+                  <label for="search-form">
+                    <div class="label-inner d-flex align-items-center">
+                      <div class="text b2-regular">
+                        Tìm kiếm
+                        <div class="text-up">
+                          <span>điểm đến</span> <span>hoạt động</span>
+                        </div>
+                      </div>
+                    </div>
+                  </label>
+                  <div class="header__search--mobile">
+                    <form action="">
+                      <input type="text" placeholder="Tìm kiếm điểm đến" />
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div class="header__wishlist">
+                <a href="./wish-list.html">
+                  <img src="./assets/images/svg/ic_wishlist.svg" alt="icon" />
+                </a>
+              </div>
+              <div class="header__lang dropdown-custom">
+                <div class="language__head dropdown-custom__btn">
+                  <div
+                    class="value-select color-white b2-font dropdown-custom__text"
+                  >
+                    <img src="./assets/images/svg/ic_flag_vi.svg" alt="" />
+                    <!-- <span>Tiếng Việt</span> -->
+                  </div>
+                </div>
+                <div class="language__body dropdown-custom__menu">
+                  <div class="lang__inner">
+                    <a
+                      class="dropdown-custom__item language__item color-black b2-font"
+                    >
+                      <img src="./assets/images/svg/ic_flag_en.svg" alt="" />
+                      <!-- <span class="b2-medium color-black">English</span> -->
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="header__sub d-none">
+            <button class="btn-back" onclick="openMenuMobile(event)">
+              <img src="./assets/images/svg/icon_arrow_left_white.svg" alt="" />
+            </button>
+            <h4 class="h4-semibold color-white text-center">Trang chủ</h4>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="header-mobile d-block d-lg-none">
+      <div class="header-mobile__menu">
+        <ul class="menu--top">
+          <li>
+            <a href="./about-us.html">
+              <div class="icon">
+                <img src="./assets/images/svg/icon_menu_flower.svg" alt="" />
+              </div>
+              <span class="b3-regular">Về FDL Travel</span>
+            </a>
+          </li>
+          <li>
+            <a href="./exclusive-tour.html">
+              <div class="icon">
+                <img src="./assets/images/svg/icon_menu_book.svg" alt="" />
+              </div>
+              <span class="b3-regular">Cẩm nang du lịch</span>
+            </a>
+          </li>
+          <li>
+            <a href="./contact.html">
+              <div class="icon">
+                <img src="./assets/images/svg/icon_menu_phone.svg" alt="" />
+              </div>
+              <span class="b3-regular">Liên hệ</span>
+            </a>
+          </li>
+          <li>
+            <a href="./wish-list.html">
+              <div class="icon">
+                <img src="./assets/images/svg/icon_menu_wishlist.svg" alt="" />
+              </div>
+              <span class="b3-regular">Mục ưa thích</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="menu--bottom">
+          <li>
+            <a href="#">
+              <img src="./assets/images/svg/icon_menu_globe.svg" alt="" />
+              Ngôn ngữ
+            </a>
+            <img
+              src="./assets/images/svg/ic_flag_vi.svg"
+              class="icon-flag"
+              alt=""
+            />
+          </li>
+          <li>
+            <a href="#">
+              <img
+                src="./assets/images/svg/icon_menu_shield-check.svg"
+                alt=""
+              />
+              Chính sách quyền riêng tư
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./assets/images/svg/icon_menu_credit.svg" alt="" />
+              Chính sách thanh toán
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./assets/images/svg/icon_menu_file-text.svg" alt="" />
+              Điều khoản sử dụng
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./assets/images/svg/icon_menu_file-ban.svg" alt="" />
+              Chính sách huỷ
+            </a>
+          </li>
+        </ul>
+      </div>
+      <ul class="header-mobile__list">
+        <li class="active home">
+          <a href="./index.html">
+            <img
+              class="icon-default"
+              src="./assets/images/svg/icon_menu_home.svg"
+              alt=""
+            />
+            <img
+              class="icon-hover"
+              src="./assets/images/svg/icon_menu_home_active.svg"
+              alt=""
+            />
+            <span class="b3-regular">Trang chủ</span>
+          </a>
+        </li>
+        <li class="menu-item-has-children">
+          <a href="./tour-list.html">
+            <img
+              class="icon-default"
+              src="./assets/images/svg/icon_menu_map.svg"
+              alt=""
+            />
+            <img
+              class="icon-hover"
+              src="./assets/images/svg/icon_menu_map_active.svg"
+              alt=""
+            />
+            <span class="b3-regular">Tour</span>
+          </a>
+          <ul class="sub-menu">
+            <li><a href="./tour-list.html">Tour trong nước</a></li>
+            <li><a href="./tour-list.html">Tour nước ngoài</a></li>
+            <li><a href="./exclusive-tour.html">Tour độc quyền</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">
+            <img
+              class="icon-default"
+              src="./assets/images/svg/icon_menu_hospital.svg"
+              alt=""
+            />
+            <img
+              class="icon-hover"
+              src="./assets/images/svg/icon_menu_hospital_active.svg"
+              alt=""
+            />
+            <span class="b3-regular">Khách sạn</span>
+          </a>
+        </li>
+        <li class="menu-item-has-children">
+          <a href="#">
+            <img
+              class="icon-default"
+              src="./assets/images/svg/icon_menu_check_list.svg"
+              alt=""
+            />
+            <img
+              class="icon-hover"
+              src="./assets/images/svg/icon_menu_check_list_active.svg"
+              alt=""
+            />
+            <span class="b3-regular">Dịch vụ</span>
+          </a>
+          <ul class="sub-menu">
+            <li><a href="./car-rental.html">Thuê xe</a></li>
+            <li><a href="./visa.html">Visa</a></li>
+            <!-- Thêm field tick chọn comming soon -->
+            <li class="comming-soon">
+              <a href="./tour-list.html"
+                >Đặt vé máy bay<span>(Sắp ra mắt)</span></a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="menu" onclick="openMenuMobile(event)">
+          <img
+            class="icon-default"
+            src="./assets/images/svg/icon_menu_menu.svg"
+            alt=""
+          />
+          <img
+            class="icon-hover"
+            src="./assets/images/svg/icon_menu_menu_active.svg"
+            alt=""
+          />
+          <span class="b3-regular">Menu</span>
+        </li>
+      </ul>
+      <div class="header-mobile__backdrop"></div>
+    </div>
+    <main>
+      <div class="page-terms">
+        <div class="container-fluid p-0">
+          <div class="row g-0">
+            <div class="col-lg-8 offset-lg-2">
+              <div class="content-page-title h0-font color-primary">
+                Điều khoản sử dụng
+              </div>
+              <div class="get-the-content b1-regular color-black">
+                <p>
+                  Nghỉ dưỡng tại các khu resort sang trọng, bao gồm spa và tiện
+                  ích riêng tư.Nghỉ dưỡng tại các khu resort sang trọng, bao gồm
+                  spa và tiện ích riêng tư.
+                </p>
+                <p>
+                  Các chuyên gia địa phương với kiến thức sâu rộng về văn hóa và
+                  vùng miền sẽ dẫn dắt khách hàng khám phá từng điểm đến một
+                  cách chân thực và sâu sắc. Nhờ sự am hiểu tường tận, họ không
+                  chỉ mang đến những góc nhìn độc đáo mà còn giúp mỗi trải
+                  nghiệm trở nên sống động, giàu ý nghĩa.
+                </p>
+                <p>
+                  Nghỉ dưỡng tại các khu resort sang trọng, bao gồm spa và tiện
+                  ích riêng tư.Nghỉ dưỡng tại các khu resort sang trọng, bao gồm
+                  spa và tiện ích riêng tư.
+                </p>
+                <p>
+                  Các chuyên gia địa phương với kiến thức sâu rộng về văn hóa và
+                  vùng miền sẽ dẫn dắt khách hàng khám phá từng điểm đến một
+                  cách chân thực và sâu sắc. Nhờ sự am hiểu tường tận, họ không
+                  chỉ mang đến những góc nhìn độc đáo mà còn giúp mỗi trải
+                  nghiệm trở nên sống động, giàu ý nghĩa.
+                </p>
+                <p>
+                  Nghỉ dưỡng tại các khu resort sang trọng, bao gồm spa và tiện
+                  ích riêng tư.Nghỉ dưỡng tại các khu resort sang trọng, bao gồm
+                  spa và tiện ích riêng tư.
+                </p>
+                <p>
+                  Các chuyên gia địa phương với kiến thức sâu rộng về văn hóa và
+                  vùng miền sẽ dẫn dắt khách hàng khám phá từng điểm đến một
+                  cách chân thực và sâu sắc. Nhờ sự am hiểu tường tận, họ không
+                  chỉ mang đến những góc nhìn độc đáo mà còn giúp mỗi trải
+                  nghiệm trở nên sống động, giàu ý nghĩa.
+                </p>
+                <p>
+                  Nghỉ dưỡng tại các khu resort sang trọng, bao gồm spa và tiện
+                  ích riêng tư.Nghỉ dưỡng tại các khu resort sang trọng, bao gồm
+                  spa và tiện ích riêng tư.
+                </p>
+                <p>
+                  Các chuyên gia địa phương với kiến thức sâu rộng về văn hóa và
+                  vùng miền sẽ dẫn dắt khách hàng khám phá từng điểm đến một
+                  cách chân thực và sâu sắc. Nhờ sự am hiểu tường tận, họ không
+                  chỉ mang đến những góc nhìn độc đáo mà còn giúp mỗi trải
+                  nghiệm trở nên sống động, giàu ý nghĩa.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="spacing"></div>
+      <section class="newsletter-sec">
+        <div class="newsletter-sec__container">
+          <div class="container-fluid p-0">
+            <div class="row g-0">
+              <div class="col-lg-6 d-none d-lg-block">
+                <div class="newsletter-sec__image">
+                  <img src="./assets/images/img/img_people_cuoi.png" alt="" />
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="newsletter-sec__content">
+                  <div class="newsletter-sec__title">
+                    Đăng ký ngay để nhận khuyến mãi độc quyền.
+                  </div>
+                  <div class="newsletter-sec__desc b3-medium color-white">
+                    So sánh giá từ hơn 200 trang đặt tour để giúp bạn tìm giá
+                    tốt nhất cho chuyến đi hoàn hảo nhất.
+                  </div>
+                  <div class="newsletter-sec__form">
+                    <form action="">
+                      <div class="newsletter-sec__submit">
+                        <input type="text" placeholder="Nhập email" />
+                        <button type="submit">Gửi</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- start footer -->
+    <footer class="footer">
+      <div class="footer__cta">
+        <div class="cta__mess">
+          <a href="">
+            <img src="./assets/images/svg/ic_mess.svg" alt="icon" />
+            <img src="./assets/images/svg/ic_mess_hover.svg" alt="icon" />
+          </a>
+        </div>
+        <div class="cta__phone">
+          <a href="">
+            <img src="./assets/images/svg/ic_phone_white.svg" alt="icon" />
+          </a>
+        </div>
+      </div>
+      <div class="container-fluid p-0">
+        <div class="footer__container">
+          <div class="footer__top">
+            <div class="row g-0">
+              <div class="col-lg-4">
+                <div
+                  class="footer__logo d-flex align-items-center justify-content-start"
+                >
+                  <img
+                    src="./assets/images/svg/ic_logo_footer.svg"
+                    alt="logo"
+                  />
+                </div>
+              </div>
+              <div class="col-lg-5">
+                <div class="footer__info">
+                  <p class="b3-regular color-black">
+                    CÔNG TY TNHH FLEUR DE LYS TRAVEL • Mã số doanh nghiệp:
+                    0316378341 • Đăng kí lần đầu ngày 09 - 07 - 2020 • Văn Phòng
+                    Đại Diện: Tầng 5 Tòa nhà Harbour View Tower, số 35 Nguyễn
+                    Huệ, Phường Bến Nghé, Quận 1, Thành phố Hồ Chí Minh, Việt
+                    Nam
+                  </p>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div
+                  class="footer__bct d-flex align-items-center justify-content-end"
+                >
+                  <img src="./assets/images/svg/ic_bct.svg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid p-0">
+        <div class="footer__bottom">
+          <div class="row g-0">
+            <div class="col-lg-4">
+              <div class="footer__company">
+                <p class="b3-regular color-text-footer">© 2024 FDL Travel</p>
+                <a
+                  href="https://alphacreative.vn/"
+                  target="_blank"
+                  class="b3-regular color-text-footer"
+                  >• Digital Experience by Alpha Creative</a
+                >
+              </div>
+            </div>
+            <div class="col-lg-5">
+              <div class="footer__terms">
+                <ul>
+                  <li>
+                    <a href="" class="b3-regular color-text-footer"
+                      >Chính sách quyền riêng tư</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="b3-regular color-text-footer"
+                      >Chính sách thanh toán</a
+                    >
+                  </li>
+                  <li>
+                    <a href="" class="b3-regular color-text-footer"
+                      >Điều khoản sử dụng</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="footer__social">
+                <ul>
+                  <li>
+                    <a href="" target="_blank">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          class="animation-icon"
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M24 12C24 5.37133 18.6287 0 12 0C5.37133 0 0 5.37133 0 12C0 18.6287 5.37133 24 12 24C12.0702 24 12.1404 24 12.2106 23.9955V14.6578H9.63294V11.6535H12.2106V9.44034C12.2106 6.87617 13.7766 5.48024 16.0645 5.48024C17.1607 5.48024 18.1031 5.55944 18.3749 5.59724V8.27841H16.7998C15.5578 8.27841 15.3148 8.86882 15.3148 9.73644V11.6481H18.2903L17.9014 14.6533H15.3139V23.5365C20.3297 22.0965 24 17.4793 24 12Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M12 0C5.37313 0 0 5.37313 0 12C0 18.6269 5.37313 24 12 24C18.6269 24 24 18.6269 24 12C24 5.37313 18.6269 0 12 0ZM18.8492 14.8414C18.8159 15.574 18.6989 16.0753 18.5288 16.5136C18.3518 16.9715 18.0812 17.3873 17.7342 17.7345C17.3871 18.0817 16.9714 18.3525 16.5136 18.5297C16.0753 18.6989 15.574 18.8159 14.8414 18.8492C14.1061 18.8825 13.8711 18.8906 12 18.8906C10.128 18.8906 9.89395 18.8825 9.15863 18.8492C8.42601 18.8159 7.9247 18.6989 7.48639 18.5288C7.02658 18.3559 6.61006 18.0846 6.26596 17.734C5.91541 17.3899 5.6442 16.9734 5.47124 16.5136C5.30023 16.0753 5.18413 15.574 5.15083 14.8414C5.11663 14.1061 5.10943 13.8711 5.10943 12C5.10943 10.128 5.11663 9.89395 5.15083 9.15953C5.18413 8.42511 5.30023 7.9247 5.47124 7.48549C5.64429 7.02601 5.9155 6.60982 6.26596 6.26596C6.61008 5.91539 7.02659 5.64417 7.48639 5.47124C7.9247 5.30023 8.42511 5.18413 9.15863 5.15083C9.89395 5.11753 10.1289 5.10943 12 5.10943C13.872 5.10943 14.1061 5.11753 14.8414 5.15083C15.574 5.18413 16.0753 5.30113 16.5136 5.47124C16.9726 5.64404 17.3902 5.91495 17.734 6.26596C18.0851 6.60977 18.356 7.02648 18.5288 7.48639C18.6998 7.9247 18.8159 8.42511 18.8492 9.15953C18.8834 9.89395 18.8906 10.1289 18.8906 12C18.8906 13.872 18.8834 14.1061 18.8492 14.8414ZM17.3713 7.9364C17.261 7.63728 17.0851 7.36665 16.8565 7.14438C16.6344 6.91541 16.3638 6.73918 16.0645 6.62867C15.8215 6.53416 15.4561 6.42166 14.7847 6.39106C14.0575 6.35776 13.8396 6.35056 12 6.35056C10.1604 6.35056 9.94165 6.35776 9.21533 6.39106C8.54391 6.42166 8.1785 6.53416 7.9364 6.62867C7.63721 6.73887 7.36655 6.91479 7.14438 7.14348C6.91487 7.36578 6.73937 7.63669 6.62777 7.9355C6.53416 8.1785 6.42076 8.54391 6.39106 9.21533C6.35776 9.94255 6.35056 10.1604 6.35056 12C6.35056 13.8396 6.35776 14.0584 6.39106 14.7847C6.42166 15.4561 6.53416 15.8215 6.62777 16.0645C6.73847 16.3633 6.91487 16.6342 7.14348 16.8565C7.36578 17.0851 7.63669 17.2615 7.9355 17.3722C8.1785 17.4667 8.54391 17.5792 9.21533 17.6089C9.94165 17.6422 10.1604 17.6494 12 17.6494C13.8396 17.6494 14.0584 17.6422 14.7847 17.6089C15.4561 17.5783 15.8215 17.4667 16.0636 17.3722C16.3608 17.2576 16.6307 17.082 16.8559 16.8568C17.0811 16.6316 17.2567 16.3617 17.3713 16.0645C17.4658 15.8215 17.5783 15.457 17.6089 14.7847C17.6422 14.0584 17.6494 13.8396 17.6494 12C17.6494 10.1604 17.6422 9.94255 17.6089 9.21533C17.5783 8.54391 17.4658 8.1785 17.3713 7.9364ZM12 15.5389C11.0615 15.5389 10.1615 15.1661 9.49795 14.5025C8.83436 13.8389 8.46156 12.9389 8.46156 12.0005C8.46156 11.062 8.83436 10.162 9.49795 9.4984C10.1615 8.83481 11.0615 8.46201 12 8.46201C12.9383 8.46201 13.8382 8.83476 14.5017 9.49827C15.1652 10.1618 15.538 11.0617 15.538 12C15.538 12.9383 15.1652 13.8382 14.5017 14.5017C13.8382 15.1652 12.9383 15.5389 12 15.5389ZM14.8513 8.32161C14.8513 8.54097 14.9384 8.75136 15.0935 8.90647C15.2486 9.06159 15.459 9.14873 15.6784 9.14873C15.8978 9.14873 16.1081 9.06159 16.2633 8.90647C16.4184 8.75136 16.5055 8.54097 16.5055 8.32161C16.5055 8.10224 16.4184 7.89186 16.2633 7.73675C16.1081 7.58163 15.8978 7.49449 15.6784 7.49449C15.459 7.49449 15.2486 7.58163 15.0935 7.73675C14.9384 7.89186 14.8513 8.10224 14.8513 8.32161ZM14.2969 12C14.2969 12.6092 14.0549 13.1934 13.6241 13.6241C13.1934 14.0549 12.6092 14.2969 12 14.2969C11.3908 14.2969 10.8066 14.0549 10.3759 13.6241C9.94513 13.1934 9.70314 12.6092 9.70314 12C9.70314 11.3908 9.94513 10.8066 10.3759 10.3759C10.8066 9.94513 11.3908 9.70314 12 9.70314C12.6092 9.70314 13.1934 9.94513 13.6241 10.3759C14.0549 10.8066 14.2969 11.3908 14.2969 12Z"
+                          fill="white"
+                          class="animation-icon"
+                        />
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M11.9986 0.570312C5.68831 0.570312 0.570312 5.68746 0.570312 11.9986C0.570312 18.3097 5.68746 23.4269 11.9986 23.4269C18.3097 23.4269 23.4277 18.3097 23.4277 11.9986C23.4277 5.68746 18.3097 0.570312 11.9986 0.570312Z"
+                          fill="white"
+                          class="animation-icon"
+                        />
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M15.3575 4.28516C15.6052 6.41259 16.7923 7.68116 18.8572 7.81658V10.2089C17.6606 10.3263 16.6123 9.93458 15.3943 9.19744V13.6717C15.3943 19.358 9.19546 21.1349 6.70288 17.0592C5.1026 14.4372 6.08317 9.83601 11.22 9.65173V12.1743C10.8152 12.2387 10.4164 12.3365 10.0277 12.4666C8.88517 12.854 8.23717 13.5783 8.41717 14.8554C8.76346 17.3026 13.2523 18.0269 12.8795 13.2449V4.28944H15.3575V4.28516Z"
+                          fill="#062435"
+                        />
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- end footer -->
+
+    <!-- import jquery -->
+    <script src="./assets/libs/jquery-3.7.1.js"></script>
+    <!-- end jquery -->
+    <!-- import gsap -->
+    <script src="./assets/libs/gsap.min.js"></script>
+    <script src="./assets/libs/ScrollTrigger.min.js"></script>
+    <script src="./assets/libs/splitType.min.js"></script>
+    <!-- end import gsap -->
+    <!-- import boostrap -->
+
+    <script src="./assets/libs/bootstrap.bundle.min.js"></script>
+    <!-- end boostrap -->
+    <!-- import swiper js -->
+    <script src="./assets/libs/swiper-bundle.min.js"></script>
+    <!-- end import swiper js -->
+
+    <!-- import moment js -->
+    <script src="./assets/libs/moment.min.js"></script>
+    <!-- end import moment js -->
+
+    <!-- import lightpick js -->
+    <script src="./assets/libs/lightpick.min.js"></script>
+    <!-- end import lightpick js -->
+    <!-- import lenis js -->
+    <script src="./assets/libs/lenis.min.js"></script>
+    <!-- end import lenis  js -->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <!-- import custom js -->
+
+    <script src="./assets/js/script.js"></script>
+    <!-- end import custom js -->
+  </body>
+</html>

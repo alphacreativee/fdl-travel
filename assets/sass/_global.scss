@@ -144,7 +144,7 @@
   }
 }
 // css lightpick
-.lightpick__select{
+.lightpick__select {
   color: var(--color-black);
 }
 
@@ -154,7 +154,7 @@
   background-image: none;
 }
 
-.lightpick__day.is-start-date{
+.lightpick__day.is-start-date {
   background-image: unset;
   background-color: var(--color-primary);
   border-radius: 50%;
@@ -341,7 +341,7 @@
         box-shadow: none;
       }
 
-      @media (max-width: 991px){
+      @media (max-width: 991px) {
         transform: none;
         width: 25px;
         height: 25px;
@@ -754,4 +754,25 @@
       visibility: visible;
     }
   }
+}
+.page-terms {
+  padding-top: 140px;
+  @media (max-width: 991px) {
+    padding-inline: 40px;
+  }
+  @media (max-width: 767px) {
+    padding-inline: 16px;
+    padding-top: 84px;
+  }
+}
+.page-terms .content-page-title {
+  margin-bottom: 32px;
+  @media (max-width: 991px) {
+    font-size: 32px;
+    line-height: 40px;
+    margin-bottom: 24px;
+  }
+}
+.page-terms .get-the-content p {
+  margin-bottom: 24px;
 }
