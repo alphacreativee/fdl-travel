@@ -278,6 +278,12 @@ p {
 .lightpick__day {
   width: 40px;
   height: 40px;
+  border-radius: 50%;
+}
+.lightpick__day:hover {
+  color: var(--color-white) !important;
+  background-color: var(--color-primary);
+  font-weight: 900;
 }
 
 .lightpick__day.is-today {
@@ -290,6 +296,10 @@ p {
   background-image: unset;
   background-color: var(--color-primary);
   border-radius: 50%;
+  color: var(--color-white);
+}
+.lightpick__day.is-start-date:hover {
+  color: var(--color-white);
 }
 
 .lightpick__day.is-in-range:hover {

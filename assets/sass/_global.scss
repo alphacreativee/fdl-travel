@@ -151,6 +151,13 @@
 .lightpick__day{
   width: 40px;
   height: 40px;
+  border-radius: 50%;
+
+  &:hover{
+    color: var(--color-white) !important;
+    background-color: var(--color-primary);
+    font-weight: 900;
+  }
 }
 
 .lightpick__day.is-today {
@@ -163,6 +170,11 @@
   background-image: unset;
   background-color: var(--color-primary);
   border-radius: 50%;
+  color: var(--color-white);
+
+  &:hover{
+    color: var(--color-white);
+  }
 }
 
 .lightpick__day.is-in-range:hover {
