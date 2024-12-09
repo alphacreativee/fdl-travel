@@ -583,7 +583,7 @@ function swiperTopTour() {
 function swiperTravelGuide() {
   if ($(".travel-guide").length || $(".related-tour").length) {
     var swiperTravelGuide = new Swiper(".swiper-travel-guide", {
-      slidesPerView: 1.5,
+      slidesPerView: 1.4,
       spaceBetween: 16,
       slidesOffsetAfter: 32,
       navigation: {
