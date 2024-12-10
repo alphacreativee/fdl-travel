@@ -24,6 +24,7 @@
     background-image: url("../images/svg/ic_arrow_down_black.svg");
     background-size: auto;
     background-position: center;
+    margin-left: 8px;
   }
   .accordion-button:not(.collapsed) {
     color: var(--color-black);
@@ -35,6 +36,9 @@
   }
   .accordion-button {
     padding: 24px 0;
+    @media (max-width: 991px) {
+      padding: 12px 0;
+    }
     @media (max-width: 767px) {
       align-items: flex-start;
     }

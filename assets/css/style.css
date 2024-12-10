@@ -4038,11 +4038,11 @@ p {
   .contact-sec__right::before {
     content: "";
     position: absolute;
-    width: calc(100% + 32px);
+    width: 100%;
     height: 1px;
     background-color: var(--color-stroke);
     top: 0;
-    left: -16px;
+    left: 0;
   }
 }
 .contact-sec__right--group {
@@ -4210,6 +4210,7 @@ p {
   background-image: url("../images/svg/ic_arrow_down_black.svg");
   background-size: auto;
   background-position: center;
+  margin-left: 8px;
 }
 .faq-sec .accordion-button:not(.collapsed) {
   color: var(--color-black);
@@ -4221,6 +4222,11 @@ p {
 }
 .faq-sec .accordion-button {
   padding: 24px 0;
+}
+@media (max-width: 991px) {
+  .faq-sec .accordion-button {
+    padding: 12px 0;
+  }
 }
 @media (max-width: 767px) {
   .faq-sec .accordion-button {
