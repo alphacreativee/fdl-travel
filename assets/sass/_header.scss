@@ -351,8 +351,7 @@
           top: 144px;
           left: 0;
           position: fixed;
-          background-color: rgba(0, 0, 0, 0.8);
-          opacity: 0.3;
+          background-color: rgba(0, 0, 0, 0.5);
           transition: all 0.3s;
 
           @media (min-width: 992px){
@@ -414,6 +413,10 @@
     display: flex;
     align-items: center;
     gap: 16px;
+
+    @media (max-width: 991px){
+      gap: 12px;
+    }
   }
   &__lang {
     position: relative;
@@ -747,13 +750,17 @@
     .menu--top {
       display: flex;
       align-items: flex-start;
-      justify-content: space-around;
+      justify-content: space-between;
       gap: 14px;
       padding-bottom: 16px;
       border-bottom: 1px solid var(--color-stroke);
 
       li {
         width: 25%;
+
+        @media (max-width: 480px){
+          max-width: 69px;
+        }
 
         a {
           display: flex;
