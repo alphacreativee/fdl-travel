@@ -231,7 +231,7 @@
   transition: all 0.3s;
 }
 .lightpick__next-action:hover,
-.lightpick__previous-action:hover{
+.lightpick__previous-action:hover {
   background-color: var(--color-gary-opa);
 }
 .lightpick__previous-action {
@@ -307,12 +307,16 @@
 
   .swiper-control {
     .custom-swiper-button {
+      position: absolute;
+      top: 50%;
+      transform: translate(0%, -50%);
       width: 32px;
       height: 32px;
       border-radius: 50%;
       border: 1px solid var(--color-white);
       transition: all 0.3s;
       background-color: var(--color-white);
+
       &:hover {
         // border-color: var(--color-grey);
         svg {
@@ -324,6 +328,7 @@
     }
     .swiper-button-next {
       right: 20px;
+      margin-top: 0;
       svg {
         transform: translateX(1px);
         path {
@@ -333,6 +338,7 @@
     }
     .swiper-button-prev {
       left: 20px;
+      margin-top: 0;
       svg {
         transform: translateX(-1px);
         path {
