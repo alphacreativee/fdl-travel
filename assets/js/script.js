@@ -91,6 +91,26 @@ if ($("#btnSubmit").length) {
     }
   });
 }
+if ($(".contact-sec__right--button").length) {
+  // check input empty
+  const btnSend = document.getElementById("btn-send");
+  const updateButtonState = () => {
+    const isEmpty = $(".contact-sec__right input")
+      .toArray()
+      .some((input) => {
+        return $(input).val().trim() === "";
+      });
+
+    if (isEmpty) {
+      btnSend.classList.add("non-active");
+    } else {
+      btnSend.classList.remove("non-active");
+    }
+  };
+  updateButtonState();
+
+  $(".contact-sec__right input").on("input", updateButtonState);
+}
 
 function chooseTime() {
   if ($("#rentalDay").length) {

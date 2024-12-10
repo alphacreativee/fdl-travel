@@ -3948,13 +3948,16 @@ p {
 .contact-sec__right--button {
   width: 100%;
   height: 48px;
-  background-color: var(--color-contact);
+  background-color: var(--color-secondary);
   border-radius: 12px;
   color: var(--color-white);
   transition: all 0.3s;
 }
+.contact-sec__right--button.non-active {
+  pointer-events: none;
+}
 .contact-sec__right--button:hover {
-  background-color: var(--color-primary);
+  background-color: var(--color-secondary-hover);
 }
 .contact-sec .dropdown-custom__car {
   position: relative;
