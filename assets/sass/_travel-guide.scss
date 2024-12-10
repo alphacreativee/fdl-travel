@@ -252,5 +252,11 @@
     display: flex;
     justify-content: center;
     margin-top: 40px;
+    @media (max-width: 991px) {
+      margin-top: 32px;
+    }
+    @media (max-width: 767px) {
+      margin-bottom: 24px;
+    }
   }
 }

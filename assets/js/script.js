@@ -772,9 +772,17 @@ function pinCards() {
     const lastCard = items[items.length - 1];
     let lastCardHeight = lastCard.clientHeight + 80;
     const element = document.querySelector(".why-choose");
-    let startPoint = element.classList.contains("animation-center")
-      ? "top 40%"
-      : "top 30%";
+    let startPoint;
+
+    if (window.innerWidth < 991) {
+      startPoint = element.classList.contains("animation-center")
+        ? "top 30%"
+        : "top 30%";
+    } else {
+      startPoint = element.classList.contains("animation-center")
+        ? "top 40%"
+        : "top 30%";
+    }
 
     let endPointImage =
       document.querySelector(".why-choose__animation").clientHeight -
