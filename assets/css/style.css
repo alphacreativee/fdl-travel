@@ -1077,7 +1077,7 @@ p {
 .header__main {
   gap: 32px;
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .header__logo {
     width: 124px;
     height: 32px;
@@ -1140,12 +1140,16 @@ p {
   top: 50%;
   left: 9px;
   transform: translateY(-50%);
+  width: 26px;
+  height: 26px;
+}
+.header__search--bottom .ic-search svg {
+  width: 26px;
+  height: 26px;
 }
 @media (max-width: 1200px) {
   .header__search--bottom .ic-search {
     left: unset;
-    width: 24px;
-    height: 24px;
   }
 }
 @media (max-width: 1200px) {
@@ -1363,9 +1367,9 @@ p {
   background-color: var(--color-gary-opa);
 }
 .header__wishlist {
-  width: 24px;
-  height: 24px;
-  min-width: 24px;
+  width: 26px;
+  height: 26px;
+  min-width: 26px;
 }
 .header__wishlist a {
   width: 100%;
@@ -1550,7 +1554,7 @@ p {
 .header-mobile__menu {
   height: calc(100dvh - 110px);
   background-color: var(--color-gray-bg);
-  padding: 34px 16px 24px 16px;
+  padding: 24px 16px 24px 16px;
   position: fixed;
   bottom: 62px;
   left: 0;
@@ -2163,6 +2167,7 @@ p {
 @media (max-width: 767px) {
   .tour-sec__result {
     gap: 16px;
+    margin-bottom: 24px;
   }
 }
 .tour-sec__item {
@@ -5806,7 +5811,7 @@ p {
   margin-top: 8px;
 }
 .tour-list .content-left .filter-list .accordion-body ul li:not(:last-child) {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 .tour-list .content-left .filter-list .accordion-body ul li label {
   color: var(--color-grey);
@@ -5905,7 +5910,7 @@ p {
     position: sticky;
     top: 48px;
     margin-bottom: 0;
-    padding: 12px 0;
+    padding: 16px 0;
     background-color: var(--color-white);
     z-index: 12;
   }
