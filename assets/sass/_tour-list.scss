@@ -243,7 +243,7 @@
         ul {
           li {
             &:not(:last-child) {
-              margin-bottom: 8px;
+              margin-bottom: 10px;
             }
 
             label {
@@ -353,7 +353,7 @@
                 position: sticky;
                 top: 48px;
                 margin-bottom: 0;
-                padding: 12px 0;
+                padding: 16px 0;
                 background-color: var(--color-white);
                 z-index: 12;
             }
