@@ -43,12 +43,17 @@
         margin-bottom: 0;
       }
       @media (max-width: 991px) {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2,1fr);
         gap: 24px;
       }
       @media (max-width: 767px) {
         gap: 16px;
+        grid-template-columns: 1fr;
       }
+    }
+
+    .travel-guide__image{
+      border-radius: 8px;
     }
   }
   &.contact-new {
@@ -119,7 +124,7 @@
   &__head {
   }
   &__container {
-    padding: 0 80px;
+    // padding: 0 80px;
     @media (max-width: 991px) {
       padding: 0 40px;
     }

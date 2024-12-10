@@ -1970,6 +1970,7 @@ p {
   width: 100%;
   aspect-ratio: 217/122;
   margin-bottom: 0;
+  border-radius: 8px;
 }
 @media (max-width: 991px) {
   .tour-sec.blog-col .travel-guide__image {
@@ -2586,14 +2587,18 @@ p {
 }
 @media (max-width: 991px) {
   .travel-guide.blog-new .travel-guide__list {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 24px;
   }
 }
 @media (max-width: 767px) {
   .travel-guide.blog-new .travel-guide__list {
     gap: 16px;
+    grid-template-columns: 1fr;
   }
+}
+.travel-guide.blog-new .travel-guide__image {
+  border-radius: 8px;
 }
 .travel-guide.contact-new .travel-guide__list {
   display: grid;
@@ -2663,9 +2668,6 @@ p {
   .travel-guide.contact-new .travel-guide__container {
     padding: 0;
   }
-}
-.travel-guide__container {
-  padding: 0 80px;
 }
 @media (max-width: 991px) {
   .travel-guide__container {
