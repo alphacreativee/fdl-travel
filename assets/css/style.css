@@ -2658,7 +2658,7 @@ p {
     display: none;
   }
   .travel-guide.contact-new .travel-guide__list .travel-guide__item {
-    min-width: 200px;
+    min-width: 42.5%;
   }
   .travel-guide.contact-new .travel-guide__list .travel-guide__item:first-child {
     margin-left: 40px;
@@ -2683,7 +2683,7 @@ p {
 }
 @media (max-width: 767px) {
   .travel-guide.contact-new .travel-guide__list .travel-guide__item {
-    min-width: 200px;
+    min-width: 71.5%;
   }
 }
 .travel-guide.contact-new .travel-guide__date {
