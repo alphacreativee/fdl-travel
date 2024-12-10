@@ -362,7 +362,7 @@ p {
 
 .lightpick__next-action:hover,
 .lightpick__previous-action:hover {
-  background-color: var(--color-gray);
+  background-color: var(--color-gary-opa);
 }
 
 .lightpick__previous-action {
@@ -4396,9 +4396,17 @@ p {
   transition: all 0.3s;
   transform: translateY(50%);
 }
+.main-detail .gallery .custom-swiper-button svg path {
+  transition: al 0.3s;
+}
+.main-detail .gallery .custom-swiper-button:hover svg path {
+  stroke: var(--color-black);
+  stroke-opacity: 1;
+}
 .main-detail .gallery .custom-swiper-button.swiper-button-disabled {
   opacity: 0 !important;
   visibility: hidden;
+  pointer-events: none;
 }
 .main-detail .gallery .custom-swiper-button.swiper-button-next {
   right: 24px;
@@ -5232,7 +5240,7 @@ p {
   transition: all 0.3s;
 }
 #checkoutModal .modal-body .departure-quantity__item button:hover {
-  background-color: var(--color-gray);
+  background-color: var(--color-gary-opa);
 }
 #checkoutModal .modal-body .departure-quantity__item button[disabled=disabled] {
   opacity: 1;

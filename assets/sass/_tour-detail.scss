@@ -303,9 +303,21 @@
       transition: all 0.3s;
       transform: translateY(50%);
 
+      svg path{
+        transition: al 0.3s;
+      }
+
+      &:hover{
+        svg path{
+          stroke: var(--color-black);
+          stroke-opacity: 1;
+        }
+      }
+
       &.swiper-button-disabled {
         opacity: 0 !important;
         visibility: hidden;
+        pointer-events: none;
       }
 
       &.swiper-button-next {
@@ -1249,7 +1261,7 @@
             transition: all 0.3s;
 
             &:hover{
-              background-color: var(--color-gray);
+              background-color: var(--color-gary-opa);
             }
 
             &[disabled="disabled"] {
