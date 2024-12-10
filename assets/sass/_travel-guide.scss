@@ -40,7 +40,7 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 24px;
       .travel-guide__date {
-        margin-bottom: 0;
+        margin-bottom: 4px;
       }
       @media (max-width: 991px) {
         grid-template-columns: repeat(2, 1fr);
@@ -189,7 +189,7 @@
       font-size: 12px;
       font-weight: 500;
       color: var(--color-black);
-      background-color: var(--color-gray-bg-60);
+      background-color: var(--color-grey-opa);
       border-radius: 4px;
       padding: 8px 12px 4px;
       margin-bottom: 0;
