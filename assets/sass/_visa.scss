@@ -15,6 +15,11 @@
     }
     h1 {
       font-weight: 400;
+
+      @media (max-width: 767px){
+        font-size: 32px;
+        line-height: 40px;
+      }
     }
   }
   &__body {
@@ -97,6 +102,11 @@
         z-index: 3;
         top: 0;
         left: 24px;
+
+        @media (max-width: 767px){
+          font-size: 70px;
+          line-height: 93px;
+        }
       }
       &-step-name {
         position: absolute;
@@ -104,6 +114,11 @@
         left: 24px;
         right: 24px;
         text-align: left;
+
+        @media (max-width: 767px){
+          font-size: 20px;
+          line-height: 27px;
+        }
       }
     }
     &-back {

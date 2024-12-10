@@ -10,6 +10,10 @@
   }
   &__head {
     margin-bottom: 60px;
+
+    @media (max-width: 767px){
+      margin-bottom: 40px;
+    }
   }
   &__title {
     font-weight: 400;
