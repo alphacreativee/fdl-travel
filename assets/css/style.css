@@ -1097,7 +1097,8 @@ p {
 @media (max-width: 991px) {
   .header__logo {
     width: 124px;
-    height: 32px;
+    height: 28px;
+    transform: translateY(-2px);
   }
 }
 .header__search {
@@ -1233,19 +1234,38 @@ p {
 }
 .header__search--mobile {
   background-color: var(--color-white);
-  padding: 8px;
-  border-radius: 8px;
-  position: absolute;
-  top: calc(100% + 8px);
-  right: -40px;
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  padding: 24px 16px;
+  position: fixed;
+  top: 48px;
+  right: 0;
+  width: 100vw;
   transition: all 0.3s;
   visibility: hidden;
   opacity: 0;
 }
+@media (min-width: 992px) {
+  .header__search--mobile {
+    top: 110px;
+  }
+}
 .header__search--mobile.visible {
   opacity: 1;
   visibility: visible;
+}
+.header__search--mobile.visible + .header__search--mobile__overlay {
+  width: 100vw;
+  height: 100vh;
+  top: 144px;
+  left: 0;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0.3;
+  transition: all 0.3s;
+}
+@media (min-width: 992px) {
+  .header__search--mobile.visible + .header__search--mobile__overlay {
+    top: 206px;
+  }
 }
 .header__search--mobile::before {
   content: "";
@@ -1258,29 +1278,31 @@ p {
   top: -7px;
   z-index: 1;
   right: 43px;
+  display: none;
 }
 .header__search--mobile form {
   display: flex;
   align-items: center;
   position: relative;
+  width: 100%;
 }
 .header__search--mobile form::before {
   content: "";
-  width: 16px;
-  height: 16px;
-  background-image: url("../images/svg/ic_location.svg");
+  width: 24px;
+  height: 24px;
+  background-image: url("../images/svg/ic_search_grey.svg");
   position: absolute;
   top: 50%;
   left: 12px;
   transform: translateY(-50%);
 }
 .header__search--mobile input {
-  min-width: 270px;
+  min-width: 100%;
   border: 1px solid var(--color-stroke);
   outline: none;
-  height: 40px;
+  height: 48px;
   border-radius: 12px;
-  padding: 6px 12px 4px 35px;
+  padding: 6px 12px 4px 40px;
   font-size: 12px;
   line-height: 22px;
 }
@@ -1414,7 +1436,6 @@ p {
 }
 
 .header.open-menu-mobile .header__search--mobile {
-  right: -10px;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
 }
 .header.open-menu-mobile .header__search--mobile::before {
@@ -1602,7 +1623,6 @@ p {
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin: 0 5px;
   color: var(--color-grey);
 }
 .header-mobile__menu .menu--top li .icon {

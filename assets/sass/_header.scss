@@ -184,7 +184,8 @@
   &__logo {
     @media (max-width: 991px) {
       width: 124px;
-      height: 32px;
+      height: 28px;
+      transform: translateY(-2px);
     }
   }
   &__search {
@@ -325,20 +326,39 @@
 
     &--mobile {
       background-color: var(--color-white);
-      padding: 8px;
-      border-radius: 8px;
-      position: absolute;
-      top: calc(100% + 8px);
-      right: -40px;
-      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+      padding: 24px 16px;
+      position: fixed;
+      top: 48px;
+      right: 0;
+      width: 100vw;
+      // box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
 
       transition: all 0.3s;
       visibility: hidden;
       opacity: 0;
 
+      @media (min-width: 992px){
+        top: 110px;
+      }
+
       &.visible {
         opacity: 1;
         visibility: visible;
+
+        & + .header__search--mobile__overlay{
+          width: 100vw;
+          height: 100vh;
+          top: 144px;
+          left: 0;
+          position: fixed;
+          background-color: rgba(0, 0, 0, 0.8);
+          opacity: 0.3;
+          transition: all 0.3s;
+
+          @media (min-width: 992px){
+            top: 206px;
+          }
+        }
       }
 
       &::before {
@@ -352,18 +372,20 @@
         top: -7px;
         z-index: 1;
         right: 43px;
+        display: none;
       }
 
       form {
         display: flex;
         align-items: center;
         position: relative;
+        width: 100%;
 
         &::before {
           content: "";
-          width: 16px;
-          height: 16px;
-          background-image: url("../images/svg/ic_location.svg");
+          width: 24px;
+          height: 24px;
+          background-image: url("../images/svg/ic_search_grey.svg");
           position: absolute;
           top: 50%;
           left: 12px;
@@ -372,12 +394,12 @@
       }
 
       input {
-        min-width: 270px;
+        min-width: 100%;
         border: 1px solid var(--color-stroke);
         outline: none;
-        height: 40px;
+        height: 48px;
         border-radius: 12px;
-        padding: 6px 12px 4px 35px;
+        padding: 6px 12px 4px 40px;
         font-size: 12px;
         line-height: 22px;
 
@@ -516,7 +538,7 @@
 }
 
 .header.open-menu-mobile .header__search--mobile {
-  right: -10px;
+  // right: -10px;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
 
   &::before {
@@ -739,7 +761,7 @@
           align-items: center;
           justify-content: center;
           text-align: center;
-          margin: 0 5px;
+          // margin: 0 5px;
           color: var(--color-grey);
         }
 
