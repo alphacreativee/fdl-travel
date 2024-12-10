@@ -222,11 +222,17 @@
   justify-content: center;
   align-items: center;
   font-size: 0;
-  background-image: url("../images/svg/ic_arrow_right_white.svg");
+  background-image: url("../images/svg/ic_arrow_right_black.svg");
   background-repeat: no-repeat;
   background-position: 55% 50%;
-  background-color: var(--color-primary);
+  background-color: var(--color-white);
   margin: 0;
+  border: 1px solid var(--color-stroke-bold);
+  transition: all 0.3s;
+}
+.lightpick__next-action:hover,
+.lightpick__previous-action:hover{
+  background-color: var(--color-gray);
 }
 .lightpick__previous-action {
   transform: rotate(180deg);

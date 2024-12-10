@@ -55,6 +55,17 @@
     .travel-guide__image{
       border-radius: 8px;
     }
+
+    .travel-guide__container{
+      padding: 0;
+
+      @media (max-width: 991px) {
+        padding: 0 40px;
+      }
+      @media (max-width: 767px) {
+        padding: 0 16px;
+      }
+    }
   }
   &.contact-new {
     .travel-guide__list {
@@ -124,7 +135,7 @@
   &__head {
   }
   &__container {
-    // padding: 0 80px;
+    padding: 0 80px;
     @media (max-width: 991px) {
       padding: 0 40px;
     }
