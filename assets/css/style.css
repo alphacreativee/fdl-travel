@@ -393,6 +393,13 @@ p {
   font-size: 0;
 }
 
+.swiper-button-next,
+.swiper-button-prev {
+  margin-top: 0;
+  transform: translateY(-50%);
+  top: 50%;
+}
+
 .swiper-button-next svg,
 .swiper-button-prev svg {
   width: auto;
@@ -3773,6 +3780,29 @@ p {
   height: 200vh;
 }
 
+.partner.visa-application {
+  padding: 0;
+}
+.partner.visa-application .visa-application__body {
+  gap: 24px;
+}
+.partner.visa-application .flip-card-front-image {
+  width: 120px;
+  aspect-ratio: 1;
+}
+.partner.visa-application .flip-card-front-content {
+  background-color: var(--color-white);
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.partner.visa-application .flip-card-front-image {
+  height: unset;
+}
+.partner.visa-application .flip-card-front-image {
+  border-radius: 0;
+}
 @media (min-width: 1441px) {
   .partner__inner {
     max-width: 1440px;
@@ -4426,6 +4456,11 @@ p {
   top: 24px;
   right: 60px;
 }
+@media (max-width: 991px) {
+  .main-detail .gallery .share-mobile {
+    top: 16px;
+  }
+}
 .main-detail .gallery .share-mobile:hover .share-dropdown {
   opacity: 1;
   visibility: visible;
@@ -4434,11 +4469,23 @@ p {
   top: 24px;
   left: 24px;
 }
+@media (max-width: 991px) {
+  .main-detail .gallery .tour-sec__tag {
+    top: 16px;
+    left: 16px;
+  }
+}
 .main-detail .gallery .wish-list {
   top: 24px;
   right: 24px;
   opacity: 1;
   visibility: visible;
+}
+@media (max-width: 991px) {
+  .main-detail .gallery .wish-list {
+    top: 16px;
+    right: 16px;
+  }
 }
 .main-detail .gallery .swiper {
   border-radius: 12px;
@@ -4479,10 +4526,9 @@ p {
   opacity: 1;
   visibility: visible;
   transition: all 0.3s;
-  transform: translateY(50%);
 }
 .main-detail .gallery .custom-swiper-button svg path {
-  transition: al 0.3s;
+  transition: all 0.3s;
 }
 .main-detail .gallery .custom-swiper-button:hover svg path {
   stroke: var(--color-black);
@@ -4496,11 +4542,14 @@ p {
 .main-detail .gallery .custom-swiper-button.swiper-button-next {
   right: 24px;
 }
+.main-detail .gallery .custom-swiper-button.swiper-button-next svg {
+  transform: translateX(0.5px);
+}
 .main-detail .gallery .custom-swiper-button.swiper-button-prev {
   left: 24px;
 }
-.main-detail .gallery .custom-swiper-button svg {
-  transform: translateX(0.5px);
+.main-detail .gallery .custom-swiper-button.swiper-button-prev svg {
+  transform: translateX(-0.5px);
 }
 .main-detail .gallery .swiper-pagination-bullet {
   opacity: 1;
@@ -4907,6 +4956,11 @@ p {
 .main-detail .tour-information__item.highlight ul li:not(:last-child) {
   margin-bottom: 16px;
 }
+@media (max-width: 991px) {
+  .main-detail .tour-information__item.highlight ul li:not(:last-child) {
+    margin-bottom: 12px;
+  }
+}
 .main-detail .tour-information__item.highlight ul li::after {
   content: "";
   width: 16px;
@@ -4952,6 +5006,11 @@ p {
   margin-bottom: 16px;
   position: relative;
 }
+@media (max-width: 991px) {
+  .main-detail .tour-information__item.chedule .tab-content ul.location > li:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
 .main-detail .tour-information__item.chedule .tab-content ul.location > li:not(:last-child)::before {
   content: "";
   width: 4px;
@@ -4970,6 +5029,11 @@ p {
 }
 .main-detail .tour-information__item.chedule .tab-content li:not(:last-child) {
   margin-bottom: 24px;
+}
+@media (max-width: 991px) {
+  .main-detail .tour-information__item.chedule .tab-content li:not(:last-child) {
+    margin-bottom: 12px;
+  }
 }
 .main-detail .tour-information__item.chedule .tab-content li .icon {
   width: 24px;
@@ -4996,6 +5060,11 @@ p {
 .main-detail .tour-information__item.chedule .tab-content li .content li:not(:last-child) {
   margin-bottom: 4px;
 }
+@media (max-width: 991px) {
+  .main-detail .tour-information__item.chedule .tab-content li .content li:not(:last-child) {
+    margin-bottom: 12px;
+  }
+}
 .main-detail .tour-information__item.expense p {
   margin-bottom: 12px;
 }
@@ -5019,6 +5088,11 @@ p {
 }
 .main-detail .tour-information__item.expense ul li:not(:last-child) {
   margin-bottom: 16px;
+}
+@media (max-width: 991px) {
+  .main-detail .tour-information__item.expense ul li:not(:last-child) {
+    margin-bottom: 12px;
+  }
 }
 .main-detail .tour-information__item.expense ul li::after {
   content: "";
@@ -5187,6 +5261,8 @@ p {
 }
 #checkoutModal .modal-body .departure-info span {
   margin-bottom: 4px;
+  display: inline-block;
+  color: var(--color-grey);
 }
 #checkoutModal .modal-body .departure-info .wrapper-tag {
   margin-top: 16px;

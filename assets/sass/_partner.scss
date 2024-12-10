@@ -1,4 +1,27 @@
 .partner {
+  &.visa-application {
+    padding: 0;
+    .visa-application__body {
+      gap: 24px;
+    }
+    .flip-card-front-image {
+      width: 120px;
+      aspect-ratio: 1;
+    }
+    .flip-card-front-content {
+      background-color: var(--color-white);
+      border-radius: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .flip-card-front-image {
+      height: unset;
+    }
+    .flip-card-front-image {
+      border-radius: 0;
+    }
+  }
   @media (min-width: 1441px) {
     &__inner {
       max-width: 1440px;
@@ -50,7 +73,7 @@
     @media (max-width: 991px) {
       grid-template-columns: repeat(2, 1fr);
     }
-    @media (max-width: 576px){
+    @media (max-width: 576px) {
       grid-template-columns: 1fr;
     }
   }

@@ -257,6 +257,12 @@
   content: unset;
   font-size: 0;
 }
+.swiper-button-next,
+.swiper-button-prev {
+  margin-top: 0;
+  transform: translateY(-50%);
+  top: 50%;
+}
 .swiper-button-next svg,
 .swiper-button-prev svg {
   width: auto;
@@ -435,7 +441,10 @@
   }
 }
 
-.select2-container--default .select2-selection--single .select2-selection__arrow b{
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__arrow
+  b {
   border: none;
   width: 24px;
   height: 24px;
@@ -448,7 +457,10 @@
   background-image: url(data:image/svg+xml,%3Csvg%20width%3D%2210%22%20height%3D%226%22%20viewBox%3D%220%200%2010%206%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M1%201L4.71716%204.71716C4.87337%204.87337%205.12663%204.87337%205.28284%204.71716L9%201%22%20stroke%3D%22%23777777%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%2F%3E%3C%2Fsvg%3E);
 }
 
-.select2-container--default .select2-selection--single[aria-expanded='true'] .select2-selection__arrow b{
+.select2-container--default
+  .select2-selection--single[aria-expanded="true"]
+  .select2-selection__arrow
+  b {
   transform: rotate(180deg);
 }
 
