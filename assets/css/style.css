@@ -2216,6 +2216,13 @@ p {
   transition: all 0.3s;
   transform: translateY(50%);
 }
+.tour-sec .swiper-tour .custom-swiper-button svg path {
+  transition: all 0.3s;
+}
+.tour-sec .swiper-tour .custom-swiper-button:hover svg path {
+  stroke: var(--color-black);
+  stroke-opacity: 1;
+}
 .tour-sec .swiper-tour .custom-swiper-button.swiper-button-next {
   right: 16px;
 }

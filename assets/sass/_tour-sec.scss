@@ -314,6 +314,17 @@
       transition: all 0.3s;
       transform: translateY(50%);
 
+      svg path{
+        transition: all 0.3s;
+      }
+
+      &:hover{
+        svg path{
+          stroke: var(--color-black);
+          stroke-opacity: 1;
+        }
+      }
+
       &.swiper-button-next {
         right: 16px;
       }
