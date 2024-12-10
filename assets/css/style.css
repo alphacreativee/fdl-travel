@@ -1999,6 +1999,17 @@ p {
   padding-top: 0;
 }
 @media (max-width: 991px) {
+  .tour-sec.blog-col .tour-sec__item:nth-child(2) {
+    border-top: 1px solid var(--color-stroke);
+    padding-top: 24px;
+  }
+}
+@media (max-width: 767px) {
+  .tour-sec.blog-col .tour-sec__item:nth-child(2) {
+    padding-top: 16px;
+  }
+}
+@media (max-width: 991px) {
   .tour-sec.blog-col .tour-sec__item {
     width: 100%;
   }
@@ -3375,6 +3386,7 @@ p {
 @media (max-width: 991px) {
   .core-values__list {
     overflow-x: scroll;
+    padding-right: 40px;
   }
   .core-values__list::-webkit-scrollbar {
     display: none;
@@ -3382,6 +3394,7 @@ p {
 }
 @media (max-width: 767px) {
   .core-values__list {
+    padding-right: 16px;
     gap: 16px;
   }
 }
@@ -3399,9 +3412,6 @@ p {
   .core-values__item:first-child {
     margin-left: 40px;
   }
-  .core-values__item:last-child {
-    margin-right: 40px;
-  }
 }
 @media (max-width: 767px) {
   .core-values__item {
@@ -3410,9 +3420,6 @@ p {
   }
   .core-values__item:first-child {
     margin-left: 16px;
-  }
-  .core-values__item:last-child {
-    margin-right: 16px;
   }
 }
 

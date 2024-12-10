@@ -74,6 +74,13 @@
       &:nth-child(2) {
         border-top: none;
         padding-top: 0;
+        @media (max-width: 991px) {
+          border-top: 1px solid var(--color-stroke);
+          padding-top: 24px;
+        }
+        @media (max-width: 767px) {
+          padding-top: 16px;
+        }
       }
       @media (max-width: 991px) {
         width: 100%;
