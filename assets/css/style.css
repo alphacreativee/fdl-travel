@@ -1618,7 +1618,7 @@ p {
 .header-mobile__menu .menu--top {
   display: flex;
   align-items: flex-start;
-  justify-content: space-around;
+  justify-content: space-between;
   gap: 14px;
   padding-bottom: 16px;
   border-bottom: 1px solid var(--color-stroke);
