@@ -16,7 +16,7 @@
     h1 {
       font-weight: 400;
 
-      @media (max-width: 767px){
+      @media (max-width: 767px) {
         font-size: 32px;
         line-height: 40px;
       }
@@ -103,9 +103,10 @@
         top: 0;
         left: 24px;
 
-        @media (max-width: 767px){
+        @media (max-width: 991px) {
           font-size: 70px;
           line-height: 93px;
+          padding-top: 12px;
         }
       }
       &-step-name {
@@ -115,7 +116,7 @@
         right: 24px;
         text-align: left;
 
-        @media (max-width: 767px){
+        @media (max-width: 767px) {
           font-size: 20px;
           line-height: 27px;
         }

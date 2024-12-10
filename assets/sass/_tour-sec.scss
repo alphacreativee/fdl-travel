@@ -8,14 +8,17 @@
     .tour-sec__result {
       @media (max-width: 991px) {
         padding: 0 40px;
+        margin-bottom: 32px;
       }
       @media (max-width: 767px) {
         padding: 0 16px;
+        margin-bottom: 24px;
       }
     }
     .tour-sec__title {
       @media (max-width: 991px) {
         padding-left: 40px;
+        margin-bottom: 16px;
       }
       @media (max-width: 767px) {
         padding-left: 16px;
@@ -132,7 +135,7 @@
         }
       }
 
-      @media (max-width: 767px){
+      @media (max-width: 767px) {
         padding-right: 16px;
       }
 
@@ -227,10 +230,10 @@
       }
     }
 
-    @media (max-width: 767px){
+    @media (max-width: 767px) {
       padding-right: 16px;
     }
-    
+
     .filter-button {
       border-radius: 19px;
       border: 1px solid var(--color-stroke);
@@ -314,12 +317,12 @@
       transition: all 0.3s;
       transform: translateY(50%);
 
-      svg path{
+      svg path {
         transition: all 0.3s;
       }
 
-      &:hover{
-        svg path{
+      &:hover {
+        svg path {
           stroke: var(--color-black);
           stroke-opacity: 1;
         }

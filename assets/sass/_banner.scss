@@ -10,7 +10,8 @@
       }
     }
     @media (max-width: 991px) {
-      height: 55vh;
+      height: auto;
+      aspect-ratio: 3 / 4;
     }
     .swiper-banner {
       width: 100%;
@@ -212,7 +213,7 @@
     height: 100%;
     transition: all 0.3s;
 
-    &:hover{
+    &:hover {
       background-color: var(--color-secondary-hover);
     }
 

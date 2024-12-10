@@ -931,7 +931,7 @@ p {
 }
 @media (max-width: 767px) {
   .header__inner {
-    padding: 8px 16px;
+    padding: 10px 16px;
   }
 }
 @media (min-width: 1441px) {
@@ -1672,7 +1672,8 @@ p {
 }
 @media (max-width: 991px) {
   .hero-sec__container {
-    height: 55vh;
+    height: auto;
+    aspect-ratio: 3/4;
   }
 }
 .hero-sec__container .swiper-banner {
@@ -1905,16 +1906,19 @@ p {
 @media (max-width: 991px) {
   .tour-sec.home .tour-sec__result {
     padding: 0 40px;
+    margin-bottom: 32px;
   }
 }
 @media (max-width: 767px) {
   .tour-sec.home .tour-sec__result {
     padding: 0 16px;
+    margin-bottom: 24px;
   }
 }
 @media (max-width: 991px) {
   .tour-sec.home .tour-sec__title {
     padding-left: 40px;
+    margin-bottom: 16px;
   }
 }
 @media (max-width: 767px) {
@@ -2826,6 +2830,16 @@ p {
   display: flex;
   justify-content: center;
   margin-top: 40px;
+}
+@media (max-width: 991px) {
+  .travel-guide__btn {
+    margin-top: 32px;
+  }
+}
+@media (max-width: 767px) {
+  .travel-guide__btn {
+    margin-bottom: 24px;
+  }
 }
 
 .customer-story {
@@ -6073,10 +6087,11 @@ p {
   top: 0;
   left: 24px;
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
   .visa-application .flip-card-front-number {
     font-size: 70px;
     line-height: 93px;
+    padding-top: 12px;
   }
 }
 .visa-application .flip-card-front-step-name {
