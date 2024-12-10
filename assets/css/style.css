@@ -396,7 +396,7 @@ p {
 .swiper-button-next,
 .swiper-button-prev {
   margin-top: 0;
-  transform: translateY(-50%);
+  transform: translateY(-50%) !important;
   top: 50%;
 }
 
@@ -4557,11 +4557,21 @@ p {
 .main-detail .gallery .custom-swiper-button.swiper-button-next {
   right: 24px;
 }
+@media (max-width: 991px) {
+  .main-detail .gallery .custom-swiper-button.swiper-button-next {
+    right: 16px;
+  }
+}
 .main-detail .gallery .custom-swiper-button.swiper-button-next svg {
   transform: translateX(0.5px);
 }
 .main-detail .gallery .custom-swiper-button.swiper-button-prev {
   left: 24px;
+}
+@media (max-width: 991px) {
+  .main-detail .gallery .custom-swiper-button.swiper-button-prev {
+    left: 16px;
+  }
 }
 .main-detail .gallery .custom-swiper-button.swiper-button-prev svg {
   transform: translateX(-0.5px);
