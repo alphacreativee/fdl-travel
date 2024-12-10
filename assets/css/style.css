@@ -351,11 +351,18 @@ p {
   justify-content: center;
   align-items: center;
   font-size: 0;
-  background-image: url("../images/svg/ic_arrow_right_white.svg");
+  background-image: url("../images/svg/ic_arrow_right_black.svg");
   background-repeat: no-repeat;
   background-position: 55% 50%;
-  background-color: var(--color-primary);
+  background-color: var(--color-white);
   margin: 0;
+  border: 1px solid var(--color-stroke-bold);
+  transition: all 0.3s;
+}
+
+.lightpick__next-action:hover,
+.lightpick__previous-action:hover {
+  background-color: var(--color-gray);
 }
 
 .lightpick__previous-action {
@@ -2600,6 +2607,19 @@ p {
 .travel-guide.blog-new .travel-guide__image {
   border-radius: 8px;
 }
+.travel-guide.blog-new .travel-guide__container {
+  padding: 0;
+}
+@media (max-width: 991px) {
+  .travel-guide.blog-new .travel-guide__container {
+    padding: 0 40px;
+  }
+}
+@media (max-width: 767px) {
+  .travel-guide.blog-new .travel-guide__container {
+    padding: 0 16px;
+  }
+}
 .travel-guide.contact-new .travel-guide__list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -2668,6 +2688,9 @@ p {
   .travel-guide.contact-new .travel-guide__container {
     padding: 0;
   }
+}
+.travel-guide__container {
+  padding: 0 80px;
 }
 @media (max-width: 991px) {
   .travel-guide__container {
@@ -4575,8 +4598,8 @@ p {
 }
 .main-detail .why-choose-us ul li::before {
   content: "";
-  width: 12.5px;
-  height: 12.5px;
+  width: 14px;
+  height: 14px;
   background-image: url("../images/svg/icon_tick.svg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -4642,6 +4665,12 @@ p {
 }
 .main-detail .departure-chedule ul li.view-calendar {
   gap: 3px;
+}
+.main-detail .departure-chedule ul li.view-calendar svg path {
+  transition: all 0.4s;
+}
+.main-detail .departure-chedule ul li.view-calendar:hover svg path {
+  fill: var(--color-grey);
 }
 @media (max-width: 1200px) {
   .main-detail .departure-chedule ul li {
@@ -4970,12 +4999,21 @@ p {
   top: -54px;
   transition: all 0.3s;
 }
+.related-tour .swiper-control .custom-swiper-button:hover {
+  background-color: var(--color-gray);
+}
 .related-tour .swiper-control .swiper-button-prev {
   left: unset;
   right: 44px;
 }
+.related-tour .swiper-control .swiper-button-prev svg {
+  transform: translateX(-1px);
+}
 .related-tour .swiper-control .swiper-button-next {
   right: 0;
+}
+.related-tour .swiper-control .swiper-button-next svg {
+  transform: translateX(0.5px);
 }
 
 @media (max-width: 991px) {
@@ -4998,6 +5036,12 @@ p {
   #checkoutModal:not([step-2=true]) .modal-body {
     height: calc(100dvh - 139px);
   }
+}
+#checkoutModal[step-2=true] .modal-title {
+  display: none;
+}
+#checkoutModal[step-2=true] .choose-tour-title {
+  display: block !important;
 }
 #checkoutModal .btn-custom {
   min-width: 170px;
@@ -5109,6 +5153,15 @@ p {
   cursor: pointer;
   transition: all 0.4s ease;
 }
+#checkoutModal .modal-body .departure-calendar ul li.view-calendar {
+  gap: 4px;
+}
+#checkoutModal .modal-body .departure-calendar ul li.view-calendar svg path {
+  transition: all 0.4s;
+}
+#checkoutModal .modal-body .departure-calendar ul li.view-calendar:hover svg path {
+  fill: var(--color-grey);
+}
 @media (max-width: 767px) {
   #checkoutModal .modal-body .departure-calendar ul li {
     width: calc((100% - 24px) / 4);
@@ -5169,14 +5222,23 @@ p {
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  border: 1px solid var(--color-grey);
+  border: 1px solid var(--color-black);
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.3s;
+}
+#checkoutModal .modal-body .departure-quantity__item button:hover {
+  background-color: var(--color-gray);
 }
 #checkoutModal .modal-body .departure-quantity__item button[disabled=disabled] {
-  opacity: 0.5;
+  opacity: 1;
+  border: 1px solid var(--color-stroke);
   cursor: default;
+  pointer-events: none;
+}
+#checkoutModal .modal-body .departure-quantity__item button[disabled=disabled] svg path {
+  fill: var(--color-stroke);
 }
 #checkoutModal .modal-body .departure-quantity__item .number {
   width: 32px;
