@@ -331,6 +331,9 @@
 
       &.swiper-button-next {
         right: 24px;
+        @media (max-width: 991px) {
+          right: 16px;
+        }
         svg {
           transform: translateX(0.5px);
         }
@@ -338,6 +341,9 @@
 
       &.swiper-button-prev {
         left: 24px;
+        @media (max-width: 991px) {
+          left: 16px;
+        }
         svg {
           transform: translateX(-0.5px);
         }
