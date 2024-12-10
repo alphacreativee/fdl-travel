@@ -1719,6 +1719,11 @@ p {
     transform: translateY(-100%);
   }
 }
+@media (max-width: 767px) {
+  .hero-sec {
+    padding-top: 48px;
+  }
+}
 .hero-sec__container {
   width: 100%;
   height: 80vh;
@@ -6068,6 +6073,9 @@ p {
 .tour-list .content-right__heading .button-filter {
   width: 24px;
   height: 24px;
+}
+.tour-list .content-right__heading .result-mobile {
+  margin-top: 3px;
 }
 
 .content-sec__container {
