@@ -2105,11 +2105,13 @@ p {
 @media (max-width: 991px) {
   .tour-sec.blog-col .tour-sec__title {
     padding-left: 40px;
+    margin-bottom: 24px;
   }
 }
 @media (max-width: 767px) {
   .tour-sec.blog-col .tour-sec__title {
     padding-left: 16px;
+    margin-bottom: 16px;
   }
 }
 @media (max-width: 991px) {
@@ -2143,12 +2145,12 @@ p {
 }
 @media (max-width: 991px) {
   .tour-sec.blog-col .tour-sec__filter {
-    margin-bottom: 32px;
+    margin-bottom: 24px;
   }
 }
 @media (max-width: 767px) {
   .tour-sec.blog-col .tour-sec__filter {
-    margin-bottom: 24px;
+    margin-bottom: 16px;
   }
 }
 .tour-sec__container {
@@ -3465,7 +3467,7 @@ p {
 }
 
 .why-choose {
-  margin-bottom: 60vh;
+  margin-bottom: calc(50vh + 120px);
 }
 @media (min-width: 1441px) {
   .why-choose {
@@ -3474,7 +3476,7 @@ p {
 }
 @media (min-width: 1600px) {
   .why-choose {
-    margin-bottom: 700px;
+    margin-bottom: 680px;
   }
 }
 @media (max-width: 1090px) {
