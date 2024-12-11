@@ -1070,7 +1070,7 @@ function openMenuMobile(event) {
   $("body").addClass("overflow-hidden");
 
   if (!$(".header.not-has-sub").length) {
-    $(".header").toggleClass("has-sub");
+    $(".header").removeClass("has-sub");
   }
 
   $(".header-mobile .header-mobile__menu").addClass("open");

@@ -400,7 +400,7 @@
     @media (max-width: 991px) {
       border-radius: unset;
       overflow: auto;
-      z-index: 2;
+      z-index: 3;
     }
 
     &__top {
@@ -509,6 +509,8 @@
     padding: 24px;
     border-radius: 8px;
     border: 1px solid var(--color-stroke);
+    position: relative;
+    z-index: 2;
 
     @media (max-width: 991px) {
       background-color: var(--color-gray-bg-60);
@@ -518,6 +520,21 @@
       padding: 12px 16px;
       height: 42px;
       transition: all 0.4s;
+    }
+
+    .why-choose-us-overlay{
+      transition: all 0.4s;
+    }
+
+    &.open{
+      & + .why-choose-us-overlay{
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.8);
+        top: 0;
+        position: fixed;
+        left: 0;
+      }
     }
 
     .title {
