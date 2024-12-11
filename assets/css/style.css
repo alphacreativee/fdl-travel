@@ -4222,8 +4222,7 @@ p {
 .faq-sec .accordion-button::after {
   background-image: url("../images/svg/ic_arrow_down_black.svg");
   background-size: auto;
-  background-position: center;
-  margin-left: 8px;
+  background-position: 10px center;
 }
 .faq-sec .accordion-button:not(.collapsed) {
   color: var(--color-black);
