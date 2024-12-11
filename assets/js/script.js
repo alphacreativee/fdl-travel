@@ -1019,10 +1019,12 @@ function changeQuantity(thisButton, action) {
   var min = parseInt($numberDiv.data("min"));
   var max = parseInt($numberDiv.data("max"));
   var currentQuantity = parseInt($numberDiv.text());
+  var price = $numberDiv.data("price");
 
   if (action === "increase") {
     if (currentQuantity < max) {
       $numberDiv.text(currentQuantity + 1);
+      priceModalCheckout(price, 'increase');
     }
     thisButton.attr(
       "disabled",
@@ -1032,6 +1034,7 @@ function changeQuantity(thisButton, action) {
   } else if (action === "decrease") {
     if (currentQuantity > min) {
       $numberDiv.text(currentQuantity - 1);
+      priceModalCheckout(price, 'decrease');
     }
     $numberDiv
       .siblings("[minus]")
@@ -1050,6 +1053,29 @@ function updateNumber() {
   } else if (currentQuantity > max) {
     $(this).text(max);
   }
+}
+
+function priceModalCheckout(price, type) {
+  if (!$("#checkoutModal").length) return;
+
+  const priceHtml = $("#checkoutModal .modal-footer .price");
+  let priceTotal = priceHtml.data("price");
+
+  if (type === 'increase') {
+    priceTotal += price;
+  } else if (type === 'decrease') {
+    priceTotal -= price;
+  }
+
+  if (priceTotal < 0) {
+    priceTotal = 0;
+  }
+ 
+  priceHtml.data("price", priceTotal);
+
+  const formattedPrice = priceTotal.toLocaleString('vi-VN');
+
+  priceHtml.html(`${formattedPrice}đ`);
 }
 
 function openMenuMobile(event) {
