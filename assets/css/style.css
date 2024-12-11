@@ -2399,6 +2399,7 @@ p {
 .tour-sec .tour__desc--note {
   font-size: 12px;
   color: var(--color-grey);
+  font-weight: 500;
   line-height: 1;
   padding: 6px 12px;
   border-radius: 4px;
@@ -2850,7 +2851,7 @@ p {
   font-family: var(--font-body);
   font-size: 12px;
   font-weight: 500;
-  color: var(--color-black);
+  color: var(--color-grey);
   background-color: var(--color-grey-opa);
   border-radius: 4px;
   padding: 8px 12px 4px;
@@ -4109,6 +4110,7 @@ p {
 }
 .contact-sec__right--button.non-active {
   pointer-events: none;
+  background-color: #e3d1ab !important;
 }
 .contact-sec__right--button:hover {
   background-color: var(--color-secondary-hover);

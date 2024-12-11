@@ -92,24 +92,36 @@ if ($("#btnSubmit").length) {
   });
 }
 if ($(".contact-sec__right--button").length) {
-  // check input empty
-  const btnSend = document.getElementById("btn-send");
+  const btnSend = $("#btn-send");
+
   const updateButtonState = () => {
-    const isEmpty = $(".contact-sec__right input")
+    // Chọn các input cần kiểm tra (loại bỏ input ẩn và disabled)
+    const isEmpty = $(
+      ".contact-sec__right input:not([type='hidden']):not([disabled])"
+    )
       .toArray()
       .some((input) => {
-        return $(input).val().trim() === "";
+        const value = $(input).val();
+        console.log("Input value:", value); // Gỡ lỗi giá trị
+        return !value || value.trim() === ""; // Kiểm tra nếu rỗng
       });
 
+    console.log("Is empty:", isEmpty); // Gỡ lỗi trạng thái
+
     if (isEmpty) {
-      btnSend.classList.add("non-active");
+      btnSend.prop("disabled", true); // Vô hiệu hóa nút
+      btnSend.addClass("non-active"); // Thêm class chỉ trạng thái không hoạt động
     } else {
-      btnSend.classList.remove("non-active");
+      btnSend.prop("disabled", false); // Bật nút
+      btnSend.removeClass("non-active"); // Loại bỏ class không hoạt động
     }
   };
+
+  // Chạy kiểm tra ban đầu
   updateButtonState();
 
-  $(".contact-sec__right input").on("input", updateButtonState);
+  // Lắng nghe sự kiện (nhập liệu, thay đổi hoặc blur)
+  $(".contact-sec__right input").on("input change blur", updateButtonState);
 }
 
 function chooseTime() {
@@ -120,9 +132,9 @@ function chooseTime() {
       numberOfMonths: 1,
       minDate: new Date(),
       onOpen: function () {
-        var input = pickerArrival._opts.field; // Use pickerArrival instead of picker
+        var input = pickerRental._opts.field; // Use pickerArrival instead of picker
         var rect = input.getBoundingClientRect();
-        var calendar = pickerArrival.el; // Use pickerArrival instead of picker
+        var calendar = pickerRental.el; // Use pickerArrival instead of picker
         if (rect.top >= window.innerHeight / 2) {
           calendar.style.top =
             rect.top + window.scrollY - calendar.offsetHeight - 38 + "px";
