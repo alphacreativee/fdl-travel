@@ -96,6 +96,9 @@
     justify-content: space-between;
     @media (max-width: 991px) {
       height: 350px;
+      padding: 40px !important;
+    }
+    @media (max-width: 767px) {
       padding: 24px !important;
     }
   }

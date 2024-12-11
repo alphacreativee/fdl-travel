@@ -3591,6 +3591,11 @@ p {
 @media (max-width: 991px) {
   .why-choose__card {
     height: 350px;
+    padding: 40px !important;
+  }
+}
+@media (max-width: 767px) {
+  .why-choose__card {
     padding: 24px !important;
   }
 }
