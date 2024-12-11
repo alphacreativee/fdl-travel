@@ -522,12 +522,12 @@
       transition: all 0.4s;
     }
 
-    .why-choose-us-overlay{
+    .why-choose-us-overlay {
       transition: all 0.4s;
     }
 
-    &.open{
-      & + .why-choose-us-overlay{
+    &.open {
+      & + .why-choose-us-overlay {
         width: 100vw;
         height: 100vh;
         background-color: rgba(0, 0, 0, 0.8);
@@ -559,7 +559,7 @@
         color: var(--color-grey);
 
         @media (max-width: 991px) {
-          font-size: 12px;
+          font-size: 14px;
           line-height: 22px;
         }
 
