@@ -3596,6 +3596,11 @@ p {
 @media (max-width: 991px) {
   .why-choose__card {
     height: 350px;
+    padding: 40px !important;
+  }
+}
+@media (max-width: 767px) {
+  .why-choose__card {
     padding: 24px !important;
   }
 }
@@ -3964,6 +3969,10 @@ p {
 .contact-sec.new .contact-sec__right--button:hover {
   background-color: var(--color-primary-hover);
 }
+.contact-sec.new .contact-sec__right--button.non-active {
+  pointer-events: none;
+  background-color: #e3d1ab !important;
+}
 .contact-sec__container {
   padding: 0 80px;
 }
@@ -4115,7 +4124,7 @@ p {
 }
 .contact-sec__right--button.non-active {
   pointer-events: none;
-  background-color: #e3d1ab !important;
+  background-color: #97a1a2 !important;
 }
 .contact-sec__right--button:hover {
   background-color: var(--color-secondary-hover);
@@ -4223,8 +4232,7 @@ p {
 .faq-sec .accordion-button::after {
   background-image: url("../images/svg/ic_arrow_down_black.svg");
   background-size: auto;
-  background-position: center;
-  margin-left: 8px;
+  background-position: 10px center;
 }
 .faq-sec .accordion-button:not(.collapsed) {
   color: var(--color-black);
