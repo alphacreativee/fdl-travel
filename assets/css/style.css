@@ -3959,6 +3959,10 @@ p {
 .contact-sec.new .contact-sec__right--button:hover {
   background-color: var(--color-primary-hover);
 }
+.contact-sec.new .contact-sec__right--button.non-active {
+  pointer-events: none;
+  background-color: #e3d1ab !important;
+}
 .contact-sec__container {
   padding: 0 80px;
 }
@@ -4110,7 +4114,7 @@ p {
 }
 .contact-sec__right--button.non-active {
   pointer-events: none;
-  background-color: #e3d1ab !important;
+  background-color: #97a1a2 !important;
 }
 .contact-sec__right--button:hover {
   background-color: var(--color-secondary-hover);

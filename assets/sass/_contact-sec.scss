@@ -47,6 +47,10 @@
       &:hover {
         background-color: var(--color-primary-hover);
       }
+      &.non-active {
+        pointer-events: none;
+        background-color: #e3d1ab !important;
+      }
     }
   }
   &__container {
@@ -205,7 +209,7 @@
       transition: all 0.3s;
       &.non-active {
         pointer-events: none;
-        background-color: #e3d1ab !important;
+        background-color: #97a1a2 !important;
       }
       &:hover {
         background-color: var(--color-secondary-hover);
