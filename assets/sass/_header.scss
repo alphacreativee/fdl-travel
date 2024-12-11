@@ -550,7 +550,7 @@
 }
 
 .header.has-sub {
-  @media (max-width: 767px) {
+  @media (max-width: 991px) {
     .header__inner {
       height: 48px;
     }
@@ -732,7 +732,7 @@
   &__menu {
     height: calc(100dvh - 110px);
     background-color: var(--color-gray-bg);
-    padding: 24px 16px 24px 16px;
+    padding: 24px 40px 24px 40px;
     position: fixed;
     bottom: 62px;
     left: 0;
@@ -741,6 +741,10 @@
     visibility: hidden;
     transition: all 0.3s ease;
     transform: translateY(0);
+
+    @media (max-width: 767px){
+      padding: 24px 16px 24px 16px;
+    }
 
     &.open {
       opacity: 1;

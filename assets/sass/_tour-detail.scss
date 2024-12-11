@@ -239,6 +239,10 @@
       right: 60px;
       @media (max-width: 991px) {
         top: 16px;
+        right: 76px;
+      }
+      @media(max-width: 767px){
+        right: 56px;
       }
       &:hover {
         .share-dropdown {
@@ -252,6 +256,9 @@
       left: 24px;
       @media (max-width: 991px) {
         top: 16px;
+        left: 40px;
+      }
+      @media(max-width: 767px){
         left: 16px;
       }
     }
@@ -263,6 +270,9 @@
       visibility: visible;
       @media (max-width: 991px) {
         top: 16px;
+        right: 40px;
+      }
+      @media(max-width: 767px){
         right: 16px;
       }
     }
@@ -332,6 +342,9 @@
       &.swiper-button-next {
         right: 24px;
         @media (max-width: 991px) {
+          right: 40px;
+        }
+        @media(max-width: 767px){
           right: 16px;
         }
         svg {
@@ -342,6 +355,9 @@
       &.swiper-button-prev {
         left: 24px;
         @media (max-width: 991px) {
+          left: 40px;
+        }
+        @media(max-width: 767px){
           left: 16px;
         }
         svg {
@@ -436,13 +452,17 @@
       background-color: var(--color-box);
 
       @media (max-width: 991px) {
-        padding: 12px 16px;
+        padding: 12px 40px;
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 40px;
         background-color: var(--color-white);
         box-shadow: 0px -2px 4px rgba(189, 189, 189, 0.2);
+      }
+
+      @media(max-width: 767px){
+        padding: 12px 16px;
       }
 
       .price {
@@ -517,9 +537,13 @@
       margin-top: 0;
       border: none;
       border-radius: 8px 8px 0 0;
-      padding: 12px 16px;
+      padding: 12px 40px;
       height: 42px;
       transition: all 0.4s;
+    }
+
+    @media(max-width: 767px){
+      padding: 12px 16px;
     }
 
     .why-choose-us-overlay {
@@ -684,7 +708,8 @@
     border-radius: 12px;
     border: 1px solid var(--color-stroke);
     @media (max-width: 991px) {
-      padding: 24px 0 0 0;
+      padding: 40px 0 0 0;
+      margin-top: 40px;
       border: none;
       border-radius: 0;
       position: relative;
@@ -699,6 +724,8 @@
       }
     }
     @media (max-width: 767px) {
+      padding: 24px 0 0 0;
+      margin-top: 24px;
       &::before {
         content: "";
         width: calc(100% + 32px);
@@ -723,6 +750,12 @@
         }
         @media (max-width: 767px) {
           margin-bottom: 40px;
+        }
+      }
+
+      &.expense{
+        @media (max-width: 991px){
+          gap: 0;
         }
       }
 
@@ -975,6 +1008,10 @@
           margin-bottom: 16px;
           transition: all 0.4s;
 
+          &:last-child{
+            margin-bottom: 0;
+          }
+
           &:hover {
             border-color: var(--color-grey);
           }
@@ -1183,12 +1220,12 @@
       &-calendar {
         margin-top: 16px;
 
-        @media (max-width: 991px) {
+        @media (max-width: 767px) {
           flex-direction: column;
         }
 
         &__main {
-          @media (max-width: 991px) {
+          @media (max-width: 767px) {
             margin-top: 16px;
           }
         }
@@ -1204,7 +1241,7 @@
           width: 100%;
           gap: 16px;
 
-          @media (max-width: 767px) {
+          @media (max-width: 991px) {
             li:nth-child(4) {
               display: none !important;
             }
@@ -1235,7 +1272,7 @@
               }
             }
 
-            @media (max-width: 767px) {
+            @media (max-width: 991px) {
               width: calc((100% - 24px) / 4);
               padding: 10px 8px;
             }
@@ -1397,6 +1434,7 @@
 
   .lightpick__month-title-bar {
     margin-bottom: 32px;
+    padding: 8px 8px 0 8px;
   }
 
   .total {
