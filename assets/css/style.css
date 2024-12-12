@@ -4232,7 +4232,7 @@ p {
 .faq-sec .accordion-button::after {
   background-image: url("../images/svg/ic_arrow_down_black.svg");
   background-size: auto;
-  background-position: 10px center;
+  background-position: center;
 }
 .faq-sec .accordion-button:not(.collapsed) {
   color: var(--color-black);
@@ -4253,6 +4253,11 @@ p {
 @media (max-width: 767px) {
   .faq-sec .accordion-button {
     align-items: flex-start;
+  }
+}
+@media (max-width: 991px) {
+  .faq-sec .accordion-button p {
+    max-width: 90%;
   }
 }
 .faq-sec .accordion-item {
