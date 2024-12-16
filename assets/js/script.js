@@ -38,6 +38,7 @@ $(document).ready(function () {
   toggleSubmenuMobile();
   paymentFilter();
   removeVisibleSearchMobile();
+  scrollableTab();
 });
 window.onload = function () {
   if ($(".gsap-section").length) {
@@ -1175,4 +1176,51 @@ function whyChooseUs(event) {
   } else {
     $element.css("height", currentHeight);
   }
+}
+
+function scrollableTab() {
+  if (!$(".scrollable-tab").length || $(window).width() > 481) return;
+
+  // Lưu trữ trạng thái cuộn tự động (để ngừng can thiệp vào cuộn thủ công của người dùng)
+  let autoScrollTriggered = false;
+
+  $(window).on("scroll", function() {
+    var scrollPos = $(window).scrollTop();
+
+    var $mainDetailContainer = $('.main-detail__container');
+    var windowTop = $(window).scrollTop();
+    var containerTop = $mainDetailContainer.offset().top;
+    var containerHeight = $mainDetailContainer.outerHeight();
+
+    // Opcity when scroll
+    if (windowTop > containerTop + containerHeight || windowTop == 0) {
+      $(".scrollable-tab").removeClass('sticky');
+    } else {
+      $(".scrollable-tab").addClass('sticky');
+    }
+
+    // Update active tab on scroll
+    $('.tour-information__item').each(function() {
+      var sectionTop = $(this).offset().top;
+      var sectionHeight = $(this).outerHeight();
+      var sectionId = $(this).attr('id');
+
+      // Check whether section on viewport?
+      if (scrollPos >= sectionTop - 150 && scrollPos < sectionTop + sectionHeight - 150) {
+        $(".scrollable-tab ul li").removeClass('active');
+        $(".scrollable-tab ul li[data-tab='" + sectionId + "']").addClass('active');
+      }
+    });
+  });
+
+  $(".scrollable-tab ul li").on("click", function() {
+    var targetTab = $(this).data('tab');
+    var targetSection = $("#" + targetTab);
+    
+    $('html, body').animate({
+      scrollTop: targetSection.offset().top
+    }, 500);
+
+    autoScrollTriggered = false;
+  });
 }

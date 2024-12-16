@@ -879,7 +879,7 @@
               </div>
               <div class="tour-information">
                 <!-- Overview -->
-                <div class="tour-information__item overview">
+                <div class="tour-information__item overview" id="detail-general">
                   <p class="h3-semibold content-left">Tổng quan</p>
                   <ul class="content-right">
                     <li>
@@ -946,7 +946,7 @@
                 </div>
 
                 <!-- Highlight -->
-                <div class="tour-information__item highlight">
+                <div class="tour-information__item highlight" id="detail-highlight">
                   <p class="h3-semibold content-left">Điểm nổi bật</p>
                   <ul class="content-right">
                     <li class="b1-regular">
@@ -969,7 +969,7 @@
                 </div>
 
                 <!-- Chedule -->
-                <div class="tour-information__item chedule">
+                <div class="tour-information__item chedule" id="detail-chedule">
                   <p class="h3-semibold content-left">Lịch trình</p>
                   <div class="content-right">
                     <ul class="nav nav-tabs" role="tablist">
@@ -1364,7 +1364,7 @@
                 </div>
 
                 <!-- Expense -->
-                <div class="tour-information__item expense">
+                <div class="tour-information__item expense" id="detail-expense">
                   <p class="h3-semibold content-left">Chi phí</p>
                   <div class="content-right row g-0">
                     <div class="col-lg-6 col-md-12 included">
@@ -1399,7 +1399,7 @@
                 </div>
 
                 <!-- More Information -->
-                <div class="tour-information__item more-information">
+                <div class="tour-information__item more-information" id="detail-more-info">
                   <p class="h3-semibold content-left">Thông tin khác</p>
                   <div class="content-right">
                     <div
@@ -1629,6 +1629,15 @@
               </div>
               <div class="why-choose-us-overlay" onclick="whyChooseUs(event)"></div>
             </div>
+          </div>
+          <div class="scrollable-tab d-block d-lg-none">
+            <ul>
+              <li class="active b2-medium color-black" data-tab="detail-general">Tổng quan</li>
+              <li class="b2-medium color-black" data-tab="detail-highlight">Điểm nổi bậc</li>
+              <li class="b2-medium color-black" data-tab="detail-chedule">Lịch trình</li>
+              <li class="b2-medium color-black" data-tab="detail-expense">Chi phí</li>
+              <li class="b2-medium color-black"  data-tab="detail-more-info">Thông tin khác</li>
+            </ul>
           </div>
         </div>
       </section>
