@@ -323,11 +323,16 @@
       transition: all 0.3s;
       background-color: var(--color-white);
 
+      &.swiper-button-disabled{
+        opacity: 0;
+        visibility: hidden;
+      }
+
       &:hover {
         // border-color: var(--color-grey);
         svg {
           path {
-            stroke: var(--color-grey);
+            stroke: var(--color-black);
           }
         }
       }
@@ -339,6 +344,7 @@
         transform: translateX(1px);
         path {
           transition: all 0.3s;
+          stroke: var(--color-grey);
         }
       }
     }
@@ -349,6 +355,7 @@
         transform: translateX(-1px);
         path {
           transition: all 0.3s;
+          stroke: var(--color-grey);
         }
       }
     }

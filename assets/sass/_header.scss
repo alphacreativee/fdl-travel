@@ -326,7 +326,7 @@
 
     &--mobile {
       background-color: var(--color-white);
-      padding: 24px 16px;
+      padding: 16px;
       position: fixed;
       top: 48px;
       right: 0;
@@ -348,7 +348,7 @@
         & + .header__search--mobile__overlay{
           width: 100vw;
           height: 100vh;
-          top: 144px;
+          top: 128px;
           left: 0;
           position: fixed;
           background-color: rgba(0, 0, 0, 0.8);

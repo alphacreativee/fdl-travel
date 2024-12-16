@@ -128,11 +128,11 @@
     .tour-sec__title {
       @media (max-width: 991px) {
         padding-left: 40px;
-        margin-bottom: 24px;
+        margin-bottom: 0;
       }
       @media (max-width: 767px) {
         padding-left: 16px;
-        margin-bottom: 16px;
+        margin-bottom: 0;
       }
     }
     .tour-sec__button {
@@ -172,10 +172,12 @@
     }
     .tour-sec__filter {
       @media (max-width: 991px) {
-        margin-bottom: 24px;
-      }
-      @media (max-width: 767px) {
-        margin-bottom: 16px;
+        margin-bottom: 0;
+        padding: 16px 0 16px;
+        margin-bottom: 8px;
+        background-color: #FFF;
+        position: sticky;
+        top: 48px;
       }
     }
   }
