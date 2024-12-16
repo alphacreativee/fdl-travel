@@ -1181,10 +1181,22 @@ function whyChooseUs(event) {
 function scrollableTab() {
   if (!$(".scrollable-tab").length || $(window).width() > 481) return;
 
-  // Lưu trữ trạng thái cuộn tự động (để ngừng can thiệp vào cuộn thủ công của người dùng)
-  let autoScrollTriggered = false;
+  // Biến theo dõi trạng thái người dùng đang cuộn
+  let isUserScrolling = false;
+  let scrollTimeout;
+
+  const itemActive = $(".scrollable-tab li.active");
+  checkTabScroll(itemActive)
 
   $(window).on("scroll", function() {
+    isUserScrolling = true; // Đặt trạng thái là đang cuộn
+
+    // Đặt lại timeout để kiểm tra khi người dùng dừng cuộn
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(function() {
+      isUserScrolling = false; // Reset trạng thái sau khi người dùng dừng cuộn
+    }, 100); // Khoảng thời gian chờ để xác định người dùng đã dừng cuộn
+
     var scrollPos = $(window).scrollTop();
 
     var $mainDetailContainer = $('.main-detail__container');
@@ -1192,27 +1204,31 @@ function scrollableTab() {
     var containerTop = $mainDetailContainer.offset().top;
     var containerHeight = $mainDetailContainer.outerHeight();
 
-    // Opcity when scroll
+    // Cập nhật trạng thái sticky
     if (windowTop > containerTop + containerHeight || windowTop == 0) {
       $(".scrollable-tab").removeClass('sticky');
     } else {
       $(".scrollable-tab").addClass('sticky');
     }
 
-    // Update active tab on scroll
+    // Cập nhật tab active khi cuộn
     $('.tour-information__item').each(function() {
       var sectionTop = $(this).offset().top;
       var sectionHeight = $(this).outerHeight();
       var sectionId = $(this).attr('id');
 
-      // Check whether section on viewport?
+      // Kiểm tra nếu section nằm trong viewport
       if (scrollPos >= sectionTop - 150 && scrollPos < sectionTop + sectionHeight - 150) {
         $(".scrollable-tab ul li").removeClass('active');
         $(".scrollable-tab ul li[data-tab='" + sectionId + "']").addClass('active');
+
+        var thisItem = $(".scrollable-tab ul li[data-tab='" + sectionId + "']");
+        checkTabScroll(thisItem); // Gọi hàm kiểm tra và cuộn tab
       }
     });
   });
 
+  // Khi người dùng click vào tab
   $(".scrollable-tab ul li").on("click", function() {
     var targetTab = $(this).data('tab');
     var targetSection = $("#" + targetTab);
@@ -1220,7 +1236,27 @@ function scrollableTab() {
     $('html, body').animate({
       scrollTop: targetSection.offset().top
     }, 500);
-
-    autoScrollTriggered = false;
+    
+    isUserScrolling = false;
   });
+
+  // Hàm kiểm tra và cuộn tab
+  function checkTabScroll(thisItem) {
+    var $ul = $(".scrollable-tab ul");
+    
+    // Chỉ thực hiện cuộn nếu người dùng không đang cuộn thủ công
+      var ulWidth = $ul.width();
+      var tabWidth = thisItem.outerWidth();
+      var activeTabOffset = thisItem.position().left;
+      var ulScrollLeft = $ul.scrollLeft();
+
+      if (thisItem.is(":nth-child(1), :nth-child(2)")) {
+        $ul.animate({ scrollLeft: 0 }, 300);
+      }
+      else if (thisItem.is(":nth-child(4), :nth-child(5)")) {
+        var dist = $ul[0].scrollWidth - ulWidth;
+        $ul.animate({ scrollLeft: dist }, 300);
+      }
+  }
 }
+
