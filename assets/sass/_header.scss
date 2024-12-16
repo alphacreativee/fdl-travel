@@ -123,7 +123,8 @@
             transform: translateY(54px);
             flex-direction: column;
             gap: 0;
-            width: 165px;
+            width: max-content;
+            min-width: 165px;
             padding: 8px;
             background-color: var(--color-white);
             border-radius: 8px;
