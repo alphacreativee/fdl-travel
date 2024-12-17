@@ -1245,18 +1245,15 @@ function scrollableTab() {
     var $ul = $(".scrollable-tab ul");
     
     // Chỉ thực hiện cuộn nếu người dùng không đang cuộn thủ công
-      var ulWidth = $ul.width();
-      var tabWidth = thisItem.outerWidth();
-      var activeTabOffset = thisItem.position().left;
-      var ulScrollLeft = $ul.scrollLeft();
+    var ulWidth = $ul.width();
 
-      if (thisItem.is(":nth-child(1), :nth-child(2)")) {
-        $ul.animate({ scrollLeft: 0 }, 300);
-      }
-      else if (thisItem.is(":nth-child(4), :nth-child(5)")) {
-        var dist = $ul[0].scrollWidth - ulWidth;
-        $ul.animate({ scrollLeft: dist }, 300);
-      }
+    if (thisItem.is(":nth-child(1), :nth-child(2)")) {
+      $ul.animate({ scrollLeft: 0 }, 300);
+    }
+    else if (thisItem.is(":nth-child(4), :nth-child(5)")) {
+      var dist = $ul[0].scrollWidth - ulWidth;
+      $ul.animate({ scrollLeft: dist }, 300);
+    }
   }
 }
 
